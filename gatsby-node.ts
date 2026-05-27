@@ -172,6 +172,14 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
       relativePath: String
       title: String
     }
+    type MarginaliaItem {
+      type: String
+      kicker: String
+      body: String
+      icon: String
+      title: String
+      caption: String
+    }
     type Frontmatter {
       subtitle: String
       kicker: String
@@ -184,6 +192,7 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
       reads: String
       tags: [String!]
       relatedSlugs: [String!]
+      marginalia: [MarginaliaItem]
     }
     type MarkdownRemark implements Node {
       fields: MarkdownRemarkFields
