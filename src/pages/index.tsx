@@ -7,6 +7,7 @@ import { SECTIONS, SECTION_LABELS } from "../data/wiki-sections";
 import { useWikiIndex } from "../data/use-wiki-index";
 
 import kolovratSvg from "../assets/img/kolovrat.svg";
+import wordmarkSvg from "../assets/img/wordmark.svg";
 
 import "../templates/wiki-article.module.css";
 import "../templates/mega-menu.module.css";
