@@ -119,6 +119,51 @@
 }
 
 /* ============================================================
+   HERO — wariant landing-page sekcji (/wiki/<sekcja>/)
+   ─────────────────────────────────────────────────────────────
+   Tytuł sekcji + blurb z wiki-sections.ts, plus duży numer
+   (01–10) jako sygnet nad tytułem.
+   ============================================================ */
+:global(.wf-hero--landing) {
+  padding: 88px 60px 64px;
+}
+:global(.wf-hero__landing-num) {
+  font-family: var(--font-display);
+  font-size: 88px;
+  line-height: 0.9;
+  color: var(--gold);
+  text-shadow: 3px 4px 0 #000;
+  opacity: 0.78;
+  margin-bottom: 4px;
+  letter-spacing: 0.04em;
+}
+:global(.wf-hero--landing .wf-hero__kicker) {
+  margin-bottom: 14px;
+}
+:global(.wf-hero--landing .wf-hero__title) {
+  font-size: 144px;
+}
+:global(.wf-hero--landing .wf-hero__subtitle) {
+  margin-top: 22px;
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-style: italic;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.78);
+  text-shadow: none;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+:global(.wf-hero--landing .wf-hero__title)::after {
+  content: "";
+  display: block;
+  margin: 28px auto 0;
+  width: 120px; height: 1px;
+  background: radial-gradient(ellipse, var(--gold) 0%, transparent 100%);
+}
+
+/* ============================================================
    BODY GRID — 3 kolumny: TOC | Article | Marginalia
    ============================================================ */
 :global(.wf-body) {
@@ -688,6 +733,10 @@
   :global(.wf-hero) { padding: 64px 40px 48px; }
   :global(.wf-hero__title) { font-size: clamp(72px, 11vw, 132px); line-height: 0.95; }
   :global(.wf-hero__subtitle) { font-size: clamp(24px, 3.5vw, 36px); }
+  :global(.wf-hero--landing) { padding: 72px 40px 56px; }
+  :global(.wf-hero--landing .wf-hero__title) { font-size: clamp(80px, 12vw, 144px); }
+  :global(.wf-hero--landing .wf-hero__subtitle) { font-size: clamp(15px, 1.6vw, 17px); font-style: italic; }
+  :global(.wf-hero__landing-num) { font-size: clamp(60px, 8vw, 88px); }
 
   :global(.wf-body) {
     grid-template-columns: 220px minmax(0, 1fr);
@@ -754,6 +803,11 @@
   :global(.wf-hero__subtitle) { font-size: clamp(20px, 5vw, 28px); }
   :global(.wf-hero__kicker) { font-size: 10px; letter-spacing: 0.18em; margin-bottom: 12px; }
   :global(.wf-hero__crumbs) { font-size: 11px; margin-bottom: 12px; }
+  :global(.wf-hero--landing) { padding: 56px 20px 40px; }
+  :global(.wf-hero--landing .wf-hero__title) { font-size: clamp(56px, 18vw, 96px); }
+  :global(.wf-hero--landing .wf-hero__subtitle) { font-size: 14px; }
+  :global(.wf-hero__landing-num) { font-size: 48px; }
+  :global(.wf-hero--landing .wf-hero__title)::after { width: 80px; margin-top: 18px; }
 
   :global(.wf-body) { padding: 28px 16px 0; gap: 24px; }
   :global(.wf-toc ol) { grid-template-columns: 1fr; }

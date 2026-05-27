@@ -129,7 +129,14 @@ const WikiArticleTemplate: React.FC<PageProps<QueryData>> = ({ data }) => {
   }, []);
 
   /* Pochodne metadane */
-  const kicker = fm.kicker || deriveKicker(fields);
+  const isSectionLanding =
+    fields.isCategoryIndex && fields.segments.length === 1 && !!fields.section;
+  const sectionMeta = fields.section ? SECTIONS[fields.section] : undefined;
+
+  const kicker = fm.kicker || deriveKicker(fields, isSectionLanding, sectionMeta);
+  const heroTitle = isSectionLanding && sectionMeta ? sectionMeta.label : fields.title;
+  const heroSubtitle =
+    fm.subtitle ?? (isSectionLanding ? sectionMeta?.blurb : undefined);
   const breadcrumbs = useMemo(
     () => buildBreadcrumbs(fields.segments, SECTION_LABELS),
     [fields.segments]
@@ -137,14 +144,16 @@ const WikiArticleTemplate: React.FC<PageProps<QueryData>> = ({ data }) => {
 
   return (
     <WikiLinkProvider>
-      <div className="wf">
+      <div className={"wf" + (isSectionLanding ? " wf--landing" : "")}>
         <MegaMenu activeUrlPath={fields.urlPath} />
 
         <Hero
           kicker={kicker}
-          title={fields.title}
-          subtitle={fm.subtitle ?? undefined}
+          title={heroTitle}
+          subtitle={heroSubtitle}
           breadcrumbs={breadcrumbs}
+          isLanding={isSectionLanding}
+          sectionOrder={sectionMeta?.order}
         />
 
         <div className="wf-body">
@@ -261,7 +270,14 @@ export const pageQuery = graphql`
    ─────────────  SUB-WIDOKI  ─────────────
    ============================================================ */
 
-function deriveKicker(fields: ArticleNode["fields"]): string {
+function deriveKicker(
+  fields: ArticleNode["fields"],
+  isSectionLanding?: boolean,
+  sectionMeta?: { order: number; label: string }
+): string {
+  if (isSectionLanding && sectionMeta) {
+    return `Sekcja ${String(sectionMeta.order).padStart(2, "0")} · Slavic Enlarged Wiki`;
+  }
   if (!fields.section) return "Wiki";
   const sectionLabel = SECTIONS[fields.section]?.label ?? fields.section;
   if (fields.segments.length <= 2) return sectionLabel;
@@ -279,27 +295,43 @@ function humanize(slug: string): string {
 }
 
 function Hero({
-  kicker, title, subtitle, breadcrumbs,
+  kicker, title, subtitle, breadcrumbs, isLanding, sectionOrder,
 }: {
   kicker: string;
   title: string;
   subtitle?: string;
   breadcrumbs: { label: string; href: string }[];
+  isLanding?: boolean;
+  sectionOrder?: number;
 }) {
   return (
-    <div className="wf-hero" data-screen-label={`Hero — ${title}`}>
+    <div
+      className={"wf-hero" + (isLanding ? " wf-hero--landing" : "")}
+      data-screen-label={`Hero — ${title}`}
+    >
       <div className="wf-hero__inner">
         {breadcrumbs.length > 0 && (
           <nav className="wf-hero__breadcrumbs" aria-label="Okruszki">
-            <Link to="/wiki">Wiki</Link>
+            <Link to="/">Wiki</Link>
             {breadcrumbs.slice(0, -1).map((b, i) => (
               <React.Fragment key={`${b.href}-${i}`}>
                 <span className="sep">›</span>
                 <Link to={b.href}>{b.label}</Link>
               </React.Fragment>
             ))}
+            {isLanding && breadcrumbs.length > 0 && (
+              <>
+                <span className="sep">›</span>
+                <span>{breadcrumbs[breadcrumbs.length - 1].label}</span>
+              </>
+            )}
           </nav>
         )}
+        {isLanding && sectionOrder ? (
+          <div className="wf-hero__landing-num">
+            {String(sectionOrder).padStart(2, "0")}
+          </div>
+        ) : null}
         <div className="wf-hero__kicker">
           <span className="dot" />
           {kicker}
