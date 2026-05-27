@@ -208,10 +208,13 @@
 :global(.mm-col__head h4) {
   margin: 0;
   font-family: var(--font-display);
-  font-size: 20px;
-  line-height: 1;
+  font-size: 17px;
+  line-height: 1.1;
   color: var(--gold-light);
   text-shadow: 1px 2px 0 #000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 :global(.mm-col__sub) {
   font-family: var(--font-body);

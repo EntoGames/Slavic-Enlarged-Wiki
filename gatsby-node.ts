@@ -77,8 +77,8 @@ export const onCreateNode: GatsbyNode["onCreateNode"] = ({
 
   // Wyciągnij H1 jako tytuł, jeśli frontmatter nie ma `title`
   const rawTitle =
-    (md.frontmatter?.title as string | undefined) ?? extractH1(md.rawMarkdownBody ?? "");
-  createNodeField({ node, name: "title", value: rawTitle ?? derived.slug });
+    (md.frontmatter?.title as string | undefined) || extractH1(md.rawMarkdownBody ?? "");
+  createNodeField({ node, name: "title", value: rawTitle || derived.slug });
 };
 
 /** Wyciągnij pierwszy `# Heading` z markdown body. */
