@@ -83,3 +83,38 @@ export const SECTIONS: Record<string, SectionMeta> = {
 export const SECTION_LABELS: Record<string, string> = Object.fromEntries(
   Object.entries(SECTIONS).map(([k, v]) => [k, v.label])
 );
+
+/**
+ * Etykiety podfolderów — poprawne polskie nazwy zamiast auto-humanizacji slugów.
+ * Klucz to ścieżka podfolderu (segments[1:n-1].join("/")).
+ */
+export const SUBFOLDER_LABELS: Record<string, string> = {
+  /* Kultury */
+  poludniowoslowianskie: "Południowosłowiańskie",
+  wschodnioslowianskie: "Wschodniosłowiańskie",
+  zachodnioslowianskie: "Zachodniosłowiańskie",
+  "zachodnioslowianskie/lechici": "Lechici",
+  "zachodnioslowianskie/polabianie": "Połabianie",
+  "zachodnioslowianskie/inni": "Inni zachodni",
+  /* Walka Słowiańszczyzny */
+  fazy: "Fazy Walki",
+};
+
+/**
+ * Slugi plików, które są szablonami redakcyjnymi (nie artykułami publicznymi).
+ * Filtrowane z mega-menu i landing-page'y sekcji.
+ */
+export const TEMPLATE_SLUGS = new Set([
+  "szablon-kultury",
+  "szablon-wiary",
+  "szablon-miejsca-swietego",
+  "szablon-decyzji",
+  "szablon-wydarzenia",
+  "szablon-postaci",
+  "szablon-poradnika",
+  "szablon-artykulu-historycznego",
+  "szablon-artykulu-technicznego",
+  "szablon-fazy",
+  "szablon-mechaniki-dwojwierstwa",
+  "szablon-zakonczenia",
+]);

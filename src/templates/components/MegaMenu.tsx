@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 import kolovratSvg from "../../assets/img/kolovrat.svg";
 import wordmarkSvg from "../../assets/img/wordmark.svg";
 import { useWikiIndex, type WikiEntry } from "../../data/use-wiki-index";
-import { SECTIONS } from "../../data/wiki-sections";
+import { SECTIONS, SUBFOLDER_LABELS, TEMPLATE_SLUGS } from "../../data/wiki-sections";
 
 /* =============================================================
    MegaMenu — top-bar wiki z mega-panelami.
@@ -200,46 +200,58 @@ function buildPanelData(section: {
   label: string;
   entries: WikiEntry[];
 }): PanelData {
+  // Filtruj szablony redakcyjne
+  const entries = section.entries.filter((e) => !TEMPLATE_SLUGS.has(e.slug));
+
+  // Grupuj po PEŁNEJ ścieżce podfolderów (segments[1:-1]).
+  // Np. ["kultury","zachodnioslowianskie","lechici","polanie-lechiccy"]
+  //   → groupKey = "zachodnioslowianskie/lechici"
   const groups = new Map<string, WikiEntry[]>();
-  for (const e of section.entries) {
-    // segments[0] = sekcja, więc grupujemy po segments[1] albo "_root"
-    const groupKey = e.segments[1] && !e.isCategoryIndex ? e.segments[1] : "_root";
+  for (const e of entries) {
+    if (e.isCategoryIndex) continue;
+    const subPath = e.segments.slice(1, -1); // podfoldery między sekcją a plikiem
+    const groupKey = subPath.length > 0 ? subPath.join("/") : "_root";
     if (!groups.has(groupKey)) groups.set(groupKey, []);
     groups.get(groupKey)!.push(e);
   }
 
-  // Posortuj wpisy w grupach: katalog-index pierwszy, potem alfabetycznie
   const columns: PanelData["columns"] = [];
-  // Wpisy w korzeniu sekcji
+
+  // Wpisy w korzeniu sekcji (bez podfolderów)
   if (groups.has("_root")) {
-    columns.push({
-      key: "_root",
-      title: "Główne",
-      items: groups.get("_root")!.filter((e) => !e.isCategoryIndex),
-    });
+    const rootItems = groups.get("_root")!;
+    if (rootItems.length > 0) {
+      columns.push({ key: "_root", title: "Główne", items: rootItems });
+    }
     groups.delete("_root");
   }
-  // Podfoldery
-  for (const [key, items] of groups) {
+
+  // Podfoldery — posortowane alfabetycznie po kluczu
+  const sortedKeys = Array.from(groups.keys()).sort();
+  for (const key of sortedKeys) {
+    const items = groups.get(key)!;
+    const label = SUBFOLDER_LABELS[key] ?? humanize(key.split("/").pop()!);
     columns.push({
       key,
-      title: humanize(key),
-      sub: `${items.filter((i) => !i.isCategoryIndex).length} ${pluralizeArtykul(items.length)}`,
-      items: items.filter((e) => !e.isCategoryIndex),
+      title: label,
+      sub: `${items.length} ${pluralizeArtykul(items.length)}`,
+      items,
     });
   }
 
-  // Featured: pierwszy podfolder-index, albo pierwszy artykuł w sekcji
+  // Featured: pierwszy category-index, albo pierwszy artykuł
   const featured =
-    section.entries.find((e) => e.isCategoryIndex && e.segments.length === 2) ||
-    section.entries.find((e) => !e.isCategoryIndex) ||
+    entries.find((e) => e.isCategoryIndex && e.segments.length === 2) ||
+    entries.find((e) => !e.isCategoryIndex) ||
     null;
+
+  const articleCount = entries.filter((e) => !e.isCategoryIndex).length;
 
   return {
     sectionId: section.id,
     label: section.label,
     blurb: SECTIONS[section.id]?.blurb ?? "",
-    count: section.entries.filter((e) => !e.isCategoryIndex).length,
+    count: articleCount,
     columns,
     featured,
   };
@@ -318,7 +330,7 @@ function CodexPanel({
                 ))}
                 {col.items.length > 12 && (
                   <li className="mm-col__more">
-                    <Link to={`/wiki/${panel.sectionId}/${col.key !== "_root" ? col.key : ""}`}>
+                    <Link to={`/wiki/${panel.sectionId}${col.key !== "_root" ? "/" + col.key : ""}`}>
                       + {col.items.length - 12} więcej →
                     </Link>
                   </li>
