@@ -2,6 +2,7 @@ import * as React from "react";
 import { Link, type HeadFC } from "gatsby";
 
 import kolovratSvg from "../assets/img/kolovrat.svg";
+import "../styles/home.css";
 import "../templates/wiki-article.module.css";
 
 const NotFoundPage: React.FC = () => (

@@ -40,6 +40,5 @@ wiki/                     ← root projektu Gatsby
 - Przed edycją pliku zawsze go przeczytaj
 - CSS: wszystkie klasy w `:global()` w plikach `.module.css`
 - Prefiks klas: `wf-` (wiki-frontend)
-- Po każdym pushu **poczekaj ~2 minuty** na build Netlify, potem **zweryfikuj stronę** w przeglądarce pod adresem produkcji
 - Fonty: Paradox King Script (display), Lato (body), SatyrSP, SlavicEnlarged (fallbacki)
 - Tokeny kolorów i typografii: `src/styles/tokens.css`

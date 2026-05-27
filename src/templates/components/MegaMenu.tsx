@@ -314,7 +314,7 @@ function CodexPanel({
 
         <div
           className="mm-panel__grid"
-          style={{ ["--col-count" as string]: panel.columns.length }}
+          style={{ ["--col-count" as string]: Math.min(panel.columns.length, 3) }}
         >
           {panel.columns.map((col) => (
             <div className="mm-col" key={col.key}>
