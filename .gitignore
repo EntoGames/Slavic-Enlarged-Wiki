@@ -1,0 +1,34 @@
+# Gatsby
+.cache/
+public/
+.netlify/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp.*
+.pnp/
+
+# Środowiska
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Edytory
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# TS
+*.tsbuildinfo
+tsconfig.tsbuildinfo
+
+# Gatsby type-gen output (jest commitable, ale często ignorowane)
+src/gatsby-types.d.ts

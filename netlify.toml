@@ -1,0 +1,82 @@
+# =============================================================
+# netlify.toml — Slavic Enlarged Wiki (Gatsby 5)
+# -------------------------------------------------------------
+# Z tym plikiem w korzeniu repo, jednorazowe „Add new site →
+# Import from Git" w panelu Netlify wykryje konfigurację
+# automatycznie. Żadnych ustawień klikania.
+# =============================================================
+
+[build]
+  command   = "npm run build"
+  publish   = "public"
+
+[build.environment]
+  NODE_VERSION   = "20"
+  NPM_FLAGS      = "--no-audit --no-fund"
+  GATSBY_TELEMETRY_DISABLED = "1"
+
+# Oficjalny plugin Netlify dla Gatsby — cache buildów, optymalizacje SSR
+[[plugins]]
+  package = "@netlify/plugin-gatsby"
+
+# -------------------------------------------------------------
+# Nagłówki bezpieczeństwa + cache
+# -------------------------------------------------------------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options       = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy       = "strict-origin-when-cross-origin"
+    Permissions-Policy    = "geolocation=(), camera=(), microphone=()"
+
+# Statyki Gatsby — content-hashed, długi cache
+[[headers]]
+  for = "/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Fonty
+[[headers]]
+  for = "/*.ttf"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/*.otf"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/*.woff2"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Access-Control-Allow-Origin = "*"
+
+# -------------------------------------------------------------
+# Redirects — / → /wiki (główna landing-page wiki)
+# -------------------------------------------------------------
+# Wyłączone: chcemy własną stronę główną pod /, patrz src/pages/index.tsx.
+# Jeśli kiedyś usuniesz index, odkomentuj:
+# [[redirects]]
+#   from = "/"
+#   to   = "/wiki/wprowadzenie/o-modach"
+#   status = 302
+
+# Stare URL-e (gdyby istniały) → kanoniczne /wiki/*
+[[redirects]]
+  from   = "/article/*"
+  to     = "/wiki/:splat"
+  status = 301

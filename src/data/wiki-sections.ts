@@ -1,0 +1,85 @@
+/* =============================================================
+   Stałe konfiguracyjne wiki — etykiety sekcji, ikony, kolory.
+   ─────────────────────────────────────────────────────────────
+   Klucz to slug folderu first-level (po stripie NN-).
+   Jeśli sekcja nie jest tu zarejestrowana, szablon nadal działa —
+   tylko etykieta w mega-menu i breadcrumbs będzie tytuł-case'owana
+   z slugu (np. "Wprowadzenie", "Kultury").
+   ============================================================= */
+
+export interface SectionMeta {
+  /** Numer wyświetlany w UI ("01", "02", …). Sortowanie. */
+  order: number;
+  /** Etykieta w mega-menu i breadcrumbs. */
+  label: string;
+  /** Krótki opis sekcji (w mega-menu intro panel). */
+  blurb: string;
+}
+
+export const SECTIONS: Record<string, SectionMeta> = {
+  wprowadzenie: {
+    order: 1,
+    label: "Wprowadzenie",
+    blurb:
+      "Czym są oba mody, jak je zainstalować i od czego zacząć grę.",
+  },
+  kultury: {
+    order: 2,
+    label: "Kultury",
+    blurb:
+      "Trzydzieści cztery historyczne plemiona słowiańskie — od Krywiczów nad Dźwiną po Duklian nad Adriatykiem.",
+  },
+  wiara: {
+    order: 3,
+    label: "Wiara",
+    blurb:
+      "Jeden panteon, trzy odłamy, piętnaście miejsc świętych i szansa na zjednoczenie.",
+  },
+  "walka-slowianczyzny": {
+    order: 4,
+    label: "Walka Słowiańszczyzny",
+    blurb:
+      "Pięć faz, trzy zakończenia, jedno pytanie: czy Perun powstanie z Dniepru.",
+  },
+  decyzje: {
+    order: 5,
+    label: "Decyzje",
+    blurb:
+      "Wszystkie narzędzia dostępne graczowi — od reformy wiary po chrzest polityczny.",
+  },
+  wydarzenia: {
+    order: 6,
+    label: "Wydarzenia",
+    blurb:
+      "Siedemnaście narracyjnych eventów — od Nocy Kupały po Ostatniego Wołchwa.",
+  },
+  scenariusze: {
+    order: 7,
+    label: "Scenariusze",
+    blurb:
+      "Siedmiu grywalnych władców w startowej dacie 867 r. Każdy z innym horyzontem.",
+  },
+  poradniki: {
+    order: 8,
+    label: "Poradniki",
+    blurb:
+      "Praktyczne przewodniki po najambitniejszych celach moda.",
+  },
+  historia: {
+    order: 9,
+    label: "Historia",
+    blurb:
+      "Tło źródłowe, na którym stoi cały mod.",
+  },
+  techniczne: {
+    order: 10,
+    label: "Techniczne",
+    blurb:
+      "Kompatybilność z innymi modami, znane problemy, changelog.",
+  },
+};
+
+/** Mapa slug → label (do breadcrumbs). */
+export const SECTION_LABELS: Record<string, string> = Object.fromEntries(
+  Object.entries(SECTIONS).map(([k, v]) => [k, v.label])
+);

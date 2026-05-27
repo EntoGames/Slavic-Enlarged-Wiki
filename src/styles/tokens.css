@@ -1,0 +1,232 @@
+/* =============================================================
+   Slavic Enlarged — Design tokens (globalne CSS variables)
+   ─────────────────────────────────────────────────────────────
+   Plik importowany jednorazowo z gatsby-browser.ts.
+   Wszystkie tokeny zgodne ze źródłem prawdy: design system
+   "Slavic Enlarged" — kolory promocji + UI overlayów modu.
+   ============================================================= */
+
+:root {
+  /* ===== KOLORY — paleta podstawowa ===== */
+
+  /* Złoto — sygnaturowy akcent marki. Tytuły w bannerach, ikony,
+     dividery, znaki frakcyjne. */
+  --gold:           #C5A048;
+  --gold-bright:    rgb(228, 172, 66);   /* #E4AC42 */
+  --gold-warm:      rgb(200, 153, 77);   /* #C8994D */
+  --gold-light:     rgb(226, 195, 121);  /* #E2C379 */
+  --gold-deep:      rgb(126,  95, 37);   /* #7E5F25 */
+  --gold-shadow:    rgb( 98,  75, 38);   /* #624B26 */
+  --gold-glow:      rgb(169, 148, 88);   /* #A99458 */
+
+  /* Łupek — wnętrze koloowratu (chłodny kamień). */
+  --slate:          rgb(107, 127, 148);
+
+  /* Pergamin / powierzchnia. */
+  --parchment:      rgb(217, 217, 217);
+  --parchment-veil: rgba(255, 255, 255, 0.6);
+
+  /* Tusz — ciemna baza. */
+  --ink:            rgb(0, 0, 0);
+  --ink-soft:       rgba(0, 0, 0, 0.93);
+  --ink-veil-80:    rgba(0, 0, 0, 0.8);
+  --ink-veil-60:    rgba(0, 0, 0, 0.6);
+  --ink-veil-25:    rgba(0, 0, 0, 0.25);
+
+  /* Bagno — oliwkowo-zielone tło modu. */
+  --bog-deep:       rgb(28, 34, 20);     /* top of background gradient */
+  --bog-warm:       rgb(26, 22, 14);     /* bottom of background gradient */
+  --bog-tar:        rgb( 8, 13,  0);
+  --bog-moss:       rgb(31, 50,  0);
+  --bog-stroke:     rgb(14, 17,  6);
+
+  /* Banner — kolor wstęgi. */
+  --banner-fill:    rgb(57, 52, 30);
+  --banner-flag:    rgb(178, 0, 207);
+
+  /* ===== KOLORY — akcenty semantyczne (in-game tag colors) ===== */
+  --accent-positive:       rgba(201, 255, 115, 0.8);
+  --accent-positive-solid: rgb(131, 200,  77);
+  --accent-info:           rgb( 77, 193, 200);
+  --accent-info-soft:      rgb(115, 230, 255);
+  --accent-warning:        rgb(255, 161, 161);
+  --accent-warning-deep:   rgb(171, 108, 108);
+  --accent-blood:          rgba(225,  98,  98, 0.5);
+
+  /* ===== KOLORY — semantyczne fg / bg ===== */
+  --fg-on-dark:      rgb(255, 255, 255);
+  --fg-on-dark-soft: rgba(255, 255, 255, 0.6);
+  --fg-on-light:     rgb(31, 50, 0);
+  --fg-muted:        rgb(115, 115, 115);
+  --fg-gold:         var(--gold);
+
+  --bg-page-dark:    var(--bog-deep);
+  --bg-card-dark:    var(--banner-fill);
+  --bg-overlay-90:   rgba( 8, 13, 0, 0.9);
+  --bg-overlay-80:   rgba(11, 16, 4, 0.8);
+  --bg-overlay-70:   rgba( 8, 13, 0, 0.7);
+
+  /* ===== TYPOGRAFIA — rodziny ===== */
+  --font-display: "Paradox King Script", "SatyrSP", "Slavic Enlarged",
+                  "Cinzel", "Trajan Pro", "Times New Roman", serif;
+  --font-body:    "Lato", "Inter", "Open Sans", system-ui, -apple-system,
+                  "Segoe UI", Roboto, sans-serif;
+  --font-mono:    ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* ===== TYPOGRAFIA — role semantyczne ===== */
+  /* Hero — wielki ozdobny tytuł ("Faiths and Cultures") */
+  --t-hero-size: 115px;
+  --t-hero-line: 86px;
+  --t-hero-weight: 400;
+  --t-hero-family: var(--font-display);
+
+  /* Title — sekcje / promo */
+  --t-title-size: 55px;
+  --t-title-line: 46px;
+  --t-title-weight: 400;
+  --t-title-family: var(--font-display);
+
+  /* Subtitle — nagłówek wstęgi */
+  --t-subtitle-size: 32px;
+  --t-subtitle-line: 100%;
+  --t-subtitle-weight: 400;
+  --t-subtitle-family: var(--font-display);
+
+  /* H2 — nazwa kultury / frakcji */
+  --t-h2-size: 60px;
+  --t-h2-line: 1.0;
+  --t-h2-family: var(--font-display);
+
+  /* Section heading — "Traditions", "Shortly about" */
+  --t-section-size: 25px;
+  --t-section-line: 1.0;
+  --t-section-family: var(--font-display);
+
+  /* Tag — "Work in Progress" */
+  --t-tag-size: 25px;
+  --t-tag-line: 46px;
+  --t-tag-family: var(--font-display);
+  --t-tag-color: var(--gold);
+
+  /* Body */
+  --t-body-size: 16px;
+  --t-body-line: 25px;
+  --t-body-weight: 500;
+  --t-body-family: var(--font-body);
+
+  /* Body-large */
+  --t-body-lg-size: 20px;
+  --t-body-lg-line: 100%;
+  --t-body-lg-family: var(--font-body);
+
+  /* Caption */
+  --t-caption-size: 15px;
+  --t-caption-line: 1.2;
+  --t-caption-weight: 700;
+  --t-caption-family: var(--font-body);
+
+  /* Menu item */
+  --t-menu-size: 20px;
+  --t-menu-line: 100%;
+  --t-menu-family: var(--font-body);
+
+  /* Footnote */
+  --t-foot-size: 12px;
+  --t-foot-line: 100%;
+  --t-foot-weight: 500;
+  --t-foot-family: var(--font-body);
+
+  /* ===== EFEKTY — cienie, krawędzie, zaokrąglenia ===== */
+  --shadow-carved:     2px 3px 1px 0 rgb(0, 0, 0);
+  --shadow-card:       0 4px  4px 0 rgba(0, 0, 0, 0.6);
+  --shadow-aura:       0 4px 30px 0 rgba(0, 0, 0, 0.8);
+  --shadow-inset-ring: 0 0 20px 0 rgb(0, 0, 0),
+                       0 0  4px 0 rgba(0, 0, 0, 0.25);
+  --shadow-title-glow: 0 0 154px 0 rgb(169, 148, 88),
+                       4px 4px 0 0 rgb(0, 0, 0);
+
+  --border-ink-1: 1px solid rgb(0, 0, 0);
+  --border-ink-2: 2px solid rgb(0, 0, 0);
+  --border-ink-3: 3px solid rgb(0, 0, 0);
+
+  --rule-gold: radial-gradient(rgb(179, 153, 77) 0%, rgba(179, 153, 77, 0) 100%);
+
+  --radius-card: 20px;
+  --radius-pill: 999px;
+  --radius-soft: 10px;
+
+  /* ===== SPACING ===== */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  10px;
+  --space-4:  14px;
+  --space-5:  15px;
+  --space-6:  20px;
+  --space-7:  25px;
+  --space-8:  30px;
+  --space-9:  40px;
+  --space-10: 50px;
+  --space-11: 60px;
+  --space-12: 70px;
+  --space-13: 80px;
+
+  /* ===== WIKI — tokeny specyficzne dla widoku artykułu ===== */
+  /* Tło strony "poza sceną" */
+  --wf-bg:               #0b1004;
+  --wf-bg-dim:           #050803;
+
+  /* Pergamin (gdy artykuł renderuje się na jasnej karcie — obecny
+     szablon używa ciemnej, ale tokeny zostają na zapas). */
+  --wf-parchment:        #efe2c0;
+  --wf-parchment-warm:   #e9d6a8;
+  --wf-parchment-edge:   #c9b483;
+  --wf-parchment-stain:  #8c6a2a;
+
+  /* Tusz */
+  --wf-ink:              #18130a;
+  --wf-ink-soft:         #3a2e18;
+  --wf-ink-mute:         #6b5a36;
+
+  /* Rubryk czerwony (manuskryptowa konwencja — pierwsza litera, kluczowe terminy). */
+  --wf-rubric:           #8a1f1f;
+  --wf-rubric-deep:      #5a0e0e;
+
+  /* Layout */
+  --wf-content-col:      620px;
+  --wf-toc-col:          240px;
+  --wf-margin-col:       220px;
+  --wf-gutter:           56px;
+}
+
+/* ===== Reset / base ===== */
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: var(--bog-deep);
+  color: var(--fg-on-dark);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+* { box-sizing: border-box; }
+a { color: inherit; text-decoration: none; }
+
+/* ===== Klasy pomocnicze, gdyby były potrzebne poza widokiem wiki ===== */
+.se-display {
+  font-family: var(--font-display);
+  color: var(--fg-on-dark);
+  text-shadow: var(--shadow-carved);
+  letter-spacing: 0.02em;
+}
+.se-body {
+  font-family: var(--font-body);
+  color: var(--fg-on-dark);
+  font-weight: 500;
+  line-height: var(--t-body-line);
+}
+.se-tag {
+  font-family: var(--font-display);
+  color: var(--gold);
+  text-shadow: var(--shadow-carved);
+}

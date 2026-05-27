@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "ES2019",
+    "lib": ["dom", "esnext"],
+    "jsx": "react-jsx",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "noUncheckedIndexedAccess": false,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": [
+    "./gatsby-config.ts",
+    "./gatsby-node.ts",
+    "./gatsby-browser.ts",
+    "./gatsby-ssr.ts",
+    "./src/**/*"
+  ]
+}
