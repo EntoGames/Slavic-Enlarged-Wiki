@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "gatsby";
 import kolovratSvg from "../../assets/img/kolovrat.svg";
 import wordmarkSvg from "../../assets/img/wordmark.svg";
@@ -46,15 +46,44 @@ interface PanelData {
 export function MegaMenu({ activeUrlPath }: MegaMenuProps) {
   const index = useWikiIndex();
   const [openId, setOpenId] = useState<string | null>(null);
+  const [drawerOpen, setDrawerOpen] = useState(false);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const closeDrawer = useCallback(() => setDrawerOpen(false), []);
 
   // Zamknij na Escape
   useEffect(() => {
     const h = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setOpenId(null);
+      if (e.key === "Escape") {
+        setOpenId(null);
+        setDrawerOpen(false);
+      }
     };
     window.addEventListener("keydown", h);
     return () => window.removeEventListener("keydown", h);
+  }, []);
+
+  // Blokada scrolla body kiedy drawer otwarty
+  useEffect(() => {
+    if (typeof document === "undefined") return;
+    if (drawerOpen) {
+      const prev = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+      return () => {
+        document.body.style.overflow = prev;
+      };
+    }
+  }, [drawerOpen]);
+
+  // Zamknij drawer przy zmianie szerokości na desktop
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const mql = window.matchMedia("(min-width: 1024px)");
+    const onChange = (e: MediaQueryListEvent) => {
+      if (e.matches) setDrawerOpen(false);
+    };
+    mql.addEventListener("change", onChange);
+    return () => mql.removeEventListener("change", onChange);
   }, []);
 
   // Wylicz aktywną sekcję
@@ -126,6 +155,19 @@ export function MegaMenu({ activeUrlPath }: MegaMenuProps) {
         <span className="mm-kbd">⌘ K</span>
       </label>
 
+      <button
+        type="button"
+        className="mm-burger"
+        aria-label="Otwórz menu nawigacji"
+        aria-expanded={drawerOpen}
+        aria-controls="mm-drawer"
+        onClick={() => setDrawerOpen((v) => !v)}
+      >
+        <span className={"mm-burger__bars" + (drawerOpen ? " is-open" : "")}>
+          <span /><span /><span />
+        </span>
+      </button>
+
       {panel && (
         <CodexPanel
           panel={panel}
@@ -133,6 +175,13 @@ export function MegaMenu({ activeUrlPath }: MegaMenuProps) {
           onMouseLeave={scheduleClose}
         />
       )}
+
+      <MobileDrawer
+        open={drawerOpen}
+        sections={index.bySection}
+        activeSection={activeSection}
+        onClose={closeDrawer}
+      />
     </header>
   );
 }
@@ -301,5 +350,102 @@ function CodexPanel({
         </div>
       </div>
     </div>
+  );
+}
+
+/* ============================================================
+   MobileDrawer — pełnoekranowa szuflada dla < 1024px.
+   ─────────────────────────────────────────────────────────────
+   Brak mega-panelu — sekcje są płaskimi linkami z licznikiem i
+   blurbem. Stosunek "1 sekcja = 1 wiersz" + akordeon nie ma
+   sensu w tym formacie (sekcje już mają landing-page z całą listą).
+   ============================================================ */
+
+function MobileDrawer({
+  open, sections, activeSection, onClose,
+}: {
+  open: boolean;
+  sections: { id: string; label: string; entries: WikiEntry[] }[];
+  activeSection: string | null;
+  onClose: () => void;
+}) {
+  return (
+    <>
+      <div
+        className={"mm-scrim" + (open ? " is-open" : "")}
+        onClick={onClose}
+        aria-hidden="true"
+      />
+      <aside
+        id="mm-drawer"
+        className={"mm-drawer" + (open ? " is-open" : "")}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Menu nawigacji"
+        aria-hidden={!open}
+      >
+        <header className="mm-drawer__head">
+          <Link to="/" className="mm-drawer__brand" onClick={onClose}>
+            <img className="kolovrat" src={kolovratSvg} alt="" />
+            <img className="wordmark" src={wordmarkSvg} alt="Slavic Enlarged" />
+          </Link>
+          <button
+            type="button"
+            className="mm-drawer__close"
+            onClick={onClose}
+            aria-label="Zamknij menu"
+          >
+            <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+              <path d="M2,2 L14,14 M14,2 L2,14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+            </svg>
+          </button>
+        </header>
+
+        <label className="mm-drawer__search" aria-label="Szukaj w wiki">
+          <svg className="mm-search-ico" viewBox="0 0 16 16" aria-hidden="true">
+            <circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" strokeWidth="1.5" />
+            <path d="M11,11 L15,15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+          </svg>
+          <input type="text" placeholder="szukaj w wiki…" />
+        </label>
+
+        <nav className="mm-drawer__nav" aria-label="Sekcje wiki">
+          <ol className="mm-drawer__list">
+            {sections.map((s) => {
+              const count = s.entries.filter((e) => !e.isCategoryIndex).length;
+              const order = SECTIONS[s.id]?.order ?? 0;
+              const blurb = SECTIONS[s.id]?.blurb ?? "";
+              return (
+                <li key={s.id}>
+                  <Link
+                    to={`/wiki/${s.id}`}
+                    className={
+                      "mm-drawer__item" +
+                      (activeSection === s.id ? " is-active" : "")
+                    }
+                    onClick={onClose}
+                  >
+                    <span className="mm-drawer__num">
+                      {String(order).padStart(2, "0")}
+                    </span>
+                    <span className="mm-drawer__meta">
+                      <span className="mm-drawer__label">{s.label}</span>
+                      {blurb && <span className="mm-drawer__blurb">{blurb}</span>}
+                    </span>
+                    <span className="mm-drawer__count">
+                      {count} {pluralizeArtykul(count)} ›
+                    </span>
+                  </Link>
+                </li>
+              );
+            })}
+          </ol>
+        </nav>
+
+        <footer className="mm-drawer__foot">
+          „Slavic Enlarged" — fan-mod do Crusader Kings III
+        </footer>
+      </aside>
+    </>
   );
 }
