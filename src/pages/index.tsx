@@ -7,7 +7,6 @@ import { SECTIONS, SECTION_LABELS } from "../data/wiki-sections";
 import { useWikiIndex } from "../data/use-wiki-index";
 
 import kolovratSvg from "../assets/img/kolovrat.svg";
-import wordmarkSvg from "../assets/img/wordmark.svg";
 
 import "../templates/wiki-article.module.css";
 import "../templates/mega-menu.module.css";
@@ -59,7 +58,7 @@ const IndexPage: React.FC<PageProps<QueryData>> = ({ data }) => {
           <div className="wf-home-hero__inner">
             <img className="wf-home-hero__mark" src={kolovratSvg} alt="" />
             <div className="wf-home-hero__brand">
-              <img src={wordmarkSvg} alt="Slavic Enlarged" />
+              <h2 className="wf-home-hero__brand-name">Slavic Enlarged</h2>
               <span className="wf-tag">Work in Progress</span>
             </div>
             <h1 className="wf-home-hero__title">{meta.title}</h1>

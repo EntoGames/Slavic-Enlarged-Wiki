@@ -56,7 +56,14 @@ export function Section({
       <header
         className="wf-section__head"
         onClick={onToggle}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            onToggle();
+          }
+        }}
         role="button"
+        tabIndex={0}
         aria-expanded={!collapsed}
       >
         <span className="wf-section__num">{String(num).padStart(2, "0")}</span>

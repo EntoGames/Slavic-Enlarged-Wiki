@@ -607,3 +607,63 @@
   :global(.mm-drawer__label) { font-size: 18px; }
   :global(.mm-drawer__blurb) { font-size: 11.5px; }
 }
+
+/* ============================================================
+   FOCUS-VISIBLE
+   ============================================================ */
+:global(.mm-top__nav-item:focus-visible) {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--gold), 0 0 0 4px rgba(197,160,72,0.3);
+  border-radius: 4px;
+}
+:global(.mm-top__brand:focus-visible) {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--gold), 0 0 0 4px rgba(197,160,72,0.3);
+  border-radius: 4px;
+}
+:global(.mm-col__list a:focus-visible) {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--gold), 0 0 0 4px rgba(197,160,72,0.3);
+  border-radius: 2px;
+}
+:global(.mm-panel__seeall:focus-visible) {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--gold), 0 0 0 4px rgba(197,160,72,0.3);
+  border-radius: 2px;
+}
+:global(.mm-feat__cta:focus-visible) {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--gold), 0 0 0 4px rgba(197,160,72,0.3);
+  border-radius: 2px;
+}
+:global(.mm-burger:focus-visible) {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--gold), 0 0 0 4px rgba(197,160,72,0.3);
+}
+:global(.mm-drawer__close:focus-visible) {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--gold), 0 0 0 4px rgba(197,160,72,0.3);
+}
+:global(.mm-drawer__item:focus-visible) {
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--gold);
+}
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  :global(.mm-panel--codex) { animation: none; }
+  :global(.mm-top__nav-item) { transition: none; }
+  :global(.mm-top__nav-item::after) { transition: none; }
+  :global(.mm-caret) { transition: none; }
+  :global(.mm-col__list a) { transition: none; }
+  :global(.mm-col__list a::before) { transition: none; }
+  :global(.mm-panel__seeall) { transition: none; }
+  :global(.mm-burger) { transition: none; }
+  :global(.mm-burger__bars span) { transition: none; }
+  :global(.mm-scrim) { transition: none; }
+  :global(.mm-drawer) { transition: none; }
+  :global(.mm-drawer__close) { transition: none; }
+  :global(.mm-drawer__item) { transition: none; }
+}

@@ -466,13 +466,13 @@ function RelatedGrid({
       </div>
       <div className="wf-related__grid">
         {items.map((p) => (
-          <a className="wf-rcard" key={p.urlPath} href={p.urlPath}>
+          <Link className="wf-rcard" key={p.urlPath} to={p.urlPath}>
             <div className="wf-rcard__kicker">{p.kicker}</div>
             <h3 className="wf-rcard__title">{p.title}</h3>
             {p.subtitle && <div className="wf-rcard__sub">{p.subtitle}</div>}
             {p.blurb && <p className="wf-rcard__blurb">{p.blurb}</p>}
             <div className="wf-rcard__go">Czytaj →</div>
-          </a>
+          </Link>
         ))}
       </div>
     </section>
