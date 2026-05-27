@@ -645,20 +645,6 @@
   font-weight: 600;
   align-self: end;
 }
-  line-height: 1.55;
-  color: rgba(255,255,255,0.62);
-  margin: 0;
-  flex: 1;
-}
-:global(.wf-rcard__go) {
-  margin-top: 14px;
-  font-family: var(--font-body);
-  font-size: 10px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--gold-light);
-  font-weight: 600;
-}
 
 /* ============================================================
    FOOTER DISCLAIMER
