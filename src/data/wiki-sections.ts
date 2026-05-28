@@ -78,20 +78,20 @@ export const SECTION_LABELS: Record<string, string> = Object.fromEntries(
  */
 export const SUBFOLDER_LABELS: Record<string, string> = {
   /* Królestwa wschodnie */
-  rus: "Ruś (k_ruthenia)",
-  "biala-rus": "Biała Ruś (k_white_rus)",
-  moldawia: "Mołdawia (k_moldavia)",
-  polock: "Połock (d_polotsk)",
+  rus: "Ruś",
+  "biala-rus": "Biała Ruś",
+  moldawia: "Mołdawia",
+  polock: "Połock",
   /* Królestwa zachodnie */
-  polska: "Polska (k_poland)",
-  pomorze: "Pomorze (k_pomerania)",
-  serboluzyce: "Serbołużyce (k_sorbia)",
-  wegry: "Węgry — enklawy (k_hungary)",
-  karyntia: "Karyntia (k_carinthia)",
+  polska: "Polska",
+  pomorze: "Pomorze",
+  serboluzyce: "Serbołużyce",
+  wegry: "Węgry — enklawy",
+  karyntia: "Karyntia",
   /* Królestwa południowe */
-  chorwacja: "Chorwacja (k_croatia)",
-  serbia: "Serbia (k_rascia)",
-  bulgaria: "Bułgaria (k_bulgaria)",
+  chorwacja: "Chorwacja",
+  serbia: "Serbia",
+  bulgaria: "Bułgaria",
   /* Walka Słowiańszczyzny */
   fazy: "Fazy Walki",
 };
