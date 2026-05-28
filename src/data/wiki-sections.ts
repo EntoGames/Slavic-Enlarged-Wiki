@@ -89,13 +89,25 @@ export const SECTION_LABELS: Record<string, string> = Object.fromEntries(
  * Klucz to ścieżka podfolderu (segments[1:n-1].join("/")).
  */
 export const SUBFOLDER_LABELS: Record<string, string> = {
-  /* Kultury */
+  /* Kultury — regiony */
   poludniowoslowianskie: "Południowosłowiańskie",
   wschodnioslowianskie: "Wschodniosłowiańskie",
   zachodnioslowianskie: "Zachodniosłowiańskie",
-  "zachodnioslowianskie/lechici": "Lechici",
-  "zachodnioslowianskie/polabianie": "Połabianie",
-  "zachodnioslowianskie/inni": "Inni zachodni",
+  /* Kultury — królestwa wschodnie */
+  "wschodnioslowianskie/rus": "Ruś (k_ruthenia)",
+  "wschodnioslowianskie/biala-rus": "Biała Ruś (k_white_rus)",
+  "wschodnioslowianskie/moldawia": "Mołdawia (k_moldavia)",
+  "wschodnioslowianskie/polock": "Połock (d_polotsk)",
+  /* Kultury — królestwa zachodnie */
+  "zachodnioslowianskie/polska": "Polska (k_poland)",
+  "zachodnioslowianskie/pomorze": "Pomorze (k_pomerania)",
+  "zachodnioslowianskie/serboluzyce": "Serbołużyce (k_sorbia)",
+  "zachodnioslowianskie/wegry": "Węgry — enklawy (k_hungary)",
+  "zachodnioslowianskie/karyntia": "Karyntia (k_carinthia)",
+  /* Kultury — królestwa południowe */
+  "poludniowoslowianskie/chorwacja": "Chorwacja (k_croatia)",
+  "poludniowoslowianskie/serbia": "Serbia (k_rascia)",
+  "poludniowoslowianskie/bulgaria": "Bułgaria (k_bulgaria)",
   /* Walka Słowiańszczyzny */
   fazy: "Fazy Walki",
 };
