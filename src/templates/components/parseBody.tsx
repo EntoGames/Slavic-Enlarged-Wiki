@@ -30,6 +30,11 @@ function makeReplacer(ctx: ParseContext) {
   return function replaceNode(node: DOMNode): React.ReactNode | undefined {
     if (!(node instanceof Element)) return undefined;
 
+    if (node.name === "table") {
+      const children = domToReact(node.children as DOMNode[], { replace: replaceNode });
+      return <div className="wf-table-wrap"><table className="wf-table">{children}</table></div>;
+    }
+
     if (node.name === "a" && node.attribs?.href) {
       const href = node.attribs.href;
       const children = domToReact(node.children as DOMNode[], { replace: replaceNode });
