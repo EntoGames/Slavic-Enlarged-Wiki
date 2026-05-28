@@ -23,56 +23,68 @@ export const SECTIONS: Record<string, SectionMeta> = {
     blurb:
       "Czym są oba mody, jak je zainstalować i od czego zacząć grę.",
   },
-  kultury: {
+  "krolestwa-wschodnie": {
     order: 2,
-    label: "Kultury",
+    label: "Królestwa Wschodnie",
     blurb:
-      "Trzydzieści cztery historyczne plemiona słowiańskie — od Krywiczów nad Dźwiną po Duklian nad Adriatykiem.",
+      "Ruś, Biała Ruś, Mołdawia i Połock — kultury od Kijowa po Dźwinę.",
+  },
+  "krolestwa-zachodnie": {
+    order: 3,
+    label: "Królestwa Zachodnie",
+    blurb:
+      "Polska, Pomorze, Serbołużyce, Węgry i Karyntia — od Gniezna po Alpy.",
+  },
+  "krolestwa-poludniowe": {
+    order: 4,
+    label: "Królestwa Południowe",
+    blurb:
+      "Chorwacja, Serbia i Bułgaria — Bałkany od Adriatyku po Trację.",
   },
   wiara: {
-    order: 3,
+    order: 5,
     label: "Wiara",
     blurb:
       "Jeden panteon, trzy odłamy, piętnaście miejsc świętych i szansa na zjednoczenie.",
   },
   "walka-slowianczyzny": {
-    order: 4,
+    order: 6,
     label: "Walka Słowiańszczyzny",
     blurb:
       "Pięć faz, trzy zakończenia, jedno pytanie: czy Perun powstanie z Dniepru.",
   },
   decyzje: {
-    order: 5,
+    order: 7,
     label: "Decyzje",
     blurb:
       "Wszystkie narzędzia dostępne graczowi — od reformy wiary po chrzest polityczny.",
   },
   wydarzenia: {
-    order: 6,
+    order: 8,
     label: "Wydarzenia",
     blurb:
       "Siedemnaście narracyjnych eventów — od Nocy Kupały po Ostatniego Wołchwa.",
   },
   scenariusze: {
-    order: 7,
+    order: 9,
     label: "Scenariusze",
     blurb:
       "Siedmiu grywalnych władców w startowej dacie 867 r. Każdy z innym horyzontem.",
   },
   poradniki: {
-    order: 8,
+    order: 10,
     label: "Poradniki",
     blurb:
       "Praktyczne przewodniki po najambitniejszych celach moda.",
   },
   historia: {
-    order: 9,
+    order: 11,
     label: "Historia",
     blurb:
       "Tło źródłowe, na którym stoi cały mod.",
   },
   techniczne: {
-    order: 10,
+    order: 12,
     label: "Techniczne",
     blurb:
       "Kompatybilność z innymi modami, znane problemy, changelog.",
@@ -89,25 +101,21 @@ export const SECTION_LABELS: Record<string, string> = Object.fromEntries(
  * Klucz to ścieżka podfolderu (segments[1:n-1].join("/")).
  */
 export const SUBFOLDER_LABELS: Record<string, string> = {
-  /* Kultury — regiony */
-  poludniowoslowianskie: "Południowosłowiańskie",
-  wschodnioslowianskie: "Wschodniosłowiańskie",
-  zachodnioslowianskie: "Zachodniosłowiańskie",
-  /* Kultury — królestwa wschodnie */
-  "wschodnioslowianskie/rus": "Ruś (k_ruthenia)",
-  "wschodnioslowianskie/biala-rus": "Biała Ruś (k_white_rus)",
-  "wschodnioslowianskie/moldawia": "Mołdawia (k_moldavia)",
-  "wschodnioslowianskie/polock": "Połock (d_polotsk)",
-  /* Kultury — królestwa zachodnie */
-  "zachodnioslowianskie/polska": "Polska (k_poland)",
-  "zachodnioslowianskie/pomorze": "Pomorze (k_pomerania)",
-  "zachodnioslowianskie/serboluzyce": "Serbołużyce (k_sorbia)",
-  "zachodnioslowianskie/wegry": "Węgry — enklawy (k_hungary)",
-  "zachodnioslowianskie/karyntia": "Karyntia (k_carinthia)",
-  /* Kultury — królestwa południowe */
-  "poludniowoslowianskie/chorwacja": "Chorwacja (k_croatia)",
-  "poludniowoslowianskie/serbia": "Serbia (k_rascia)",
-  "poludniowoslowianskie/bulgaria": "Bułgaria (k_bulgaria)",
+  /* Królestwa wschodnie */
+  rus: "Ruś (k_ruthenia)",
+  "biala-rus": "Biała Ruś (k_white_rus)",
+  moldawia: "Mołdawia (k_moldavia)",
+  polock: "Połock (d_polotsk)",
+  /* Królestwa zachodnie */
+  polska: "Polska (k_poland)",
+  pomorze: "Pomorze (k_pomerania)",
+  serboluzyce: "Serbołużyce (k_sorbia)",
+  wegry: "Węgry — enklawy (k_hungary)",
+  karyntia: "Karyntia (k_carinthia)",
+  /* Królestwa południowe */
+  chorwacja: "Chorwacja (k_croatia)",
+  serbia: "Serbia (k_rascia)",
+  bulgaria: "Bułgaria (k_bulgaria)",
   /* Walka Słowiańszczyzny */
   fazy: "Fazy Walki",
 };
