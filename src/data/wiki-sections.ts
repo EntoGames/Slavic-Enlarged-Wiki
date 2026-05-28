@@ -53,38 +53,14 @@ export const SECTIONS: Record<string, SectionMeta> = {
     blurb:
       "Pięć faz, trzy zakończenia, jedno pytanie: czy Perun powstanie z Dniepru.",
   },
-  decyzje: {
-    order: 7,
-    label: "Decyzje",
-    blurb:
-      "Wszystkie narzędzia dostępne graczowi — od reformy wiary po chrzest polityczny.",
-  },
-  wydarzenia: {
-    order: 8,
-    label: "Wydarzenia",
-    blurb:
-      "Siedemnaście narracyjnych eventów — od Nocy Kupały po Ostatniego Wołchwa.",
-  },
-  scenariusze: {
-    order: 9,
-    label: "Scenariusze",
-    blurb:
-      "Siedmiu grywalnych władców w startowej dacie 867 r. Każdy z innym horyzontem.",
-  },
-  poradniki: {
-    order: 10,
-    label: "Poradniki",
-    blurb:
-      "Praktyczne przewodniki po najambitniejszych celach moda.",
-  },
   historia: {
-    order: 11,
+    order: 7,
     label: "Historia",
     blurb:
       "Tło źródłowe, na którym stoi cały mod.",
   },
   techniczne: {
-    order: 12,
+    order: 8,
     label: "Techniczne",
     blurb:
       "Kompatybilność z innymi modami, znane problemy, changelog.",
