@@ -35,7 +35,7 @@ interface PanelData {
   label: string;
   blurb: string;
   count: number;
-  columns: { key: string; title: string; sub?: string; items: WikiEntry[] }[];
+  columns: { key: string; title: string; sub?: number; items: WikiEntry[] }[];
   featured: WikiEntry | null;
 }
 
@@ -234,7 +234,7 @@ function buildPanelData(section: {
     columns.push({
       key,
       title: label,
-      sub: `${items.length} ${pluralizeArtykul(items.length)}`,
+      sub: items.length,
       items,
     });
   }
@@ -295,12 +295,9 @@ function CodexPanel({
     >
       <div className="mm-panel__inner">
         <div className="mm-panel__intro">
-          <div className="mm-panel__count">
+          <div className="mm-panel__count" title={`${panel.count} ${pluralizeArtykul(panel.count)}`}>
             <span className="mm-panel__count-num">
               {String(panel.count).padStart(2, "0")}
-            </span>
-            <span className="mm-panel__count-lbl">
-              {pluralizeArtykul(panel.count)}
             </span>
           </div>
           <div className="mm-panel__intro-text">
@@ -320,7 +317,9 @@ function CodexPanel({
             <div className="mm-col" key={col.key}>
               <header className="mm-col__head">
                 <h4>{col.title}</h4>
-                {col.sub && <span className="mm-col__sub">{col.sub}</span>}
+                {col.sub != null && (
+                  <span className="mm-col__sub" title={`${col.sub} ${pluralizeArtykul(col.sub)}`}>{col.sub}</span>
+                )}
               </header>
               <ul className="mm-col__list">
                 {col.items.slice(0, 12).map((it) => (
@@ -444,8 +443,8 @@ function MobileDrawer({
                       <span className="mm-drawer__label">{s.label}</span>
                       {blurb && <span className="mm-drawer__blurb">{blurb}</span>}
                     </span>
-                    <span className="mm-drawer__count">
-                      {count} {pluralizeArtykul(count)} ›
+                    <span className="mm-drawer__count" title={`${count} ${pluralizeArtykul(count)}`}>
+                      {count} ›
                     </span>
                   </Link>
                 </li>
