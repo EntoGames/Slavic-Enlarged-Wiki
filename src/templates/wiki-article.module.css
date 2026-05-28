@@ -435,6 +435,30 @@
   text-transform: uppercase; letter-spacing: 0.08em;
 }
 
+/* Listy */
+:global(.wf-article ul),
+:global(.wf-article ol) {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.82);
+  margin: 12px 0 20px;
+  padding-left: 1.6em;
+}
+:global(.wf-article ul) { list-style: disc; }
+:global(.wf-article ol) { list-style: decimal; }
+:global(.wf-article li) {
+  margin-bottom: 6px;
+  padding-left: 0.3em;
+}
+:global(.wf-article li::marker) {
+  color: var(--gold-light);
+}
+:global(.wf-article li ul),
+:global(.wf-article li ol) {
+  margin: 4px 0 4px;
+}
+
 /* Strong/em */
 :global(.wf-article strong) { font-weight: 700; color: #fff; }
 :global(.wf-article em) { font-style: italic; color: rgba(255,255,255,0.7); }
