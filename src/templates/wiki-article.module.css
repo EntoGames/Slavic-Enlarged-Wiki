@@ -345,13 +345,15 @@
   margin-bottom: 0;
 }
 
-/* Subsekcja */
+/* Subsekcja — karta postaci / entry */
 :global(.wf-article h3) {
   font-family: var(--font-display);
   font-size: 28px; line-height: 1.1;
   color: var(--gold-light);
   margin: 30px 0 10px;
   text-shadow: 2px 3px 0 #000;
+  padding-left: 16px;
+  border-left: 3px solid var(--gold);
 }
 
 /* Pull-quote */
@@ -457,6 +459,14 @@
 :global(.wf-article li ul),
 :global(.wf-article li ol) {
   margin: 4px 0 4px;
+}
+
+/* Separator (hr) — subtelna złota linia między kartami postaci itp. */
+:global(.wf-article hr) {
+  border: none;
+  height: 1px;
+  margin: 32px 0;
+  background: linear-gradient(90deg, transparent, rgba(179,153,77,0.35) 20%, rgba(179,153,77,0.35) 80%, transparent);
 }
 
 /* Strong/em */
@@ -746,6 +756,7 @@
   max-width: 1180px;
   margin: 64px auto 0;
   padding: 26px 40px 0;
+  border-top: 1px solid rgba(179,153,77,0.2);
   display: flex; align-items: center; gap: 24px;
 }
 :global(.wf-footer__brand) {

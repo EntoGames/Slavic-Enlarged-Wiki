@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Zakończenia Walki Słowiańszczyzny
 
 Walka Słowiańszczyzny w Slavic Enlarged: Slavic Struggle of Perun może zakończyć się na jeden z trzech sposobów. Każde zakończenie wymaga spełnienia określonych warunków i daje potężne modyfikatory na 50 lat.

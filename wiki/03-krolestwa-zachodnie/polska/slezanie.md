@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Ślężanie
 
 Ślężanie to wspólnotowe plemię lechickie zamieszkujące Śląsk -- rozległe dorzecze górnej i środkowej Odry. Z trzynastoma prowincjami i tradycjami rolniczymi oraz leśnymi stanowią największą terytorialnie kulturę lechicką w modzie. To nowa kultura dodana przez Slavic Enlarged, nieobecna w waniliowej grze.
@@ -12,7 +19,7 @@
 | **Klucz w grze** | `silesian` |
 | **Grupa dziedzictwa** | zachodniosłowiańska (`heritage_west_slavic`) |
 | **Etos** | Wspólnotowy (`ethos_communal`) |
-| **Język** | lechicki (`language_lechitic`) |
+| **Język** | zachodniosłowiański (`language_lechitic`) |
 | **Lista imion** | `name_list_se_slavic` |
 | **Tradycje startowe** | Rolnicy, Lud puszczy |
 | **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
@@ -47,10 +54,10 @@ Z pliku `SE/history/provinces/se_silesian.txt`:
 **Księstwo Śląska Dolnego (d_lower_silesia):**
 - prowincja 3045, 3061, 3058, 3067, 3068, 3145, 3064
 
-Łącznie **13 prowincji** -- zdecydowanie największy blok terytorialny wśród wszystkich Lechitów.
+Łącznie **13 prowincji** -- zdecydowanie największy blok terytorialny wśród wszystkich kultur polskich.
 
 ### Sąsiedztwo kulturowe
-- **Na północ:** Polanie lechiccy i ludy połabskie
+- **Na północ:** Polanie i ludy połabskie
 - **Na wschód:** Wiślanie (pokrewni Lechici, stoicki etos)
 - **Na południe:** Czesi i Morawianie (za Sudetami, inne dziedzictwo językowe)
 - **Na zachód:** Serbowie łużyccy (pokrewni zachodni Słowianie)
@@ -80,11 +87,11 @@ Z pliku `SE/history/provinces/se_silesian.txt`:
 - Rozległy, trudny do obrony region bez tradycji zamkowej
 - Wspólnotowy etos utrudnia centralizację tak dużego terytorium
 - Zagrożenie ze strony ekspansji czeskiej z południa
-- Konkurencja z Polanami i Wiślanami o prymat wśród Lechitów
+- Konkurencja z Polanami i Wiślanami o prymat wśród tych kultur
 
 ---
 
 ## Powiązane artykuły
 - Grupa dziedzictwa: [Kultury zachodniosłowiańskie](../README.md)
 - Wiara: [zachodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)
+- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)

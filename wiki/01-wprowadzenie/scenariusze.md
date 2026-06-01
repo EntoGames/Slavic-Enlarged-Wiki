@@ -1,8 +1,12 @@
-# Scenariusze startowe — „Slavic Struggles" (867 r.)
-
-Slavic Enlarged dodaje nowy ekran startowy z siedmioma grywalnymi postaciami. Każda oferuje zupełnie inne doświadczenie — od budowy proto-państwa polskiego po obronę ostatnich pogańskich bastionów.
-
 ---
+title: "Scenariusze startowe"
+subtitle: "Slavic Struggles — 867 r."
+lede: "Slavic Enlarged dodaje nowy ekran startowy z siedmioma grywalnymi postaciami. Każda oferuje zupełnie inne doświadczenie — od budowy proto-państwa polskiego po obronę ostatnich pogańskich bastionów."
+tags: ["scenariusze", "postacie", "867"]
+interactive: "scenario-map"
+---
+
+# Scenariusze startowe — „Slavic Struggles" (867 r.)
 
 ## Postacie do wyboru
 

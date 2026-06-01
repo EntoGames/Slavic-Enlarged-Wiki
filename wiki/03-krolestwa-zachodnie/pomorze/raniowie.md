@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Raniowie
 
 Raniowie to wojowniczy lud zamieszkujący wyspę Rugię — siedzibę Arkony, najświętszego miejsca kultu zachodnich Słowian. W modzie Slavic Enlarged łączą tradycję morską z religijnym znaczeniem swoich ziem, co czyni ich strażnikami pogańskiej tożsamości na Bałtyku. Kontrola nad Arkoną daje im wyjątkową pozycję wśród Połabian.
@@ -12,7 +19,7 @@ Raniowie to wojowniczy lud zamieszkujący wyspę Rugię — siedzibę Arkony, na
 | **Klucz w grze** | `rani` |
 | **Grupa dziedzictwa** | zachodniosłowiańska (`heritage_west_slavic`) |
 | **Etos** | Wojowniczy (`ethos_bellicose`) |
-| **Język** | lechicki (`language_lechitic`) |
+| **Język** | zachodniosłowiański (`language_lechitic`) |
 | **Lista imion** | `name_list_se_slavic` |
 | **Tradycje startowe** | Święte gaje, Morski merkantylizm |
 | **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
@@ -80,4 +87,4 @@ Raniowie byli strażnikami Arkony — twierdzy-świątyni poświęconej Święto
 
 - Grupa dziedzictwa: [Kultury zachodniosłowiańskie](../README.md)
 - Wiara: [zachodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)
+- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)

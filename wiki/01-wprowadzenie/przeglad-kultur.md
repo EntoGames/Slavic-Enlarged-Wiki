@@ -20,13 +20,13 @@ Plemiona zamieszkujące tereny dzisiejszej Ukrainy, Białorusi i zachodniej Rosj
 
 ## Kultury zachodniosłowiańskie (16)
 
-Najliczniejsza grupa w modzie, obejmująca Lechitów (przodków Polaków), Połabian (Słowian na zachód od Odry) oraz Czechów i Słowaków.
+Najliczniejsza grupa w modzie, obejmująca polskie plemiona zachodniosłowiańskie, Połabian (Słowian na zachód od Odry) oraz Czechów i Słowaków.
 
-### Lechici (7)
+### Polskie kultury zachodniosłowiańskie (7)
 
 | Kultura | Etos | Region |
 |---------|------|--------|
-| Polanie lechiccy | Dworski | Wielkopolska, Łęczyckie |
+| Polanie | Dworski | Wielkopolska, Łęczyckie |
 | Goplanie | Wspólnotowy | Okolice jeziora Gopło |
 | Mazowszanie | Wspólnotowy | Mazowsze |
 | Wiślanie | Stoicki | Małopolska |

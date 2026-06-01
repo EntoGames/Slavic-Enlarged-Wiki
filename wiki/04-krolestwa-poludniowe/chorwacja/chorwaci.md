@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Chorwaci
 
 Chorwaci to jedna z dwóch największych kultur południowosłowiańskich, dominująca na wybrzeżu Dalmacji i w Slawonii. W modzie Slavic Enlarged ich definicja została nadpisana z wanilii — kluczowa zmiana to zastąpienie tradycji husarskiej Podziwem dla waleczności, co lepiej oddaje wczesnośredniowieczny charakter chorwackiej kultury wojowniczej. Z trzema tradycjami startowymi to jedna z najbogatszych kultur w modzie.
@@ -88,4 +95,4 @@ Chorwaci stworzyli jedno z najsilniejszych wczesnośredniowiecznych państw sło
 
 - Grupa dziedzictwa: [Kultury południowosłowiańskie](../poludniowoslowianskie/README.md)
 - Wiara: [południowosłowiańska](../../03-wiara/przeglad-wiary.md)
-- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)
+- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)

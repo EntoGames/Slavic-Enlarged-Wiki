@@ -1,6 +1,13 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Pomorzanie
 
-Pomorzanie to stoickie plemię lechickie kontrolujące Pomorze Zachodnie -- wybrzeże Bałtyku od Odry po Łebę. Łączą tradycję morską z gotowością do walki, tworząc profil kultury handlowo-wojskowej. To nadpisana wersja waniliowej kultury pomorskiej -- mod zastępuje tradycję husarską bardziej historyczną "Stać i walczyć".
+Pomorzanie to stoickie plemię słowiańskie kontrolujące Pomorze Zachodnie -- wybrzeże Bałtyku od Odry po Łebę. Łączą tradycję morską z gotowością do walki, tworząc profil kultury handlowo-wojskowej. To nadpisana wersja waniliowej kultury pomorskiej -- mod zastępuje tradycję husarską bardziej historyczną "Stać i walczyć".
 
 ---
 
@@ -12,7 +19,7 @@ Pomorzanie to stoickie plemię lechickie kontrolujące Pomorze Zachodnie -- wybr
 | **Klucz w grze** | `pommeranian` |
 | **Grupa dziedzictwa** | zachodniosłowiańska (`heritage_west_slavic`) |
 | **Etos** | Stoicki (`ethos_stoic`) |
-| **Język** | lechicki (`language_lechitic`) |
+| **Język** | zachodniosłowiański (`language_lechitic`) |
 | **Lista imion** | `name_list_se_slavic` |
 | **Tradycje startowe** | Handlarze morscy, Stać i walczyć |
 | **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
@@ -25,7 +32,7 @@ Pomorzanie to stoickie plemię lechickie kontrolujące Pomorze Zachodnie -- wybr
 ## Etos i tradycje
 
 ### Etos: Stoicki
-Etos stoicki daje bonusy do wytrzymałości i zarządzania stresem, co dobrze oddaje charakter ludu żyjącego na pograniczu słowiańsko-skandynawskim. Wśród Lechitów tylko Wiślanie dzielą ten sam etos -- Pomorzanie i Wiślanie stanowią stoickie "skrzydła" lechickiego świata.
+Etos stoicki daje bonusy do wytrzymałości i zarządzania stresem, co dobrze oddaje charakter ludu żyjącego na pograniczu słowiańsko-skandynawskim. Wśród Lechitów tylko Wiślanie dzielą ten sam etos -- Pomorzanie i Wiślanie stanowią stoickie "skrzydła" polskiego świata.
 
 ### Tradycje
 - **Handlarze morscy** (`tradition_maritime_mercantilism`) -- bonus do dochodów z handlu morskiego i portów. Kontrola wybrzeża Bałtyku i portów takich jak Wolin czy Szczecin dawała Pomorzanom dostęp do skandynawskich szlaków handlowych.
@@ -79,4 +86,4 @@ Pomorzanie to jedno z lepiej udokumentowanych plemion słowiańskich dzięki kro
 ## Powiązane artykuły
 - Grupa dziedzictwa: [Kultury zachodniosłowiańskie](../README.md)
 - Wiara: [zachodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)
+- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)

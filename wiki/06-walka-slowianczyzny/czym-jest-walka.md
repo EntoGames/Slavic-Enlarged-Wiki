@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Walka Słowiańszczyzny — czym jest?
 
 **Slavic Enlarged: Slavic Struggle of Perun** wykorzystuje mechanikę Walki (Struggle) z DLC Fate of Iberia, by opowiedzieć historię wielopokoleniowego konfliktu między słowiańskim pogaństwem a napierającym chrześcijaństwem.

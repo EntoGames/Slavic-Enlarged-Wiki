@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Lucice
 
 Lucice (Wieleci) to wojowniczy związek plemienny zamieszkujący tereny na wschód od Obodrzyców, w okolicach dzisiejszego Wolgastu i Prenzlau. W modzie Slavic Enlarged łączą tradycję świętych gajów z niezłomnym oporem militarnym — to kultura, której centrum religijne w Retrze stanowiło jeden z najważniejszych ośrodków pogańskiego kultu w Europie.
@@ -12,7 +19,7 @@ Lucice (Wieleci) to wojowniczy związek plemienny zamieszkujący tereny na wsch�
 | **Klucz w grze** | `lutici` |
 | **Grupa dziedzictwa** | zachodniosłowiańska (`heritage_west_slavic`) |
 | **Etos** | Wojowniczy (`ethos_bellicose`) |
-| **Język** | lechicki (`language_lechitic`) |
+| **Język** | zachodniosłowiański (`language_lechitic`) |
 | **Lista imion** | `name_list_se_slavic` |
 | **Tradycje startowe** | Święte gaje, Stać i walczyć |
 | **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
@@ -81,4 +88,4 @@ Lucice stanowili jeden z najważniejszych związków plemiennych Słowian Połab
 
 - Grupa dziedzictwa: [Kultury zachodniosłowiańskie](../README.md)
 - Wiara: [zachodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)
+- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)

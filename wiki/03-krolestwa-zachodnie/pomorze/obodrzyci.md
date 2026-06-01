@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Obodrzyci
 
 Obodrzyci to najpotężniejszy związek plemienny Połabian, zamieszkujący tereny dzisiejszej Meklemburgii nad Bałtykiem. W modzie Slavic Enlarged wyróżniają się połączeniem wojowniczego etosu z tradycją morskiego handlu, co czyni ich naturalnym liderem oporu przeciw saskiej ekspansji. To kultura startowa Mściwoja — jednej z postaci bookmarkowych moda.
@@ -12,7 +19,7 @@ Obodrzyci to najpotężniejszy związek plemienny Połabian, zamieszkujący tere
 | **Klucz w grze** | `obodrites` |
 | **Grupa dziedzictwa** | zachodniosłowiańska (`heritage_west_slavic`) |
 | **Etos** | Wojowniczy (`ethos_bellicose`) |
-| **Język** | lechicki (`language_lechitic`) |
+| **Język** | zachodniosłowiański (`language_lechitic`) |
 | **Lista imion** | `name_list_se_slavic` |
 | **Tradycje startowe** | Morski merkantylizm, Stać i walczyć |
 | **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
@@ -82,4 +89,4 @@ Obodrzyci stworzyli najsilniejszą federację plemienną wśród Słowian Połab
 
 - Grupa dziedzictwa: [Kultury zachodniosłowiańskie](../README.md)
 - Wiara: [zachodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)
+- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)

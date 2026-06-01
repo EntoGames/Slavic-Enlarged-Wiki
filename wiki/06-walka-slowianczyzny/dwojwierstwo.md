@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # System dwójwierstwa (Dvoeverie)
 
 Jednym z najbardziej unikalnych elementów Slavic Enlarged: Slavic Struggle of Perun jest system dwójwierstwa — model, w którym konwersja religijna nie jest jednorazowym aktem, lecz powolnym, wielopokoleniowym procesem.

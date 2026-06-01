@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Goplanie
 
 Goplanie to niewielkie plemię osiadłe nad jeziorem Gopło w centralnej Wielkopolsce. Z etosem wspólnotowym i zaledwie dwiema prowincjami stanowią jedną z najsłabszych kultur lechickich -- ale ich tradycja rolnicza i gotowość do walki w obronie własnej ziemi czynią ich twardym orzechem do zgryzienia dla sąsiadów.
@@ -12,7 +19,7 @@ Goplanie to niewielkie plemię osiadłe nad jeziorem Gopło w centralnej Wielkop
 | **Klucz w grze** | `goplans` |
 | **Grupa dziedzictwa** | zachodniosłowiańska (`heritage_west_slavic`) |
 | **Etos** | Wspólnotowy (`ethos_communal`) |
-| **Język** | lechicki (`language_lechitic`) |
+| **Język** | zachodniosłowiański (`language_lechitic`) |
 | **Lista imion** | `name_list_se_slavic` |
 | **Tradycje startowe** | Rolnicy, Stać i walczyć |
 | **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
@@ -44,13 +51,13 @@ Z pliku `SE/history/provinces/se_goplans.txt`:
 - prowincja 4918
 - prowincja 4922
 
-Zaledwie **2 prowincje** -- najmniejszy blok terytorialny wśród Lechitów.
+Zaledwie **2 prowincje** -- najmniejszy blok terytorialny wśród tych kultur.
 
 ### Sąsiedztwo kulturowe
 - **Na północ:** Kaszubi (tradycja morska)
 - **Na wschód:** Mazowszanie (leśni wojownicy)
-- **Na południe:** Polanie lechiccy (dominujący sąsiad)
-- **Na zachód:** Polanie lechiccy (otoczenie z dwóch stron)
+- **Na południe:** Polanie (dominujący sąsiad)
+- **Na zachód:** Polanie (otoczenie z dwóch stron)
 
 ---
 
@@ -70,7 +77,7 @@ Goplanie to plemię znane głównie z Geografa Bawarskiego (IX w.), który lokal
 ### Mocne strony
 - Tradycja "Stać i walczyć" daje solidną obronę pomimo małego terytorium
 - Wspólnotowy etos wspiera rozwój nawet przy niskiej kontroli
-- Centralne położenie wśród Lechitów -- potencjał do dyplomacji
+- Centralne położenie wśród tych kultur -- potencjał do dyplomacji
 
 ### Wyzwania
 - Zaledwie 2 prowincje -- krytycznie mało na start
@@ -83,4 +90,4 @@ Goplanie to plemię znane głównie z Geografa Bawarskiego (IX w.), który lokal
 ## Powiązane artykuły
 - Grupa dziedzictwa: [Kultury zachodniosłowiańskie](../README.md)
 - Wiara: [zachodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)
+- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)

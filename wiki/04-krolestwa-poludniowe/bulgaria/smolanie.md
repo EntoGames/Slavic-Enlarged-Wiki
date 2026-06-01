@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Smolanie
 
 Smolanie to południowosłowiańska kultura zamieszkująca góry Rodopy na terenie dzisiejszej Bułgarii i północnej Grecji. W modzie Slavic Enlarged to stoiccy górale i myśliwi, żyjący w jednym z najbardziej izolowanych regionów Bałkanów — głęboko w górach, z dala od wielkich szlaków handlowych.
@@ -82,4 +89,4 @@ Smolanie (Smolianie) to plemię słowiańskie osiadłe w Rodopach, wymieniane w 
 
 - Grupa dziedzictwa: [Kultury południowosłowiańskie](../poludniowoslowianskie/README.md)
 - Wiara: [południowosłowiańska](../../03-wiara/przeglad-wiary.md)
-- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)
+- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)

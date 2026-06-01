@@ -1,17 +1,17 @@
-# Kultury południowosłowiańskie
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
 
-Dziewięć kultur Bałkanów — od chorwackiego wybrzeża Adriatyku po bułgarskie Rodopy. Region, w którym świat słowiański zderzył się z Bizancjum, chrześcijaństwem i dziedzictwem Rzymu wcześniej niż gdziekolwiek indziej.
+---
 
-W Slavic Enlarged wiele z tych kultur to stoickie społeczności — twarde, odporne, przyzwyczajone do życia na pograniczu wielkich mocarstw.
+# Królestwa południowe
 
-## Artykuły w tej sekcji
+Cztery sub-mody królewskie dla południowosłowiańskiej części mapy — Bałkany od Dalmacji po Macedonię. Każdy rozbudowuje jedno królestwo CK3 o specyficzne mechaniki, decyzje i eventy. Wszystkie wymagają Slavic Enlarged i Slavic Struggle of Perun.
 
-- [Travunianie](travunianie.md) — pasterze i żeglarze pogranicza Dalmacji
-- [Duklanie](duklanie.md) — lud gór czarnogórskich, twórcy Dukli
-- [Timoczanie](timoczanie.md) — myśliwi doliny Timoku
-- [Braniczewscy](braniczewscy.md) — drużynnicy i rolnicy Braniczewa
-- [Smolanie](smolanie.md) — górale Rodopów
-- [Słowianie panońscy](slowianie-panoscy.md) — biurokraci Panonii, dziedzice Blatnogradu
-- [Draguwickie](draguwickie.md) — rolnicy Macedonii i Tracji
-- [Chorwaci](chorwaci.md) — morska potęga Dalmacji (poprawiona z wanilii)
-- [Serbowie](serbowie.md) — wojownicy Raszki (poprawiona z wanilii)
+## Sub-mody w tej sekcji
+
+- [Bułgaria](bulgaria/README.md) — **Slavic Enlarged: Bulgaria Rhodope Highlands** — Smolanie i Draguwickie w górach Rodopów
+- [Chorwacja](chorwacja/README.md) — **Slavic Enlarged: Croatia Adriatic Coast** — Chorwaci na wybrzeżu Dalmacji
+- [Serbia](serbia/README.md) — **Slavic Enlarged: Serbia Balkan Clans** — Serbowie, Duklanie, Timoczanie, Braniczewscy, Travunianie
+- [Tessaloniki](tessaloniki/README.md) — **Slavic Enlarged: Thessalonika Southern Frontier** — słowiańskie pogranicze Bizancjum

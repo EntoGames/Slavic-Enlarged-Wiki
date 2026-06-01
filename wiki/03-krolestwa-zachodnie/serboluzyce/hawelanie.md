@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Hawelanie
 
 Hawelanie to dworska kultura zamieszkująca tereny nad rzeką Hawelą — region, na którym w przyszłości powstanie Berlin i Brandenburg. W modzie Slavic Enlarged wyróżniają się unikatowym wśród Połabian etosem dworskim i otwartością na obce wpływy, co odzwierciedla ich położenie na skrzyżowaniu szlaków handlowych łączących świat słowiański z germańskim.
@@ -12,7 +19,7 @@ Hawelanie to dworska kultura zamieszkująca tereny nad rzeką Hawelą — region
 | **Klucz w grze** | `hevelli` |
 | **Grupa dziedzictwa** | zachodniosłowiańska (`heritage_west_slavic`) |
 | **Etos** | Dworski (`ethos_courtly`) |
-| **Język** | lechicki (`language_lechitic`) |
+| **Język** | zachodniosłowiański (`language_lechitic`) |
 | **Lista imion** | `name_list_se_slavic` |
 | **Tradycje startowe** | Strażnicy miast, Ksenofilizm |
 | **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
@@ -83,4 +90,4 @@ Hawelanie zajmowali strategicznie kluczowe tereny na styku świata słowiańskie
 
 - Grupa dziedzictwa: [Kultury zachodniosłowiańskie](../README.md)
 - Wiara: [zachodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)
+- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)

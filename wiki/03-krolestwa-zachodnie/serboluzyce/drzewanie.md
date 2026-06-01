@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Drzewanie
 
 Drzewanie (Połabianie właściwi) to stoicka kultura leśna zamieszkująca tereny Wendlandu i Marchii Starej, na zachód od Łaby. W modzie Slavic Enlarged reprezentują najdalej na zachód wysunięte plemię słowiańskie — lud lasów i świętych gajów, który najdłużej spośród Połabian zachował swój język (połabski przetrwał aż do XVIII wieku).
@@ -12,7 +19,7 @@ Drzewanie (Połabianie właściwi) to stoicka kultura leśna zamieszkująca tere
 | **Klucz w grze** | `drevani` |
 | **Grupa dziedzictwa** | zachodniosłowiańska (`heritage_west_slavic`) |
 | **Etos** | Stoicki (`ethos_stoic`) |
-| **Język** | lechicki (`language_lechitic`) |
+| **Język** | zachodniosłowiański (`language_lechitic`) |
 | **Lista imion** | `name_list_se_slavic` |
 | **Tradycje startowe** | Lud lasu, Święte gaje |
 | **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
@@ -82,4 +89,4 @@ Drzewanie, zwani też Połabianami właściwymi (od rzeki Łaby, po słowiańsku
 
 - Grupa dziedzictwa: [Kultury zachodniosłowiańskie](../README.md)
 - Wiara: [zachodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)
+- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)

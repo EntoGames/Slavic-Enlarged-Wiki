@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Serbowie Łużyccy
 
 Serbowie Łużyccy to wspólnotowa kultura rolnicza zamieszkująca żyzne tereny Łużyc, Miśni i pogranicza Turyngii. W modzie Slavic Enlarged dysponują największą liczbą prowincji spośród wszystkich Połabian, co odzwierciedla ich rozległe osadnictwo wzdłuż Łaby i Sprewy. To kultura oparta na ziemi i grodach — cicha, ale trudna do podbicia.
@@ -12,7 +19,7 @@ Serbowie Łużyccy to wspólnotowa kultura rolnicza zamieszkująca żyzne tereny
 | **Klucz w grze** | `sorbian` |
 | **Grupa dziedzictwa** | zachodniosłowiańska (`heritage_west_slavic`) |
 | **Etos** | Wspólnotowy (`ethos_communal`) |
-| **Język** | lechicki (`language_lechitic`) |
+| **Język** | zachodniosłowiański (`language_lechitic`) |
 | **Lista imion** | `name_list_se_slavic` |
 | **Tradycje startowe** | Rolnicy, Strażnicy zamków |
 | **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
@@ -85,4 +92,4 @@ Serbowie Łużyccy byli najdalej na południe wysuniętym plemieniem połabskim,
 
 - Grupa dziedzictwa: [Kultury zachodniosłowiańskie](../README.md)
 - Wiara: [zachodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)
+- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)

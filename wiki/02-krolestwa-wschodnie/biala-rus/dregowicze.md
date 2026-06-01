@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Dregowicze
 
 Dregowicze to wschodniosłowiańskie plemię zamieszkujące bagniste tereny Polesia i górnego Niemna, w okolicach Turowa, Pińska i Mińska. W modzie Slavic Enlarged to kultura łącząca leśny charakter z tradycją rolniczą — osadnicy, którzy potrafili zagospodarować nawet najbardziej podmokłe tereny.
@@ -87,4 +94,4 @@ Dregowicze (od starosłowiańskiego "dregwa" — bagno) zamieszkiwali jedne z na
 
 - Grupa dziedzictwa: [Kultury wschodniosłowiańskie](../wschodnioslowianskie/README.md)
 - Wiara: [wschodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)
+- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)

@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Mazowszanie
 
 Mazowszanie to leśne plemię lechickie zamieszkujące rozległe puszcze i bagna Mazowsza. Ich wspólnotowy etos w połączeniu z tradycjami leśnymi i obronnymi czyni z nich twardych, trudnych do podbicia sąsiadów. W 867 roku kontrolują pięć prowincji wzdłuż środkowej Wisły -- solidna baza dla gracza, który woli defensywny styl rozgrywki.
@@ -12,7 +19,7 @@ Mazowszanie to leśne plemię lechickie zamieszkujące rozległe puszcze i bagna
 | **Klucz w grze** | `mazovians` |
 | **Grupa dziedzictwa** | zachodniosłowiańska (`heritage_west_slavic`) |
 | **Etos** | Wspólnotowy (`ethos_communal`) |
-| **Język** | lechicki (`language_lechitic`) |
+| **Język** | zachodniosłowiański (`language_lechitic`) |
 | **Lista imion** | `name_list_se_slavic` |
 | **Tradycje startowe** | Lud puszczy, Stać i walczyć |
 | **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
@@ -53,7 +60,7 @@ Z pliku `SE/history/provinces/se_mazovians.txt`:
 - **Na północ:** Prusowie (bałtowie -- obcy językowo i religijnie)
 - **Na wschód:** ludy wschodniosłowiańskie (inne dziedzictwo)
 - **Na południe:** Wiślanie (pokrewni Lechici, stoicki etos)
-- **Na zachód:** Polanie lechiccy i Goplanie (serce lechickie)
+- **Na zachód:** Polanie i Goplanie (serce lechickie)
 
 ---
 
@@ -87,4 +94,4 @@ Mazowszanie to jedno z najlepiej udokumentowanych plemion lechickich, wspomniane
 ## Powiązane artykuły
 - Grupa dziedzictwa: [Kultury zachodniosłowiańskie](../README.md)
 - Wiara: [zachodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)
+- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)

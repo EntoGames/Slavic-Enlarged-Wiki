@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Tywercy
 
 Tywercy to wschodniosłowiańskie plemię zamieszkujące dorzecze Dniestru, od Bukowiny po Morze Czarne. W modzie Slavic Enlarged to stoicka kultura rolniczo-drużynowa, położona na strategicznym skrzyżowaniu szlaków między Rusią, Bizancjum a stepem — lud zahartowany przez życie na niebezpiecznym pograniczu.
@@ -92,4 +99,4 @@ Tywercy byli jednym z najbardziej wysuniętych na południe i zachód plemion ws
 
 - Grupa dziedzictwa: [Kultury wschodniosłowiańskie](../wschodnioslowianskie/README.md)
 - Wiara: [wschodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)
+- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)

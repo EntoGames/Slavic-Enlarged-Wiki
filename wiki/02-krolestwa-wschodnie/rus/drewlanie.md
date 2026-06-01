@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Drewlanie
 
 Drewlanie to wschodniosłowiańskie plemię zamieszkujące gęste lasy Polesia, na zachód od Kijowa. W modzie Slavic Enlarged wyróżniają się jako surowi leśni łowcy o stoickim etosie — twarda kultura przystosowana do przetrwania w trudnych warunkach puszczy prypeckiej.
@@ -84,4 +91,4 @@ Drewlanie zapisali się w kronikach przede wszystkim dzięki konfliktowi z Kijow
 
 - Grupa dziedzictwa: [Kultury wschodniosłowiańskie](../wschodnioslowianskie/README.md)
 - Wiara: [wschodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)
+- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)

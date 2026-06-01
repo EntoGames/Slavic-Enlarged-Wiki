@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Katalizatory — co napędza Walkę Słowiańszczyzny
 
 Katalizatory to wydarzenia i działania w grze, które przesuwają Walkę Słowiańszczyzny między fazami. Slavic Enlarged: Slavic Struggle of Perun definiuje 11 unikalnych katalizatorów religijnych oraz korzysta z kilkunastu waniliowych.

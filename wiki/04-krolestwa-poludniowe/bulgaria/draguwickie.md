@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Draguwickie
 
 Draguwickie to południowosłowiańska kultura rolnicza zamieszkująca tereny Macedonii i Strymonu w bizantyńskiej Tracji. W modzie Slavic Enlarged to nowa kultura, nieobecna w waniliowej grze — wspólnotowi rolnicy i leśni mieszkańcy, żyjący w cieniu Tesaloniki i Cesarstwa Bizantyńskiego.
@@ -81,4 +88,4 @@ Draguwici (Druguvici) to plemię słowiańskie osiadłe w okolicach Tesaloniki, 
 
 - Grupa dziedzictwa: [Kultury południowosłowiańskie](../poludniowoslowianskie/README.md)
 - Wiara: [południowosłowiańska](../../03-wiara/przeglad-wiary.md)
-- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)
+- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)

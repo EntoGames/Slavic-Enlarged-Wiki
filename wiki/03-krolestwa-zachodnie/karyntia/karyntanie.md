@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Karyntanie
 
 Karyntanie to wspólnotowa kultura alpejskich Słowian, zamieszkujących Karyntię i tereny dzisiejszej Słowenii. W modzie Slavic Enlarged to jedyna kultura zachodniosłowiańska posługująca się językiem południowosłowiańskim — efekt geograficznej izolacji za barierą Alp i silnych wpływów bałkańskich. Jest to kultura nadpisana z waniliowej wersji gry, z poprawionymi tradycjami.
@@ -80,4 +87,4 @@ Karyntanie byli alpejskimi Słowianami, którzy osiedlili się w Alpach Wschodni
 
 - Grupa dziedzictwa: [Kultury zachodniosłowiańskie](../README.md)
 - Wiara: [zachodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)
+- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)

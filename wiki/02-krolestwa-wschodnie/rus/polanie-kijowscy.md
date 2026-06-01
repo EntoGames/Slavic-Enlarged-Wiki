@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Polanie kijowscy
 
 Polanie kijowscy to wschodniosłowiańskie plemię zamieszkujące okolice Kijowa i Perejasławia — serce przyszłej Rusi Kijowskiej. W modzie Slavic Enlarged to kultura dworska z tradycjami miejskimi i dyplomatycznymi, odzwierciedlająca rolę Kijowa jako najważniejszego ośrodka politycznego wschodnich Słowian.
@@ -81,4 +88,4 @@ Polanie kijowscy odegrali kluczową rolę w historii Europy Wschodniej jako plem
 
 - Grupa dziedzictwa: [Kultury wschodniosłowiańskie](../wschodnioslowianskie/README.md)
 - Wiara: [wschodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)
+- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)

@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Nitrianie
 
 Nitrianie to biurokratyczna kultura zachodniosłowiańska reprezentująca Księstwo Nitrzańskie — słowiański organizm państwowy, który stał się jednym z filarów Wielkich Moraw. W modzie Slavic Enlarged wyróżniają się unikatowym połączeniem miejskiej administracji z silnym przywiązaniem do lokalnych tradycji, posługując się językiem czeskosłowackim zamiast lechickiego.
@@ -80,4 +87,4 @@ Księstwo Nitrzańskie było jednym z najstarszych słowiańskich organizmów pa
 
 - Grupa dziedzictwa: [Kultury zachodniosłowiańskie](../README.md)
 - Wiara: [zachodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)
+- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)

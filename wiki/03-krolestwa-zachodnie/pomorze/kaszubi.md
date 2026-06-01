@@ -1,6 +1,13 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Kaszubi
 
-Kaszubi to morskie plemię lechickie zamieszkujące Pomorze Gdańskie. Jako jedyni wśród Lechitów łączą tradycję morską z rolniczą, co daje im unikalny profil handlowo-gospodarczy. Wyróżnia ich również odrębna lista imion (pomorska) i brak polskiego zestawu herbów -- są bliżsi kulturowo Pomorzanom niż lechickiemu rdzeniowi.
+Kaszubi to morskie plemię słowiańskie zamieszkujące Pomorze Gdańskie. Jako jedyni wśród Lechitów łączą tradycję morską z rolniczą, co daje im unikalny profil handlowo-gospodarczy. Wyróżnia ich również odrębna lista imion (pomorska) i brak polskiego zestawu herbów -- są bliżsi kulturowo Pomorzanom niż polańskiemu rdzeniowi.
 
 ---
 
@@ -12,7 +19,7 @@ Kaszubi to morskie plemię lechickie zamieszkujące Pomorze Gdańskie. Jako jedy
 | **Klucz w grze** | `kashubians` |
 | **Grupa dziedzictwa** | zachodniosłowiańska (`heritage_west_slavic`) |
 | **Etos** | Wspólnotowy (`ethos_communal`) |
-| **Język** | lechicki (`language_lechitic`) |
+| **Język** | zachodniosłowiański (`language_lechitic`) |
 | **Lista imion** | `name_list_pommeranian` (unikalna!) |
 | **Tradycje startowe** | Handlarze morscy, Rolnicy |
 | **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
@@ -28,7 +35,7 @@ Kaszubi to morskie plemię lechickie zamieszkujące Pomorze Gdańskie. Jako jedy
 Etos wspólnotowy daje bonusy do popularności i rozwoju przy niskiej kontroli. Kaszubi dzielą go z Goplanami, Mazowszanami i Ślężanami. Pasuje do ich zdecentralizowanej społeczności opartej na rybołówstwie i handlu przybrzeżnym.
 
 ### Tradycje
-- **Handlarze morscy** (`tradition_maritime_mercantilism`) -- bonus do dochodów z handlu morskiego i portów. Dostęp do Bałtyku dawał Kaszubom unikalne źródło bogactwa wśród lądowych Lechitów.
+- **Handlarze morscy** (`tradition_maritime_mercantilism`) -- bonus do dochodów z handlu morskiego i portów. Dostęp do Bałtyku dawał Kaszubom unikalne źródło bogactwa wśród lądowych kultur polskich.
 - **Rolnicy** (`tradition_agrarian`) -- bonus do rozwoju prowincji. Równowaga między morzem a polem -- zaplecze rolnicze wspierało porty i osady rybackie.
 
 ---
@@ -63,7 +70,7 @@ Z pliku `SE/history/provinces/se_kashubians.txt`:
 ---
 
 ## Kontekst historyczny
-Kaszubi to pomorskie plemię słowiańskie, którego nazwa przetrwała do dziś w regionie Kaszub. Byli jedynym ludem lechickim z silną tożsamością morską, powiązanym kulturowo zarówno z Lechitami z interioru, jak i z Pomorzanami na zachodzie. Ich odrębna lista imion w modzie (pomorska zamiast ogólnosłowiańskiej) odzwierciedla tę hybrydową pozycję. Gdańsk stał się później jednym z najważniejszych miast Bałtyku.
+Kaszubi to pomorskie plemię słowiańskie, którego nazwa przetrwała do dziś w regionie Kaszub. Byli jedynym ludem słowiańskim z silną tożsamością morską, powiązanym kulturowo zarówno z Polanami z interioru, jak i z Pomorzanami na zachodzie. Ich odrębna lista imion w modzie (pomorska zamiast ogólnosłowiańskiej) odzwierciedla tę hybrydową pozycję. Gdańsk stał się później jednym z najważniejszych miast Bałtyku.
 
 ---
 
@@ -86,4 +93,4 @@ Kaszubi to pomorskie plemię słowiańskie, którego nazwa przetrwała do dziś 
 ## Powiązane artykuły
 - Grupa dziedzictwa: [Kultury zachodniosłowiańskie](../README.md)
 - Wiara: [zachodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)
+- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)

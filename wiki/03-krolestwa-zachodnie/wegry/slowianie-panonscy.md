@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Słowianie Panońscy
 
 Słowianie Panońscy to południowosłowiańska kultura zamieszkująca region jeziora Balaton i Zalaváru w Panonii. W modzie Slavic Enlarged wyróżniają się jako jedyna południowa kultura z etosem biurokratycznym — dziedzice tradycji administracyjnej Księstwa Blatnogradzkiego, z unikalną zachodniosłowiańską grafiką i mieszaną etnicznością.
@@ -89,4 +96,4 @@ Słowianie Panońscy to lud związany z Księstwem Blatnogradzkim (Balaton), jed
 
 - Grupa dziedzictwa: [Kultury południowosłowiańskie](../poludniowoslowianskie/README.md)
 - Wiara: [południowosłowiańska](../../03-wiara/przeglad-wiary.md)
-- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)
+- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)

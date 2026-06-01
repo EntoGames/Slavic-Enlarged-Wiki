@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Serbowie
 
 Serbowie to jedna z dwóch dominujących kultur południowosłowiańskich, skupiona wokół Raszki w centralnych Bałkanach. W modzie Slavic Enlarged ich definicja została nadpisana z wanilii — tradycja husarska zastąpiona Podziwem dla waleczności, co lepiej pasuje do realiów IX wieku. Z trzema tradycjami startowymi i silnym profilem militarno-religijnym, Serbowie to jedna z najpotężniejszych kultur w regionie.
@@ -90,4 +97,4 @@ W 867 roku Serbami rządzi wielki żupan Mutimir z dynastii Włastimirowiczów, 
 
 - Grupa dziedzictwa: [Kultury południowosłowiańskie](../poludniowoslowianskie/README.md)
 - Wiara: [południowosłowiańska](../../03-wiara/przeglad-wiary.md)
-- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)
+- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)

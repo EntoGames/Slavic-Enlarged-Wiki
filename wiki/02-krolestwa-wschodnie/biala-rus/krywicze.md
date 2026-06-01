@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Krywicze
 
 Krywicze to wschodniosłowiańskie plemię zamieszkujące region Smoleńska i Pskowa, na styku szlaków handlowych łączących Bałtyk z Morzem Czarnym. W modzie Slavic Enlarged wyróżniają się jako społeczność miejska z silnym zapleczem rolniczym, co czyni ich jedną z najbardziej stabilnych ekonomicznie kultur w regionie.
@@ -84,4 +91,4 @@ Krywicze byli jednym z najważniejszych plemion wschodniosłowiańskich, kontrol
 
 - Grupa dziedzictwa: [Kultury wschodniosłowiańskie](../wschodnioslowianskie/README.md)
 - Wiara: [wschodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)
+- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)

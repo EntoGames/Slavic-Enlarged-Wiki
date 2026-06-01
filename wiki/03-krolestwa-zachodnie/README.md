@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Kultury zachodniosłowiańskie
 
 Najliczniejsza grupa w Slavic Enlarged — aż 16 kultur, od Polan lechickich w Wielkopolsce po Drzewian w lasach nad Łabą. Dzielą się na trzy podgrupy:
@@ -29,4 +36,4 @@ Słowianie na zachód od Odry — jedni z najbardziej wojowniczych i jednocześn
 ## Inni zachodni (2 kultury)
 
 - [Nitrianie](inni/nitrianie.md) — biurokratyczna kultura Księstwa Nitrzańskiego / Wielkich Moraw
-- [Karyntanie](inni/karyntanie.md) — alpejscy Słowianie Karyntii
+- [Karyntanie](inni/karyntanie.md) — alpejscy Słowianie Karyntii

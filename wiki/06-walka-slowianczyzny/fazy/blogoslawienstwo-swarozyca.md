@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Błogosławieństwo Swarożyca
 
 **Bóstwo patronujące:** Swarożyc — bóg domowego ognia, syn Swaroga

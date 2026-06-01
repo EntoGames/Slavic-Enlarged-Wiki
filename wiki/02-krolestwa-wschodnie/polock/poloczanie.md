@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Połoczanie
 
 Połoczanie to wschodniosłowiańskie plemię zamieszkujące region Połocka nad Dźwiną Zachodnią, na pograniczu z ludami bałtyckimi. W modzie Slavic Enlarged to kultura dworska z tradycjami miejskimi i drużynowymi — ambitne plemię kontrolujące strategiczny szlak handlowy wzdłuż Dźwiny.
@@ -82,4 +89,4 @@ Połoczanie stworzyli jedno z najsilniejszych księstw wczesnośredniowiecznej R
 
 - Grupa dziedzictwa: [Kultury wschodniosłowiańskie](../wschodnioslowianskie/README.md)
 - Wiara: [wschodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)
+- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)

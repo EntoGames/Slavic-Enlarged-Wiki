@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 ﻿---
 title: "Połock"
 subtitle: "Księstwo CK3: d_polotsk (w k_white_rus)"

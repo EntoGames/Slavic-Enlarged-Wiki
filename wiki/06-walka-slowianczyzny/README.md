@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Walka Słowiańszczyzny
 
 Slavic Struggle of Perun — flagowa mechanika modu. Pięć faz, trzy zakończenia, jedno pytanie: czy Perun powstanie z Dniepru, czy chrzest spadnie wcześniej niż grom. Każda gra trwa około 200 lat realtime'u.
@@ -37,4 +44,4 @@ Trzy ścieżki końcowe: Reforma Wszechsłowiańska, Chrzest Polityczny, Edykt D
 
 ---
 
-Powiązane: [Wiara](../03-wiara/) — trzy odłamy religijne; [Decyzje](../05-decyzje/) — narzędzia gracza w trakcie Walki; [Scenariusze](../07-scenariusze/) — siedmiu władców 867 r.
+Powiązane: [Wiara](../03-wiara/) — trzy odłamy religijne; [Decyzje](../05-decyzje/) — narzędzia gracza w trakcie Walki; [Scenariusze](../07-scenariusze/) — siedmiu władców 867 r.

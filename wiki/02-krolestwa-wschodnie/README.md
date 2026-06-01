@@ -1,17 +1,20 @@
-# Kultury wschodniosłowiańskie
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
 
-Dziewięć plemion, które zamieszkiwały tereny od Smoleńska po Mołdawię. W Slavic Enlarged każde z nich ma własną tożsamość — etos, tradycje kulturowe i prowincje startowe w 867 roku.
+---
 
-Ich duchowym centrum jest Kijów, a wspólną wiarą — odłam wschodniosłowiański z miejscami świętymi w Kijowie, Lwowie, Mińsku, Nowogrodzie i Połocku.
+# Królestwa wschodnie
 
-## Artykuły w tej sekcji
+Siedem sub-modów królewskich dla wschodniosłowiańskiej części mapy. Każdy rozbudowuje jedno królestwo CK3 o specyficzne mechaniki, decyzje i eventy osadzone w realiach tego regionu. Wszystkie wymagają Slavic Enlarged i Slavic Struggle of Perun.
 
-- [Krywicze](krywicze.md) — handlarze i strażnicy szlaków nad Dźwiną
-- [Wiatycze](wiatycze.md) — leśny lud dorzecza Oki, jedni z ostatnich pogan
-- [Drewlanie](drewlanie.md) — „ludzie z drewna", zabójcy księcia Igora
-- [Dregowicze](dregowicze.md) — mieszkańcy bagien Polesia
-- [Polanie kijowscy](polanie-kijowscy.md) — twórcy Rusi, elita nad Dnieprem
-- [Ulicze](ulicze.md) — drużynnicy stepowego pogranicza
-- [Radymicze](radymicze.md) — rolnicy nad Sożem
-- [Połoczanie](poloczanie.md) — kupcy i wojownicy Połocka
-- [Tywerscy](tywerscy.md) — strażnicy Dniestru i Prutu
+## Sub-mody w tej sekcji
+
+- [Ruś](rus/README.md) — **Slavic Enlarged: Ruthenia Ancient Heartland** — kolebka Rusi Kijowskiej (Drewlanie, Polanie, Ulicze, Wiatycze)
+- [Biała Ruś](biala-rus/README.md) — **Slavic Enlarged: White Ruthenia Forest Tribes** — bagna i lasy Polesia (Dregowicze, Radymicze, Krywicze)
+- [Połock](polock/README.md) — **Slavic Enlarged: Polotsk Northern Gateway** — brama na Dźwinie (Połoczanie)
+- [Mołdawia](moldawia/README.md) — **Slavic Enlarged: Moldavia River Frontier** — pogranicze Dniestru i Prutu (Tywerscy)
+- [Nowogród](nowogrod/README.md) — **Slavic Enlarged: Novgorod Northern Republic** — republika kupiecka nad Wołchowem (Ilmenianie, Krywicze)
+- [Galicja-Wołyń](galicja-wolyn/README.md) — **Slavic Enlarged: Galicia-Volhynia Western Borderlands** — zachodnie pogranicze Rusi (Wołynianie)
+- [Opolye](opolye/README.md) — **Slavic Enlarged: Opolye Eastern Steppe** — wschodnie pogranicze stepów

@@ -13,12 +13,14 @@ import {
   parseArticleBody,
   splitLede,
 } from "./components/parseBody";
+import { ScenarioMap } from "./components/ScenarioMap";
 import { buildBreadcrumbs } from "../utils/wiki-paths";
 import { SECTION_LABELS, SECTIONS } from "../data/wiki-sections";
 import { useWikiIndex } from "../data/use-wiki-index";
 
 import "./wiki-article.module.css";
 import "./mega-menu.module.css";
+import "./scenario-map.module.css";
 
 /* =============================================================
    wiki-article.tsx — szablon strony pojedynczego wpisu wiki.
@@ -70,6 +72,7 @@ interface ArticleNode {
     tags?: string[] | null;
     relatedSlugs?: string[] | null;
     marginalia?: MarginaliaItem[] | null;
+    interactive?: string | null;
   };
 }
 
@@ -147,54 +150,59 @@ const WikiArticleTemplate: React.FC<PageProps<QueryData>> = ({ data }) => {
       <div className={"wf" + (isSectionLanding ? " wf--landing" : "")}>
         <MegaMenu activeUrlPath={fields.urlPath} />
 
-        <Hero
-          kicker={kicker}
-          title={heroTitle}
-          subtitle={heroSubtitle}
-          breadcrumbs={breadcrumbs}
-          isLanding={isSectionLanding}
-          sectionOrder={sectionMeta?.order}
-        />
-
-        <div className="wf-body">
-          <TOC
-            sections={rest.sections}
-            activeId={activeId}
-            onJump={onJump}
-            meta={fm}
+        {fm.interactive !== "scenario-map" && (
+          <Hero
+            kicker={kicker}
+            title={heroTitle}
+            subtitle={heroSubtitle}
+            breadcrumbs={breadcrumbs}
+            isLanding={isSectionLanding}
+            sectionOrder={sectionMeta?.order}
           />
+        )}
 
-          <article className="wf-article">
-            {fm.lede ? (
-              // Frontmatter-supplied lede with drop cap
-              <p
-                className="wf-lede wf-dropcap"
-                dangerouslySetInnerHTML={{ __html: fm.lede }}
-              />
-            ) : ledeNode ? (
-              <LedeFromFirstParagraph node={ledeNode} />
-            ) : null}
+        {fm.interactive === "scenario-map" && <ScenarioMap />}
 
-            {rest.intro}
-            {rest.sections.map((s, i) => (
-              <Section
-                key={s.id}
-                id={s.id}
-                title={s.title}
-                num={i + 1}
-                collapsed={false}
-                onToggle={() => {}}
-                registerRef={(el) => {
-                  sectionRefs.current[s.id] = el;
-                }}
-              >
-                {s.body}
-              </Section>
-            ))}
-          </article>
+        {fm.interactive !== "scenario-map" && (
+          <div className="wf-body">
+            <TOC
+              sections={rest.sections}
+              activeId={activeId}
+              onJump={onJump}
+              meta={fm}
+            />
 
-          <Marginalia items={fm.marginalia ?? []} />
-        </div>
+            <article className="wf-article">
+              {fm.lede ? (
+                <p
+                  className="wf-lede wf-dropcap"
+                  dangerouslySetInnerHTML={{ __html: fm.lede }}
+                />
+              ) : ledeNode ? (
+                <LedeFromFirstParagraph node={ledeNode} />
+              ) : null}
+
+              {rest.intro}
+              {rest.sections.map((s, i) => (
+                <Section
+                  key={s.id}
+                  id={s.id}
+                  title={s.title}
+                  num={i + 1}
+                  collapsed={false}
+                  onToggle={() => {}}
+                  registerRef={(el) => {
+                    sectionRefs.current[s.id] = el;
+                  }}
+                >
+                  {s.body}
+                </Section>
+              ))}
+            </article>
+
+            <Marginalia items={fm.marginalia ?? []} />
+          </div>
+        )}
 
         <RelatedGrid
           urlPath={fields.urlPath}
@@ -253,6 +261,7 @@ export const pageQuery = graphql`
         reads
         tags
         relatedSlugs
+        interactive
         marginalia {
           type
           kicker

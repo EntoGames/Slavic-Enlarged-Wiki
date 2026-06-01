@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Wiślanie
 
 Wiślanie to stoickie plemię lechickie władające żyznymi ziemiami Małopolski wzdłuż górnej Wisły. Z siedmioma prowincjami, tradycją rolniczą i umiejętnością budowy warowni stanowią jedną z najpotężniejszych kultur lechickich. To nowa kultura dodana przez mod Slavic Enlarged, wyodrębniona z waniliowej kultury polskiej.
@@ -12,7 +19,7 @@ Wiślanie to stoickie plemię lechickie władające żyznymi ziemiami Małopolsk
 | **Klucz w grze** | `vistulan` |
 | **Grupa dziedzictwa** | zachodniosłowiańska (`heritage_west_slavic`) |
 | **Etos** | Stoicki (`ethos_stoic`) |
-| **Język** | lechicki (`language_lechitic`) |
+| **Język** | zachodniosłowiański (`language_lechitic`) |
 | **Lista imion** | `name_list_se_slavic` |
 | **Tradycje startowe** | Rolnicy, Strażnicy zamków |
 | **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
@@ -25,7 +32,7 @@ Wiślanie to stoickie plemię lechickie władające żyznymi ziemiami Małopolsk
 ## Etos i tradycje
 
 ### Etos: Stoicki
-Etos stoicki kładzie nacisk na wytrwałość i cierpliwość. Daje bonusy do stresu i wytrzymałości -- przydatne przy obronie przed silniejszymi sąsiadami. Wśród Lechitów stoicki etos dzielą z nimi tylko Pomorzanie, co wyróżnia te dwie kultury na tle wspólnotowej większości.
+Etos stoicki kładzie nacisk na wytrwałość i cierpliwość. Daje bonusy do stresu i wytrzymałości -- przydatne przy obronie przed silniejszymi sąsiadami. Wśród tych kultur stoicki etos dzielą z nimi tylko Pomorzanie, co wyróżnia te dwie kultury na tle wspólnotowej większości.
 
 ### Tradycje
 - **Rolnicy** (`tradition_agrarian`) -- bonus do rozwoju prowincji i produkcji żywności. Żyzna lessowa gleba Małopolski to jedne z najlepszych ziem uprawnych w regionie.
@@ -44,10 +51,10 @@ Z pliku `SE/history/provinces/se_vistulan.txt`:
 - prowincja 527, 532, 531
 - prowincja 4951, 4953, 4957, 4965
 
-Łącznie **7 prowincji** -- największy blok terytorialny wśród Lechitów obok Polan.
+Łącznie **7 prowincji** -- największy blok terytorialny wśród tych kultur obok Polan.
 
 ### Sąsiedztwo kulturowe
-- **Na północ:** Mazowszanie (leśni Lechici) i Polanie lechiccy
+- **Na północ:** Mazowszanie (leśni Lechici) i Polanie
 - **Na wschód:** ludy wschodniosłowiańskie (Wołynianie, inne dziedzictwo)
 - **Na południe:** Morawianie i ludy czesko-słowackie (Karpaty jako bariera)
 - **Na zachód:** Ślężanie (pokrewna kultura nadodrzańska)
@@ -76,7 +83,7 @@ Wiślanie to jedno z najpotężniejszych plemion lechickich, wspomniane w Żywot
 ### Wyzwania
 - Stoicki etos nie daje bonusów do dyplomacji -- sojusze trudniejsze do zawarcia
 - Presja morawska z południa (historyczna zależność)
-- Konkurencja z Polanami o dominację nad Lechitami
+- Konkurencja z Polanami o dominację regionalną
 - Brak tradycji morskiej -- odcięci od handlu bałtyckiego
 
 ---
@@ -84,4 +91,4 @@ Wiślanie to jedno z najpotężniejszych plemion lechickich, wspomniane w Żywot
 ## Powiązane artykuły
 - Grupa dziedzictwa: [Kultury zachodniosłowiańskie](../README.md)
 - Wiara: [zachodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)
+- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)

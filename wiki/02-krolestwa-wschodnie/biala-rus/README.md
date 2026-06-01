@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 ﻿---
 title: "Biała Ruś"
 subtitle: "Królestwo CK3: k_white_rus"

@@ -94,7 +94,7 @@ Ton zmienia się zależnie od rodzaju artykułu i sekcji.
 | Opis mechanik i efektów | Techniczny, tabelaryczny | Konkretne liczby, bez ozdobników | `+15% pościg armii`, `-25% koszt zakonów świętych` |
 | Charakter fazy / opis wiary | Literacki, dramatyczny | Atmosfera, napięcie | *„Święte gaje płoną, wojownicy chwytają za broń, a kompromis nie wchodzi w grę."* |
 | Kontekst historyczny | Akademicki, ostrożny | Tryb przypuszczający, źródła | *„Mod traktuje Siemowita jako historyczną postać startową — główna licentia poetica to przypisanie mu tytułu księcia."* |
-| Porady dla gracza | Praktyczny, bezpośredni | Imperatywy, „warto / unikaj" | *„Skup się na jednoczeniu Lechitów. Unikaj konfliktów z zachodem, dopóki nie zbudujesz bazy siły."* |
+| Porady dla gracza | Praktyczny, bezpośredni | Imperatywy, „warto / unikaj" | *„Skup się na jednoczeniu Polan. Unikaj konfliktów z zachodem, dopóki nie zbudujesz bazy siły."* |
 | Checklista / instrukcja redakcyjna | Suchy, listy | Tylko fakty, zero narracji | `[ ] Klucze zgadzają się z plikiem gry` |
 
 ---
@@ -108,7 +108,7 @@ Używaj konsekwentnie tych form. Klucz gry podaj przy pierwszym użyciu w backti
 | Walka (Struggle) | **Walka Słowiańszczyzny** | region `custom_slavia` | Pełna nazwa przy pierwszym wystąpieniu; potem „Walka" |
 | Involved / Interloper | **zaangażowany / intruz** | `involved` / `interloper` | Zawsze tłumaczyć |
 | Etos | **Wspólnotowy / Stoicki / Dworski / Wojowniczy / Biurokratyczny** | `ethos_communal` itp. | Polska nazwa + klucz |
-| Tradycja | polska nazwa z lokalizacji | `tradition_*` | Z pliku `wsl_cultures_l_polish.yml` |
+| Tradycja | polska nazwa z lokalizacji | `tradition_*` | Z pliku `se_cultures_l_polish.yml` |
 | Miejsce święte | **miejsce święte** (małe litery) | `holy_site` | Nie „Miejsce Święte" |
 | Wiara wszechsłowiańska | **Wiara Wszechsłowiańska** (wielkie litery jako nazwa własna) | — | |
 | Dwójwierstwo | **dwójwierstwo** lub **Dvoeverie** | — | Oba dopuszczalne; w tekstach historycznych preferuj „dwójwierstwo" |

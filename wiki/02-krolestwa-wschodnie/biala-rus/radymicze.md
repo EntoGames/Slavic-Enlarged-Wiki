@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Radymicze
 
 Radymicze to wschodniosłowiańskie plemię zamieszkujące dorzecze Soży, w okolicach późniejszego Mińska. W modzie Slavic Enlarged to spokojna, wspólnotowa kultura łącząca kult świętych gajów z tradycją rolniczą — małe, ale głęboko zakorzenione w pogańskiej wierze plemię.
@@ -80,4 +87,4 @@ Radymicze byli stosunkowo niewielkim plemieniem, zamieszkującym tereny między 
 
 - Grupa dziedzictwa: [Kultury wschodniosłowiańskie](../wschodnioslowianskie/README.md)
 - Wiara: [wschodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)
+- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)

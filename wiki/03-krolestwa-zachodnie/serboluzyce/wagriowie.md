@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Wagriowie
 
 Wagriowie to stoickie plemię zamieszkujące Wagrię — najdalej na północny zachód wysunięty skrawek słowiańskiego osadnictwa, na terenie dzisiejszego wschodniego Holsztynu. W modzie Slavic Enlarged łączą tradycje morskie z łowiectwem, co odzwierciedla ich życie na pograniczu lasu i morza, w cieniu potężnych sąsiadów — Sasów i Duńczyków.
@@ -12,7 +19,7 @@ Wagriowie to stoickie plemię zamieszkujące Wagrię — najdalej na północny 
 | **Klucz w grze** | `wagrians` |
 | **Grupa dziedzictwa** | zachodniosłowiańska (`heritage_west_slavic`) |
 | **Etos** | Stoicki (`ethos_stoic`) |
-| **Język** | lechicki (`language_lechitic`) |
+| **Język** | zachodniosłowiański (`language_lechitic`) |
 | **Lista imion** | `name_list_se_slavic` |
 | **Tradycje startowe** | Morski merkantylizm, Łowcy |
 | **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
@@ -80,4 +87,4 @@ Wagriowie byli najbardziej na północny zachód wysuniętym plemieniem słowia�
 
 - Grupa dziedzictwa: [Kultury zachodniosłowiańskie](../README.md)
 - Wiara: [zachodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)
+- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)

@@ -65,11 +65,11 @@ const IndexPage: React.FC<PageProps<QueryData>> = ({ data }) => {
             <h1 className="wf-home-hero__title">{meta.title}</h1>
             <p className="wf-home-hero__lede">{meta.description}</p>
             <div className="wf-home-hero__cta">
-              <Link className="wf-btn wf-btn--gold" to="/wiki/wprowadzenie/o-modach">
-                Zacznij od „O Modach"
+              <Link className="wf-btn wf-btn--gold" to="/wiki/wprowadzenie/scenariusze">
+                Scenariusze startowe
               </Link>
-              <Link className="wf-btn" to="/wiki/walka-slowianczyzny/czym-jest-walka">
-                Czytaj o Walce Słowiańszczyzny
+              <Link className="wf-btn" to="/wiki/wprowadzenie/o-modach">
+                Zacznij od „O Modach"
               </Link>
             </div>
           </div>

@@ -186,7 +186,7 @@ Każdy artykuł o kulturze zawiera:
 
 | Artykuł | Typ | Opis |
 |---------|-----|------|
-| Przegląd wiary | Encyklopedyczny | Religia wsl_slavic, bóstwa, doktryny, cnoty i grzechy |
+| Przegląd wiary | Encyklopedyczny | Religia se_slavic, bóstwa, doktryny, cnoty i grzechy |
 | Wiara wschodnia | Encyklopedyczny | Opis odłamu, zasięg, tenetsy, miejsca święte |
 | Wiara zachodnia | Encyklopedyczny | j.w. |
 | Wiara południowa | Encyklopedyczny | j.w. |

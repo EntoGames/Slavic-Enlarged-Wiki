@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Dukljanie
 
 Dukljanie to południowosłowiańska kultura zasiedlająca region dzisiejszej Czarnogóry, z centrum w Dukli (Doclea). W modzie Slavic Enlarged wyróżniają się jako budowniczowie twierdz z dostępem do morskiego handlu — stoicka społeczność, która przetrwała między bizantyńskim wybrzeżem a dzikimi górami Bałkanów.
@@ -81,4 +88,4 @@ Dukla (Doclea) wzięła nazwę od starożytnego rzymskiego miasta Doclea. W IX w
 
 - Grupa dziedzictwa: [Kultury południowosłowiańskie](../poludniowoslowianskie/README.md)
 - Wiara: [południowosłowiańska](../../03-wiara/przeglad-wiary.md)
-- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)
+- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)

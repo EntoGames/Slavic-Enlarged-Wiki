@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Wiatycze
 
 Wiatycze to wschodniosłowiańskie plemię zamieszkujące gęste lasy w dorzeczu górnej Oki, na wschodnich rubieżach świata słowiańskiego. W modzie Slavic Enlarged to kultura leśna z głębokim przywiązaniem do pogańskich świętych gajów, co czyni ich jednym z najbardziej tradycyjnych plemion w regionie.
@@ -83,4 +90,4 @@ Wiatycze byli jednym z najbardziej niezależnych plemion wschodniosłowiańskich
 
 - Grupa dziedzictwa: [Kultury wschodniosłowiańskie](../wschodnioslowianskie/README.md)
 - Wiara: [wschodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)
+- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)

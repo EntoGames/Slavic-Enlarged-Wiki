@@ -100,9 +100,14 @@ interface ArticleQueryResult {
         slug: string;
         isContent: boolean;
       };
+      frontmatter: {
+        draft: boolean | null;
+      };
     }>;
   };
 }
+
+const isProduction = process.env.NODE_ENV === "production";
 
 export const createPages: GatsbyNode["createPages"] = async ({
   graphql,
@@ -122,6 +127,9 @@ export const createPages: GatsbyNode["createPages"] = async ({
             slug
             isContent
           }
+          frontmatter {
+            draft
+          }
         }
       }
     }
@@ -132,11 +140,16 @@ export const createPages: GatsbyNode["createPages"] = async ({
     return;
   }
 
-  const nodes = (result.data?.allMarkdownRemark.nodes ?? []).filter(
-    (n) => n.fields.isContent && n.fields.urlPath
-  );
+  const allNodes = result.data?.allMarkdownRemark.nodes ?? [];
+  const nodes = allNodes.filter((n) => {
+    if (!n.fields.isContent || !n.fields.urlPath) return false;
+    // W produkcji pomijaj strony z draft: true
+    if (isProduction && n.frontmatter?.draft === true) return false;
+    return true;
+  });
 
-  reporter.info(`[wiki] generuję ${nodes.length} stron`);
+  const draftCount = allNodes.filter((n) => n.frontmatter?.draft === true).length;
+  reporter.info(`[wiki] generuję ${nodes.length} stron${isProduction ? ` (pomijam ${draftCount} draft)` : ` (tryb dev: wszystkie, w tym ${draftCount} draft)`}`);
 
   for (const node of nodes) {
     createPage({
@@ -181,6 +194,7 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
       caption: String
     }
     type Frontmatter {
+      draft: Boolean
       subtitle: String
       kicker: String
       blurb: String
@@ -193,6 +207,7 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
       tags: [String!]
       relatedSlugs: [String!]
       marginalia: [MarginaliaItem]
+      interactive: String
     }
     type MarkdownRemark implements Node {
       fields: MarkdownRemarkFields

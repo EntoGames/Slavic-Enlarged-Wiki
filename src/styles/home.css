@@ -14,8 +14,8 @@
   text-align: center;
   padding: 100px 40px 72px;
   background:
-    radial-gradient(ellipse 70% 55% at 50% 40%, rgba(197,160,72,0.08) 0%, transparent 100%),
-    linear-gradient(180deg, var(--bog-deep) 0%, var(--bog-warm) 100%);
+    radial-gradient(ellipse 80% 70% at 50% 50%, rgba(8,13,0,0.75) 0%, rgba(8,13,0,0.45) 60%, transparent 100%),
+    url("/img/heightmap-europe-color.png") center center / cover no-repeat;
   overflow: hidden;
 }
 .wf-home-hero__inner {

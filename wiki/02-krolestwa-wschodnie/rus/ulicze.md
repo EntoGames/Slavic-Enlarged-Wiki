@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Ulicze
 
 Ulicze to wschodniosłowiańskie plemię zamieszkujące tereny nad dolnym Dnieprem i Bohem Południowym, na pograniczu świata słowiańskiego i stepu. W modzie Slavic Enlarged to surowa, stoicka kultura pasterzy z tradycją drużynową — lud zahartowany przez ciągłe kontakty z koczownikami.
@@ -81,4 +88,4 @@ Ulicze byli jednym z najbardziej wysuniętych na południe plemion wschodniosło
 
 - Grupa dziedzictwa: [Kultury wschodniosłowiańskie](../wschodnioslowianskie/README.md)
 - Wiara: [wschodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)
+- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)

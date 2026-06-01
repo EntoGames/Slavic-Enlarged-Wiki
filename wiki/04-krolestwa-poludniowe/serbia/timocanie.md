@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Timocanie
 
 Timocanie to południowosłowiańska kultura zamieszkująca dolinę rzeki Timok na wschodzie dzisiejszej Serbii. W modzie Slavic Enlarged to stoiccy pasterze i myśliwi, żyjący na pograniczu serbsko-bułgarskim — w regionie, gdzie lasy i góry definiowały sposób życia.
@@ -81,4 +88,4 @@ Timocanie (Timoczanie) to plemię słowiańskie wymieniane w źródłach frankij
 
 - Grupa dziedzictwa: [Kultury południowosłowiańskie](../poludniowoslowianskie/README.md)
 - Wiara: [południowosłowiańska](../../03-wiara/przeglad-wiary.md)
-- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)
+- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)

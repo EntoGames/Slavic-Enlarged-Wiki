@@ -1,6 +1,13 @@
-# Polanie lechiccy
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
 
-Polanie lechiccy to dominująca kultura Wielkopolski i serce przyszłego państwa polskiego. Ich dworski etos, tradycje rolnicze i miejskie czynią z nich naturalnych budowniczych królestwa. To kultura Siemowita i dynastii Piastów -- idealna do zjednoczenia ziem lechickich pod jednym berłem.
+---
+
+# Polanie
+
+Polanie to dominująca kultura Wielkopolski i serce przyszłego państwa polskiego. Ich dworski etos, tradycje rolnicze i miejskie czynią z nich naturalnych budowniczych królestwa. To kultura Siemowita i dynastii Piastów -- idealna do zjednoczenia ziem lechickich pod jednym berłem.
 
 ---
 
@@ -8,11 +15,11 @@ Polanie lechiccy to dominująca kultura Wielkopolski i serce przyszłego państw
 
 | Pole | Wartość |
 |------|---------|
-| **Nazwa (PL)** | Polanie lechiccy |
-| **Klucz w grze** | `lechitic_polans` |
+| **Nazwa (PL)** | Polanie |
+| **Klucz w grze** | `polans` |
 | **Grupa dziedzictwa** | zachodniosłowiańska (`heritage_west_slavic`) |
 | **Etos** | Dworski (`ethos_courtly`) |
-| **Język** | lechicki (`language_lechitic`) |
+| **Język** | zachodniosłowiański (`language_lechitic`) |
 | **Lista imion** | `name_list_se_slavic` |
 | **Tradycje startowe** | Rolnicy, Strażnicy miast |
 | **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
@@ -39,7 +46,7 @@ Etos dworski kładzie nacisk na dyplomację, sojusze i prestiż dynastyczny. Daj
 Polanie zajmują Wielkopolskę -- rozległą nizinę wokół Warty i Noteci z centrum w Gnieźnie. Region obejmuje również ziemie łęczyckie i sieradzkie na południowym wschodzie, dając kontrolę nad kluczowym szlakiem z zachodu na wschód.
 
 ### Prowincje przypisane w 867
-Z pliku `SE/history/provinces/se_lechitic_polans.txt`:
+Z pliku `SE/history/provinces/se_polans.txt`:
 
 **Księstwo Wielkopolski (d_wielkopolska):**
 - prowincja 4900, 4905, 4909, 4912, 3149
@@ -47,7 +54,7 @@ Z pliku `SE/history/provinces/se_lechitic_polans.txt`:
 **Księstwo Kujaw / ziemie łęczycko-sieradzkie (d_kuyavia):**
 - prowincja 4924, 528, 4931
 
-Łącznie **8 prowincji** -- jeden z największych bloków terytorialnych wśród Lechitów.
+Łącznie **8 prowincji** -- jeden z największych bloków terytorialnych wśród tych kultur.
 
 ### Sąsiedztwo kulturowe
 - **Na północ:** Goplanie (pokrewni Lechici, ale słabsi) i Kaszubi (morski etos)
@@ -71,7 +78,7 @@ Polanie to plemię, od którego wywodzi się sama nazwa Polski. Ich gród w Gnie
 ## Porady dla gracza
 
 ### Mocne strony
-- Największy blok terytorialny wśród Lechitów -- solidna baza do ekspansji
+- Największy blok terytorialny wśród tych kultur -- solidna baza do ekspansji
 - Etos dworski ułatwia dyplomację i sojusze, których brakuje sąsiadom
 - Tradycje rolnicze i miejskie generują stabilny rozwój i dochody
 - Siemowit jako postać startowa daje historyczny punkt wyjścia
@@ -87,4 +94,4 @@ Polanie to plemię, od którego wywodzi się sama nazwa Polski. Ich gród w Gnie
 - Grupa dziedzictwa: [Kultury zachodniosłowiańskie](../README.md)
 - Wiara: [zachodniosłowiańska](../../03-wiara/przeglad-wiary.md)
 - Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)
-- Postacie startowe: [Siemowit](../../07-scenariusze/postacie/siemowit.md)
+- Postacie startowe: [Siemowit](../../07-scenariusze/postacie/siemowit.md)

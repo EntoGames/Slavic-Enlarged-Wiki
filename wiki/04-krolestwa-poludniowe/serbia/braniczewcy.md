@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Braniczewcy
 
 Braniczewcy to południowosłowiańska kultura skupiona wokół twierdzy Braniczew nad Dunajem, na styku szlaków łączących Bizancjum z wnętrzem Bałkanów. W modzie Slavic Enlarged to stoiccy wojownicy-rolnicy, łączący tradycję drużyny książęcej z solidną bazą agrarną.
@@ -80,4 +87,4 @@ Branicevo było ważnym punktem strategicznym nad Dunajem, wzmiankowanym w źró
 
 - Grupa dziedzictwa: [Kultury południowosłowiańskie](../poludniowoslowianskie/README.md)
 - Wiara: [południowosłowiańska](../../03-wiara/przeglad-wiary.md)
-- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)
+- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)

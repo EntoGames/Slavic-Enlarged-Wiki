@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Harmonia Lady
 
 **Bóstwo patronujące:** Lada — bogini miłości, harmonii i płodności

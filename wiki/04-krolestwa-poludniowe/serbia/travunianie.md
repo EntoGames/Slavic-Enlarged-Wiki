@@ -1,3 +1,10 @@
+---
+draft: true
+---
+> **⚠ Ten artykuł dotyczy moda, który jest obecnie w przygotowaniu i nie jest jeszcze publicznie dostępny.**
+
+---
+
 # Travunianie
 
 Travunianie to południowosłowiańska kultura zamieszkująca okolice Trebinje, na styku gór Dalmacji i wybrzeża Adriatyku. W modzie Slavic Enlarged łączą pasterski styl życia z morskim handlem, co czyni ich naturalnym pomostem między lądem a morzem na południowym krańcu chorwacko-serbskiego pogranicza.
@@ -80,4 +87,4 @@ Travunia była jednym z mniejszych słowiańskich państewek na wybrzeżu Dalmac
 
 - Grupa dziedzictwa: [Kultury południowosłowiańskie](../poludniowoslowianskie/README.md)
 - Wiara: [południowosłowiańska](../../03-wiara/przeglad-wiary.md)
-- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)
+- Walka Słowiańszczyzny: [Czym jest](../../04-walka-slowianczyzny/czym-jest-walka.md)
