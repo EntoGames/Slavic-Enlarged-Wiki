@@ -763,6 +763,52 @@
   align-self: end;
 }
 
+/* --- Home card variant ------------------------------------ */
+:global(.wf-rcard--home) {
+  grid-row: span 4;
+  background: rgba(8,13,4,0.65);
+  border: 1px solid rgba(179,153,77,0.15);
+  border-radius: 6px;
+  padding: 24px 28px;
+  transition: background 150ms ease, border-color 150ms ease;
+}
+:global(.wf-rcard--home:hover) {
+  background: rgba(179,153,77,0.06);
+  border-color: rgba(179,153,77,0.35);
+  transform: none;
+  box-shadow: none;
+}
+:global(.wf-rcard--home .wf-rcard__kicker) {
+  font-family: var(--font-display);
+  font-size: var(--t-subtitle-size);
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+:global(.wf-rcard--home .wf-rcard__title) {
+  color: var(--fg-on-dark);
+  margin: 0 0 8px;
+}
+:global(.wf-rcard--home .wf-rcard__blurb) {
+  font-size: 13px;
+  color: rgba(255,255,255,0.65);
+  margin: 0 0 auto;
+  padding-bottom: 14px;
+}
+:global(.wf-rcard--home .wf-rcard__go) {
+  font-size: var(--t-foot-size);
+  color: var(--gold);
+  margin-top: 8px;
+}
+@media (max-width: 600px) {
+  :global(.wf-rcard--home) { padding: 20px 22px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  :global(.wf-rcard--home) { transition: none; }
+}
+
 /* ============================================================
    FOOTER DISCLAIMER
    ============================================================ */

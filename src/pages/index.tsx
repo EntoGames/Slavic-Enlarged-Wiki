@@ -52,7 +52,7 @@ const IndexPage: React.FC<PageProps<QueryData>> = ({ data }) => {
 
   return (
     <WikiLinkProvider>
-      <div className="wf">
+      <main id="main" className="wf">
         <MegaMenu activeUrlPath="/" />
 
         <section className="wf-home-hero" data-screen-label="Home — Hero">
@@ -82,17 +82,17 @@ const IndexPage: React.FC<PageProps<QueryData>> = ({ data }) => {
               <Link
                 key={s.key}
                 to={`/wiki/${s.key}`}
-                className="wf-home-card"
+                className="wf-rcard wf-rcard--home"
                 data-screen-label={`Sekcja — ${s.label}`}
               >
-                <div className="wf-home-card__num">
+                <div className="wf-rcard__kicker" aria-hidden="true">
                   {String(s.order).padStart(2, "0")}
                 </div>
-                <h3 className="wf-home-card__title">{s.label}</h3>
+                <h3 className="wf-rcard__title">{s.label}</h3>
                 {s.blurb && (
-                  <p className="wf-home-card__blurb">{s.blurb}</p>
+                  <p className="wf-rcard__blurb">{s.blurb}</p>
                 )}
-                <div className="wf-home-card__count">
+                <div className="wf-rcard__go">
                   {s.items.length} {pluralizeArtykuly(s.items.length)} →
                 </div>
               </Link>
@@ -111,7 +111,7 @@ const IndexPage: React.FC<PageProps<QueryData>> = ({ data }) => {
             i prawa do gry-bazy należą do Paradox Interactive.
           </p>
         </footer>
-      </div>
+      </main>
     </WikiLinkProvider>
   );
 };

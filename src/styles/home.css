@@ -149,64 +149,8 @@
 .wf-home-sections__grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-rows: auto auto 1fr auto;
   gap: 20px;
-}
-
-/* --- Section Card --- */
-.wf-home-card {
-  display: flex;
-  flex-direction: column;
-  padding: 24px 28px;
-  border-radius: var(--radius-card);
-  background: linear-gradient(160deg, rgba(57,52,30,0.7) 0%, rgba(28,34,20,0.85) 100%);
-  border: 1px solid rgba(197,160,72,0.15);
-  text-decoration: none;
-  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
-  cursor: pointer;
-}
-.wf-home-card:hover {
-  border-color: rgba(197,160,72,0.45);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
-}
-.wf-home-card:focus-visible {
-  outline: none;
-  border-color: var(--gold);
-  box-shadow: 0 0 0 2px var(--gold), 0 0 0 4px rgba(197,160,72,0.3);
-}
-.wf-home-card:active {
-  transform: translateY(-1px);
-}
-.wf-home-card__num {
-  font-family: var(--font-display);
-  font-size: 36px;
-  line-height: 1;
-  color: rgba(197,160,72,0.25);
-  margin-bottom: 6px;
-}
-.wf-home-card__title {
-  font-family: var(--font-display);
-  font-size: 26px;
-  line-height: 1.1;
-  color: var(--fg-on-dark);
-  text-shadow: 2px 3px 0 var(--ink);
-  margin: 0 0 8px;
-}
-.wf-home-card__blurb {
-  font-family: var(--font-body);
-  font-size: 13px;
-  line-height: 1.55;
-  color: rgba(255,255,255,0.65);
-  margin: 0 0 auto;
-  padding-bottom: 14px;
-}
-.wf-home-card__count {
-  font-family: var(--font-body);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  color: var(--gold);
-  margin-top: 8px;
 }
 
 /* --- 404 Page --- */
@@ -238,7 +182,7 @@
 }
 .wf-404__title {
   font-family: var(--font-display);
-  font-size: 28px;
+  font-size: var(--t-h2-size);
   color: var(--fg-on-dark);
   text-shadow: 2px 3px 0 var(--ink);
   margin: 0 0 16px;
@@ -276,13 +220,11 @@
   .wf-btn { justify-content: center; font-size: 13px; padding: 12px 20px; }
   .wf-home-sections { padding: 40px 16px 48px; }
   .wf-home-sections__grid { grid-template-columns: 1fr; }
-  .wf-home-card { padding: 20px 22px; }
   .wf-404__num { font-size: 80px; }
 }
 
 /* --- Reduced motion --- */
 @media (prefers-reduced-motion: reduce) {
   .wf-home-hero__mark { animation: none; }
-  .wf-home-card { transition: none; }
   .wf-btn { transition: none; }
 }
