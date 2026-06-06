@@ -1,6 +1,6 @@
 # Tywercy
 
-Tywercy to wschodniosłowiańskie plemię zamieszkujące dorzecze Dniestru, od Bukowiny po Morze Czarne. W modzie Slavic Enlarged to stoicka kultura rolniczo-drużynowa, położona na strategicznym skrzyżowaniu szlaków między Rusią, Bizancjum a stepem — lud zahartowany przez życie na niebezpiecznym pograniczu.
+Tywercy to wschodniosłowiańskie plemię zamieszkujące dorzecze Dniestru, od Bukowiny po Morze Czarne. W modzie Slavic Enlarged to stoicka kultura rolnicza otwarta na obce wpływy, położona na strategicznym skrzyżowaniu szlaków między Rusią, Bizancjum a stepem — lud zahartowany przez życie na niebezpiecznym pograniczu.
 
 ---
 
@@ -14,7 +14,7 @@ Tywercy to wschodniosłowiańskie plemię zamieszkujące dorzecze Dniestru, od B
 | **Etos** | Stoicki (`ethos_stoic`) |
 | **Język** | wschodniosłowiański (`language_east_slavic`) |
 | **Lista imion** | `name_list_se_slavic` |
-| **Tradycje startowe** | Rolnicy, Drużyna |
+| **Tradycje startowe** | Rolnicy, Ksenofile |
 | **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
 | **Kolor na mapie** | RGB 0.70 0.70 0.30 |
 | **Status w modzie** | nowa |
@@ -29,7 +29,7 @@ Etos stoicki daje Tywercom bonusy do wytrzymałości armii i obronności. Reprez
 
 ### Tradycje
 - **Rolnicy** (`tradition_agrarian`) — bonusy do podatków z gospodarstw i wzrostu populacji; żyzne doliny Dniestru i Prutu sprzyjały rolnictwu.
-- **Drużyna** (`tradition_druzhina`) — bonusy do ciężkich oddziałów i rycerzy; silna drużyna była niezbędna do obrony przed koczownikami i sąsiednimi mocarstwami.
+- **Ksenofile** (`tradition_xenophilic`) — bonusy do akceptacji obcych kultur i dyplomacji; położenie na skrzyżowaniu Rusi, Bizancjum i stepu zmusiło Tywercow do otwartości na inne ludy.
 
 ---
 
@@ -78,13 +78,13 @@ Tywercy byli jednym z najbardziej wysuniętych na południe i zachód plemion ws
 
 ### Mocne strony
 - Siedem prowincji rozciągniętych od gór po morze to duże i zróżnicowane terytorium
-- Połączenie tradycji rolniczej i drużynowej daje stabilną ekonomię i silną armię
+- Połączenie tradycji rolniczej i ksenofilnej daje stabilną ekonomię i dyplomatyczną elastyczność
 - Położenie na skrzyżowaniu kultur otwiera ciekawe opcje dyplomatyczne
 
 ### Wyzwania
 - Wydłużone terytorium wzdłuż Dniestru jest trudne do obrony
 - Sąsiedztwo z Węgrami, koczownikami i wpływami bizantyńskimi oznacza zagrożenia z wielu stron
-- Brak tradycji miejskiej ogranicza dochody z handlu
+- Brak tradycji wojskowej ogranicza siłę armii
 
 ---
 

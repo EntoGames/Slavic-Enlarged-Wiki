@@ -1,6 +1,6 @@
 # Ulicze
 
-Ulicze to wschodniosłowiańskie plemię zamieszkujące tereny nad dolnym Dnieprem i Bohem Południowym, na pograniczu świata słowiańskiego i stepu. W modzie Slavic Enlarged to surowa, stoicka kultura pasterzy z tradycją drużynową — lud zahartowany przez ciągłe kontakty z koczownikami.
+Ulicze to wschodniosłowiańskie plemię zamieszkujące tereny nad dolnym Dnieprem i Bohem Południowym, na pograniczu świata słowiańskiego i stepu. W modzie Slavic Enlarged to wojownicza kultura jeźdźców z tradycją drużynową — lud zahartowany przez ciągłe kontakty z koczownikami.
 
 ---
 
@@ -11,10 +11,10 @@ Ulicze to wschodniosłowiańskie plemię zamieszkujące tereny nad dolnym Dniepr
 | **Nazwa (PL)** | Ulicze |
 | **Klucz w grze** | `ulichs` |
 | **Grupa dziedzictwa** | wschodniosłowiańska (`heritage_east_slavic`) |
-| **Etos** | Stoicki (`ethos_stoic`) |
+| **Etos** | Wojowniczy (`ethos_bellicose`) |
 | **Język** | wschodniosłowiański (`language_east_slavic`) |
 | **Lista imion** | `name_list_se_slavic` |
-| **Tradycje startowe** | Pasterze, Drużyna |
+| **Tradycje startowe** | Panowie koni, Drużyna |
 | **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
 | **Kolor na mapie** | RGB 0.55 0.45 0.25 |
 | **Status w modzie** | nowa |
@@ -24,11 +24,11 @@ Ulicze to wschodniosłowiańskie plemię zamieszkujące tereny nad dolnym Dniepr
 
 ## Etos i tradycje
 
-### Etos: Stoicki
-Etos stoicki daje Uliczom bonusy do wytrzymałości armii i obronności. Odzwierciedla charakter ludu żyjącego na niebezpiecznym pograniczu ze stepem, przywykłego do ciągłych zagrożeń i trudnych warunków.
+### Etos: Wojowniczy
+Etos wojowniczy daje Uliczom bonusy do siły ataku i prestiżu z podbojów. Odzwierciedla charakter ludu żyjącego na niebezpiecznym pograniczu ze stepem, który przetrwał dzięki agresywnej postawie wobec koczowników.
 
 ### Tradycje
-- **Pasterze** (`tradition_pastoralists`) — bonusy do lekkiej kawalerii i zaopatrzenia na stepie; Ulicze hodowali bydło na rozległych pastwiskach nadstepia.
+- **Panowie koni** (`tradition_horse_lords`) — bonusy do kawalerii i mobilności; Ulicze przejęli jeździeckie umiejętności od stepowych sąsiadów, co czyni ich unikalnymi wśród Słowian.
 - **Drużyna** (`tradition_druzhina`) — bonusy do ciężkich oddziałów i rycerzy; drużyna książęca stanowiła rdzeń sił zbrojnych, niezbędnych do obrony przed koczownikami.
 
 ---
@@ -66,8 +66,8 @@ Ulicze byli jednym z najbardziej wysuniętych na południe plemion wschodniosło
 ## Porady dla gracza
 
 ### Mocne strony
-- Połączenie tradycji pasterskiej i drużynowej daje silną i wszechstronną armię
-- Stoicki etos zwiększa odporność na ataki
+- Połączenie tradycji jeździeckiej i drużynowej daje najsilniejszą kawalerię wśród Słowian
+- Wojowniczy etos zwiększa prestiż z podbojów
 - Doświadczenie stepowe przydaje się w walce z koczownikami
 
 ### Wyzwania

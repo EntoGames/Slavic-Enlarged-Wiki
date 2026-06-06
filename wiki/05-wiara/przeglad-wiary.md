@@ -30,13 +30,13 @@ Wszystkie odłamy wiary słowiańskiej w Slavic Enlarged to **niezhierarchizowan
 ### Wiara wschodniosłowiańska
 - **Kolor na mapie:** krwistoczerwony
 - **Kluczowe miejsca święte:** Kijów, Lwów, Nowogród, Mińsk, Połock
-- **Wyróżnik:** tenet wspólnotowej tożsamości — wiara jest spoiwem ludu
+- **Wyróżnik:** tenet kultu przodków — przeszłość jest fundamentem i spoiwem ludu
 - **Wyznawcy:** kultury wschodniosłowiańskie (Krywicze, Polanie kijowscy, Drewlanie itd.)
 
 ### Wiara zachodniosłowiańska
 - **Kolor na mapie:** niebieski
 - **Kluczowe miejsca święte:** Arkona (Rugia), Płock, Praga, Legnica, Retra
-- **Wyróżnik:** tenet kultu przodków — przeszłość jest fundamentem
+- **Wyróżnik:** tenet wojenny — walka jest obowiązkiem wobec bogów
 - **Wyznawcy:** kultury lechickie i połabskie + Czesi
 
 ### Wiara południowosłowiańska
@@ -47,7 +47,7 @@ Wszystkie odłamy wiary słowiańskiej w Slavic Enlarged to **niezhierarchizowan
 
 ## Wiara wszechsłowiańska (zreformowana)
 
-Czwarty, ukryty odłam — **Wiara Wszechsłowiańska** — nie istnieje na mapie w 867 roku. Może zostać odblokowana poprzez decyzję reformy, która wymaga kontroli nad miejscami świętymi ze wszystkich trzech regionów. To zjednoczona, zreformowana wersja pogaństwa z 15 miejscami świętymi i tenetem wojennym.
+Czwarty, ukryty odłam — **Wiara Wszechsłowiańska** — nie istnieje na mapie w 867 roku. Może zostać odblokowana poprzez decyzję reformy, która wymaga kontroli nad miejscami świętymi ze wszystkich trzech regionów. To zjednoczona, zreformowana wersja pogaństwa z 15 miejscami świętymi i tenetem wspólnotowej tożsamości.
 
 Więcej: [Wiara wszechsłowiańska](wiara-wszechslowianska.md) | [Jak zreformować wiarę](../08-poradniki/reforma-wiary.md)
 

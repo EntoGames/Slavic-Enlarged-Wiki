@@ -17,6 +17,7 @@ import { ScenarioMap } from "./components/ScenarioMap";
 import { buildBreadcrumbs } from "../utils/wiki-paths";
 import { SECTION_LABELS, SECTIONS } from "../data/wiki-sections";
 import { useWikiIndex } from "../data/use-wiki-index";
+import { humanizeSlug } from "../utils/wiki-paths";
 
 import "./wiki-article.module.css";
 import "./mega-menu.module.css";
@@ -131,12 +132,14 @@ const WikiArticleTemplate: React.FC<PageProps<QueryData>> = ({ data }) => {
     window.scrollBy({ top: r.top - 24, behavior: "smooth" });
   }, []);
 
+  const index = useWikiIndex();
+
   /* Pochodne metadane */
   const isSectionLanding =
     fields.isCategoryIndex && fields.segments.length === 1 && !!fields.section;
   const sectionMeta = fields.section ? SECTIONS[fields.section] : undefined;
 
-  const kicker = fm.kicker || deriveKicker(fields, isSectionLanding, sectionMeta);
+  const kicker = fm.kicker || deriveKicker(fields, isSectionLanding, sectionMeta, index.visibleSections);
   const heroTitle = isSectionLanding && sectionMeta ? sectionMeta.label : fields.title;
   const heroSubtitle =
     fm.subtitle ?? (isSectionLanding ? sectionMeta?.blurb : undefined);
@@ -158,6 +161,7 @@ const WikiArticleTemplate: React.FC<PageProps<QueryData>> = ({ data }) => {
             breadcrumbs={breadcrumbs}
             isLanding={isSectionLanding}
             sectionOrder={sectionMeta?.order}
+            visibleSections={index.visibleSections}
           />
         )}
 
@@ -282,29 +286,33 @@ export const pageQuery = graphql`
 function deriveKicker(
   fields: ArticleNode["fields"],
   isSectionLanding?: boolean,
-  sectionMeta?: { order: number; label: string }
+  sectionMeta?: { order: number; label: string },
+  visibleSections?: { id: string }[]
 ): string {
   if (isSectionLanding && sectionMeta) {
-    return `Sekcja ${String(sectionMeta.order).padStart(2, "0")} · Slavic Enlarged Wiki`;
+    let displayNum = sectionMeta.order;
+    if (visibleSections) {
+      const orders = visibleSections
+        .map((s) => SECTIONS[s.id]?.order ?? 0)
+        .sort((a, b) => a - b);
+      const idx = orders.indexOf(sectionMeta.order);
+      if (idx >= 0) displayNum = idx + 1;
+    }
+    return `Sekcja ${String(displayNum).padStart(2, "0")} · Wiki`;
   }
   if (!fields.section) return "Wiki";
   const sectionLabel = SECTIONS[fields.section]?.label ?? fields.section;
   if (fields.segments.length <= 2) return sectionLabel;
   const middle = fields.segments
     .slice(1, -1)
-    .map(humanize)
+    .map(humanizeSlug)
     .join(" · ");
   return middle ? `${sectionLabel} · ${middle}` : sectionLabel;
-}
-function humanize(slug: string): string {
-  return slug
-    .split("-")
-    .map((w) => (w ? w[0].toUpperCase() + w.slice(1) : w))
-    .join(" ");
 }
 
 function Hero({
   kicker, title, subtitle, breadcrumbs, isLanding, sectionOrder,
+  visibleSections,
 }: {
   kicker: string;
   title: string;
@@ -312,7 +320,17 @@ function Hero({
   breadcrumbs: { label: string; href: string }[];
   isLanding?: boolean;
   sectionOrder?: number;
+  visibleSections?: { id: string }[];
 }) {
+  const displayOrder = useMemo(() => {
+    if (!sectionOrder || !visibleSections) return sectionOrder;
+    const orders = visibleSections
+      .map((s) => SECTIONS[s.id]?.order ?? 0)
+      .sort((a, b) => a - b);
+    const idx = orders.indexOf(sectionOrder);
+    return idx >= 0 ? idx + 1 : sectionOrder;
+  }, [sectionOrder, visibleSections]);
+
   return (
     <div
       className={"wf-hero" + (isLanding ? " wf-hero--landing" : "")}
@@ -320,25 +338,26 @@ function Hero({
     >
       <div className="wf-hero__inner">
         {breadcrumbs.length > 0 && (
-          <nav className="wf-hero__breadcrumbs" aria-label="Okruszki">
+          <nav className="wf-hero__breadcrumbs" aria-label="Ścieżka nawigacji">
             <Link to="/">Wiki</Link>
-            {breadcrumbs.slice(0, -1).map((b, i) => (
-              <React.Fragment key={`${b.href}-${i}`}>
-                <span className="sep">›</span>
-                <Link to={b.href}>{b.label}</Link>
-              </React.Fragment>
-            ))}
-            {isLanding && breadcrumbs.length > 0 && (
-              <>
-                <span className="sep">›</span>
-                <span>{breadcrumbs[breadcrumbs.length - 1].label}</span>
-              </>
-            )}
+            {breadcrumbs.map((b, i) => {
+              const isLast = i === breadcrumbs.length - 1;
+              return (
+                <React.Fragment key={`${b.href}-${i}`}>
+                  <span className="sep">›</span>
+                  {isLast && isLanding ? (
+                    <span>{b.label}</span>
+                  ) : (
+                    <Link to={b.href}>{b.label}</Link>
+                  )}
+                </React.Fragment>
+              );
+            })}
           </nav>
         )}
-        {isLanding && sectionOrder ? (
+        {isLanding && displayOrder ? (
           <div className="wf-hero__landing-num">
-            {String(sectionOrder).padStart(2, "0")}
+            {String(displayOrder).padStart(2, "0")}
           </div>
         ) : null}
         <div className="wf-hero__kicker">
@@ -480,7 +499,7 @@ function RelatedGrid({
             <h3 className="wf-rcard__title">{p.title}</h3>
             {p.subtitle && <div className="wf-rcard__sub">{p.subtitle}</div>}
             {p.blurb && <p className="wf-rcard__blurb">{p.blurb}</p>}
-            <div className="wf-rcard__go">Czytaj →</div>
+            <div className="wf-rcard__go">Czytaj dalej →</div>
           </Link>
         ))}
       </div>
@@ -496,10 +515,9 @@ function Footer() {
         <img className="wordmark" src={wordmarkSvg} alt="Slavic Enlarged" />
       </div>
       <p>
-        „Slavic Enlarged" is a fan-created mod designed to expand the gameplay
-        experience in „Crusader Kings III". Treści wiki są tworzone przez
-        społeczność moda; wszystkie nazwy własne i prawa do gry-bazy należą do
-        Paradox Interactive.
+        „Slavic Enlarged" to fan-mod rozszerzający słowiańską część
+        Crusader Kings III. Treści wiki tworzy społeczność moda. Wszelkie prawa
+        do gry bazowej należą do Paradox Interactive.
       </p>
     </div>
   );

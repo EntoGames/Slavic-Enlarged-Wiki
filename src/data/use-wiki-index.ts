@@ -1,7 +1,8 @@
 import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import { SECTIONS } from "./wiki-sections";
+import { SECTIONS, TEMPLATE_SLUGS } from "./wiki-sections";
 import { isArticleVisible } from "./mod-registry";
+import { humanizeSlug } from "../utils/wiki-paths";
 
 /* =============================================================
    useWikiIndex — pełna mapa wszystkich artykułów wiki.
@@ -39,12 +40,24 @@ export interface WikiEntry {
   segments: string[];
   /** Czy to landing-page kategorii (README.md w podfolderze). */
   isCategoryIndex: boolean;
+  /** Opcjonalny badge z frontmattera (np. "REFORMA", "NOWE"). */
+  badge?: string;
+}
+
+export interface WikiSection {
+  id: string;
+  label: string;
+  /** Skrócona etykieta do topbara (fallback → label). */
+  navLabel: string;
+  entries: WikiEntry[];
 }
 
 export interface WikiIndex {
   byUrlPath: Record<string, WikiEntry>;
   /** Sekcje uporządkowane wg `SECTIONS[s].order`, każda z listą wpisów. */
-  bySection: { id: string; label: string; entries: WikiEntry[] }[];
+  bySection: WikiSection[];
+  /** Sekcje z co najmniej jednym prawdziwym artykułem (bez szablonów i indeksów). */
+  visibleSections: WikiSection[];
   /** Wszystkie wpisy (płaska lista, do search). */
   all: WikiEntry[];
 }
@@ -66,6 +79,7 @@ interface RawNode {
     kicker: string | null;
     blurb: string | null;
     mod: string | null;
+    badge: string | null;
   };
   excerpt: string;
 }
@@ -88,6 +102,7 @@ const WIKI_INDEX_QUERY = graphql`
           kicker
           blurb
           mod
+          badge
         }
         excerpt(pruneLength: 200)
       }
@@ -98,18 +113,10 @@ const WIKI_INDEX_QUERY = graphql`
 /** Kicker w stylu "Sekcja · Subfolder" — jeśli frontmatter go nie podał. */
 function deriveKicker(entry: Pick<WikiEntry, "section" | "segments">): string {
   if (!entry.section) return "Wiki";
-  const sectionLabel = SECTIONS[entry.section]?.label ?? humanize(entry.section);
+  const sectionLabel = SECTIONS[entry.section]?.label ?? humanizeSlug(entry.section);
   if (entry.segments.length <= 2) return sectionLabel;
-  // np. ["kultury", "wschodnioslowianskie", "krywicze"] → "Kultury · Wschodniosłowiańskie"
-  const middle = entry.segments.slice(1, -1).map(humanize).join(" · ");
+  const middle = entry.segments.slice(1, -1).map(humanizeSlug).join(" · ");
   return middle ? `${sectionLabel} · ${middle}` : sectionLabel;
-}
-
-function humanize(slug: string): string {
-  return slug
-    .split("-")
-    .map((w) => (w ? w[0].toUpperCase() + w.slice(1) : w))
-    .join(" ");
 }
 
 export function useWikiIndex(): WikiIndex {
@@ -125,11 +132,12 @@ export function useWikiIndex(): WikiIndex {
       const f = node.fields;
       if (!f.isContent || !f.urlPath || !f.slug) continue;
       if (!isArticleVisible(f.section, node.frontmatter?.mod)) continue;
+      if (TEMPLATE_SLUGS.has(f.slug)) continue;
 
       const entry: WikiEntry = {
         urlPath: f.urlPath,
         slug: f.slug,
-        title: f.title ?? humanize(f.slug),
+        title: f.title ?? humanizeSlug(f.slug),
         subtitle: node.frontmatter?.subtitle ?? undefined,
         kicker:
           node.frontmatter?.kicker ??
@@ -140,6 +148,7 @@ export function useWikiIndex(): WikiIndex {
         section: f.section || null,
         segments: f.segments ?? [],
         isCategoryIndex: !!f.isCategoryIndex,
+        badge: node.frontmatter?.badge ?? undefined,
       };
       all.push(entry);
       byUrlPath[entry.urlPath] = entry;
@@ -153,12 +162,21 @@ export function useWikiIndex(): WikiIndex {
         (SECTIONS[a]?.order ?? 99) - (SECTIONS[b]?.order ?? 99) ||
         a.localeCompare(b)
     );
-    const bySection = ordered.map((id) => ({
-      id,
-      label: SECTIONS[id]?.label ?? humanize(id),
-      entries: all.filter((e) => e.section === id),
-    }));
+    const bySection = ordered.map((id) => {
+      const meta = SECTIONS[id];
+      const label = meta?.label ?? humanizeSlug(id);
+      return {
+        id,
+        label,
+        navLabel: meta?.navLabel ?? label,
+        entries: all.filter((e) => e.section === id),
+      };
+    });
 
-    return { all, byUrlPath, bySection };
+    const visibleSections = bySection.filter(
+      (s) => s.entries.filter((e) => !e.isCategoryIndex).length > 0
+    );
+
+    return { all, byUrlPath, bySection, visibleSections };
   }, [data]);
 }

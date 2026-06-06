@@ -79,6 +79,10 @@
 :global(.mm-top__nav-item.is-open .mm-caret) { transform: rotate(180deg); }
 
 /* ----- Search ----- */
+:global(.mm-top__search-wrap) {
+  position: relative;
+  flex-shrink: 0;
+}
 :global(.mm-top__search) {
   display: flex; align-items: center; gap: 10px;
   height: 36px;
@@ -104,6 +108,45 @@
   border: 1px solid rgba(255,255,255,0.18);
   border-radius: 3px;
   color: rgba(255,255,255,0.5);
+}
+
+/* ----- Search Results Dropdown ----- */
+:global(.mm-search-results) {
+  position: absolute;
+  top: 100%; left: 0; right: 0;
+  z-index: 90;
+  margin: 4px 0 0;
+  padding: 6px 0;
+  list-style: none;
+  background: linear-gradient(180deg, rgba(11,16,4,0.98) 0%, rgba(8,13,0,0.98) 100%);
+  border: 1px solid rgba(179,153,77,0.22);
+  border-radius: 6px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+  max-height: 360px;
+  overflow-y: auto;
+}
+:global(.mm-search-results li) { margin: 0; padding: 0; }
+:global(.mm-search-result) {
+  display: flex; flex-direction: column; gap: 2px;
+  padding: 8px 14px;
+  text-decoration: none;
+  transition: background 100ms;
+}
+:global(.mm-search-result:hover),
+:global(.mm-search-result.is-selected) {
+  background: rgba(179,153,77,0.12);
+}
+:global(.mm-search-result__kicker) {
+  font-family: var(--font-body);
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+:global(.mm-search-result__title) {
+  font-family: var(--font-body);
+  font-size: 13px; line-height: 1.35;
+  color: rgba(255,255,255,0.85);
 }
 
 /* ============================================================
@@ -256,8 +299,33 @@
   margin-right: 0;
 }
 :global(.mm-col__more a) {
+  margin-top: 6px;
+  padding-top: 8px;
+  border-top: 1px dotted rgba(179,153,77,0.25);
   font-style: italic;
-  color: rgba(255,255,255,0.45);
+  color: var(--gold, #C5A048);
+  font-size: 12px;
+  letter-spacing: 0.02em;
+}
+:global(.mm-col__more a:hover) {
+  color: var(--gold-light, #E2C379);
+}
+:global(.mm-col__more a::before) {
+  display: none;
+}
+
+/* Pill badge — wyróżnia specjalne elementy (np. REFORMA) */
+:global(.mm-pill) {
+  margin-left: 8px;
+  padding: 1px 6px;
+  font-size: 8.5px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent-positive, #83C84D);
+  border: 1px solid rgba(131,200,77,0.4);
+  border-radius: 2px;
+  vertical-align: middle;
 }
 
 /* Featured panel */
@@ -275,8 +343,8 @@
   margin-bottom: 14px;
   border-radius: 4px;
   background:
-    radial-gradient(ellipse 80% 70% at 50% 50%, rgba(126,95,37,0.32), transparent 70%),
-    linear-gradient(180deg, rgba(31,50,0,0.4), rgba(8,13,0,0.7));
+    radial-gradient(ellipse 80% 70% at 50% 50%, hsla(var(--panel-hue, 45), 55%, 32%, 0.35), transparent 70%),
+    linear-gradient(180deg, hsla(var(--panel-hue, 45), 40%, 12%, 0.5), rgba(8,13,0,0.7));
   display: flex; align-items: center; justify-content: center;
   overflow: hidden;
 }
@@ -529,6 +597,36 @@
   white-space: nowrap;
 }
 
+:global(.mm-drawer__results) {
+  list-style: none;
+  margin: 4px 20px 8px;
+  padding: 6px 0;
+  background: rgba(179,153,77,0.06);
+  border: 1px solid rgba(179,153,77,0.18);
+  border-radius: 4px;
+}
+:global(.mm-drawer__results li) { margin: 0; padding: 0; }
+:global(.mm-drawer__result) {
+  display: flex; flex-direction: column; gap: 2px;
+  padding: 8px 14px;
+  text-decoration: none;
+}
+:global(.mm-drawer__result:hover) {
+  background: rgba(179,153,77,0.12);
+}
+:global(.mm-drawer__result-kicker) {
+  font-family: var(--font-body);
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+:global(.mm-drawer__result-title) {
+  font-family: var(--font-body);
+  font-size: 13px; line-height: 1.35;
+  color: rgba(255,255,255,0.85);
+}
+
 :global(.mm-drawer__foot) {
   padding: 16px 20px 24px;
   border-top: 1px solid rgba(179,153,77,0.18);
@@ -561,7 +659,7 @@
     left: 10px; right: 10px;
   }
   :global(.mm-top__search) {
-    min-width: 180px;
+    min-width: 160px;
   }
   :global(.mm-kbd) { display: none; }
   :global(.mm-panel__inner) {
@@ -583,7 +681,7 @@
   :global(.mm-top__brand .wordmark) { height: 22px; }
   :global(.mm-top__brand .kolovrat) { width: 34px; height: 34px; }
   :global(.mm-top__nav) { display: none; }
-  :global(.mm-top__search) { display: none; }
+  :global(.mm-top__search-wrap) { display: none; }
   :global(.mm-burger) {
     display: inline-flex;
     margin-left: auto;

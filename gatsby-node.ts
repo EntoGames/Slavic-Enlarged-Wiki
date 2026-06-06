@@ -229,6 +229,7 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
       relatedSlugs: [String!]
       marginalia: [MarginaliaItem]
       interactive: String
+      badge: String
     }
     type MarkdownRemark implements Node {
       fields: MarkdownRemarkFields

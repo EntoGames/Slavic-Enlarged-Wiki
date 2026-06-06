@@ -12,26 +12,33 @@ export interface SectionMeta {
   order: number;
   /** Etykieta w mega-menu i breadcrumbs. */
   label: string;
+  /** Skrócona etykieta w topbarze nawigacji (jeśli inna niż label). */
+  navLabel?: string;
   /** Krótki opis sekcji (w mega-menu intro panel). */
   blurb: string;
   /** ID moda z mod-registry ("se", "ssp", "kingdom-mods"). Sekcje mieszane → "mixed". */
   mod: string;
+  /** Kolor akcentu panelu mega-menu (CSS hue lub gradient). */
+  panelHue?: number;
 }
 
 export const SECTIONS: Record<string, SectionMeta> = {
   wprowadzenie: {
     order: 1,
     label: "Wprowadzenie",
+    navLabel: "Start",
     blurb:
-      "Czym są oba mody, jak je zainstalować i od czego zacząć grę.",
+      "Instalacja, wymagania i pierwsze kroki.",
     mod: "se",
+    panelHue: 45,
   },
   kultury: {
     order: 2,
     label: "Kultury",
     blurb:
-      "34 kultury słowiańskie — od Krywiczów po Karyntan.",
+      "35 kultur słowiańskich — od Krywiczów po Słoweńców.",
     mod: "se",
+    panelHue: 120,
   },
   "krolestwa-wschodnie": {
     order: 3,
@@ -60,6 +67,7 @@ export const SECTIONS: Record<string, SectionMeta> = {
     blurb:
       "Jeden panteon, trzy odłamy, piętnaście miejsc świętych i szansa na zjednoczenie.",
     mod: "se",
+    panelHue: 260,
   },
   "walka-slowianczyzny": {
     order: 7,
@@ -72,15 +80,17 @@ export const SECTIONS: Record<string, SectionMeta> = {
     order: 8,
     label: "Decyzje",
     blurb:
-      "Decyzje strategiczne i religijne dostępne w grze.",
+      "Reformuj wiarę, zjednocz Słowiańszczyznę, zmień bieg historii.",
     mod: "mixed",
+    panelHue: 0,
   },
   wydarzenia: {
     order: 9,
     label: "Wydarzenia",
     blurb:
-      "Eventy synkretyczne, fazowe i tradycyjne.",
+      "Zdarzenia losowe i fabularne — od intryg bogów po lokalne obrzędy.",
     mod: "mixed",
+    panelHue: 30,
   },
   scenariusze: {
     order: 10,
@@ -93,15 +103,17 @@ export const SECTIONS: Record<string, SectionMeta> = {
     order: 11,
     label: "Poradniki",
     blurb:
-      "Przewodniki krok po kroku do kluczowych mechanik.",
+      "Przewodniki krok po kroku do najważniejszych wyzwań.",
     mod: "mixed",
+    panelHue: 180,
   },
   historia: {
     order: 12,
     label: "Historia",
     blurb:
-      "Tło źródłowe, na którym stoi cały mod.",
+      "Realia historyczne stojące za mechanikami modu.",
     mod: "se",
+    panelHue: 40,
   },
   techniczne: {
     order: 13,
@@ -109,13 +121,15 @@ export const SECTIONS: Record<string, SectionMeta> = {
     blurb:
       "Kompatybilność z innymi modami, znane problemy, changelog.",
     mod: "se",
+    panelHue: 210,
   },
   changelog: {
     order: 14,
     label: "Changelog",
     blurb:
-      "Kronika zmian we wszystkich modach.",
+      "Co nowego w każdej wersji.",
     mod: "mixed",
+    panelHue: 15,
   },
 };
 

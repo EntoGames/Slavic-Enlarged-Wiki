@@ -1,10 +1,11 @@
 import * as React from "react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { Link } from "gatsby";
+import { Link, navigate } from "gatsby";
 import kolovratSvg from "../../assets/img/kolovrat.svg";
 import wordmarkSvg from "../../assets/img/wordmark.svg";
 import { useWikiIndex, type WikiEntry } from "../../data/use-wiki-index";
-import { SECTIONS, SUBFOLDER_LABELS, TEMPLATE_SLUGS } from "../../data/wiki-sections";
+import { SECTIONS, SUBFOLDER_LABELS } from "../../data/wiki-sections";
+import { humanizeSlug } from "../../utils/wiki-paths";
 
 /* =============================================================
    MegaMenu — top-bar wiki z mega-panelami.
@@ -37,6 +38,7 @@ interface PanelData {
   count: number;
   columns: { key: string; title: string; sub?: number; items: WikiEntry[] }[];
   featured: WikiEntry | null;
+  panelHue: number;
 }
 
 /* ============================================================
@@ -47,9 +49,27 @@ export function MegaMenu({ activeUrlPath }: MegaMenuProps) {
   const index = useWikiIndex();
   const [openId, setOpenId] = useState<string | null>(null);
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchFocused, setSearchFocused] = useState(false);
+  const [selectedResultIdx, setSelectedResultIdx] = useState(-1);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const searchRef = useRef<HTMLInputElement>(null);
 
   const closeDrawer = useCallback(() => setDrawerOpen(false), []);
+
+  const visibleSections = index.visibleSections;
+
+  const searchResults = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase();
+    if (q.length < 2) return [];
+    return index.all
+      .filter(
+        (e) =>
+          e.title.toLowerCase().includes(q) ||
+          e.blurb.toLowerCase().includes(q)
+      )
+      .slice(0, 8);
+  }, [searchQuery, index.all]);
 
   // Zamknij na Escape
   useEffect(() => {
@@ -57,6 +77,21 @@ export function MegaMenu({ activeUrlPath }: MegaMenuProps) {
       if (e.key === "Escape") {
         setOpenId(null);
         setDrawerOpen(false);
+        setSearchQuery("");
+        setSearchFocused(false);
+        searchRef.current?.blur();
+      }
+    };
+    window.addEventListener("keydown", h);
+    return () => window.removeEventListener("keydown", h);
+  }, []);
+
+  // Cmd/Ctrl+K → focus search
+  useEffect(() => {
+    const h = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === "k") {
+        e.preventDefault();
+        searchRef.current?.focus();
       }
     };
     window.addEventListener("keydown", h);
@@ -111,6 +146,23 @@ export function MegaMenu({ activeUrlPath }: MegaMenuProps) {
     return buildPanelData(section);
   }, [openId, index.bySection]);
 
+  const handleSearchKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      setSelectedResultIdx((i) => Math.min(i + 1, searchResults.length - 1));
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      setSelectedResultIdx((i) => Math.max(i - 1, -1));
+    } else if (e.key === "Enter" && selectedResultIdx >= 0 && searchResults[selectedResultIdx]) {
+      e.preventDefault();
+      navigate(searchResults[selectedResultIdx].urlPath);
+      setSearchQuery("");
+      setSearchFocused(false);
+    }
+  };
+
+  const showSearchResults = searchFocused && searchResults.length > 0;
+
   return (
     <header className="mm-top" onMouseLeave={scheduleClose}>
       <Link to="/" className="mm-top__brand" aria-label="Slavic Enlarged Wiki">
@@ -119,7 +171,7 @@ export function MegaMenu({ activeUrlPath }: MegaMenuProps) {
       </Link>
 
       <nav className="mm-top__nav" aria-label="Sekcje wiki">
-        {index.bySection.map((s) => (
+        {visibleSections.map((s) => (
           <button
             key={s.id}
             className={
@@ -138,7 +190,7 @@ export function MegaMenu({ activeUrlPath }: MegaMenuProps) {
             aria-expanded={openId === s.id}
             aria-controls={`mm-panel-${s.id}`}
           >
-            <span>{s.label}</span>
+            <span>{s.navLabel}</span>
             <svg className="mm-caret" viewBox="0 0 10 6" aria-hidden="true">
               <path d="M0,0 L5,6 L10,0" fill="currentColor" />
             </svg>
@@ -146,19 +198,56 @@ export function MegaMenu({ activeUrlPath }: MegaMenuProps) {
         ))}
       </nav>
 
-      <label className="mm-top__search" aria-label="Szukaj w wiki">
-        <svg className="mm-search-ico" viewBox="0 0 16 16" aria-hidden="true">
-          <circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" strokeWidth="1.5" />
-          <path d="M11,11 L15,15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-        </svg>
-        <input type="text" placeholder="szukaj w wiki…" />
-        <span className="mm-kbd">⌘ K</span>
-      </label>
+      <div className="mm-top__search-wrap">
+        <label className="mm-top__search" aria-label="Szukaj artykułu">
+          <svg className="mm-search-ico" viewBox="0 0 16 16" aria-hidden="true">
+            <circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" strokeWidth="1.5" />
+            <path d="M11,11 L15,15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+          </svg>
+          <input
+            ref={searchRef}
+            type="text"
+            placeholder="Szukaj artykułu…"
+            value={searchQuery}
+            onChange={(e) => {
+              setSearchQuery(e.target.value);
+              setSelectedResultIdx(-1);
+            }}
+            onFocus={() => setSearchFocused(true)}
+            onBlur={() => setTimeout(() => setSearchFocused(false), 150)}
+            onKeyDown={handleSearchKeyDown}
+            role="combobox"
+            aria-expanded={showSearchResults}
+            aria-controls="mm-search-results"
+            aria-autocomplete="list"
+          />
+          <span className="mm-kbd">⌘ K</span>
+        </label>
+        {showSearchResults && (
+          <ul className="mm-search-results" id="mm-search-results" role="listbox">
+            {searchResults.map((r, i) => (
+              <li key={r.urlPath} role="option" aria-selected={i === selectedResultIdx}>
+                <Link
+                  to={r.urlPath}
+                  className={"mm-search-result" + (i === selectedResultIdx ? " is-selected" : "")}
+                  onClick={() => {
+                    setSearchQuery("");
+                    setSearchFocused(false);
+                  }}
+                >
+                  <span className="mm-search-result__kicker">{r.kicker}</span>
+                  <span className="mm-search-result__title">{r.title}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
 
       <button
         type="button"
         className="mm-burger"
-        aria-label="Otwórz menu nawigacji"
+        aria-label={drawerOpen ? "Zamknij menu" : "Menu"}
         aria-expanded={drawerOpen}
         aria-controls="mm-drawer"
         onClick={() => setDrawerOpen((v) => !v)}
@@ -178,7 +267,7 @@ export function MegaMenu({ activeUrlPath }: MegaMenuProps) {
 
       <MobileDrawer
         open={drawerOpen}
-        sections={index.bySection}
+        sections={visibleSections}
         activeSection={activeSection}
         onClose={closeDrawer}
       />
@@ -200,8 +289,7 @@ function buildPanelData(section: {
   label: string;
   entries: WikiEntry[];
 }): PanelData {
-  // Filtruj szablony redakcyjne
-  const entries = section.entries.filter((e) => !TEMPLATE_SLUGS.has(e.slug));
+  const entries = section.entries;
 
   // Grupuj po PEŁNEJ ścieżce podfolderów (segments[1:-1]).
   // Np. ["kultury","zachodnioslowianskie","lechici","polanie-lechiccy"]
@@ -217,11 +305,11 @@ function buildPanelData(section: {
 
   const columns: PanelData["columns"] = [];
 
-  // Wpisy w korzeniu sekcji (bez podfolderów)
+  // Wpisy w korzeniu sekcji (bez podfolderów) — bez nagłówka kolumny
   if (groups.has("_root")) {
     const rootItems = groups.get("_root")!;
     if (rootItems.length > 0) {
-      columns.push({ key: "_root", title: "Główne", items: rootItems });
+      columns.push({ key: "_root", title: "", items: rootItems });
     }
     groups.delete("_root");
   }
@@ -230,7 +318,7 @@ function buildPanelData(section: {
   const sortedKeys = Array.from(groups.keys()).sort();
   for (const key of sortedKeys) {
     const items = groups.get(key)!;
-    const label = SUBFOLDER_LABELS[key] ?? humanize(key.split("/").pop()!);
+    const label = SUBFOLDER_LABELS[key] ?? humanizeSlug(key.split("/").pop()!);
     columns.push({
       key,
       title: label,
@@ -254,14 +342,8 @@ function buildPanelData(section: {
     count: articleCount,
     columns,
     featured,
+    panelHue: SECTIONS[section.id]?.panelHue ?? 45,
   };
-}
-
-function humanize(slug: string): string {
-  return slug
-    .split("-")
-    .map((w) => (w ? w[0].toUpperCase() + w.slice(1) : w))
-    .join(" ");
 }
 
 function pluralizeArtykul(n: number): string {
@@ -304,7 +386,7 @@ function CodexPanel({
             <h3>{panel.label}</h3>
             {panel.blurb && <p>{panel.blurb}</p>}
             <Link className="mm-panel__seeall" to={`/wiki/${panel.sectionId}`}>
-              Zobacz całą sekcję →
+              Przeglądaj sekcję →
             </Link>
           </div>
         </div>
@@ -315,22 +397,27 @@ function CodexPanel({
         >
           {panel.columns.map((col) => (
             <div className="mm-col" key={col.key}>
-              <header className="mm-col__head">
-                <h4>{col.title}</h4>
-                {col.sub != null && (
-                  <span className="mm-col__sub" title={`${col.sub} ${pluralizeArtykul(col.sub)}`}>{col.sub}</span>
-                )}
-              </header>
+              {col.title && (
+                <header className="mm-col__head">
+                  <h4>{col.title}</h4>
+                  {col.sub != null && (
+                    <span className="mm-col__sub" title={`${col.sub} ${pluralizeArtykul(col.sub)}`}>{col.sub}</span>
+                  )}
+                </header>
+              )}
               <ul className="mm-col__list">
-                {col.items.slice(0, 12).map((it) => (
+                {col.items.slice(0, 5).map((it) => (
                   <li key={it.urlPath}>
-                    <Link to={it.urlPath}>{it.title}</Link>
+                    <Link to={it.urlPath}>
+                      {it.title}
+                      {it.badge && <span className="mm-pill">{it.badge}</span>}
+                    </Link>
                   </li>
                 ))}
-                {col.items.length > 12 && (
+                {col.items.length > 5 && (
                   <li className="mm-col__more">
                     <Link to={`/wiki/${panel.sectionId}${col.key !== "_root" ? "/" + col.key : ""}`}>
-                      + {col.items.length - 12} więcej →
+                      Zobacz wszystkie {col.items.length} →
                     </Link>
                   </li>
                 )}
@@ -339,7 +426,10 @@ function CodexPanel({
           ))}
 
           {panel.featured && (
-            <aside className="mm-feat">
+            <aside
+              className="mm-feat"
+              style={{ ["--panel-hue" as string]: panel.panelHue }}
+            >
               <div className="mm-feat__art">
                 <img src={kolovratSvg} alt="" />
               </div>
@@ -380,6 +470,23 @@ function MobileDrawer({
   activeSection: string | null;
   onClose: () => void;
 }) {
+  const [mobileQuery, setMobileQuery] = useState("");
+  const allEntries = useMemo(
+    () => sections.flatMap((s) => s.entries),
+    [sections]
+  );
+  const mobileResults = useMemo(() => {
+    const q = mobileQuery.trim().toLowerCase();
+    if (q.length < 2) return [];
+    return allEntries
+      .filter(
+        (e) =>
+          e.title.toLowerCase().includes(q) ||
+          e.blurb.toLowerCase().includes(q)
+      )
+      .slice(0, 8);
+  }, [mobileQuery, allEntries]);
+
   return (
     <>
       <div
@@ -412,19 +519,37 @@ function MobileDrawer({
           </button>
         </header>
 
-        <label className="mm-drawer__search" aria-label="Szukaj w wiki">
+        <label className="mm-drawer__search" aria-label="Szukaj artykułu">
           <svg className="mm-search-ico" viewBox="0 0 16 16" aria-hidden="true">
             <circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" strokeWidth="1.5" />
             <path d="M11,11 L15,15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
           </svg>
-          <input type="text" placeholder="szukaj w wiki…" />
+          <input
+            type="text"
+            placeholder="Szukaj artykułu…"
+            value={mobileQuery}
+            onChange={(e) => setMobileQuery(e.target.value)}
+          />
         </label>
+
+        {mobileResults.length > 0 && (
+          <ul className="mm-drawer__results">
+            {mobileResults.map((r) => (
+              <li key={r.urlPath}>
+                <Link to={r.urlPath} className="mm-drawer__result" onClick={onClose}>
+                  <span className="mm-drawer__result-kicker">{r.kicker}</span>
+                  <span className="mm-drawer__result-title">{r.title}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        )}
 
         <nav className="mm-drawer__nav" aria-label="Sekcje wiki">
           <ol className="mm-drawer__list">
-            {sections.map((s) => {
+            {sections.map((s, idx) => {
               const count = s.entries.filter((e) => !e.isCategoryIndex).length;
-              const order = SECTIONS[s.id]?.order ?? 0;
+              const displayNum = idx + 1;
               const blurb = SECTIONS[s.id]?.blurb ?? "";
               return (
                 <li key={s.id}>
@@ -437,7 +562,7 @@ function MobileDrawer({
                     onClick={onClose}
                   >
                     <span className="mm-drawer__num">
-                      {String(order).padStart(2, "0")}
+                      {String(displayNum).padStart(2, "0")}
                     </span>
                     <span className="mm-drawer__meta">
                       <span className="mm-drawer__label">{s.label}</span>

@@ -88,10 +88,11 @@
   background: var(--gold);
 }
 :global(.wf-hero__breadcrumbs) {
-  display: flex; gap: 8px; justify-content: center;
+  display: flex; gap: 6px; justify-content: center;
+  align-items: center; flex-wrap: wrap;
   font-family: var(--font-body);
-  font-size: 11px;
-  letter-spacing: 0.06em;
+  font-size: 13px;
+  letter-spacing: 0.04em;
   color: rgba(255,255,255,0.4);
   margin-bottom: 14px;
 }
@@ -99,6 +100,7 @@
   color: rgba(255,255,255,0.65);
   text-decoration: none;
   transition: color 120ms;
+  padding: 6px 4px;
 }
 :global(.wf-hero__breadcrumbs a:hover) { color: var(--gold-light); }
 :global(.wf-hero__breadcrumbs .sep) { color: rgba(179,153,77,0.4); }

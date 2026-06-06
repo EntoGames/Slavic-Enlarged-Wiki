@@ -1,8 +1,8 @@
 # Przegląd kultur w Slavic Enlarged
 
-Slavic Enlarged dodaje do gry **34 kultury słowiańskie** — 30 zupełnie nowych i 4 poprawione z waniliowej wersji gry. Kultury są podzielone na trzy grupy dziedzictwa, odzwierciedlające historyczny podział Słowian.
+Slavic Enlarged dodaje do gry **35 kultur słowiańskich** — 31 zupełnie nowych i 4 poprawione z waniliowej wersji gry. Kultury są podzielone na trzy grupy dziedzictwa, odzwierciedlające historyczny podział Słowian.
 
-## Kultury wschodniosłowiańskie (9)
+## Kultury wschodniosłowiańskie (10)
 
 Plemiona zamieszkujące tereny dzisiejszej Ukrainy, Białorusi i zachodniej Rosji. Ich wspólnym językiem jest język wschodniosłowiański, a centrum duchowym — Kijów.
 
@@ -13,10 +13,12 @@ Plemiona zamieszkujące tereny dzisiejszej Ukrainy, Białorusi i zachodniej Rosj
 | Drewlanie | Stoicki | Lasy Prypeci | Legendarni „ludzie z drewna", zabójcy Igora |
 | Dregowicze | Wspólnotowy | Bagna Polesia | Ludy bagienne między Prypecią a Dźwiną |
 | Polanie kijowscy | Dworski | Kijów, środkowy Dniepr | Elita polityczna, twórcy Rusi Kijowskiej |
-| Ulicze | Stoicki | Dolny Dniepr/Bug | Pasterze i drużynnicy stepowego pogranicza |
+| Ulicze | Wojowniczy | Dolny Dniepr/Bug | Jeźdźcy i drużynnicy stepowego pogranicza |
 | Radymicze | Wspólnotowy | Dorzecze Soża | Spokojni rolnicy przy szlaku na wschód |
 | Połoczanie | Dworski | Region połocki | Kupcy i wojownicy nad Dźwiną |
 | Tywerscy | Stoicki | Dniestr/Prut (Mołdawia) | Strażnicy południowo-zachodniego pogranicza |
+| Ilmenianie | Wspólnotowy | Nowogród, Jezioro Ilmen | Kupcy i mieszczanie — brama między Bałtykiem a stepem |
+| Siewierzanie | Stoicki | Dorzecze Desny | Wytrzymałe plemię leśnych rolników na pograniczu stepu |
 
 ## Kultury zachodniosłowiańskie (16)
 
