@@ -65,6 +65,7 @@ interface RawNode {
     subtitle: string | null;
     kicker: string | null;
     blurb: string | null;
+    mod: string | null;
   };
   excerpt: string;
 }
@@ -86,6 +87,7 @@ const WIKI_INDEX_QUERY = graphql`
           subtitle
           kicker
           blurb
+          mod
         }
         excerpt(pruneLength: 200)
       }
@@ -122,7 +124,7 @@ export function useWikiIndex(): WikiIndex {
     for (const node of data.allMarkdownRemark.nodes) {
       const f = node.fields;
       if (!f.isContent || !f.urlPath || !f.slug) continue;
-      if (!isArticleVisible(f.section)) continue;
+      if (!isArticleVisible(f.section, node.frontmatter?.mod)) continue;
 
       const entry: WikiEntry = {
         urlPath: f.urlPath,
