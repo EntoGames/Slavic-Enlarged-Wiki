@@ -1,3 +1,7 @@
+---
+mod: sml
+---
+
 # Changelog — Slavic Enlarged: Myths and Legends
 
 > **⚠ Ten mod jest obecnie w fazie koncepcyjnej i nie jest jeszcze publicznie dostępny.**

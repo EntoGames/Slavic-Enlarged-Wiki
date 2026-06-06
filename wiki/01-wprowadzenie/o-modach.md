@@ -13,35 +13,33 @@ Mod dodaje:
 - **7 grywalnych postaci** na ekranie startowym 867 roku
 - **Ponad 580 historycznych imion** słowiańskich
 
-## Slavic Enlarged: Slavic Struggle of Perun — addon
+## Planowane rozszerzenia
 
-> **⚠ W przygotowaniu** — mod nie jest jeszcze publicznie dostępny.
+Slavic Enlarged jest modem bazowym. W przygotowaniu są dodatkowe mody, które pojawią się w wiki gdy zostaną opublikowane.
 
+### Slavic Struggle of Perun
+Addon wprowadzający mechanikę Walki Słowiańszczyzny — wielopokoleniowy konflikt o duszę słowiańskiego pogaństwa. Wymaga DLC Fate of Iberia.
 
-Slavic Struggle of Perun to rozszerzenie wymagające modu bazowego Slavic Enlarged oraz DLC Fate of Iberia. Wykorzystuje mechanikę Walki (Struggle) z tego DLC, aby opowiedzieć wielopokoleniową historię konfliktu między słowiańskim pogaństwem a napierającym chrześcijaństwem.
+### Sub-mody królewskie
+Rozszerzenia regionalne dodające unikalne eventy, decyzje i modyfikatory dla konkretnych królestw. Każdy sub-mod to osobna modyfikacja zależna od Slavic Enlarged i Slavic Struggle of Perun.
 
-Zamiast prostego przełącznika „pogaństwo → chrześcijaństwo", addon wprowadza:
-- **5 faz Walki Słowiańszczyzny** — nazwanych od słowiańskich bóstw (Swarożyc, Perun, Lada, Weles, Marzanna)
-- **3 możliwe zakończenia** — Odrodzenie Słowiańszczyzny, Triumf Chrześcijaństwa lub Trwałe Dwójwierstwo
-- **System dwójwierstwa (dvoeverie)** — 5-stopniowa skala wiary prowincji, od „głęboko słowiańskiej" po „głęboko chrześcijańską"
-- **Przetrwanie tradycji** — ludowe zwyczaje (Noc Kupały, Dziady, Kolędnicy) mogą przetrwać pod chrześcijańskimi nazwami lub zostać zapomniane
-- **17 wydarzeń narracyjnych** — od Święta Świętego Ognia po spotkanie z Ostatnim Wołchwem
-- **10 decyzji strategicznych** — od chrztu politycznego po fortyfikację świętego gaju
+W aktywnym rozwoju:
+- **Polska: Początki Piastów** *(Poland Piast Origins)* — Polanie, Goplanie, Mazowszanie, Wiślanie, Ślężanie
+- **Pomorze: Brzegi Bałtyku** *(Pomerania Baltic Shores)* — Pomorzanie, Ranowie i ludy nadbałtyckie
+- **Serbia: Klany Bałkańskie** *(Serbia Balkan Clans)* — klany serbskie i bałkańska dynamika plemienna
+- **Serbołużyce: Plemiona Połabskie** *(Sorbia Polabian Tribes)* — Obodryci, Wieleci i Połabianie
+- **Nowogród: Republika Północy** *(Novgorod Northern Republic)* — republika nowogrodzka i handel szlakiem wareskim
+- **Biała Ruś: Plemiona Puszczy** *(White Ruthenia Forest Tribes)* — Dregowicze i ludy puszczy białoruskiej
+- **Ruś: Pradawne Serce** *(Ruthenia Ancient Heartland)* — serce dawnej Rusi
+- **Bułgaria: Wyżyny Rodopskie** *(Bulgaria Rhodope Highlands)* — tradycje rodopskie i bałkańskie wyżyny
+- **Chorwacja: Wybrzeże Adriatyku** *(Croatia Adriatic Coast)* — Chorwacja i wybrzeże adriatyckie
 
-## Sub-mody królewskie — 16 rozszerzeń regionalnych
+Planowane (w fazie koncepcyjnej):
+Karyntia: Słowianie Alpejscy *(Carinthia Alpine Slavs)*, Halicz-Wołyń: Zachodnie Pogranicze *(Galicia-Volhynia Western Borderlands)*, Węgry: Enklawy Słowiańskie *(Hungary Slavic Enclaves)*, Mołdawia: Granica Rzeczna *(Moldavia River Frontier)*, Opole: Wschodni Step *(Opolye Eastern Steppe)*, Połock: Brama Północy *(Polotsk Northern Gateway)*, Tesaloniki: Południowa Granica *(Thessalonika Southern Frontier)*.
 
-> **⚠ W przygotowaniu** — żaden z sub-modów królewskich nie jest jeszcze publicznie dostępny.
+### Myths and Legends
+System legend słowiańskich — wymaga DLC Legends of the Dead. W fazie koncepcyjnej.
 
-Seria 16 niezależnych sub-modów, z których każdy skupia się na jednym królestwie CK3. Każdy sub-mod rozbudowuje swój region o mechaniki, decyzje i eventy niedostępne w bazowym Slavic Enlarged ani Slavic Struggle of Perun. Wszystkie wymagają obu modów wymienionych powyżej.
+## Dla kogo jest ten mod?
 
-**Królestwa wschodnie** — Ruś, Biała Ruś, Połock, Mołdawia, Nowogród, Galicja-Wołyń, Opolye
-
-**Królestwa zachodnie** — Polska, Pomorze, Serbolużyce, Węgry, Karyntia
-
-**Królestwa południowe** — Bułgaria, Chorwacja, Serbia, Tessaloniki
-
-Każdy sub-mod ma własną sekcję w wiki — patrz [Królestwa wschodnie](../../02-krolestwa-wschodnie/README.md), [Królestwa zachodnie](../../03-krolestwa-zachodnie/README.md), [Królestwa południowe](../../04-krolestwa-poludniowe/README.md).
-
-## Dla kogo są te mody?
-
-Slavic Enlarged jest dla każdego, kto chce głębszego doświadczenia kulturowego w słowiańskiej części mapy CK3. Slavic Struggle of Perun jest dla graczy, którzy lubią narracyjne mechaniki i chcą przeżyć dramat chrystianizacji Słowian — nie jako jednorazowe kliknięcie, ale jako wielowiekowy proces pełen kompromisów, zdrad i heroicznych ostatnich bastionów. Sub-mody królewskie są dla tych, którzy chcą jeszcze głębszego zanurzenia w realiach konkretnego królestwa.
+Slavic Enlarged jest dla każdego, kto chce głębszego doświadczenia kulturowego w słowiańskiej części mapy CK3 — zamiast jednej monolitycznej kultury, dziesiątki historycznych plemion z własnymi tradycjami, etosami i prowincjami.

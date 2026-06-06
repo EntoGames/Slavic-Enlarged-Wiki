@@ -1,3 +1,7 @@
+---
+mod: ssp
+---
+
 # Changelog — Slavic Struggle of Perun
 
 > **⚠ Ten mod jest obecnie w fazie rozwoju i nie jest jeszcze publicznie dostępny.**

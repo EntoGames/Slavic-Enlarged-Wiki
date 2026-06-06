@@ -1,3 +1,7 @@
+---
+mod: kingdom-mods
+---
+
 # Changelog — Slavic Enlarged: Pomerania Baltic Shores
 
 > **⚠ Ten sub-mod jest obecnie w fazie rozwoju i nie jest jeszcze publicznie dostępny.**

@@ -1,3 +1,7 @@
+---
+mod: kingdom-mods
+---
+
 # Sub-mody królewskie — changelog
 
 > **⚠ Sub-mody królewskie są aktualnie w fazie rozwoju i nie są jeszcze publicznie dostępne.**

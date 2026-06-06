@@ -14,4 +14,4 @@ Poniższe mody są aktywnie rozwijane i zostaną opublikowane w przyszłości. I
 |-----|--------|
 | Slavic Struggle of Perun | 🔒 W przygotowaniu |
 | Myths and Legends | 🔒 W przygotowaniu |
-| Sub-mody królewskie (16) | 🔒 W przygotowaniu |
+| Sub-mody królewskie | 🔒 W przygotowaniu |
