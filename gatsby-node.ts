@@ -184,7 +184,17 @@ export const createPages: GatsbyNode["createPages"] = async ({
 };
 
 /* ============================================================
-   3. createSchemaCustomization — gwarantuje schemat pól nawet
+   3. onCreatePage — usuwaj strony /dev/* na produkcji
+   ============================================================ */
+
+export const onCreatePage: GatsbyNode["onCreatePage"] = ({ page, actions }) => {
+  if (isProduction && page.path.startsWith("/dev/")) {
+    actions.deletePage(page);
+  }
+};
+
+/* ============================================================
+   4. createSchemaCustomization — gwarantuje schemat pól nawet
       kiedy żaden plik markdown nie ma jeszcze danego pola.
    ============================================================ */
 
@@ -229,7 +239,10 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
       relatedSlugs: [String!]
       marginalia: [MarginaliaItem]
       interactive: String
+      heroMap: String
+      ogImage: String
       badge: String
+      sections: String
     }
     type MarkdownRemark implements Node {
       fields: MarkdownRemarkFields

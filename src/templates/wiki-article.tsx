@@ -74,6 +74,9 @@ interface ArticleNode {
     relatedSlugs?: string[] | null;
     marginalia?: MarginaliaItem[] | null;
     interactive?: string | null;
+    sections?: string | null;
+    heroMap?: string | null;
+    ogImage?: string | null;
   };
 }
 
@@ -101,6 +104,7 @@ const WikiArticleTemplate: React.FC<PageProps<QueryData>> = ({ data }) => {
   );
   const { ledeNode, rest } = useMemo(() => splitLede(parsed), [parsed]);
 
+  const isFlat = fm.sections === "flat";
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
   const [activeId, setActiveId] = useState<string>(rest.sections[0]?.id ?? "");
   const [collapsedSet, setCollapsedSet] = useState<Set<string>>(new Set());
@@ -155,15 +159,24 @@ const WikiArticleTemplate: React.FC<PageProps<QueryData>> = ({ data }) => {
         <MegaMenu activeUrlPath={fields.urlPath} />
 
         {fm.interactive !== "scenario-map" && (
-          <Hero
-            kicker={kicker}
-            title={heroTitle}
-            subtitle={heroSubtitle}
-            breadcrumbs={breadcrumbs}
-            isLanding={isSectionLanding}
-            sectionOrder={sectionMeta?.order}
-            visibleSections={index.visibleSections}
-          />
+          <div className={fm.heroMap ? "wf-hero-wrap wf-hero-wrap--map" : "wf-hero-wrap"}>
+            {fm.heroMap && (
+              <div
+                className="wf-hero-wrap__map"
+                style={{ backgroundImage: `url(${fm.heroMap})` }}
+              />
+            )}
+            <Hero
+              kicker={kicker}
+              title={heroTitle}
+              subtitle={heroSubtitle}
+              breadcrumbs={breadcrumbs}
+              isLanding={isSectionLanding}
+              sectionOrder={sectionMeta?.order}
+              visibleSections={index.visibleSections}
+              heroMap={fm.heroMap}
+            />
+          </div>
         )}
 
         {fm.interactive === "scenario-map" && <ScenarioMap />}
@@ -188,28 +201,43 @@ const WikiArticleTemplate: React.FC<PageProps<QueryData>> = ({ data }) => {
               ) : null}
 
               {rest.intro}
-              {rest.sections.map((s, i) => (
-                <Section
-                  key={s.id}
-                  id={s.id}
-                  title={s.title}
-                  num={i + 1}
-                  collapsed={collapsedSet.has(s.id)}
-                  onToggle={() =>
-                    setCollapsedSet((prev) => {
-                      const next = new Set(prev);
-                      if (next.has(s.id)) next.delete(s.id);
-                      else next.add(s.id);
-                      return next;
-                    })
-                  }
-                  registerRef={(el) => {
-                    sectionRefs.current[s.id] = el;
-                  }}
-                >
-                  {s.body}
-                </Section>
-              ))}
+              {isFlat
+                ? rest.sections.map((s, i) => (
+                    <section
+                      key={s.id}
+                      id={s.id}
+                      className="wf-section wf-section--flat"
+                      ref={(el) => { sectionRefs.current[s.id] = el; }}
+                    >
+                      <header className="wf-section__head wf-section__head--flat">
+                        <span className="wf-section__num">{String(i + 1).padStart(2, "0")}</span>
+                        <h2 className="wf-section__title">{s.title}</h2>
+                      </header>
+                      <div className="wf-section__body">{s.body}</div>
+                    </section>
+                  ))
+                : rest.sections.map((s, i) => (
+                    <Section
+                      key={s.id}
+                      id={s.id}
+                      title={s.title}
+                      num={i + 1}
+                      collapsed={collapsedSet.has(s.id)}
+                      onToggle={() =>
+                        setCollapsedSet((prev) => {
+                          const next = new Set(prev);
+                          if (next.has(s.id)) next.delete(s.id);
+                          else next.add(s.id);
+                          return next;
+                        })
+                      }
+                      registerRef={(el) => {
+                        sectionRefs.current[s.id] = el;
+                      }}
+                    >
+                      {s.body}
+                    </Section>
+                  ))}
             </article>
 
             <Marginalia items={fm.marginalia ?? []} />
@@ -235,13 +263,29 @@ export default WikiArticleTemplate;
    ============================================================ */
 export const Head: HeadFC<QueryData> = ({ data }) => {
   const n = data.markdownRemark;
+  const title = `${n.fields.title} — Slavic Enlarged Wiki`;
+  const description = n.frontmatter.subtitle || n.fields.title;
+  const ogImage = n.frontmatter.ogImage || n.frontmatter.heroMap || null;
+
   return (
     <>
-      <title>{n.fields.title} — Slavic Enlarged Wiki</title>
-      <meta
-        name="description"
-        content={n.frontmatter.subtitle || n.fields.title}
-      />
+      <title>{title}</title>
+      <meta name="description" content={description} />
+
+      {/* Open Graph */}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content="article" />
+      {ogImage && <meta property="og:image" content={ogImage} />}
+      {ogImage && <meta property="og:image:width" content="1200" />}
+      {ogImage && <meta property="og:image:height" content="630" />}
+
+      {/* Twitter Card */}
+      <meta name="twitter:card" content={ogImage ? "summary_large_image" : "summary"} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      {ogImage && <meta name="twitter:image" content={ogImage} />}
+
       <html lang="pl" />
     </>
   );
@@ -274,6 +318,9 @@ export const pageQuery = graphql`
         tags
         relatedSlugs
         interactive
+        sections
+        heroMap
+        ogImage
         marginalia {
           type
           kicker
@@ -320,7 +367,7 @@ function deriveKicker(
 
 function Hero({
   kicker, title, subtitle, breadcrumbs, isLanding, sectionOrder,
-  visibleSections,
+  visibleSections, heroMap,
 }: {
   kicker: string;
   title: string;
@@ -329,6 +376,7 @@ function Hero({
   isLanding?: boolean;
   sectionOrder?: number;
   visibleSections?: { id: string }[];
+  heroMap?: string | null;
 }) {
   const displayOrder = useMemo(() => {
     if (!sectionOrder || !visibleSections) return sectionOrder;
@@ -339,9 +387,15 @@ function Hero({
     return idx >= 0 ? idx + 1 : sectionOrder;
   }, [sectionOrder, visibleSections]);
 
+  const heroClass = [
+    "wf-hero",
+    isLanding && "wf-hero--landing",
+    heroMap && "wf-hero--map",
+  ].filter(Boolean).join(" ");
+
   return (
     <div
-      className={"wf-hero" + (isLanding ? " wf-hero--landing" : "")}
+      className={heroClass}
       data-screen-label={`Hero — ${title}`}
     >
       <div className="wf-hero__inner">
