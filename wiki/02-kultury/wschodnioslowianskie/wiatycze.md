@@ -1,3 +1,10 @@
+﻿---
+heroMap: /maps/culture_vyatichi.png
+ogImage: /maps/culture_vyatichi_og.png
+subtitle: Ostatni poganie Rusi — leśny lud nad Oką
+sections: flat
+---
+
 # Wiatycze
 
 Wiatycze to wschodniosłowiańskie plemię zamieszkujące gęste lasy w dorzeczu górnej Oki, na wschodnich rubieżach świata słowiańskiego. W modzie Slavic Enlarged to kultura leśna z głębokim przywiązaniem do pogańskich świętych gajów, co czyni ich jednym z najbardziej tradycyjnych plemion w regionie.
@@ -6,19 +13,28 @@ Wiatycze to wschodniosłowiańskie plemię zamieszkujące gęste lasy w dorzeczu
 
 ## Karta kultury
 
+Wiatycze należą do **dziedzictwa wschodniosłowiańska** i kierują się etosem **wspólnotowym** — współpraca i solidarność ponad ambicję jednostki. Mówią językiem wschodniosłowiański.
+
+Zaczynają grę z dwiema tradycjami: **Leśny lud** i **Święte gaje**. W 867 roku kontrolują **4 prowincje**. Sukcesja wojenna dopuszcza **tylko mężczyzn**.
+
+*Nowa kultura dodana przez Slavic Enlarged.*
+
+<details>
+<summary>Dane techniczne (dla modderów)</summary>
+
 | Pole | Wartość |
 |------|---------|
-| **Nazwa (PL)** | Wiatycze |
-| **Klucz w grze** | `vyatichi` |
-| **Grupa dziedzictwa** | wschodniosłowiańska (`heritage_east_slavic`) |
-| **Etos** | Wspólnotowy (`ethos_communal`) |
-| **Język** | wschodniosłowiański (`language_east_slavic`) |
-| **Lista imion** | `name_list_se_slavic` |
-| **Tradycje startowe** | Leśny lud, Święte gaje |
-| **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
-| **Kolor na mapie** | RGB 0.50 0.40 0.30 |
-| **Status w modzie** | nowa |
-| **Plik definicji** | `SE/common/culture/cultures/se_slavic_new.txt` |
+| **Klucz** | `vyatichi` |
+| **Heritage** | `heritage_east_slavic` |
+| **Ethos** | `ethos_communal` |
+| **Język** | `language_east_slavic` |
+| **Imiona** | `name_list_se_slavic` |
+| **Tradycje** | `tradition_forest_folk`, `tradition_sacred_groves` |
+| **Sukcesja** | `martial_custom_male_only` |
+| **Kolor** | `rgb(127, 102, 76)` · CK3: `0.5 0.4 0.3` |
+| **Plik** | `se_slavic_new.txt` |
+
+</details>
 
 ---
 
@@ -28,8 +44,8 @@ Wiatycze to wschodniosłowiańskie plemię zamieszkujące gęste lasy w dorzeczu
 Etos wspólnotowy zapewnia Wiatyczom bonusy do opinii wasali i stabilności wewnętrznej. Odzwierciedla to ich zdecentralizowany ustrój plemienny, w którym decyzje podejmowano wspólnie na wiecach.
 
 ### Tradycje
-- **Leśny lud** (`tradition_forest_folk`) — bonusy do walki w lasach i zaopatrzenia na zalesionym terenie; puszcze nad Oką stanowiły naturalną twierdzę Wiatyczów.
-- **Święte gaje** (`tradition_sacred_groves`) — bonusy do pobożności i obrony przed nawracaniem; Wiatycze byli jednym z ostatnich plemion, które przyjęły chrześcijaństwo.
+- **Leśny lud** — bonusy do walki w lasach i zaopatrzenia na zalesionym terenie; puszcze nad Oką stanowiły naturalną twierdzę Wiatyczów.
+- **Święte gaje** — bonusy do pobożności i obrony przed nawracaniem; Wiatycze byli jednym z ostatnich plemion, które przyjęły chrześcijaństwo.
 
 ---
 
@@ -38,7 +54,7 @@ Etos wspólnotowy zapewnia Wiatyczom bonusy do opinii wasali i stabilności wewn
 ### Region historyczny
 Wiatycze zamieszkiwali dorzecze górnej Oki i jej dopływów, na terenie dzisiejszej Rosji środkowej. Region jest gęsto zalesiony, z łagodnymi wzgórzami Wyżyny Środkoworosyjskiej. Głównym ośrodkiem był gród w okolicach późniejszego Czernihowa i Riazania.
 
-### Prowincje przypisane w 867
+### Prowincje w 867
 - 5209
 - 5212
 - 5206
@@ -54,8 +70,9 @@ Wiatycze zamieszkiwali dorzecze górnej Oki i jej dopływów, na terenie dzisiej
 
 ## Wiara
 
-- **Wiara startowa (867):** [wschodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- **Najbliższe miejsca święte:** Kijów (c_kiev), Nowogród (c_novgorod)
+Wiatycze wyznają wiarę [wschodniosłowiańską](../../03-wiara/przeglad-wiary.md) — pogański kult Peruna i Welesa. Historycznie byli jednym z ostatnich plemion ruskich, które opierały się chrystianizacji.
+
+- **Najbliższe miejsca święte:** Kijów, Nowogród
 
 ---
 

@@ -1,3 +1,10 @@
+﻿---
+heroMap: /maps/culture_pannonian_slavs.png
+ogImage: /maps/culture_pannonian_slavs_og.png
+subtitle: Słowianie niziny panońskiej — między Frankami a Bułgarami
+sections: flat
+---
+
 # Słowianie Panońscy
 
 Słowianie Panońscy to południowosłowiańska kultura zamieszkująca region jeziora Balaton i Zalaváru w Panonii. W modzie Slavic Enlarged wyróżniają się jako jedyna południowa kultura z etosem biurokratycznym — dziedzice tradycji administracyjnej Księstwa Blatnogradzkiego, z unikalną zachodniosłowiańską grafiką i mieszaną etnicznością.
@@ -6,19 +13,28 @@ Słowianie Panońscy to południowosłowiańska kultura zamieszkująca region je
 
 ## Karta kultury
 
+Słowianie Panońscy należą do **dziedzictwa południowosłowiańska** i kierują się etosem **biurokratyczny**. Mówią językiem południowosłowiański.
+
+Zaczynają grę z dwiema tradycjami: **Strażnicy miast** i **Wytrawni dyplomaci**. W 867 roku kontrolują **2 prowincje**. Sukcesja wojenna dopuszcza **tylko mężczyzn**.
+
+*Nowa kultura dodana przez Slavic Enlarged.*
+
+<details>
+<summary>Dane techniczne (dla modderów)</summary>
+
 | Pole | Wartość |
 |------|---------|
-| **Nazwa (PL)** | Słowianie Panońscy |
-| **Klucz w grze** | `pannonian_slavs` |
-| **Grupa dziedzictwa** | południowosłowiańska (`heritage_south_slavic`) |
-| **Etos** | Biurokratyczny (`ethos_bureaucratic`) |
-| **Język** | południowosłowiański (`language_south_slavic`) |
-| **Lista imion** | `name_list_se_slavic` |
-| **Tradycje startowe** | Strażnicy miast, Wytrawni dyplomaci |
-| **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
-| **Kolor na mapie** | RGB 0.50 0.55 0.45 |
-| **Status w modzie** | nowa |
-| **Plik definicji** | `SE/common/culture/cultures/se_slavic_new.txt` |
+| **Klucz** | `pannonian_slavs` |
+| **Heritage** | `heritage_south_slavic` |
+| **Ethos** | `ethos_bureaucratic` |
+| **Język** | `language_south_slavic` |
+| **Imiona** | `name_list_se_slavic` |
+| **Tradycje** | `tradition_city_keepers`, `tradition_astute_diplomats` |
+| **Sukcesja** | `martial_custom_male_only` |
+| **Kolor** | `rgb(127, 140, 114)` · CK3: `0.5 0.55 0.45` |
+| **Plik** | `se_slavic_new.txt` |
+
+</details>
 
 ---
 
@@ -28,8 +44,8 @@ Słowianie Panońscy to południowosłowiańska kultura zamieszkująca region je
 Etos biurokratyczny daje bonusy do rozwoju prowincji i efektywności administracyjnej. Słowianie Panońscy to jedyna kultura południowosłowiańska z tym etosem — odzwierciedla to wpływ państwa wielkomorawskiego i tradycji administracyjnych odziedziczonych po Awarii.
 
 ### Tradycje
-- **Strażnicy miast** (`tradition_city_keepers`) — bonusy do rozwoju i podatków z miast; Blatnograd (Zalavár) był jednym z najważniejszych grodów słowiańskich w Panonii.
-- **Wytrawni dyplomaci** (`tradition_astute_diplomats`) — bonusy do relacji dyplomatycznych i opinii; Słowianie Panońscy lawirwali między Frankami, Morawami i Bułgarami, co wymagało zręczności politycznej.
+- **Strażnicy miast** — bonusy do rozwoju i podatków z miast; Blatnograd (Zalavár) był jednym z najważniejszych grodów słowiańskich w Panonii.
+- **Wytrawni dyplomaci** — bonusy do relacji dyplomatycznych i opinii; Słowianie Panońscy lawirwali między Frankami, Morawami i Bułgarami, co wymagało zręczności politycznej.
 
 ---
 
@@ -38,7 +54,7 @@ Etos biurokratyczny daje bonusy do rozwoju prowincji i efektywności administrac
 ### Region historyczny
 Słowianie Panońscy zajmowali region wokół jeziora Balaton w dzisiejszych Węgrzech, z głównym ośrodkiem w Blatnogradzie (Zalavár). Teren jest nizinny, żyzny, położony na skrzyżowaniu szlaków między światem frankijskim a bałkańskim.
 
-### Prowincje przypisane w 867
+### Prowincje w 867
 - 3835 (region Balatonu / Zalaváru)
 - 3827
 
@@ -52,8 +68,9 @@ Słowianie Panońscy zajmowali region wokół jeziora Balaton w dzisiejszych Wę
 
 ## Wiara
 
-- **Wiara startowa (867):** [południowosłowiańska](../../03-wiara/przeglad-wiary.md)
-- **Najbliższe miejsca święte:** Tolna (c_tolna), Szerem (c_szerem)
+Słowianie panońscy wyznają wiarę [południowosłowiańską](../../03-wiara/przeglad-wiary.md) — pogański kult pod presją zarówno frankijskich, jak i bizantyńskich misjonarzy.
+
+- **Najbliższe miejsca święte:** Tolna, Szerem
 
 ---
 

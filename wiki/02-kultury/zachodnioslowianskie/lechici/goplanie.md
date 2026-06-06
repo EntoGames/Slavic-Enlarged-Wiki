@@ -1,3 +1,10 @@
+﻿---
+heroMap: /maps/culture_goplans.png
+ogImage: /maps/culture_goplans_og.png
+subtitle: Lud znad Gopła — legendarne plemię Popiela
+sections: flat
+---
+
 # Goplanie
 
 Goplanie to niewielkie plemię osiadłe nad jeziorem Gopło w centralnej Wielkopolsce. Z etosem wspólnotowym i zaledwie dwiema prowincjami stanowią jedną z najsłabszych kultur lechickich -- ale ich tradycja rolnicza i gotowość do walki w obronie własnej ziemi czynią ich twardym orzechem do zgryzienia dla sąsiadów.
@@ -6,19 +13,28 @@ Goplanie to niewielkie plemię osiadłe nad jeziorem Gopło w centralnej Wielkop
 
 ## Karta kultury
 
+Goplanie należą do **dziedzictwa zachodniosłowiańska** i kierują się etosem **wspólnotowym** — współpraca i solidarność ponad ambicję jednostki. Mówią językiem zachodniosłowiański.
+
+Zaczynają grę z dwiema tradycjami: **Rolnicy** i **Stać i walczyć**. W 867 roku kontrolują **2 prowincje**. Sukcesja wojenna dopuszcza **tylko mężczyzn**.
+
+*Nowa kultura dodana przez Slavic Enlarged.*
+
+<details>
+<summary>Dane techniczne (dla modderów)</summary>
+
 | Pole | Wartość |
 |------|---------|
-| **Nazwa (PL)** | Goplanie |
-| **Klucz w grze** | `goplans` |
-| **Grupa dziedzictwa** | zachodniosłowiańska (`heritage_west_slavic`) |
-| **Etos** | Wspólnotowy (`ethos_communal`) |
-| **Język** | zachodniosłowiański (`language_lechitic`) |
-| **Lista imion** | `name_list_se_slavic` |
-| **Tradycje startowe** | Rolnicy, Stać i walczyć |
-| **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
-| **Kolor na mapie** | RGB 0.55 0.50 0.30 |
-| **Status w modzie** | nowa |
-| **Plik definicji** | `SE/common/culture/cultures/se_slavic_new.txt` |
+| **Klucz** | `goplans` |
+| **Heritage** | `heritage_west_slavic` |
+| **Ethos** | `ethos_communal` |
+| **Język** | `language_lechitic` |
+| **Imiona** | `name_list_se_slavic` |
+| **Tradycje** | `tradition_agrarian`, `tradition_stand_and_fight` |
+| **Sukcesja** | `martial_custom_male_only` |
+| **Kolor** | `rgb(140, 127, 76)` · CK3: `0.55 0.5 0.3` |
+| **Plik** | `se_slavic_new.txt` |
+
+</details>
 
 ---
 
@@ -28,8 +44,8 @@ Goplanie to niewielkie plemię osiadłe nad jeziorem Gopło w centralnej Wielkop
 Etos wspólnotowy kładzie nacisk na równość i współpracę między członkami społeczności. Daje bonusy do popularności i rozwoju w warunkach niskiej kontroli. Goplanie dzielą ten etos z Mazowszanami, Ślężanami i Kaszubami -- to typowy profil mniejszych, peryferyjnych plemion lechickich.
 
 ### Tradycje
-- **Rolnicy** (`tradition_agrarian`) -- bonus do rozwoju prowincji i produkcji żywności. Żyzne tereny wokół Gopła sprzyjały osadnictwu rolniczemu.
-- **Stać i walczyć** (`tradition_stand_and_fight`) -- bonus do obrony własnego terytorium. Kompensuje brak ofensywnych ambicji silną pozycją defensywną.
+- **Rolnicy** -- bonus do rozwoju prowincji i produkcji żywności. Żyzne tereny wokół Gopła sprzyjały osadnictwu rolniczemu.
+- **Stać i walczyć** -- bonus do obrony własnego terytorium. Kompensuje brak ofensywnych ambicji silną pozycją defensywną.
 
 ---
 
@@ -38,9 +54,7 @@ Etos wspólnotowy kładzie nacisk na równość i współpracę między członka
 ### Region historyczny
 Goplanie zamieszkiwali okolice jeziora Gopło na Kujawach -- niewielki, ale strategicznie ważny region między Wielkopolską Polan a Mazowszem. Jezioro Gopło było centrum ich tożsamości plemiennej i mityczną siedzibą legendy o Popielu.
 
-### Prowincje przypisane w 867
-Z pliku `SE/history/provinces/se_goplans.txt`:
-
+### Prowincje w 867
 - prowincja 4918
 - prowincja 4922
 
@@ -55,8 +69,9 @@ Zaledwie **2 prowincje** -- najmniejszy blok terytorialny wśród tych kultur.
 ---
 
 ## Wiara
-- **Wiara startowa (867):** [zachodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- **Najbliższe miejsca święte:** Płock (c_plocka), Legnica (c_legnica)
+Goplanie wyznają wiarę [zachodniosłowiańską](../../03-wiara/przeglad-wiary.md) — pogański kult związany z tradycjami lechickimi.
+
+- **Najbliższe miejsca święte:** Płock, Legnica
 
 ---
 

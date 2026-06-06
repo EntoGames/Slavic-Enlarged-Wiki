@@ -1,3 +1,10 @@
+﻿---
+heroMap: /maps/culture_pommeranian.png
+ogImage: /maps/culture_pommeranian_og.png
+subtitle: Stoiccy rybacy i kupcy bałtyckiego wybrzeża
+sections: flat
+---
+
 # Pomorzanie
 
 Pomorzanie to stoickie plemię słowiańskie kontrolujące Pomorze Zachodnie -- wybrzeże Bałtyku od Odry po Łebę. Łączą tradycję morską z gotowością do walki, tworząc profil kultury handlowo-wojskowej. To nadpisana wersja waniliowej kultury pomorskiej -- mod zastępuje tradycję husarską bardziej historyczną "Stać i walczyć".
@@ -6,19 +13,28 @@ Pomorzanie to stoickie plemię słowiańskie kontrolujące Pomorze Zachodnie -- 
 
 ## Karta kultury
 
+Pomorzanie należą do **dziedzictwa zachodniosłowiańska** i kierują się etosem **stoickim** — wytrzymałość i przetrwanie ponad wszystko. Mówią językiem zachodniosłowiański.
+
+Zaczynają grę z dwiema tradycjami: **Handlarze morscy** i **Stać i walczyć**. Sukcesja wojenna dopuszcza **tylko mężczyzn**.
+
+*kultura waniliowa z prowincjami SE*
+
+<details>
+<summary>Dane techniczne (dla modderów)</summary>
+
 | Pole | Wartość |
 |------|---------|
-| **Nazwa (PL)** | Pomorzanie |
-| **Klucz w grze** | `pommeranian` |
-| **Grupa dziedzictwa** | zachodniosłowiańska (`heritage_west_slavic`) |
-| **Etos** | Stoicki (`ethos_stoic`) |
-| **Język** | zachodniosłowiański (`language_lechitic`) |
-| **Lista imion** | `name_list_se_slavic` |
-| **Tradycje startowe** | Handlarze morscy, Stać i walczyć |
-| **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
-| **Kolor na mapie** | RGB 0.30 0.60 0.40 |
-| **Status w modzie** | nadpisana wanilijna |
-| **Plik definicji** | `SE/common/culture/cultures/se_west_slavic_corrections.txt` |
+| **Klucz** | `pommeranian` |
+| **Heritage** | `heritage_west_slavic` |
+| **Ethos** | `ethos_stoic` |
+| **Język** | `language_lechitic` |
+| **Imiona** | `name_list_se_slavic` |
+| **Tradycje** | `tradition_maritime_mercantilism`, `tradition_stand_and_fight`, `tradition_hussar` |
+| **Sukcesja** | `martial_custom_male_only` |
+| **Kolor** | `rgb(76, 153, 102)` · CK3: `0.3 0.6 0.4` |
+| **Plik** | `se_west_slavic_corrections.txt` |
+
+</details>
 
 ---
 
@@ -28,8 +44,8 @@ Pomorzanie to stoickie plemię słowiańskie kontrolujące Pomorze Zachodnie -- 
 Etos stoicki daje bonusy do wytrzymałości i zarządzania stresem, co dobrze oddaje charakter ludu żyjącego na pograniczu słowiańsko-skandynawskim. Wśród Lechitów tylko Wiślanie dzielą ten sam etos -- Pomorzanie i Wiślanie stanowią stoickie "skrzydła" polskiego świata.
 
 ### Tradycje
-- **Handlarze morscy** (`tradition_maritime_mercantilism`) -- bonus do dochodów z handlu morskiego i portów. Kontrola wybrzeża Bałtyku i portów takich jak Wolin czy Szczecin dawała Pomorzanom dostęp do skandynawskich szlaków handlowych.
-- **Stać i walczyć** (`tradition_stand_and_fight`) -- bonus do obrony własnego terytorium. Zastępuje waniliową tradycję husarską (`tradition_hussar`), niedopasowaną do IX-wiecznych realiów. Odzwierciedla konieczność obrony przed wikińskimi najazdami.
+- **Handlarze morscy** -- bonus do dochodów z handlu morskiego i portów. Kontrola wybrzeża Bałtyku i portów takich jak Wolin czy Szczecin dawała Pomorzanom dostęp do skandynawskich szlaków handlowych.
+- **Stać i walczyć** -- bonus do obrony własnego terytorium. Zastępuje waniliową tradycję husarską, niedopasowaną do IX-wiecznych realiów. Odzwierciedla konieczność obrony przed wikińskimi najazdami.
 
 ---
 
@@ -38,7 +54,7 @@ Etos stoicki daje bonusy do wytrzymałości i zarządzania stresem, co dobrze od
 ### Region historyczny
 Pomorzanie zamieszkiwali Pomorze Zachodnie -- pas wybrzeża Bałtyku od ujścia Odry na zachodzie po granicę z Kaszubami na wschodzie. Głównymi ośrodkami były Szczecin, Wolin i Kamień. Region ten leżał na styku świata słowiańskiego, skandynawskiego i saskiego.
 
-### Prowincje przypisane w 867
+### Prowincje w 867
 Pomorzanie to nadpisana kultura waniliowa -- ich prowincje pochodzą z bazowej gry CK3 (księstwo d_pomerania). Mod nie dodaje osobnego pliku prowincji, lecz zmienia definicję samej kultury. W grze kontrolują prowincje Pomorza Zachodniego wokół Szczecina, Wolina i Kołobrzegu.
 
 ### Sąsiedztwo kulturowe
@@ -50,8 +66,9 @@ Pomorzanie to nadpisana kultura waniliowa -- ich prowincje pochodzą z bazowej g
 ---
 
 ## Wiara
-- **Wiara startowa (867):** [zachodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- **Najbliższe miejsca święte:** Arkona (c_rugen), Retra (c_mecklenburg)
+Pomorzanie wyznają wiarę [zachodniosłowiańską](../../03-wiara/przeglad-wiary.md) — pogański kult z silnymi wpływami tradycji morskiej i bałtyckiej.
+
+- **Najbliższe miejsca święte:** Arkona, Retra
 
 ---
 

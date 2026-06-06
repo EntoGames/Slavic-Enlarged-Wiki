@@ -1,3 +1,10 @@
+﻿---
+heroMap: /maps/culture_wagrians.png
+ogImage: /maps/culture_wagrians_og.png
+subtitle: Nadbałtyccy Połabianie na granicy duńsko-saskiej
+sections: flat
+---
+
 # Wagriowie
 
 Wagriowie to stoickie plemię zamieszkujące Wagrię — najdalej na północny zachód wysunięty skrawek słowiańskiego osadnictwa, na terenie dzisiejszego wschodniego Holsztynu. W modzie Slavic Enlarged łączą tradycje morskie z łowiectwem, co odzwierciedla ich życie na pograniczu lasu i morza, w cieniu potężnych sąsiadów — Sasów i Duńczyków.
@@ -6,19 +13,28 @@ Wagriowie to stoickie plemię zamieszkujące Wagrię — najdalej na północny 
 
 ## Karta kultury
 
+Wagriowie należą do **dziedzictwa zachodniosłowiańska** i kierują się etosem **stoickim** — wytrzymałość i przetrwanie ponad wszystko. Mówią językiem zachodniosłowiański.
+
+Zaczynają grę z dwiema tradycjami: **Morski merkantylizm** i **Łowcy**. W 867 roku kontrolują **1 prowincję**. Sukcesja wojenna dopuszcza **tylko mężczyzn**.
+
+*Nowa kultura dodana przez Slavic Enlarged.*
+
+<details>
+<summary>Dane techniczne (dla modderów)</summary>
+
 | Pole | Wartość |
 |------|---------|
-| **Nazwa (PL)** | Wagriowie |
-| **Klucz w grze** | `wagrians` |
-| **Grupa dziedzictwa** | zachodniosłowiańska (`heritage_west_slavic`) |
-| **Etos** | Stoicki (`ethos_stoic`) |
-| **Język** | zachodniosłowiański (`language_lechitic`) |
-| **Lista imion** | `name_list_se_slavic` |
-| **Tradycje startowe** | Morski merkantylizm, Łowcy |
-| **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
-| **Kolor na mapie** | RGB 0.35 0.45 0.50 |
-| **Status w modzie** | nowa |
-| **Plik definicji** | `SE/common/culture/cultures/se_slavic_new.txt` |
+| **Klucz** | `wagrians` |
+| **Heritage** | `heritage_west_slavic` |
+| **Ethos** | `ethos_stoic` |
+| **Język** | `language_lechitic` |
+| **Imiona** | `name_list_se_slavic` |
+| **Tradycje** | `tradition_maritime_mercantilism`, `tradition_hunters` |
+| **Sukcesja** | `martial_custom_male_only` |
+| **Kolor** | `rgb(89, 114, 127)` · CK3: `0.35 0.45 0.5` |
+| **Plik** | `se_slavic_new.txt` |
+
+</details>
 
 ---
 
@@ -28,8 +44,8 @@ Wagriowie to stoickie plemię zamieszkujące Wagrię — najdalej na północny 
 Etos stoicki daje Wagriom bonusy do wytrzymałości i odporności na kryzysy. To odpowiedni charakter dla ludu żyjącego na krańcu słowiańskiego świata, otoczonego z trzech stron przez germańskich i skandynawskich sąsiadów.
 
 ### Tradycje
-- **Morski merkantylizm** (`tradition_maritime_mercantilism`) — bonusy do handlu morskiego i dochodów portowych; Wagriowie kontrolowali ważny port Starigard (Oldenburg w Holsztynie), leżący na szlaku handlowym łączącym Słowian z Skandynawią.
-- **Łowcy** (`tradition_hunters`) — bonusy do rycerzy lekkich i przetrwania; lasy Wagrii dostarczały obfitej zwierzyny, a umiejętności łowieckie Wagrów przekładały się na skuteczność w prowadzeniu zasadzek.
+- **Morski merkantylizm** — bonusy do handlu morskiego i dochodów portowych; Wagriowie kontrolowali ważny port Starigard (Oldenburg w Holsztynie), leżący na szlaku handlowym łączącym Słowian z Skandynawią.
+- **Łowcy** — bonusy do rycerzy lekkich i przetrwania; lasy Wagrii dostarczały obfitej zwierzyny, a umiejętności łowieckie Wagrów przekładały się na skuteczność w prowadzeniu zasadzek.
 
 ---
 
@@ -38,7 +54,7 @@ Etos stoicki daje Wagriom bonusy do wytrzymałości i odporności na kryzysy. To
 ### Region historyczny
 Wagria obejmowała wschodnią część półwyspu Jutlandzkiego — dzisiejszy wschodni Holsztyn. Region cechował zalesiony, pagórkowaty krajobraz z dostępem do Morza Bałtyckiego, co łączyło charakter leśny z morskim. Głównym grodem był Starigard ("stary gród"), znany później jako Oldenburg.
 
-### Prowincje przypisane w 867
+### Prowincje w 867
 - 2804 (Wagria / wschodni Holsztyn)
 
 ### Sąsiedztwo kulturowe
@@ -51,8 +67,9 @@ Wagria obejmowała wschodnią część półwyspu Jutlandzkiego — dzisiejszy w
 
 ## Wiara
 
-- **Wiara startowa (867):** [zachodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- **Najbliższe miejsca święte:** Arkona (c_rugen), Retra (c_mecklenburg), Płock (c_plocka)
+Wagriowie wyznają wiarę [zachodniosłowiańską](../../03-wiara/przeglad-wiary.md) — pogański kult zagrożony z dwóch stron: od Duńczyków z morza i Sasów z lądu.
+
+- **Najbliższe miejsca święte:** Arkona, Retra, Płock
 
 ---
 

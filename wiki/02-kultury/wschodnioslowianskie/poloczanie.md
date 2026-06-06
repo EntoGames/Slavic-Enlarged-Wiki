@@ -1,3 +1,10 @@
+﻿---
+heroMap: /maps/culture_polochans.png
+ogImage: /maps/culture_polochans_og.png
+subtitle: Kupcy i wojownicy nad Dźwiną — most między Rusią a Bałtykiem
+sections: flat
+---
+
 # Połoczanie
 
 Połoczanie to wschodniosłowiańskie plemię zamieszkujące region Połocka nad Dźwiną Zachodnią, na pograniczu z ludami bałtyckimi. W modzie Slavic Enlarged to kultura dworska z tradycjami miejskimi i drużynowymi — ambitne plemię kontrolujące strategiczny szlak handlowy wzdłuż Dźwiny.
@@ -6,19 +13,28 @@ Połoczanie to wschodniosłowiańskie plemię zamieszkujące region Połocka nad
 
 ## Karta kultury
 
+Połoczanie należą do **dziedzictwa wschodniosłowiańska** i kierują się etosem **dworskim** — prestiż i dyplomacja ponad siłę. Mówią językiem wschodniosłowiański.
+
+Zaczynają grę z dwiema tradycjami: **Strażnicy miast** i **Drużyna**. W 867 roku kontrolują **3 prowincje**. Sukcesja wojenna dopuszcza **tylko mężczyzn**.
+
+*Nowa kultura dodana przez Slavic Enlarged.*
+
+<details>
+<summary>Dane techniczne (dla modderów)</summary>
+
 | Pole | Wartość |
 |------|---------|
-| **Nazwa (PL)** | Połoczanie |
-| **Klucz w grze** | `polochans` |
-| **Grupa dziedzictwa** | wschodniosłowiańska (`heritage_east_slavic`) |
-| **Etos** | Dworski (`ethos_courtly`) |
-| **Język** | wschodniosłowiański (`language_east_slavic`) |
-| **Lista imion** | `name_list_se_slavic` |
-| **Tradycje startowe** | Strażnicy miast, Drużyna |
-| **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
-| **Kolor na mapie** | RGB 0.40 0.50 0.60 |
-| **Status w modzie** | nowa |
-| **Plik definicji** | `SE/common/culture/cultures/se_slavic_new.txt` |
+| **Klucz** | `polochans` |
+| **Heritage** | `heritage_east_slavic` |
+| **Ethos** | `ethos_courtly` |
+| **Język** | `language_east_slavic` |
+| **Imiona** | `name_list_se_slavic` |
+| **Tradycje** | `tradition_city_keepers`, `tradition_druzhina` |
+| **Sukcesja** | `martial_custom_male_only` |
+| **Kolor** | `rgb(102, 127, 153)` · CK3: `0.4 0.5 0.6` |
+| **Plik** | `se_slavic_new.txt` |
+
+</details>
 
 ---
 
@@ -28,8 +44,8 @@ Połoczanie to wschodniosłowiańskie plemię zamieszkujące region Połocka nad
 Etos dworski daje Połoczanom bonusy do prestiżu i sprawności dyplomatycznej. Odzwierciedla aspiracje Połocka jako niezależnego ośrodka władzy, rywalizującego z samym Kijowem o dominację nad szlakami handlowymi.
 
 ### Tradycje
-- **Strażnicy miast** (`tradition_city_keepers`) — bonusy do rozwoju i podatków z miast; Połock był jednym z najstarszych i najbogatszych grodów wschodnich Słowian.
-- **Drużyna** (`tradition_druzhina`) — bonusy do ciężkich oddziałów i rycerzy; silna drużyna książęca pozwalała Połoczanom utrzymać niezależność od Kijowa.
+- **Strażnicy miast** — bonusy do rozwoju i podatków z miast; Połock był jednym z najstarszych i najbogatszych grodów wschodnich Słowian.
+- **Drużyna** — bonusy do ciężkich oddziałów i rycerzy; silna drużyna książęca pozwalała Połoczanom utrzymać niezależność od Kijowa.
 
 ---
 
@@ -38,7 +54,7 @@ Etos dworski daje Połoczanom bonusy do prestiżu i sprawności dyplomatycznej. 
 ### Region historyczny
 Połoczanie zamieszkiwali dorzecze Dźwiny Zachodniej i Połoty, na terenie dzisiejszej północnej Białorusi. Region jest stosunkowo pagórkowaty jak na standardy wschodnioeuropejskie, z gęstymi lasami i licznymi jeziorami. Połock kontrolował kluczowy szlak handlowy z Bałtyku w głąb kontynentu.
 
-### Prowincje przypisane w 867
+### Prowincje w 867
 - 5129
 - 934
 - 5134
@@ -53,8 +69,9 @@ Połoczanie zamieszkiwali dorzecze Dźwiny Zachodniej i Połoty, na terenie dzis
 
 ## Wiara
 
-- **Wiara startowa (867):** [wschodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- **Najbliższe miejsca święte:** Połock (c_polotsk), Mińsk (c_minsk), Nowogród (c_novgorod)
+Poloczanie wyznają wiarę [wschodniosłowiańską](../../03-wiara/przeglad-wiary.md) — pogański kult Peruna i Welesa. Połock jest jednym z ważniejszych miejsc świętych tej wiary.
+
+- **Najbliższe miejsca święte:** Połock, Mińsk, Nowogród
 
 ---
 

@@ -1,3 +1,10 @@
+﻿---
+heroMap: /maps/culture_mazovians.png
+ogImage: /maps/culture_mazovians_og.png
+subtitle: Leśni Lechici z nizin nad Wisłą i Bugiem
+sections: flat
+---
+
 # Mazowszanie
 
 Mazowszanie to leśne plemię lechickie zamieszkujące rozległe puszcze i bagna Mazowsza. Ich wspólnotowy etos w połączeniu z tradycjami leśnymi i obronnymi czyni z nich twardych, trudnych do podbicia sąsiadów. W 867 roku kontrolują pięć prowincji wzdłuż środkowej Wisły -- solidna baza dla gracza, który woli defensywny styl rozgrywki.
@@ -6,19 +13,28 @@ Mazowszanie to leśne plemię lechickie zamieszkujące rozległe puszcze i bagna
 
 ## Karta kultury
 
+Mazowszanie należą do **dziedzictwa zachodniosłowiańska** i kierują się etosem **wspólnotowym** — współpraca i solidarność ponad ambicję jednostki. Mówią językiem zachodniosłowiański.
+
+Zaczynają grę z dwiema tradycjami: **Lud puszczy** i **Stać i walczyć**. W 867 roku kontrolują **5 prowincji**. Sukcesja wojenna dopuszcza **tylko mężczyzn**.
+
+*Nowa kultura dodana przez Slavic Enlarged.*
+
+<details>
+<summary>Dane techniczne (dla modderów)</summary>
+
 | Pole | Wartość |
 |------|---------|
-| **Nazwa (PL)** | Mazowszanie |
-| **Klucz w grze** | `mazovians` |
-| **Grupa dziedzictwa** | zachodniosłowiańska (`heritage_west_slavic`) |
-| **Etos** | Wspólnotowy (`ethos_communal`) |
-| **Język** | zachodniosłowiański (`language_lechitic`) |
-| **Lista imion** | `name_list_se_slavic` |
-| **Tradycje startowe** | Lud puszczy, Stać i walczyć |
-| **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
-| **Kolor na mapie** | RGB 0.60 0.40 0.30 |
-| **Status w modzie** | nowa |
-| **Plik definicji** | `SE/common/culture/cultures/se_slavic_new.txt` |
+| **Klucz** | `mazovians` |
+| **Heritage** | `heritage_west_slavic` |
+| **Ethos** | `ethos_communal` |
+| **Język** | `language_lechitic` |
+| **Imiona** | `name_list_se_slavic` |
+| **Tradycje** | `tradition_forest_folk`, `tradition_stand_and_fight` |
+| **Sukcesja** | `martial_custom_male_only` |
+| **Kolor** | `rgb(153, 102, 76)` · CK3: `0.6 0.4 0.3` |
+| **Plik** | `se_slavic_new.txt` |
+
+</details>
 
 ---
 
@@ -28,8 +44,8 @@ Mazowszanie to leśne plemię lechickie zamieszkujące rozległe puszcze i bagna
 Etos wspólnotowy daje bonusy do popularności i rozwoju przy niskiej kontroli -- idealny dla społeczności rozproszonych po rozległych puszczach. Mazowszanie dzielą go z Goplanami, Ślężanami i Kaszubami, ale jako jedyni łączą go z tradycjami leśnymi.
 
 ### Tradycje
-- **Lud puszczy** (`tradition_forest_folk`) -- bonus do walki w lasach i korzyści z terenów zalesionych. Mazowieckie puszcze stanowiły naturalną barierę obronną i źródło zasobów.
-- **Stać i walczyć** (`tradition_stand_and_fight`) -- bonus do obrony własnego terytorium. Razem z tradycją leśną tworzy profil kultury trudnej do podbicia.
+- **Lud puszczy** -- bonus do walki w lasach i korzyści z terenów zalesionych. Mazowieckie puszcze stanowiły naturalną barierę obronną i źródło zasobów.
+- **Stać i walczyć** -- bonus do obrony własnego terytorium. Razem z tradycją leśną tworzy profil kultury trudnej do podbicia.
 
 ---
 
@@ -38,9 +54,7 @@ Etos wspólnotowy daje bonusy do popularności i rozwoju przy niskiej kontroli -
 ### Region historyczny
 Mazowsze to rozległa nizina wzdłuż środkowej Wisły, pokryta gęstymi puszczami i poprzecinana bagnami. Głównym grodem był Płock, kontrolujący przeprawę przez Wisłę. Tereny te były rzadziej zaludnione niż Wielkopolska, ale ich naturalnie obronne ukształtowanie chroniło przed najazdami.
 
-### Prowincje przypisane w 867
-Z pliku `SE/history/provinces/se_mazovians.txt`:
-
+### Prowincje w 867
 - prowincja 529
 - prowincja 530
 - prowincja 4940
@@ -58,8 +72,9 @@ Z pliku `SE/history/provinces/se_mazovians.txt`:
 ---
 
 ## Wiara
-- **Wiara startowa (867):** [zachodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- **Najbliższe miejsca święte:** Płock (c_plocka) -- bezpośrednio na terytorium Mazowszan
+Mazowszanie wyznają wiarę [zachodniosłowiańską](../../03-wiara/przeglad-wiary.md) — pogański kult wspólny z innymi kulturami lechickimi.
+
+- **Najbliższe miejsca święte:** Płock -- bezpośrednio na terytorium Mazowszan
 
 ---
 

@@ -1,3 +1,10 @@
+﻿---
+heroMap: /maps/culture_sorbian.png
+ogImage: /maps/culture_sorbian_og.png
+subtitle: Połabscy rolnicy między Łabą a Odrą
+sections: flat
+---
+
 # Serbowie Łużyccy
 
 Serbowie Łużyccy to wspólnotowa kultura rolnicza zamieszkująca żyzne tereny Łużyc, Miśni i pogranicza Turyngii. W modzie Slavic Enlarged dysponują największą liczbą prowincji spośród wszystkich Połabian, co odzwierciedla ich rozległe osadnictwo wzdłuż Łaby i Sprewy. To kultura oparta na ziemi i grodach — cicha, ale trudna do podbicia.
@@ -6,19 +13,28 @@ Serbowie Łużyccy to wspólnotowa kultura rolnicza zamieszkująca żyzne tereny
 
 ## Karta kultury
 
+Serbowie Łużyccy należą do **dziedzictwa zachodniosłowiańska** i kierują się etosem **wspólnotowym** — współpraca i solidarność ponad ambicję jednostki. Mówią językiem zachodniosłowiański.
+
+Zaczynają grę z dwiema tradycjami: **Rolnicy** i **Strażnicy zamków**. W 867 roku kontrolują **17 prowincji**. Sukcesja wojenna dopuszcza **tylko mężczyzn**.
+
+*Nowa kultura dodana przez Slavic Enlarged.*
+
+<details>
+<summary>Dane techniczne (dla modderów)</summary>
+
 | Pole | Wartość |
 |------|---------|
-| **Nazwa (PL)** | Serbowie Łużyccy |
-| **Klucz w grze** | `sorbian` |
-| **Grupa dziedzictwa** | zachodniosłowiańska (`heritage_west_slavic`) |
-| **Etos** | Wspólnotowy (`ethos_communal`) |
-| **Język** | zachodniosłowiański (`language_lechitic`) |
-| **Lista imion** | `name_list_se_slavic` |
-| **Tradycje startowe** | Rolnicy, Strażnicy zamków |
-| **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
-| **Kolor na mapie** | RGB 0.55 0.50 0.45 |
-| **Status w modzie** | nowa |
-| **Plik definicji** | `SE/common/culture/cultures/se_slavic_new.txt` |
+| **Klucz** | `sorbian` |
+| **Heritage** | `heritage_west_slavic` |
+| **Ethos** | `ethos_communal` |
+| **Język** | `language_lechitic` |
+| **Imiona** | `name_list_se_slavic` |
+| **Tradycje** | `tradition_agrarian`, `tradition_castle_keepers` |
+| **Sukcesja** | `martial_custom_male_only` |
+| **Kolor** | `rgb(140, 127, 114)` · CK3: `0.55 0.5 0.45` |
+| **Plik** | `se_slavic_new.txt` |
+
+</details>
 
 ---
 
@@ -28,8 +44,8 @@ Serbowie Łużyccy to wspólnotowa kultura rolnicza zamieszkująca żyzne tereny
 Etos wspólnotowy daje Serbom Łużyckim bonusy do opinii wasali i stabilności państwa. Plemię to opierało się na kolektywnym zarządzaniu, z wiecami decydującymi o sprawach wspólnoty — typowy model dla ludów rolniczych Połabia.
 
 ### Tradycje
-- **Rolnicy** (`tradition_agrarian`) — bonusy do podatków z gospodarstw i wzrostu populacji; żyzne gleby dolin Łaby, Sprewy i Muldy stanowiły podstawę serbołużyckiego dobrobytu.
-- **Strażnicy zamków** (`tradition_castle_keepers`) — bonusy do budowy i obrony fortyfikacji; Serbowie Łużyccy wznosili liczne grody obronne, które stanowiły trzon ich systemu obronnego przed saską ekspansją.
+- **Rolnicy** — bonusy do podatków z gospodarstw i wzrostu populacji; żyzne gleby dolin Łaby, Sprewy i Muldy stanowiły podstawę serbołużyckiego dobrobytu.
+- **Strażnicy zamków** — bonusy do budowy i obrony fortyfikacji; Serbowie Łużyccy wznosili liczne grody obronne, które stanowiły trzon ich systemu obronnego przed saską ekspansją.
 
 ---
 
@@ -38,7 +54,7 @@ Etos wspólnotowy daje Serbom Łużyckim bonusy do opinii wasali i stabilności 
 ### Region historyczny
 Serbowie Łużyccy zajmowali rozległy pas ziem od Łaby po Nysę, obejmujący dzisiejsze Łużyce, Saksonię i pogranicze Turyngii. Krajobraz stanowiły żyzne doliny rzeczne, idealne dla rolnictwa, z gęstą siecią grodów obronnych na wzgórzach.
 
-### Prowincje przypisane w 867
+### Prowincje w 867
 - 3023 (d_anhalt)
 - 3027, 3030, 3012, 3021, 3020, 3039 (d_meissen)
 - 3181, 2980, 3180, 3173, 3025, 3140, 3143 (d_lausitz)
@@ -56,8 +72,9 @@ Serbowie Łużyccy zajmowali rozległy pas ziem od Łaby po Nysę, obejmujący d
 
 ## Wiara
 
-- **Wiara startowa (867):** [zachodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- **Najbliższe miejsca święte:** Legnica (c_legnica), Retra (c_mecklenburg), Praga (c_praha)
+Serbowie łużyccy wyznają wiarę [zachodniosłowiańską](../../03-wiara/przeglad-wiary.md) — pogański kult pod presją chrześcijańskiej ekspansji z zachodu.
+
+- **Najbliższe miejsca święte:** Legnica, Retra, Praga
 
 ---
 

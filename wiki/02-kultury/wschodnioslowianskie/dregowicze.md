@@ -1,3 +1,10 @@
+﻿---
+heroMap: /maps/culture_dregovichs.png
+ogImage: /maps/culture_dregovichs_og.png
+subtitle: Bagnisty lud z dorzecza Prypeci
+sections: flat
+---
+
 # Dregowicze
 
 Dregowicze to wschodniosłowiańskie plemię zamieszkujące bagniste tereny Polesia i górnego Niemna, w okolicach Turowa, Pińska i Mińska. W modzie Slavic Enlarged to kultura łącząca leśny charakter z tradycją rolniczą — osadnicy, którzy potrafili zagospodarować nawet najbardziej podmokłe tereny.
@@ -6,19 +13,28 @@ Dregowicze to wschodniosłowiańskie plemię zamieszkujące bagniste tereny Pole
 
 ## Karta kultury
 
+Dregowicze należą do **dziedzictwa wschodniosłowiańska** i kierują się etosem **wspólnotowym** — współpraca i solidarność ponad ambicję jednostki. Mówią językiem wschodniosłowiański.
+
+Zaczynają grę z dwiema tradycjami: **Leśny lud** i **Rolnicy**. W 867 roku kontrolują **8 prowincji**. Sukcesja wojenna dopuszcza **tylko mężczyzn**.
+
+*Nowa kultura dodana przez Slavic Enlarged.*
+
+<details>
+<summary>Dane techniczne (dla modderów)</summary>
+
 | Pole | Wartość |
 |------|---------|
-| **Nazwa (PL)** | Dregowicze |
-| **Klucz w grze** | `dregovichs` |
-| **Grupa dziedzictwa** | wschodniosłowiańska (`heritage_east_slavic`) |
-| **Etos** | Wspólnotowy (`ethos_communal`) |
-| **Język** | wschodniosłowiański (`language_east_slavic`) |
-| **Lista imion** | `name_list_se_slavic` |
-| **Tradycje startowe** | Leśny lud, Rolnicy |
-| **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
-| **Kolor na mapie** | RGB 0.30 0.50 0.40 |
-| **Status w modzie** | nowa |
-| **Plik definicji** | `SE/common/culture/cultures/se_slavic_new.txt` |
+| **Klucz** | `dregovichs` |
+| **Heritage** | `heritage_east_slavic` |
+| **Ethos** | `ethos_communal` |
+| **Język** | `language_east_slavic` |
+| **Imiona** | `name_list_se_slavic` |
+| **Tradycje** | `tradition_forest_folk`, `tradition_agrarian` |
+| **Sukcesja** | `martial_custom_male_only` |
+| **Kolor** | `rgb(76, 127, 102)` · CK3: `0.3 0.5 0.4` |
+| **Plik** | `se_slavic_new.txt` |
+
+</details>
 
 ---
 
@@ -28,8 +44,8 @@ Dregowicze to wschodniosłowiańskie plemię zamieszkujące bagniste tereny Pole
 Etos wspólnotowy zapewnia Dregowiczom bonusy do opinii wasali i stabilności wewnętrznej. Odzwierciedla to wspólnotowy charakter osadnictwa na trudnych, bagiennych terenach, gdzie przetrwanie wymagało ścisłej współpracy.
 
 ### Tradycje
-- **Leśny lud** (`tradition_forest_folk`) — bonusy do walki w lasach i zaopatrzenia na zalesionym terenie; lasy i bagna Polesia stanowiły naturalną osłonę Dregowiczów.
-- **Rolnicy** (`tradition_agrarian`) — bonusy do podatków z gospodarstw i wzrostu populacji; mimo trudnego terenu Dregowicze rozwinęli skuteczne rolnictwo na wykarczowanych polanach.
+- **Leśny lud** — bonusy do walki w lasach i zaopatrzenia na zalesionym terenie; lasy i bagna Polesia stanowiły naturalną osłonę Dregowiczów.
+- **Rolnicy** — bonusy do podatków z gospodarstw i wzrostu populacji; mimo trudnego terenu Dregowicze rozwinęli skuteczne rolnictwo na wykarczowanych polanach.
 
 ---
 
@@ -38,7 +54,7 @@ Etos wspólnotowy zapewnia Dregowiczom bonusy do opinii wasali i stabilności we
 ### Region historyczny
 Dregowicze zamieszkiwali rozległe tereny prypeckich bagien i dorzecza górnego Niemna, obejmujące późniejsze księstwa turowskie, pińskie i mińskie. Region jest nizinny, silnie zabagniony, z gęstymi lasami. Główne grody to Turów, Pińsk i Mińsk.
 
-### Prowincje przypisane w 867
+### Prowincje w 867
 - 552
 - 548
 - 5114
@@ -58,8 +74,9 @@ Dregowicze zamieszkiwali rozległe tereny prypeckich bagien i dorzecza górnego 
 
 ## Wiara
 
-- **Wiara startowa (867):** [wschodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- **Najbliższe miejsca święte:** Mińsk (c_minsk), Połock (c_polotsk), Kijów (c_kiev)
+Dregowicze wyznają wiarę [wschodniosłowiańską](../../03-wiara/przeglad-wiary.md) — kult Peruna i Welesa wspólny dla plemion znad Dniepru i Prypeci.
+
+- **Najbliższe miejsca święte:** Mińsk, Połock, Kijów
 
 ---
 

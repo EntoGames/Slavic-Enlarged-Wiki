@@ -1,3 +1,10 @@
+﻿---
+heroMap: /maps/culture_ulichs.png
+ogImage: /maps/culture_ulichs_og.png
+subtitle: Stepowi Słowianie na południowych rubieżach Rusi
+sections: flat
+---
+
 # Ulicze
 
 Ulicze to wschodniosłowiańskie plemię zamieszkujące tereny nad dolnym Dnieprem i Bohem Południowym, na pograniczu świata słowiańskiego i stepu. W modzie Slavic Enlarged to wojownicza kultura jeźdźców z tradycją drużynową — lud zahartowany przez ciągłe kontakty z koczownikami.
@@ -6,19 +13,28 @@ Ulicze to wschodniosłowiańskie plemię zamieszkujące tereny nad dolnym Dniepr
 
 ## Karta kultury
 
+Ulicze należą do **dziedzictwa wschodniosłowiańska** i kierują się etosem **wojowniczym** — waleczność i chwała bojowa. Mówią językiem wschodniosłowiański.
+
+Zaczynają grę z dwiema tradycjami: **Panowie koni** i **Drużyna**. W 867 roku kontrolują **2 prowincje**. Sukcesja wojenna dopuszcza **tylko mężczyzn**.
+
+*Nowa kultura dodana przez Slavic Enlarged.*
+
+<details>
+<summary>Dane techniczne (dla modderów)</summary>
+
 | Pole | Wartość |
 |------|---------|
-| **Nazwa (PL)** | Ulicze |
-| **Klucz w grze** | `ulichs` |
-| **Grupa dziedzictwa** | wschodniosłowiańska (`heritage_east_slavic`) |
-| **Etos** | Wojowniczy (`ethos_bellicose`) |
-| **Język** | wschodniosłowiański (`language_east_slavic`) |
-| **Lista imion** | `name_list_se_slavic` |
-| **Tradycje startowe** | Panowie koni, Drużyna |
-| **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
-| **Kolor na mapie** | RGB 0.55 0.45 0.25 |
-| **Status w modzie** | nowa |
-| **Plik definicji** | `SE/common/culture/cultures/se_slavic_new.txt` |
+| **Klucz** | `ulichs` |
+| **Heritage** | `heritage_east_slavic` |
+| **Ethos** | `ethos_bellicose` |
+| **Język** | `language_east_slavic` |
+| **Imiona** | `name_list_se_slavic` |
+| **Tradycje** | `tradition_horse_lords`, `tradition_druzhina` |
+| **Sukcesja** | `martial_custom_male_only` |
+| **Kolor** | `rgb(140, 114, 63)` · CK3: `0.55 0.45 0.25` |
+| **Plik** | `se_slavic_new.txt` |
+
+</details>
 
 ---
 
@@ -28,8 +44,8 @@ Ulicze to wschodniosłowiańskie plemię zamieszkujące tereny nad dolnym Dniepr
 Etos wojowniczy daje Uliczom bonusy do siły ataku i prestiżu z podbojów. Odzwierciedla charakter ludu żyjącego na niebezpiecznym pograniczu ze stepem, który przetrwał dzięki agresywnej postawie wobec koczowników.
 
 ### Tradycje
-- **Panowie koni** (`tradition_horse_lords`) — bonusy do kawalerii i mobilności; Ulicze przejęli jeździeckie umiejętności od stepowych sąsiadów, co czyni ich unikalnymi wśród Słowian.
-- **Drużyna** (`tradition_druzhina`) — bonusy do ciężkich oddziałów i rycerzy; drużyna książęca stanowiła rdzeń sił zbrojnych, niezbędnych do obrony przed koczownikami.
+- **Panowie koni** — bonusy do kawalerii i mobilności; Ulicze przejęli jeździeckie umiejętności od stepowych sąsiadów, co czyni ich unikalnymi wśród Słowian.
+- **Drużyna** — bonusy do ciężkich oddziałów i rycerzy; drużyna książęca stanowiła rdzeń sił zbrojnych, niezbędnych do obrony przed koczownikami.
 
 ---
 
@@ -38,7 +54,7 @@ Etos wojowniczy daje Uliczom bonusy do siły ataku i prestiżu z podbojów. Odzw
 ### Region historyczny
 Ulicze zamieszkiwali tereny nad dolnym Dnieprem i Bohem Południowym, na pograniczu strefy leśno-stepowej i otwartego stepu. Region charakteryzuje się rozległymi łąkami, niewielkimi lasami nadrzecznymi i otwartymi przestrzeniami sprzyjającymi hodowli.
 
-### Prowincje przypisane w 867
+### Prowincje w 867
 - 5098
 - 544
 
@@ -52,8 +68,9 @@ Ulicze zamieszkiwali tereny nad dolnym Dnieprem i Bohem Południowym, na pograni
 
 ## Wiara
 
-- **Wiara startowa (867):** [wschodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- **Najbliższe miejsca święte:** Kijów (c_kiev), Lwów (c_lwow)
+Ulicze wyznają wiarę [wschodniosłowiańską](../../03-wiara/przeglad-wiary.md) — pogański kult Peruna i Welesa, zagrożony przez bliskość bizantyńskich misjonarzy ze stepu.
+
+- **Najbliższe miejsca święte:** Kijów, Lwów
 
 ---
 

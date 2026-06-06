@@ -1,3 +1,10 @@
+﻿---
+heroMap: /maps/culture_lutici.png
+ogImage: /maps/culture_lutici_og.png
+subtitle: Konfederacja wojowniczych plemion nad Hawelą i Szprewą
+sections: flat
+---
+
 # Lucice
 
 Lucice (Wieleci) to wojowniczy związek plemienny zamieszkujący tereny na wschód od Obodrzyców, w okolicach dzisiejszego Wolgastu i Prenzlau. W modzie Slavic Enlarged łączą tradycję świętych gajów z niezłomnym oporem militarnym — to kultura, której centrum religijne w Retrze stanowiło jeden z najważniejszych ośrodków pogańskiego kultu w Europie.
@@ -6,19 +13,28 @@ Lucice (Wieleci) to wojowniczy związek plemienny zamieszkujący tereny na wsch�
 
 ## Karta kultury
 
+Lucice należą do **dziedzictwa zachodniosłowiańska** i kierują się etosem **wojowniczym** — waleczność i chwała bojowa. Mówią językiem zachodniosłowiański.
+
+Zaczynają grę z dwiema tradycjami: **Święte gaje** i **Stać i walczyć**. W 867 roku kontrolują **2 prowincje**. Sukcesja wojenna dopuszcza **tylko mężczyzn**.
+
+*Nowa kultura dodana przez Slavic Enlarged.*
+
+<details>
+<summary>Dane techniczne (dla modderów)</summary>
+
 | Pole | Wartość |
 |------|---------|
-| **Nazwa (PL)** | Lucice |
-| **Klucz w grze** | `lutici` |
-| **Grupa dziedzictwa** | zachodniosłowiańska (`heritage_west_slavic`) |
-| **Etos** | Wojowniczy (`ethos_bellicose`) |
-| **Język** | zachodniosłowiański (`language_lechitic`) |
-| **Lista imion** | `name_list_se_slavic` |
-| **Tradycje startowe** | Święte gaje, Stać i walczyć |
-| **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
-| **Kolor na mapie** | RGB 0.50 0.55 0.65 |
-| **Status w modzie** | nowa |
-| **Plik definicji** | `SE/common/culture/cultures/se_slavic_new.txt` |
+| **Klucz** | `lutici` |
+| **Heritage** | `heritage_west_slavic` |
+| **Ethos** | `ethos_bellicose` |
+| **Język** | `language_lechitic` |
+| **Imiona** | `name_list_se_slavic` |
+| **Tradycje** | `tradition_sacred_groves`, `tradition_stand_and_fight` |
+| **Sukcesja** | `martial_custom_male_only` |
+| **Kolor** | `rgb(127, 140, 165)` · CK3: `0.5 0.55 0.65` |
+| **Plik** | `se_slavic_new.txt` |
+
+</details>
 
 ---
 
@@ -28,8 +44,8 @@ Lucice (Wieleci) to wojowniczy związek plemienny zamieszkujący tereny na wsch�
 Etos wojowniczy daje Lucicom bonusy do waleczności rycerzy i prestiżu wojennego. Lucice byli znani z niezwykle gwałtownych powstań przeciw germańskiej ekspansji — ich bunt w 983 roku odrzucił saską dominację na ponad sto lat.
 
 ### Tradycje
-- **Święte gaje** (`tradition_sacred_groves`) — bonusy do pobożności i obrony wiary; Lucice otaczali czcią święte miejsca kultu, w tym legendarną Retrę z posągiem Swarożyca.
-- **Stać i walczyć** (`tradition_stand_and_fight`) — bonusy obronne dla piechoty; luciccy wojownicy bronili swoich ziem z fanatyczną determinacją, odrzucając kompromis z chrześcijańskim zachodem.
+- **Święte gaje** — bonusy do pobożności i obrony wiary; Lucice otaczali czcią święte miejsca kultu, w tym legendarną Retrę z posągiem Swarożyca.
+- **Stać i walczyć** — bonusy obronne dla piechoty; luciccy wojownicy bronili swoich ziem z fanatyczną determinacją, odrzucając kompromis z chrześcijańskim zachodem.
 
 ---
 
@@ -38,7 +54,7 @@ Etos wojowniczy daje Lucicom bonusy do waleczności rycerzy i prestiżu wojenneg
 ### Region historyczny
 Lucice zajmowali tereny między dolną Odrą a Hawelą, w krajobrazie jeziorno-leśnym typowym dla Pomorza. Ich związek plemienny obejmował cztery główne plemiona: Redarów, Dolan, Czrezpienian i Chyżan, z centrum religijnym w Retrze.
 
-### Prowincje przypisane w 867
+### Prowincje w 867
 - 2817 (Wolgast)
 - 3160 (Prenzlau)
 
@@ -52,8 +68,9 @@ Lucice zajmowali tereny między dolną Odrą a Hawelą, w krajobrazie jeziorno-l
 
 ## Wiara
 
-- **Wiara startowa (867):** [zachodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- **Najbliższe miejsca święte:** Retra (c_mecklenburg), Arkona (c_rugen), Legnica (c_legnica)
+Lucice wyznają wiarę [zachodniosłowiańską](../../03-wiara/przeglad-wiary.md) — pogański kult z centrum w Retrze, ważnym ośrodku wyroczni i kultu Swarożyca.
+
+- **Najbliższe miejsca święte:** Retra, Arkona, Legnica
 
 ---
 

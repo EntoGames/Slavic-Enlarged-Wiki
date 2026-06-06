@@ -1,3 +1,10 @@
+﻿---
+heroMap: /maps/culture_kashubians.png
+ogImage: /maps/culture_kashubians_og.png
+subtitle: Morski lud lechicki na wybrzeżu Bałtyku
+sections: flat
+---
+
 # Kaszubi
 
 Kaszubi to morskie plemię słowiańskie zamieszkujące Pomorze Gdańskie. Jako jedyni wśród Lechitów łączą tradycję morską z rolniczą, co daje im unikalny profil handlowo-gospodarczy. Wyróżnia ich również odrębna lista imion (pomorska) i brak polskiego zestawu herbów -- są bliżsi kulturowo Pomorzanom niż polańskiemu rdzeniowi.
@@ -6,19 +13,28 @@ Kaszubi to morskie plemię słowiańskie zamieszkujące Pomorze Gdańskie. Jako 
 
 ## Karta kultury
 
+Kaszubi należą do **dziedzictwa zachodniosłowiańska** i kierują się etosem **wspólnotowym** — współpraca i solidarność ponad ambicję jednostki. Mówią językiem zachodniosłowiański.
+
+Zaczynają grę z dwiema tradycjami: **Handlarze morscy** i **Rolnicy**. W 867 roku kontrolują **4 prowincje**. Sukcesja wojenna dopuszcza **tylko mężczyzn**.
+
+*Nowa kultura dodana przez Slavic Enlarged.*
+
+<details>
+<summary>Dane techniczne (dla modderów)</summary>
+
 | Pole | Wartość |
 |------|---------|
-| **Nazwa (PL)** | Kaszubi |
-| **Klucz w grze** | `kashubians` |
-| **Grupa dziedzictwa** | zachodniosłowiańska (`heritage_west_slavic`) |
-| **Etos** | Wspólnotowy (`ethos_communal`) |
-| **Język** | zachodniosłowiański (`language_lechitic`) |
-| **Lista imion** | `name_list_pommeranian` (unikalna!) |
-| **Tradycje startowe** | Handlarze morscy, Rolnicy |
-| **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
-| **Kolor na mapie** | RGB 0.30 0.50 0.55 |
-| **Status w modzie** | nowa |
-| **Plik definicji** | `SE/common/culture/cultures/se_slavic_new.txt` |
+| **Klucz** | `kashubians` |
+| **Heritage** | `heritage_west_slavic` |
+| **Ethos** | `ethos_communal` |
+| **Język** | `language_lechitic` |
+| **Imiona** | `name_list_pommeranian` (unikalna!)` |
+| **Tradycje** | `tradition_maritime_mercantilism`, `tradition_agrarian` |
+| **Sukcesja** | `martial_custom_male_only` |
+| **Kolor** | `rgb(76, 127, 140)` · CK3: `0.3 0.5 0.55` |
+| **Plik** | `se_slavic_new.txt` |
+
+</details>
 
 ---
 
@@ -28,8 +44,8 @@ Kaszubi to morskie plemię słowiańskie zamieszkujące Pomorze Gdańskie. Jako 
 Etos wspólnotowy daje bonusy do popularności i rozwoju przy niskiej kontroli. Kaszubi dzielą go z Goplanami, Mazowszanami i Ślężanami. Pasuje do ich zdecentralizowanej społeczności opartej na rybołówstwie i handlu przybrzeżnym.
 
 ### Tradycje
-- **Handlarze morscy** (`tradition_maritime_mercantilism`) -- bonus do dochodów z handlu morskiego i portów. Dostęp do Bałtyku dawał Kaszubom unikalne źródło bogactwa wśród lądowych kultur polskich.
-- **Rolnicy** (`tradition_agrarian`) -- bonus do rozwoju prowincji. Równowaga między morzem a polem -- zaplecze rolnicze wspierało porty i osady rybackie.
+- **Handlarze morscy** -- bonus do dochodów z handlu morskiego i portów. Dostęp do Bałtyku dawał Kaszubom unikalne źródło bogactwa wśród lądowych kultur polskich.
+- **Rolnicy** -- bonus do rozwoju prowincji. Równowaga między morzem a polem -- zaplecze rolnicze wspierało porty i osady rybackie.
 
 ---
 
@@ -38,9 +54,7 @@ Etos wspólnotowy daje bonusy do popularności i rozwoju przy niskiej kontroli. 
 ### Region historyczny
 Kaszubi zamieszkiwali Pomorze Gdańskie -- pas wybrzeża Bałtyku od ujścia Wisły po Łebę. Centrum regionu stanowił Gdańsk, kontrolujący ujście Wisły i dostęp do szlaków handlowych Bałtyku. Tereny zaplecza to lekko falista równina z jeziorami i lasami.
 
-### Prowincje przypisane w 867
-Z pliku `SE/history/provinces/se_kashubians.txt`:
-
+### Prowincje w 867
 - prowincja 2830
 - prowincja 2827
 - prowincja 3190
@@ -57,8 +71,9 @@ Z pliku `SE/history/provinces/se_kashubians.txt`:
 ---
 
 ## Wiara
-- **Wiara startowa (867):** [zachodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- **Najbliższe miejsca święte:** Płock (c_plocka), Arkona (c_rugen)
+Kaszubi wyznają wiarę [zachodniosłowiańską](../../03-wiara/przeglad-wiary.md) — pogański kult wspólny z innymi ludami lechickimi, wzbogacony o tradycje morskie.
+
+- **Najbliższe miejsca święte:** Płock, Arkona
 
 ---
 

@@ -1,3 +1,10 @@
+﻿---
+heroMap: /maps/culture_obodrites.png
+ogImage: /maps/culture_obodrites_og.png
+subtitle: Najpotężniejsze plemię połabskie — sąsiedzi Franków i Sasów
+sections: flat
+---
+
 # Obodrzyci
 
 Obodrzyci to najpotężniejszy związek plemienny Połabian, zamieszkujący tereny dzisiejszej Meklemburgii nad Bałtykiem. W modzie Slavic Enlarged wyróżniają się połączeniem wojowniczego etosu z tradycją morskiego handlu, co czyni ich naturalnym liderem oporu przeciw saskiej ekspansji. To kultura startowa Mściwoja — jednej z postaci bookmarkowych moda.
@@ -6,19 +13,28 @@ Obodrzyci to najpotężniejszy związek plemienny Połabian, zamieszkujący tere
 
 ## Karta kultury
 
+Obodrzyci należą do **dziedzictwa zachodniosłowiańska** i kierują się etosem **wojowniczym** — waleczność i chwała bojowa. Mówią językiem zachodniosłowiański.
+
+Zaczynają grę z dwiema tradycjami: **Morski merkantylizm** i **Stać i walczyć**. W 867 roku kontrolują **3 prowincje**. Sukcesja wojenna dopuszcza **tylko mężczyzn**.
+
+*Nowa kultura dodana przez Slavic Enlarged.*
+
+<details>
+<summary>Dane techniczne (dla modderów)</summary>
+
 | Pole | Wartość |
 |------|---------|
-| **Nazwa (PL)** | Obodrzyci |
-| **Klucz w grze** | `obodrites` |
-| **Grupa dziedzictwa** | zachodniosłowiańska (`heritage_west_slavic`) |
-| **Etos** | Wojowniczy (`ethos_bellicose`) |
-| **Język** | zachodniosłowiański (`language_lechitic`) |
-| **Lista imion** | `name_list_se_slavic` |
-| **Tradycje startowe** | Morski merkantylizm, Stać i walczyć |
-| **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
-| **Kolor na mapie** | RGB 0.35 0.60 0.55 |
-| **Status w modzie** | nowa |
-| **Plik definicji** | `SE/common/culture/cultures/se_slavic_new.txt` |
+| **Klucz** | `obodrites` |
+| **Heritage** | `heritage_west_slavic` |
+| **Ethos** | `ethos_bellicose` |
+| **Język** | `language_lechitic` |
+| **Imiona** | `name_list_se_slavic` |
+| **Tradycje** | `tradition_maritime_mercantilism`, `tradition_stand_and_fight` |
+| **Sukcesja** | `martial_custom_male_only` |
+| **Kolor** | `rgb(89, 153, 140)` · CK3: `0.35 0.6 0.55` |
+| **Plik** | `se_slavic_new.txt` |
+
+</details>
 
 ---
 
@@ -28,8 +44,8 @@ Obodrzyci to najpotężniejszy związek plemienny Połabian, zamieszkujący tere
 Etos wojowniczy daje Obodrzycom bonusy do waleczności rycerzy i prestiżu z wojen. Odzwierciedla to charakter plemienia, które przez wieki prowadziło nieustanne walki z Sasami i Duńczykami, broniąc niezależności Słowian Połabskich.
 
 ### Tradycje
-- **Morski merkantylizm** (`tradition_maritime_mercantilism`) — bonusy do dochodów z portów i handlu morskiego; Obodrzyci kontrolowali południowe wybrzeże Bałtyku, a ich porty rywalizowały z wikińskimi emporium.
-- **Stać i walczyć** (`tradition_stand_and_fight`) — bonusy obronne dla ciężkiej piechoty; połabscy wojownicy słynęli z determinacji w obronie swoich grodów przed germańskimi najazdami.
+- **Morski merkantylizm** — bonusy do dochodów z portów i handlu morskiego; Obodrzyci kontrolowali południowe wybrzeże Bałtyku, a ich porty rywalizowały z wikińskimi emporium.
+- **Stać i walczyć** — bonusy obronne dla ciężkiej piechoty; połabscy wojownicy słynęli z determinacji w obronie swoich grodów przed germańskimi najazdami.
 
 ---
 
@@ -38,7 +54,7 @@ Etos wojowniczy daje Obodrzycom bonusy do waleczności rycerzy i prestiżu z woj
 ### Region historyczny
 Obodrzyci zajmowali nadmorskie tereny dzisiejszej Meklemburgii — od Wagrii na zachodzie po ziemie Luciców na wschodzie. Ich głównym grodem było Wieligrad (późniejszy Meklemburg), a centrum handlowym — Reric nad Bałtykiem.
 
-### Prowincje przypisane w 867
+### Prowincje w 867
 - 2807 (d_nordmark / Meklemburgia)
 - 2809
 - 2812
@@ -53,8 +69,9 @@ Obodrzyci zajmowali nadmorskie tereny dzisiejszej Meklemburgii — od Wagrii na 
 
 ## Wiara
 
-- **Wiara startowa (867):** [zachodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- **Najbliższe miejsca święte:** Arkona (c_rugen), Retra (c_mecklenburg), Płock (c_plocka)
+Obodrzyci wyznają wiarę [zachodniosłowiańską](../../03-wiara/przeglad-wiary.md) — pogański kult zagrożony bezpośrednim sąsiedztwem z chrześcijańskim cesarstwem frankijskim.
+
+- **Najbliższe miejsca święte:** Arkona, Retra, Płock
 
 ---
 

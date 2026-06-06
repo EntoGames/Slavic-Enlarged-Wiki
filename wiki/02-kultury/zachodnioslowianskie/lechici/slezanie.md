@@ -1,3 +1,10 @@
+﻿---
+heroMap: /maps/culture_silesian.png
+ogImage: /maps/culture_silesian_og.png
+subtitle: Nadodrzańscy rolnicy u podnóża Sudetów
+sections: flat
+---
+
 # Ślężanie
 
 Ślężanie to wspólnotowe plemię lechickie zamieszkujące Śląsk -- rozległe dorzecze górnej i środkowej Odry. Z trzynastoma prowincjami i tradycjami rolniczymi oraz leśnymi stanowią największą terytorialnie kulturę lechicką w modzie. To nowa kultura dodana przez Slavic Enlarged, nieobecna w waniliowej grze.
@@ -6,19 +13,28 @@
 
 ## Karta kultury
 
+Ślężanie należą do **dziedzictwa zachodniosłowiańska** i kierują się etosem **wspólnotowym** — współpraca i solidarność ponad ambicję jednostki. Mówią językiem zachodniosłowiański.
+
+Zaczynają grę z dwiema tradycjami: **Rolnicy** i **Lud puszczy**. W 867 roku kontrolują **13 prowincji**. Sukcesja wojenna dopuszcza **tylko mężczyzn**.
+
+*Nowa kultura dodana przez Slavic Enlarged.*
+
+<details>
+<summary>Dane techniczne (dla modderów)</summary>
+
 | Pole | Wartość |
 |------|---------|
-| **Nazwa (PL)** | Ślężanie |
-| **Klucz w grze** | `silesian` |
-| **Grupa dziedzictwa** | zachodniosłowiańska (`heritage_west_slavic`) |
-| **Etos** | Wspólnotowy (`ethos_communal`) |
-| **Język** | zachodniosłowiański (`language_lechitic`) |
-| **Lista imion** | `name_list_se_slavic` |
-| **Tradycje startowe** | Rolnicy, Lud puszczy |
-| **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
-| **Kolor na mapie** | RGB 0.60 0.50 0.30 |
-| **Status w modzie** | nowa |
-| **Plik definicji** | `SE/common/culture/cultures/se_west_slavic_corrections.txt` |
+| **Klucz** | `silesian` |
+| **Heritage** | `heritage_west_slavic` |
+| **Ethos** | `ethos_communal` |
+| **Język** | `language_lechitic` |
+| **Imiona** | `name_list_se_slavic` |
+| **Tradycje** | `tradition_agrarian`, `tradition_forest_folk` |
+| **Sukcesja** | `martial_custom_male_only` |
+| **Kolor** | `rgb(153, 127, 76)` · CK3: `0.6 0.5 0.3` |
+| **Plik** | `se_west_slavic_corrections.txt` |
+
+</details>
 
 ---
 
@@ -28,8 +44,8 @@
 Etos wspólnotowy zapewnia bonusy do popularności i rozwoju przy niskiej kontroli. Ślężanie dzielą go z Goplanami, Mazowszanami i Kaszubami. Pasuje do obrazu luźno zorganizowanej społeczności rozciągniętej na dużym terytorium wzdłuż Odry.
 
 ### Tradycje
-- **Rolnicy** (`tradition_agrarian`) -- bonus do rozwoju prowincji. Dolina Odry oferowała doskonałe warunki do uprawy roli, co wspierało gęste osadnictwo.
-- **Lud puszczy** (`tradition_forest_folk`) -- bonus do walki w lasach i korzyści z terenów zalesionych. Śląskie puszcze pokrywały znaczną część terytorium, zwłaszcza w górnej części regionu.
+- **Rolnicy** -- bonus do rozwoju prowincji. Dolina Odry oferowała doskonałe warunki do uprawy roli, co wspierało gęste osadnictwo.
+- **Lud puszczy** -- bonus do walki w lasach i korzyści z terenów zalesionych. Śląskie puszcze pokrywały znaczną część terytorium, zwłaszcza w górnej części regionu.
 
 ---
 
@@ -38,9 +54,7 @@ Etos wspólnotowy zapewnia bonusy do popularności i rozwoju przy niskiej kontro
 ### Region historyczny
 Ślężanie zajmowali Śląsk -- rozciągający się od Sudetów na południu po środkowy bieg Odry na północy. Nazwa plemienia pochodzi od góry Ślęży, świętego miejsca kultu pogańskiego. Region dzielił się na Śląsk Górny (bardziej górzysty) i Dolny (nizinny), co odzwierciedla podział na dwa księstwa w grze.
 
-### Prowincje przypisane w 867
-Z pliku `SE/history/provinces/se_silesian.txt`:
-
+### Prowincje w 867
 **Księstwo Śląska Górnego (d_upper_silesia):**
 - prowincja 3052, 3049, 3048, 3040, 3042, 3044
 
@@ -58,8 +72,9 @@ Z pliku `SE/history/provinces/se_silesian.txt`:
 ---
 
 ## Wiara
-- **Wiara startowa (867):** [zachodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- **Najbliższe miejsca święte:** Legnica (c_legnica) -- bezpośrednio na terytorium Ślężan
+Ślężanie wyznają wiarę [zachodniosłowiańską](../../03-wiara/przeglad-wiary.md) — pogański kult z silnym kultem góry Ślęży, świętego miejsca od czasów przedsłowiańskich.
+
+- **Najbliższe miejsca święte:** Legnica -- bezpośrednio na terytorium Ślężan
 
 ---
 

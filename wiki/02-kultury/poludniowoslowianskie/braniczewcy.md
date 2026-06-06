@@ -1,3 +1,10 @@
+﻿---
+heroMap: /maps/culture_branicevci.png
+ogImage: /maps/culture_branicevci_og.png
+subtitle: Stoiccy strażnicy twierdzy Braniczewa nad Dunajem
+sections: flat
+---
+
 # Braniczewcy
 
 Braniczewcy to południowosłowiańska kultura skupiona wokół twierdzy Braniczew nad Dunajem, na styku szlaków łączących Bizancjum z wnętrzem Bałkanów. W modzie Slavic Enlarged to stoiccy wojownicy-rolnicy, łączący tradycję drużyny książęcej z solidną bazą agrarną.
@@ -6,19 +13,28 @@ Braniczewcy to południowosłowiańska kultura skupiona wokół twierdzy Branicz
 
 ## Karta kultury
 
+Braniczewcy należą do **dziedzictwa południowosłowiańska** i kierują się etosem **stoickim** — wytrzymałość i przetrwanie ponad wszystko. Mówią językiem południowosłowiański.
+
+Zaczynają grę z dwiema tradycjami: **Drużyna** i **Rolnicy**. W 867 roku kontrolują **1 prowincję**. Sukcesja wojenna dopuszcza **tylko mężczyzn**.
+
+*Nowa kultura dodana przez Slavic Enlarged.*
+
+<details>
+<summary>Dane techniczne (dla modderów)</summary>
+
 | Pole | Wartość |
 |------|---------|
-| **Nazwa (PL)** | Braniczewcy |
-| **Klucz w grze** | `branicevci` |
-| **Grupa dziedzictwa** | południowosłowiańska (`heritage_south_slavic`) |
-| **Etos** | Stoicki (`ethos_stoic`) |
-| **Język** | południowosłowiański (`language_south_slavic`) |
-| **Lista imion** | `name_list_se_slavic` |
-| **Tradycje startowe** | Drużyna, Rolnicy |
-| **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
-| **Kolor na mapie** | RGB 0.55 0.40 0.35 |
-| **Status w modzie** | nowa |
-| **Plik definicji** | `SE/common/culture/cultures/se_slavic_new.txt` |
+| **Klucz** | `branicevci` |
+| **Heritage** | `heritage_south_slavic` |
+| **Ethos** | `ethos_stoic` |
+| **Język** | `language_south_slavic` |
+| **Imiona** | `name_list_se_slavic` |
+| **Tradycje** | `tradition_druzhina`, `tradition_agrarian` |
+| **Sukcesja** | `martial_custom_male_only` |
+| **Kolor** | `rgb(140, 102, 89)` · CK3: `0.55 0.4 0.35` |
+| **Plik** | `se_slavic_new.txt` |
+
+</details>
 
 ---
 
@@ -28,8 +44,8 @@ Braniczewcy to południowosłowiańska kultura skupiona wokół twierdzy Branicz
 Etos stoicki daje Braniczewcom bonusy do wytrzymałości armii. Na naddunajskim pograniczu, narażonym na najazdy z każdej strony, wytrwałość była warunkiem przetrwania.
 
 ### Tradycje
-- **Drużyna** (`tradition_druzhina`) — bonusy do ciężkiej kawalerii i rycerzy; Braniczewcy utrzymywali drużynę książęcą na wzór wschodniosłowiański, co odróżnia ich od większości południowych kultur.
-- **Rolnicy** (`tradition_agrarian`) — bonusy do podatków z gospodarstw i wzrostu populacji; żyzne tereny nad Dunajem i Morawą stanowiły podstawę ich gospodarki.
+- **Drużyna** — bonusy do ciężkiej kawalerii i rycerzy; Braniczewcy utrzymywali drużynę książęcą na wzór wschodniosłowiański, co odróżnia ich od większości południowych kultur.
+- **Rolnicy** — bonusy do podatków z gospodarstw i wzrostu populacji; żyzne tereny nad Dunajem i Morawą stanowiły podstawę ich gospodarki.
 
 ---
 
@@ -38,7 +54,7 @@ Etos stoicki daje Braniczewcom bonusy do wytrzymałości armii. Na naddunajskim 
 ### Region historyczny
 Braniczew (Branicevo) leżał nad Dunajem, w rejonie ujścia Morawy Wielkiej, na terenie dzisiejszej wschodniej Serbii. Strategiczna twierdza kontrolowała przeprawę dunajską i szlak z Belgradu na wschód, ku Bułgarii i Bizancjum.
 
-### Prowincje przypisane w 867
+### Prowincje w 867
 - 3664 (region Braniczewa)
 
 ### Sąsiedztwo kulturowe
@@ -51,8 +67,9 @@ Braniczew (Branicevo) leżał nad Dunajem, w rejonie ujścia Morawy Wielkiej, na
 
 ## Wiara
 
-- **Wiara startowa (867):** [południowosłowiańska](../../03-wiara/przeglad-wiary.md)
-- **Najbliższe miejsca święte:** Szerem (c_szerem), Welbazhd (c_velbazhd)
+Braniczewcy wyznają wiarę [południowosłowiańską](../../03-wiara/przeglad-wiary.md) — pogański kult na styku wpływów bułgarskich i bizantyńskich.
+
+- **Najbliższe miejsca święte:** Szerem, Welbazhd
 
 ---
 

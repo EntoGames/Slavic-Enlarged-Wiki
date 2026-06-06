@@ -1,3 +1,10 @@
+﻿---
+heroMap: /maps/culture_nitrianians.png
+ogImage: /maps/culture_nitrianians_og.png
+subtitle: Słowiańskie plemię na pograniczu morawsko-węgierskim
+sections: flat
+---
+
 # Nitrianie
 
 Nitrianie to biurokratyczna kultura zachodniosłowiańska reprezentująca Księstwo Nitrzańskie — słowiański organizm państwowy, który stał się jednym z filarów Wielkich Moraw. W modzie Slavic Enlarged wyróżniają się unikatowym połączeniem miejskiej administracji z silnym przywiązaniem do lokalnych tradycji, posługując się językiem czeskosłowackim zamiast lechickiego.
@@ -6,19 +13,28 @@ Nitrianie to biurokratyczna kultura zachodniosłowiańska reprezentująca Księs
 
 ## Karta kultury
 
+Nitrianie należą do **dziedzictwa zachodniosłowiańska** i kierują się etosem **biurokratyczny**. Mówią językiem czeskosłowacki.
+
+Zaczynają grę z dwiema tradycjami: **Strażnicy miast** i **Partykularyzm**. W 867 roku kontrolują **1 prowincję**. Sukcesja wojenna dopuszcza **tylko mężczyzn**.
+
+*Nowa kultura dodana przez Slavic Enlarged.*
+
+<details>
+<summary>Dane techniczne (dla modderów)</summary>
+
 | Pole | Wartość |
 |------|---------|
-| **Nazwa (PL)** | Nitrianie |
-| **Klucz w grze** | `nitrianians` |
-| **Grupa dziedzictwa** | zachodniosłowiańska (`heritage_west_slavic`) |
-| **Etos** | Biurokratyczny (`ethos_bureaucratic`) |
-| **Język** | czeskosłowacki (`language_czech_slovak`) |
-| **Lista imion** | `name_list_se_slavic` |
-| **Tradycje startowe** | Strażnicy miast, Partykularyzm |
-| **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
-| **Kolor na mapie** | RGB 0.50 0.45 0.50 |
-| **Status w modzie** | nowa |
-| **Plik definicji** | `SE/common/culture/cultures/se_slavic_new.txt` |
+| **Klucz** | `nitrianians` |
+| **Heritage** | `heritage_west_slavic` |
+| **Ethos** | `ethos_bureaucratic` |
+| **Język** | `language_czech_slovak` |
+| **Imiona** | `name_list_se_slavic` |
+| **Tradycje** | `tradition_city_keepers`, `tradition_parochialism` |
+| **Sukcesja** | `martial_custom_male_only` |
+| **Kolor** | `rgb(127, 114, 127)` · CK3: `0.5 0.45 0.5` |
+| **Plik** | `se_slavic_new.txt` |
+
+</details>
 
 ---
 
@@ -28,8 +44,8 @@ Nitrianie to biurokratyczna kultura zachodniosłowiańska reprezentująca Księs
 Etos biurokratyczny daje Nitrianom bonusy do zarządzania państwem i efektywności administracji. To jedyny taki etos wśród zachodnich Słowian w modzie — odzwierciedla fakt, że Księstwo Nitrzańskie było jednym z najlepiej zorganizowanych wczesnośredniowiecznych organizmów słowiańskich.
 
 ### Tradycje
-- **Strażnicy miast** (`tradition_city_keepers`) — bonusy do rozwoju i podatków miejskich; Nitra była jednym z największych grodów słowiańskich, z rozwiniętym rzemiosłem i handlem.
-- **Partykularyzm** (`tradition_parochialism`) — bonusy do obrony terytorium i opinii lokalnych wasali; Nitrianie silnie identyfikowali się ze swoim księstwem, opierając się wchłonięciu nawet przez bratnie Morawy.
+- **Strażnicy miast** — bonusy do rozwoju i podatków miejskich; Nitra była jednym z największych grodów słowiańskich, z rozwiniętym rzemiosłem i handlem.
+- **Partykularyzm** — bonusy do obrony terytorium i opinii lokalnych wasali; Nitrianie silnie identyfikowali się ze swoim księstwem, opierając się wchłonięciu nawet przez bratnie Morawy.
 
 ---
 
@@ -38,7 +54,7 @@ Etos biurokratyczny daje Nitrianom bonusy do zarządzania państwem i efektywno�
 ### Region historyczny
 Nitrianie zamieszkiwali dolinę rzeki Nitry i zachodnie tereny dzisiejszej Słowacji, w regionie żyznych nizin podkarpackich. Ich gród Nitra leżał na skrzyżowaniu szlaków łączących świat zachodniosłowiański z Panonią i sterowymi ludami na wschodzie.
 
-### Prowincje przypisane w 867
+### Prowincje w 867
 - 3831 (d_nyitra / Księstwo Nitrzańskie)
 
 ### Sąsiedztwo kulturowe
@@ -51,8 +67,9 @@ Nitrianie zamieszkiwali dolinę rzeki Nitry i zachodnie tereny dzisiejszej Słow
 
 ## Wiara
 
-- **Wiara startowa (867):** [zachodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- **Najbliższe miejsca święte:** Praga (c_praha), Legnica (c_legnica), Płock (c_plocka)
+Nitrianie wyznają wiarę [zachodniosłowiańską](../../03-wiara/przeglad-wiary.md) — pogański kult silnie zagrożony przez misje chrześcijańskie z Wielkich Moraw.
+
+- **Najbliższe miejsca święte:** Praga, Legnica, Płock
 
 ---
 

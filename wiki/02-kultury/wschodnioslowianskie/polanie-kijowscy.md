@@ -1,24 +1,40 @@
+﻿---
+heroMap: /maps/culture_polyans.png
+ogImage: /maps/culture_polyans_og.png
+subtitle: Dworska kultura nad Dnieprem — serce przyszłej Rusi Kijowskiej
+sections: flat
+---
+
 # Polanie kijowscy
 
-Polanie kijowscy to wschodniosłowiańskie plemię zamieszkujące okolice Kijowa i Perejasławia — serce przyszłej Rusi Kijowskiej. W modzie Slavic Enlarged to kultura dworska z tradycjami miejskimi i dyplomatycznymi, odzwierciedlająca rolę Kijowa jako najważniejszego ośrodka politycznego wschodnich Słowian.
+Serce przyszłej Rusi Kijowskiej. Polanie kijowscy władają żyznymi ziemiami nad środkowym Dnieprem, a ich gród — Kijów — jest najważniejszym ośrodkiem politycznym wschodnich Słowian. To kultura dworska: silna dyplomacją, bogata handlem, ale z zaledwie dwoma prowincjami na start. Nowa kultura dodana przez Slavic Enlarged.
 
 ---
 
 ## Karta kultury
 
+Polanie kijowscy należą do **dziedzictwa wschodniosłowiańskie** i kierują się etosem **dworskim** — prestiż i dyplomacja ponad siłę. Mówią językiem wschodniosłowiański.
+
+Zaczynają grę z dwiema tradycjami: **Strażnicy miast** i **Wytrawni dyplomaci**. W 867 roku kontrolują **2 prowincje** (Kijów, Perejasław). Sukcesja wojenna dopuszcza **tylko mężczyzn**.
+
+*Nowa kultura dodana przez Slavic Enlarged.*
+
+<details>
+<summary>Dane techniczne (dla modderów)</summary>
+
 | Pole | Wartość |
 |------|---------|
-| **Nazwa (PL)** | Polanie kijowscy |
-| **Klucz w grze** | `polyans` |
-| **Grupa dziedzictwa** | wschodniosłowiańska (`heritage_east_slavic`) |
-| **Etos** | Dworski (`ethos_courtly`) |
-| **Język** | wschodniosłowiański (`language_east_slavic`) |
-| **Lista imion** | `name_list_se_slavic` |
-| **Tradycje startowe** | Strażnicy miast, Wytrawni dyplomaci |
-| **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
-| **Kolor na mapie** | RGB 0.65 0.55 0.20 |
-| **Status w modzie** | nowa |
-| **Plik definicji** | `SE/common/culture/cultures/se_slavic_new.txt` |
+| **Klucz** | `polyans` |
+| **Heritage** | `heritage_east_slavic` |
+| **Ethos** | `ethos_courtly` |
+| **Język** | `language_east_slavic` |
+| **Imiona** | `name_list_se_slavic` |
+| **Tradycje** | `tradition_city_keepers`, `tradition_astute_diplomats` |
+| **Sukcesja** | `martial_custom_male_only` |
+| **Kolor** | `rgb(166, 140, 51)` · CK3: `0.65 0.55 0.20` |
+| **Plik** | `se_slavic_new.txt` |
+
+</details>
 
 ---
 
@@ -28,8 +44,8 @@ Polanie kijowscy to wschodniosłowiańskie plemię zamieszkujące okolice Kijowa
 Etos dworski daje Polanom bonusy do prestiżu i sprawności dyplomatycznej. Reprezentuje kulturę plemienia, które jako pierwsze wśród wschodnich Słowian rozwinęło zaawansowane struktury państwowe i ceremoniał dworski.
 
 ### Tradycje
-- **Strażnicy miast** (`tradition_city_keepers`) — bonusy do rozwoju i podatków z miast; Kijów był największym i najbogatszym grodem wschodnich Słowian.
-- **Wytrawni dyplomaci** (`tradition_astute_diplomats`) — bonusy do dyplomacji i relacji z innymi władcami; Polanie utrzymywali kontakty z Bizancjum, Chazarami i Skandynawami.
+- **Strażnicy miast** — bonusy do rozwoju i podatków z miast. Kijów był największym i najbogatszym grodem wschodnich Słowian.
+- **Wytrawni dyplomaci** — bonusy do dyplomacji i relacji z innymi władcami. Polanie utrzymywali kontakty z Bizancjum, Chazarami i Skandynawami.
 
 ---
 
@@ -38,9 +54,8 @@ Etos dworski daje Polanom bonusy do prestiżu i sprawności dyplomatycznej. Repr
 ### Region historyczny
 Polanie kijowscy zajmowali żyzne tereny nad środkowym Dnieprem, w okolicach Kijowa i Perejasławia. Region leży na pograniczu strefy leśnej i leśno-stepowej, z urodzajnymi czarnoziemami. Kijów kontrolował kluczowy punkt przeprawy przez Dniepr.
 
-### Prowincje przypisane w 867
-- 547 (region Kijowa)
-- 555 (region Perejasławia)
+### Prowincje w 867
+Kijów i Perejasław — **2 prowincje** w dorzeczu środkowego Dniepru.
 
 ### Sąsiedztwo kulturowe
 - **Północ:** Drewlanie
@@ -52,8 +67,9 @@ Polanie kijowscy zajmowali żyzne tereny nad środkowym Dnieprem, w okolicach Ki
 
 ## Wiara
 
-- **Wiara startowa (867):** [wschodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- **Najbliższe miejsca święte:** Kijów (c_kiev), Lwów (c_lwow)
+Polanie kijowscy wyznają wiarę [wschodniosłowiańską](../../03-wiara/przeglad-wiary.md) — pogański kult Peruna, Welesa i Dażboga, wspólny dla plemion znad Dniepru. Kijów jest jednym z miejsc świętych tej wiary, co daje Polanom bonus religijny od startu gry.
+
+- **Najbliższe miejsca święte:** Kijów, Lwów
 
 ---
 

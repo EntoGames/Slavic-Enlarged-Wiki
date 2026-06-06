@@ -1,3 +1,10 @@
+﻿---
+heroMap: /maps/culture_serbian.png
+ogImage: /maps/culture_serbian_og.png
+subtitle: Bałkańscy wojownicy między Bizancjum a Bułgarią
+sections: flat
+---
+
 # Serbowie
 
 Serbowie to jedna z dwóch dominujących kultur południowosłowiańskich, skupiona wokół Raszki w centralnych Bałkanach. W modzie Slavic Enlarged ich definicja została nadpisana z wanilii — tradycja husarska zastąpiona Podziwem dla waleczności, co lepiej pasuje do realiów IX wieku. Z trzema tradycjami startowymi i silnym profilem militarno-religijnym, Serbowie to jedna z najpotężniejszych kultur w regionie.
@@ -6,19 +13,28 @@ Serbowie to jedna z dwóch dominujących kultur południowosłowiańskich, skupi
 
 ## Karta kultury
 
+Serbowie należą do **dziedzictwa południowosłowiańska** i kierują się etosem **wspólnotowym** — współpraca i solidarność ponad ambicję jednostki. Mówią językiem południowosłowiański.
+
+Zaczynają grę z trzema tradycjami: **Podziw dla waleczności**, **Patronat religijny** i **Niezłomni obrońcy**. Sukcesja wojenna dopuszcza **tylko mężczyzn**.
+
+*kultura waniliowa z prowincjami SE*
+
+<details>
+<summary>Dane techniczne (dla modderów)</summary>
+
 | Pole | Wartość |
 |------|---------|
-| **Nazwa (PL)** | Serbowie |
-| **Klucz w grze** | `serbian` |
-| **Grupa dziedzictwa** | południowosłowiańska (`heritage_south_slavic`) |
-| **Etos** | Wspólnotowy (`ethos_communal`) |
-| **Język** | południowosłowiański (`language_south_slavic`) |
-| **Lista imion** | `name_list_se_slavic` |
-| **Tradycje startowe** | Podziw dla waleczności, Patronat religijny, Niezłomni obrońcy |
-| **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
-| **Kolor na mapie** | RGB 0.36 0.10 0.04 |
-| **Status w modzie** | nadpisana wanilijna |
-| **Plik definicji** | `SE/common/culture/cultures/se_south_slavic_corrections.txt` |
+| **Klucz** | `serbian` |
+| **Heritage** | `heritage_south_slavic` |
+| **Ethos** | `ethos_communal` |
+| **Język** | `language_south_slavic` |
+| **Imiona** | `name_list_se_slavic` |
+| **Tradycje** | `tradition_martial_admiration`, `tradition_religious_patronage`, `tradition_stalwart_defenders`, `tradition_hussar`, `tradition_martial_admiration`, `tradition_staunch_traditionalists` |
+| **Sukcesja** | `martial_custom_male_only` |
+| **Kolor** | `rgb(91, 25, 10)` · CK3: `0.36 0.1 0.04` |
+| **Plik** | `se_south_slavic_corrections.txt` |
+
+</details>
 
 ---
 
@@ -28,9 +44,9 @@ Serbowie to jedna z dwóch dominujących kultur południowosłowiańskich, skupi
 Etos wspólnotowy daje Serbom bonusy do opinii wasali. Wczesnośredniowieczna Serbia opierała się na systemie żupanii — lokalnych wspólnotach pod władzą wielkich żupanów, co wymagało konsensusu i współpracy.
 
 ### Tradycje
-- **Podziw dla waleczności** (`tradition_martial_admiration`) — bonusy do waleczności rycerzy; zastąpiła tradycję husarską z wanilii, co jest adekwatniejsze dla IX-wiecznych realiów.
-- **Patronat religijny** (`tradition_religious_patronage`) — bonusy do relacji z duchowieństwem i budowy świątyń; odzwierciedla znaczenie religii w kształtowaniu serbskiej tożsamości.
-- **Niezłomni obrońcy** (`tradition_stalwart_defenders`) — bonusy do obrony i fortyfikacji; górzysty teren Raszki czynił Serbów trudnym celem dla najeźdźców.
+- **Podziw dla waleczności** — bonusy do waleczności rycerzy; zastąpiła tradycję husarską z wanilii, co jest adekwatniejsze dla IX-wiecznych realiów.
+- **Patronat religijny** — bonusy do relacji z duchowieństwem i budowy świątyń; odzwierciedla znaczenie religii w kształtowaniu serbskiej tożsamości.
+- **Niezłomni obrońcy** — bonusy do obrony i fortyfikacji; górzysty teren Raszki czynił Serbów trudnym celem dla najeźdźców.
 
 ---
 
@@ -39,8 +55,8 @@ Etos wspólnotowy daje Serbom bonusy do opinii wasali. Wczesnośredniowieczna Se
 ### Region historyczny
 Serbowie zajmowali region Raszki (Ras) w centralnych Bałkanach — górzysty teren w dorzeczu Morawy Zachodniej i Ibru, na terenie dzisiejszej centralnej Serbii i Kosowa. To naturalnie obronne terytorium, otoczone górami i trudno dostępne z zewnątrz.
 
-### Prowincje przypisane w 867
-Serbia jest kulturą waniliową — prowincje wynikają z domyślnej mapy CK3. Kultura serbska obejmuje Raszkę i okoliczne tereny.
+### Prowincje w 867
+Raszka i Serbia — rozległy blok terytorialny w sercu Bałkanów.
 
 ### Sąsiedztwo kulturowe
 - **Północ:** Braniczewcy, wpływy węgierskie
@@ -52,8 +68,9 @@ Serbia jest kulturą waniliową — prowincje wynikają z domyślnej mapy CK3. K
 
 ## Wiara
 
-- **Wiara startowa (867):** [południowosłowiańska](../../03-wiara/przeglad-wiary.md)
-- **Najbliższe miejsca święte:** Szerem (c_szerem), Ston (c_ston), Welbazhd (c_velbazhd)
+Serbowie wyznają wiarę [południowosłowiańską](../../03-wiara/przeglad-wiary.md) — pogański kult pod rosnącą presją ze strony Bizancjum i Bułgarii.
+
+- **Najbliższe miejsca święte:** Szerem, Ston, Welbazhd
 
 ---
 
@@ -61,7 +78,7 @@ Serbia jest kulturą waniliową — prowincje wynikają z domyślnej mapy CK3. K
 
 Zamiana `tradition_hussar` na `tradition_martial_admiration` — identycznie jak u Chorwatów. Husaria jest anachronizmem w IX-wiecznym kontekście, a Podziw dla waleczności lepiej oddaje kulturę osobistego bohaterstwa i waleczności wodzów serbskich.
 
-Serbowie posiadają też opcjonalną tradycję DLC: **Zatwardziali tradycjonaliści** (`tradition_staunch_traditionalists`), dostępną przy włączonym DLC hybrydy kultur.
+Serbowie posiadają też opcjonalną tradycję DLC: **Zatwardziali tradycjonaliści**, dostępną przy włączonym DLC hybrydy kultur.
 
 ---
 

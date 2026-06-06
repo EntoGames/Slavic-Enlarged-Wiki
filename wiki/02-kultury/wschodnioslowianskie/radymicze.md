@@ -1,3 +1,10 @@
+﻿---
+heroMap: /maps/culture_radimichs.png
+ogImage: /maps/culture_radimichs_og.png
+subtitle: Małe plemię świętych gajów nad rzeką Soż
+sections: flat
+---
+
 # Radymicze
 
 Radymicze to wschodniosłowiańskie plemię zamieszkujące dorzecze Soży, w okolicach późniejszego Mińska. W modzie Slavic Enlarged to spokojna, wspólnotowa kultura łącząca kult świętych gajów z tradycją rolniczą — małe, ale głęboko zakorzenione w pogańskiej wierze plemię.
@@ -6,19 +13,28 @@ Radymicze to wschodniosłowiańskie plemię zamieszkujące dorzecze Soży, w oko
 
 ## Karta kultury
 
+Radymicze należą do **dziedzictwa wschodniosłowiańska** i kierują się etosem **wspólnotowym** — współpraca i solidarność ponad ambicję jednostki. Mówią językiem wschodniosłowiański.
+
+Zaczynają grę z dwiema tradycjami: **Święte gaje** i **Rolnicy**. W 867 roku kontrolują **1 prowincję**. Sukcesja wojenna dopuszcza **tylko mężczyzn**.
+
+*Nowa kultura dodana przez Slavic Enlarged.*
+
+<details>
+<summary>Dane techniczne (dla modderów)</summary>
+
 | Pole | Wartość |
 |------|---------|
-| **Nazwa (PL)** | Radymicze |
-| **Klucz w grze** | `radimichs` |
-| **Grupa dziedzictwa** | wschodniosłowiańska (`heritage_east_slavic`) |
-| **Etos** | Wspólnotowy (`ethos_communal`) |
-| **Język** | wschodniosłowiański (`language_east_slavic`) |
-| **Lista imion** | `name_list_se_slavic` |
-| **Tradycje startowe** | Święte gaje, Rolnicy |
-| **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
-| **Kolor na mapie** | RGB 0.40 0.55 0.30 |
-| **Status w modzie** | nowa |
-| **Plik definicji** | `SE/common/culture/cultures/se_slavic_new.txt` |
+| **Klucz** | `radimichs` |
+| **Heritage** | `heritage_east_slavic` |
+| **Ethos** | `ethos_communal` |
+| **Język** | `language_east_slavic` |
+| **Imiona** | `name_list_se_slavic` |
+| **Tradycje** | `tradition_sacred_groves`, `tradition_agrarian` |
+| **Sukcesja** | `martial_custom_male_only` |
+| **Kolor** | `rgb(102, 140, 76)` · CK3: `0.4 0.55 0.3` |
+| **Plik** | `se_slavic_new.txt` |
+
+</details>
 
 ---
 
@@ -28,8 +44,8 @@ Radymicze to wschodniosłowiańskie plemię zamieszkujące dorzecze Soży, w oko
 Etos wspólnotowy daje Radymiczom bonusy do opinii wasali i stabilności wewnętrznej. Reprezentuje tradycję wspólnotowego podejmowania decyzji i bliskich więzi plemiennych charakterystycznych dla tego niewielkiego ludu.
 
 ### Tradycje
-- **Święte gaje** (`tradition_sacred_groves`) — bonusy do pobożności i obrony przed nawracaniem; Radymicze byli głęboko przywiązani do pogańskich miejsc kultu.
-- **Rolnicy** (`tradition_agrarian`) — bonusy do podatków z gospodarstw i wzrostu populacji; dolina Soży oferowała żyzne gleby sprzyjające uprawie.
+- **Święte gaje** — bonusy do pobożności i obrony przed nawracaniem; Radymicze byli głęboko przywiązani do pogańskich miejsc kultu.
+- **Rolnicy** — bonusy do podatków z gospodarstw i wzrostu populacji; dolina Soży oferowała żyzne gleby sprzyjające uprawie.
 
 ---
 
@@ -38,8 +54,8 @@ Etos wspólnotowy daje Radymiczom bonusy do opinii wasali i stabilności wewnęt
 ### Region historyczny
 Radymicze zamieszkiwali dorzecze Soży, lewego dopływu Dniepru, na terenie późniejszego księstwa mińskiego. Region jest nizinny, z mieszanką lasów i pól uprawnych, stosunkowo żyzny jak na standardy wschodnioeuropejskie.
 
-### Prowincje przypisane w 867
-- 5127
+### Prowincje w 867
+Dorzecze Soży — **1 prowincja** na pograniczu leśnym.
 
 ### Sąsiedztwo kulturowe
 - **Północ:** Krywicze
@@ -51,8 +67,9 @@ Radymicze zamieszkiwali dorzecze Soży, lewego dopływu Dniepru, na terenie pó�
 
 ## Wiara
 
-- **Wiara startowa (867):** [wschodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- **Najbliższe miejsca święte:** Mińsk (c_minsk), Kijów (c_kiev), Połock (c_polotsk)
+Radymicze wyznają wiarę [wschodniosłowiańską](../../03-wiara/przeglad-wiary.md) — pogański kult głęboko zakorzeniony w tradycji świętych gajów, z dostępem do miejsc świętych w Mińsku i Kijowie.
+
+- **Najbliższe miejsca święte:** Mińsk, Kijów, Połock
 
 ---
 

@@ -1,3 +1,10 @@
+﻿---
+heroMap: /maps/culture_drevlyans.png
+ogImage: /maps/culture_drevlyans_og.png
+subtitle: Surowi leśni łowcy z puszczy prypeckiej
+sections: flat
+---
+
 # Drewlanie
 
 Drewlanie to wschodniosłowiańskie plemię zamieszkujące gęste lasy Polesia, na zachód od Kijowa. W modzie Slavic Enlarged wyróżniają się jako surowi leśni łowcy o stoickim etosie — twarda kultura przystosowana do przetrwania w trudnych warunkach puszczy prypeckiej.
@@ -6,19 +13,28 @@ Drewlanie to wschodniosłowiańskie plemię zamieszkujące gęste lasy Polesia, 
 
 ## Karta kultury
 
+Drewlanie należą do **dziedzictwa wschodniosłowiańskiego** i kierują się etosem **stoickim** — wytrzymałość i przetrwanie ponad wszystko. Mówią językiem wschodniosłowiańskim.
+
+Zaczynają grę z dwiema tradycjami: **Leśny lud** i **Łowcy**. W 867 roku kontrolują **5 prowincji** w puszczy prypeckiej. Sukcesja wojenna dopuszcza **tylko mężczyzn**.
+
+*Nowa kultura dodana przez Slavic Enlarged.*
+
+<details>
+<summary>Dane techniczne (dla modderów)</summary>
+
 | Pole | Wartość |
 |------|---------|
-| **Nazwa (PL)** | Drewlanie |
-| **Klucz w grze** | `drevlyans` |
-| **Grupa dziedzictwa** | wschodniosłowiańska (`heritage_east_slavic`) |
-| **Etos** | Stoicki (`ethos_stoic`) |
-| **Język** | wschodniosłowiański (`language_east_slavic`) |
-| **Lista imion** | `name_list_se_slavic` |
-| **Tradycje startowe** | Leśny lud, Łowcy |
-| **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
-| **Kolor na mapie** | RGB 0.35 0.50 0.25 |
-| **Status w modzie** | nowa |
-| **Plik definicji** | `SE/common/culture/cultures/se_slavic_new.txt` |
+| **Klucz** | `drevlyans` |
+| **Heritage** | `heritage_east_slavic` |
+| **Ethos** | `ethos_stoic` |
+| **Język** | `language_east_slavic` |
+| **Imiona** | `name_list_se_slavic` |
+| **Tradycje** | `tradition_forest_folk`, `tradition_hunters` |
+| **Sukcesja** | `martial_custom_male_only` |
+| **Kolor** | `rgb(89, 127, 63)` · CK3: `0.35 0.5 0.25` |
+| **Plik** | `se_slavic_new.txt` |
+
+</details>
 
 ---
 
@@ -28,8 +44,8 @@ Drewlanie to wschodniosłowiańskie plemię zamieszkujące gęste lasy Polesia, 
 Etos stoicki daje Drewlanom bonusy do wytrzymałości armii i obronności. Reprezentuje charakter ludu, który przetrwał w surowych warunkach leśnych i nie bał się stawiać czoła silniejszym przeciwnikom.
 
 ### Tradycje
-- **Leśny lud** (`tradition_forest_folk`) — bonusy do walki w lasach i zaopatrzenia na zalesionym terenie; lasy były domem i twierdzą Drewlan.
-- **Łowcy** (`tradition_hunters`) — bonusy do lekkich oddziałów i zaopatrzenia armii; polowanie stanowiło podstawę bytu plemienia.
+- **Leśny lud** — bonusy do walki w lasach i zaopatrzenia na zalesionym terenie; lasy były domem i twierdzą Drewlan.
+- **Łowcy** — bonusy do lekkich oddziałów i zaopatrzenia armii; polowanie stanowiło podstawę bytu plemienia.
 
 ---
 
@@ -38,12 +54,8 @@ Etos stoicki daje Drewlanom bonusy do wytrzymałości armii i obronności. Repre
 ### Region historyczny
 Drewlanie zajmowali tereny puszczy prypeckiej, na zachód od Kijowa, w dorzeczu Prypeci i jej dopływów. Region jest gęsto zalesiony, bagnisty, z niewielką liczbą grodów. Głównym ośrodkiem plemiennym był Iskorosteń (Owrucz).
 
-### Prowincje przypisane w 867
-- 5104
-- 5109
-- 5087
-- 5091
-- 5095
+### Prowincje w 867
+Polesie i puszcza prypecka — **5 prowincji** w gęstych lasach na zachód od Kijowa.
 
 ### Sąsiedztwo kulturowe
 - **Północ:** Dregowicze
@@ -55,8 +67,9 @@ Drewlanie zajmowali tereny puszczy prypeckiej, na zachód od Kijowa, w dorzeczu 
 
 ## Wiara
 
-- **Wiara startowa (867):** [wschodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- **Najbliższe miejsca święte:** Kijów (c_kiev), Lwów (c_lwow), Mińsk (c_minsk)
+Drewlanie wyznają wiarę [wschodniosłowiańską](../../03-wiara/przeglad-wiary.md) — pogański kult głęboko zakorzeniony w leśnym życiu plemienia. Ich bliskość Kijowa daje dostęp do jednego z najważniejszych miejsc świętych.
+
+- **Najbliższe miejsca święte:** Kijów, Lwów, Mińsk
 
 ---
 

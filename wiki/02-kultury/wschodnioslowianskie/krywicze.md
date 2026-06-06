@@ -1,3 +1,10 @@
+﻿---
+heroMap: /maps/culture_krivichians.png
+ogImage: /maps/culture_krivichians_og.png
+subtitle: Lud handlowych szlaków między Bałtykiem a Dnieprem
+sections: flat
+---
+
 # Krywicze
 
 Krywicze to wschodniosłowiańskie plemię zamieszkujące region Smoleńska i Pskowa, na styku szlaków handlowych łączących Bałtyk z Morzem Czarnym. W modzie Slavic Enlarged wyróżniają się jako społeczność miejska z silnym zapleczem rolniczym, co czyni ich jedną z najbardziej stabilnych ekonomicznie kultur w regionie.
@@ -6,19 +13,28 @@ Krywicze to wschodniosłowiańskie plemię zamieszkujące region Smoleńska i Ps
 
 ## Karta kultury
 
+Krywicze należą do **dziedzictwa wschodniosłowiańska** i kierują się etosem **wspólnotowym** — współpraca i solidarność ponad ambicję jednostki. Mówią językiem wschodniosłowiański.
+
+Zaczynają grę z dwiema tradycjami: **Strażnicy miast** i **Rolnicy**. W 867 roku kontrolują **5 prowincji**. Sukcesja wojenna dopuszcza **tylko mężczyzn**.
+
+*Nowa kultura dodana przez Slavic Enlarged.*
+
+<details>
+<summary>Dane techniczne (dla modderów)</summary>
+
 | Pole | Wartość |
 |------|---------|
-| **Nazwa (PL)** | Krywicze |
-| **Klucz w grze** | `krivichians` |
-| **Grupa dziedzictwa** | wschodniosłowiańska (`heritage_east_slavic`) |
-| **Etos** | Wspólnotowy (`ethos_communal`) |
-| **Język** | wschodniosłowiański (`language_east_slavic`) |
-| **Lista imion** | `name_list_se_slavic` |
-| **Tradycje startowe** | Strażnicy miast, Rolnicy |
-| **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
-| **Kolor na mapie** | RGB 0.45 0.55 0.35 |
-| **Status w modzie** | nowa |
-| **Plik definicji** | `SE/common/culture/cultures/se_slavic_new.txt` |
+| **Klucz** | `krivichians` |
+| **Heritage** | `heritage_east_slavic` |
+| **Ethos** | `ethos_communal` |
+| **Język** | `language_east_slavic` |
+| **Imiona** | `name_list_se_slavic` |
+| **Tradycje** | `tradition_city_keepers`, `tradition_agrarian` |
+| **Sukcesja** | `martial_custom_male_only` |
+| **Kolor** | `rgb(114, 140, 89)` · CK3: `0.45 0.55 0.35` |
+| **Plik** | `se_slavic_new.txt` |
+
+</details>
 
 ---
 
@@ -28,8 +44,8 @@ Krywicze to wschodniosłowiańskie plemię zamieszkujące region Smoleńska i Ps
 Etos wspólnotowy daje Krywiczom bonusy do opinii wasali i ułatwia utrzymanie spokoju w państwie. Odzwierciedla to charakter plemienia, które opierało swój byt na współpracy osadniczej i wspólnym zarządzaniu zasobami.
 
 ### Tradycje
-- **Strażnicy miast** (`tradition_city_keepers`) — bonusy do rozwoju i podatków z miast; Krywicze kontrolowali ważne grody na szlakach handlowych, w tym Smoleńsk.
-- **Rolnicy** (`tradition_agrarian`) — bonusy do podatków z gospodarstw i wzrostu populacji; żyzne doliny rzeczne stanowiły podstawę ich gospodarki.
+- **Strażnicy miast** — bonusy do rozwoju i podatków z miast; Krywicze kontrolowali ważne grody na szlakach handlowych, w tym Smoleńsk.
+- **Rolnicy** — bonusy do podatków z gospodarstw i wzrostu populacji; żyzne doliny rzeczne stanowiły podstawę ich gospodarki.
 
 ---
 
@@ -38,7 +54,7 @@ Etos wspólnotowy daje Krywiczom bonusy do opinii wasali i ułatwia utrzymanie s
 ### Region historyczny
 Krywicze zajmowali tereny w dorzeczu górnego Dniepru i Dźwiny, z głównym grodem w Smoleńsku. Region jest stosunkowo płaski, pokryty lasami mieszanymi, z rozbudowaną siecią rzeczną ułatwiającą handel i komunikację.
 
-### Prowincje przypisane w 867
+### Prowincje w 867
 - 568 (region Smoleńska)
 - 5221
 - 933
@@ -55,8 +71,9 @@ Krywicze zajmowali tereny w dorzeczu górnego Dniepru i Dźwiny, z głównym gro
 
 ## Wiara
 
-- **Wiara startowa (867):** [wschodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- **Najbliższe miejsca święte:** Nowogród (c_novgorod), Połock (c_polotsk), Mińsk (c_minsk)
+Krywicze wyznają wiarę [wschodniosłowiańską](../../03-wiara/przeglad-wiary.md) — pogański kult Peruna i Welesa, z dostępem do miejsc świętych w Połocku i Smoleńsku.
+
+- **Najbliższe miejsca święte:** Nowogród, Połock, Mińsk
 
 ---
 

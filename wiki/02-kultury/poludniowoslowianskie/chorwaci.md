@@ -1,3 +1,10 @@
+﻿---
+heroMap: /maps/culture_croatian.png
+ogImage: /maps/culture_croatian_og.png
+subtitle: Najpotężniejsza kultura południa — od Dalmacji po Slawonię
+sections: flat
+---
+
 # Chorwaci
 
 Chorwaci to jedna z dwóch największych kultur południowosłowiańskich, dominująca na wybrzeżu Dalmacji i w Slawonii. W modzie Slavic Enlarged ich definicja została nadpisana z wanilii — kluczowa zmiana to zastąpienie tradycji husarskiej Podziwem dla waleczności, co lepiej oddaje wczesnośredniowieczny charakter chorwackiej kultury wojowniczej. Z trzema tradycjami startowymi to jedna z najbogatszych kultur w modzie.
@@ -6,19 +13,28 @@ Chorwaci to jedna z dwóch największych kultur południowosłowiańskich, domin
 
 ## Karta kultury
 
+Chorwaci należą do **dziedzictwa południowosłowiańska** i kierują się etosem **wspólnotowym** — współpraca i solidarność ponad ambicję jednostki. Mówią językiem południowosłowiański.
+
+Zaczynają grę z trzema tradycjami: **Podziw dla waleczności**, **Wytrawni dyplomaci** i **Dziedziczna hierarchia**. Sukcesja wojenna dopuszcza **tylko mężczyzn**.
+
+*Kultura zmieniona przez Slavic Enlarged.*
+
+<details>
+<summary>Dane techniczne (dla modderów)</summary>
+
 | Pole | Wartość |
 |------|---------|
-| **Nazwa (PL)** | Chorwaci |
-| **Klucz w grze** | `croatian` |
-| **Grupa dziedzictwa** | południowosłowiańska (`heritage_south_slavic`) |
-| **Etos** | Wspólnotowy (`ethos_communal`) |
-| **Język** | południowosłowiański (`language_south_slavic`) |
-| **Lista imion** | `name_list_se_slavic` |
-| **Tradycje startowe** | Podziw dla waleczności, Wytrawni dyplomaci, Dziedziczna hierarchia |
-| **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
-| **Kolor na mapie** | RGB 0.40 0.20 0.20 |
-| **Status w modzie** | nadpisana wanilijna |
-| **Plik definicji** | `SE/common/culture/cultures/se_south_slavic_corrections.txt` |
+| **Klucz** | `croatian` |
+| **Heritage** | `heritage_south_slavic` |
+| **Ethos** | `ethos_communal` |
+| **Język** | `language_south_slavic` |
+| **Imiona** | `name_list_se_slavic` |
+| **Tradycje** | `tradition_martial_admiration`, `tradition_astute_diplomats`, `tradition_hereditary_hierarchy`, `tradition_hussar`, `tradition_martial_admiration` |
+| **Sukcesja** | `martial_custom_male_only` |
+| **Kolor** | `rgb(102, 51, 51)` · CK3: `0.4 0.2 0.2` |
+| **Plik** | `se_south_slavic_corrections.txt` |
+
+</details>
 
 ---
 
@@ -28,9 +44,9 @@ Chorwaci to jedna z dwóch największych kultur południowosłowiańskich, domin
 Etos wspólnotowy daje Chorwatom bonusy do opinii wasali, odzwierciedlając charakter wczesnośredniowiecznego państwa chorwackiego, które opierało się na współpracy lokalnych żupanów pod władzą bana lub króla.
 
 ### Tradycje
-- **Podziw dla waleczności** (`tradition_martial_admiration`) — bonusy do waleczności rycerzy i prestiżu wojowników; zastąpiła tradycję husarską z wanilii, lepiej oddając IX-wieczny charakter Chorwatów.
-- **Wytrawni dyplomaci** (`tradition_astute_diplomats`) — bonusy do relacji dyplomatycznych; Chorwaci lawirwali między Frankami, Bizancjum i papiestwem, utrzymując niezależność.
-- **Dziedziczna hierarchia** (`tradition_hereditary_hierarchy`) — bonusy do sukcesji i stabilności dynastycznej; odzwierciedla silne struktury władzy rodu Trpimirowiczów.
+- **Podziw dla waleczności** — bonusy do waleczności rycerzy i prestiżu wojowników; zastąpiła tradycję husarską z wanilii, lepiej oddając IX-wieczny charakter Chorwatów.
+- **Wytrawni dyplomaci** — bonusy do relacji dyplomatycznych; Chorwaci lawirwali między Frankami, Bizancjum i papiestwem, utrzymując niezależność.
+- **Dziedziczna hierarchia** — bonusy do sukcesji i stabilności dynastycznej; odzwierciedla silne struktury władzy rodu Trpimirowiczów.
 
 ---
 
@@ -39,8 +55,8 @@ Etos wspólnotowy daje Chorwatom bonusy do opinii wasali, odzwierciedlając char
 ### Region historyczny
 Chorwaci zajmowali rozległy teren od wybrzeża dalmatyńskiego (Zadar, Split, Dubrownik) po wewnętrzną Slawonię. Region jest zróżnicowany — od śródziemnomorskiego wybrzeża po kontynentalny interior z rzekami i równinami.
 
-### Prowincje przypisane w 867
-Chorwacja jest kulturą waniliową — prowincje wynikają z domyślnej mapy CK3. Kultura chorwacka obejmuje większość Dalmacji i Slawonii.
+### Prowincje w 867
+Dalmacja i Slawonia — rozległy blok terytorialny z dostępem do Adriatyku.
 
 ### Sąsiedztwo kulturowe
 - **Północ:** Słowianie Panońscy, Frankowie
@@ -52,8 +68,9 @@ Chorwacja jest kulturą waniliową — prowincje wynikają z domyślnej mapy CK3
 
 ## Wiara
 
-- **Wiara startowa (867):** [południowosłowiańska](../../03-wiara/przeglad-wiary.md)
-- **Najbliższe miejsca święte:** Ston (c_ston), Tolna (c_tolna), Szerem (c_szerem)
+Chorwaci wyznają wiarę [południowosłowiańską](../../03-wiara/przeglad-wiary.md) — pogański kult wspólny z innymi ludami bałkańskimi, choć historycznie jedni z pierwszych Słowian południowych przyjmujących chrzest.
+
+- **Najbliższe miejsca święte:** Ston, Tolna, Szerem
 
 ---
 

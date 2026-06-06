@@ -1,3 +1,10 @@
+﻿---
+heroMap: /maps/culture_timocani.png
+ogImage: /maps/culture_timocani_og.png
+subtitle: Stoiccy pasterze i myśliwi z doliny Timoku
+sections: flat
+---
+
 # Timocanie
 
 Timocanie to południowosłowiańska kultura zamieszkująca dolinę rzeki Timok na wschodzie dzisiejszej Serbii. W modzie Slavic Enlarged to stoiccy pasterze i myśliwi, żyjący na pograniczu serbsko-bułgarskim — w regionie, gdzie lasy i góry definiowały sposób życia.
@@ -6,19 +13,28 @@ Timocanie to południowosłowiańska kultura zamieszkująca dolinę rzeki Timok 
 
 ## Karta kultury
 
+Timocanie należą do **dziedzictwa południowosłowiańska** i kierują się etosem **stoickim** — wytrzymałość i przetrwanie ponad wszystko. Mówią językiem południowosłowiański.
+
+Zaczynają grę z dwiema tradycjami: **Pasterze** i **Myśliwi**. W 867 roku kontrolują **2 prowincje**. Sukcesja wojenna dopuszcza **tylko mężczyzn**.
+
+*Nowa kultura dodana przez Slavic Enlarged.*
+
+<details>
+<summary>Dane techniczne (dla modderów)</summary>
+
 | Pole | Wartość |
 |------|---------|
-| **Nazwa (PL)** | Timocanie |
-| **Klucz w grze** | `timocani` |
-| **Grupa dziedzictwa** | południowosłowiańska (`heritage_south_slavic`) |
-| **Etos** | Stoicki (`ethos_stoic`) |
-| **Język** | południowosłowiański (`language_south_slavic`) |
-| **Lista imion** | `name_list_se_slavic` |
-| **Tradycje startowe** | Pasterze, Myśliwi |
-| **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
-| **Kolor na mapie** | RGB 0.60 0.45 0.30 |
-| **Status w modzie** | nowa |
-| **Plik definicji** | `SE/common/culture/cultures/se_slavic_new.txt` |
+| **Klucz** | `timocani` |
+| **Heritage** | `heritage_south_slavic` |
+| **Ethos** | `ethos_stoic` |
+| **Język** | `language_south_slavic` |
+| **Imiona** | `name_list_se_slavic` |
+| **Tradycje** | `tradition_pastoralists`, `tradition_hunters` |
+| **Sukcesja** | `martial_custom_male_only` |
+| **Kolor** | `rgb(153, 114, 76)` · CK3: `0.6 0.45 0.3` |
+| **Plik** | `se_slavic_new.txt` |
+
+</details>
 
 ---
 
@@ -28,8 +44,8 @@ Timocanie to południowosłowiańska kultura zamieszkująca dolinę rzeki Timok 
 Stoicyzm Timocan odzwierciedla twardy, samowystarczalny charakter ludu żyjącego w lasach i dolinach z dala od wielkich ośrodków cywilizacyjnych. Bonusy do wytrzymałości armii pomagają w obronie trudno dostępnego terytorium.
 
 ### Tradycje
-- **Pasterze** (`tradition_pastoralists`) — bonusy do lekkiej kawalerii i podatków z nisko rozwiniętych prowincji; Timocanie prowadzili stada w dolinach Timoku i okolicznych wzgórzach.
-- **Myśliwi** (`tradition_hunters`) — bonusy do pościgu i polowań; gęste lasy wschodniej Serbii dostarczały zwierzyny i kształtowały styl walki oparty na zasadzkach.
+- **Pasterze** — bonusy do lekkiej kawalerii i podatków z nisko rozwiniętych prowincji; Timocanie prowadzili stada w dolinach Timoku i okolicznych wzgórzach.
+- **Myśliwi** — bonusy do pościgu i polowań; gęste lasy wschodniej Serbii dostarczały zwierzyny i kształtowały styl walki oparty na zasadzkach.
 
 ---
 
@@ -38,9 +54,8 @@ Stoicyzm Timocan odzwierciedla twardy, samowystarczalny charakter ludu żyjąceg
 ### Region historyczny
 Timocanie zajmowali dolinę rzeki Timok i okoliczne wzgórza we wschodniej Serbii, na pograniczu z Cesarstwem Bułgarskim. Region jest górzysty i lesisty, z ograniczonymi terenami rolnymi, ale bogaty w pastwiska i łowiska.
 
-### Prowincje przypisane w 867
-- 506 (dolina Timoku)
-- 3668
+### Prowincje w 867
+Dolina Timoku — **2 prowincje** na pograniczu serbsko-bułgarskim.
 
 ### Sąsiedztwo kulturowe
 - **Północ:** Braniczewcy
@@ -52,8 +67,9 @@ Timocanie zajmowali dolinę rzeki Timok i okoliczne wzgórza we wschodniej Serbi
 
 ## Wiara
 
-- **Wiara startowa (867):** [południowosłowiańska](../../03-wiara/przeglad-wiary.md)
-- **Najbliższe miejsca święte:** Welbazhd (c_velbazhd), Barlad (c_barlad)
+Timocanie wyznają wiarę [południowosłowiańską](../../03-wiara/przeglad-wiary.md) — pogański kult na pograniczu wpływów bułgarskich i bizantyńskich.
+
+- **Najbliższe miejsca święte:** Welbazhd, Barlad
 
 ---
 

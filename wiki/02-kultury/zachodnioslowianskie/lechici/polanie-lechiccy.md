@@ -1,3 +1,10 @@
+﻿---
+heroMap: /maps/culture_polans.png
+ogImage: /maps/culture_polans_og.png
+subtitle: Serce przyszłej Polski — dworska kultura dynastii Piastów
+sections: flat
+---
+
 # Polanie
 
 Polanie to dominująca kultura Wielkopolski i serce przyszłego państwa polskiego. Ich dworski etos, tradycje rolnicze i miejskie czynią z nich naturalnych budowniczych królestwa. To kultura Siemowita i dynastii Piastów -- idealna do zjednoczenia ziem lechickich pod jednym berłem.
@@ -6,19 +13,28 @@ Polanie to dominująca kultura Wielkopolski i serce przyszłego państwa polskie
 
 ## Karta kultury
 
+Polanie należą do **dziedzictwa zachodniosłowiańska** i kierują się etosem **dworskim** — prestiż i dyplomacja ponad siłę. Mówią językiem zachodniosłowiański.
+
+Zaczynają grę z dwiema tradycjami: **Rolnicy** i **Strażnicy miast**. W 867 roku kontrolują **8 prowincji**. Sukcesja wojenna dopuszcza **tylko mężczyzn**.
+
+*Nowa kultura dodana przez Slavic Enlarged.*
+
+<details>
+<summary>Dane techniczne (dla modderów)</summary>
+
 | Pole | Wartość |
 |------|---------|
-| **Nazwa (PL)** | Polanie |
-| **Klucz w grze** | `polans` |
-| **Grupa dziedzictwa** | zachodniosłowiańska (`heritage_west_slavic`) |
-| **Etos** | Dworski (`ethos_courtly`) |
-| **Język** | zachodniosłowiański (`language_lechitic`) |
-| **Lista imion** | `name_list_se_slavic` |
-| **Tradycje startowe** | Rolnicy, Strażnicy miast |
-| **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
-| **Kolor na mapie** | RGB 0.70 0.45 0.20 |
-| **Status w modzie** | nowa |
-| **Plik definicji** | `SE/common/culture/cultures/se_slavic_new.txt` |
+| **Klucz** | `polans` |
+| **Heritage** | `heritage_west_slavic` |
+| **Ethos** | `ethos_courtly` |
+| **Język** | `language_lechitic` |
+| **Imiona** | `name_list_se_slavic` |
+| **Tradycje** | `tradition_agrarian`, `tradition_city_keepers` |
+| **Sukcesja** | `martial_custom_male_only` |
+| **Kolor** | `rgb(178, 114, 51)` · CK3: `0.7 0.45 0.2` |
+| **Plik** | `se_slavic_new.txt` |
+
+</details>
 
 ---
 
@@ -28,8 +44,8 @@ Polanie to dominująca kultura Wielkopolski i serce przyszłego państwa polskie
 Etos dworski kładzie nacisk na dyplomację, sojusze i prestiż dynastyczny. Daje bonusy do zdobywania prestiżu i ułatwia zawieranie sojuszy małżeńskich. To jedyny etos dworski wśród kultur lechickich, co odzwierciedla ambicje polityczne Polan na tle bardziej wspólnotowych lub stoickich sąsiadów.
 
 ### Tradycje
-- **Rolnicy** (`tradition_agrarian`) -- bonus do rozwoju prowincji i produkcji żywności. Oddaje żyzność gleb wielkopolskich i rolniczy charakter osadnictwa Polan.
-- **Strażnicy miast** (`tradition_city_keepers`) -- bonus do rozwoju miast i dochodów z baronii miejskich. Odzwierciedla rolę Gniezna i Poznania jako ośrodków władzy.
+- **Rolnicy** -- bonus do rozwoju prowincji i produkcji żywności. Oddaje żyzność gleb wielkopolskich i rolniczy charakter osadnictwa Polan.
+- **Strażnicy miast** -- bonus do rozwoju miast i dochodów z baronii miejskich. Odzwierciedla rolę Gniezna i Poznania jako ośrodków władzy.
 
 ---
 
@@ -38,16 +54,8 @@ Etos dworski kładzie nacisk na dyplomację, sojusze i prestiż dynastyczny. Daj
 ### Region historyczny
 Polanie zajmują Wielkopolskę -- rozległą nizinę wokół Warty i Noteci z centrum w Gnieźnie. Region obejmuje również ziemie łęczyckie i sieradzkie na południowym wschodzie, dając kontrolę nad kluczowym szlakiem z zachodu na wschód.
 
-### Prowincje przypisane w 867
-Z pliku `SE/history/provinces/se_polans.txt`:
-
-**Księstwo Wielkopolski (d_wielkopolska):**
-- prowincja 4900, 4905, 4909, 4912, 3149
-
-**Księstwo Kujaw / ziemie łęczycko-sieradzkie (d_kuyavia):**
-- prowincja 4924, 528, 4931
-
-Łącznie **8 prowincji** -- jeden z największych bloków terytorialnych wśród tych kultur.
+### Prowincje w 867
+Wielkopolska i Kujawy — **8 prowincji** z centrum w Gnieźnie i Poznaniu.
 
 ### Sąsiedztwo kulturowe
 - **Na północ:** Goplanie (pokrewni Lechici, ale słabsi) i Kaszubi (morski etos)
@@ -58,8 +66,9 @@ Z pliku `SE/history/provinces/se_polans.txt`:
 ---
 
 ## Wiara
-- **Wiara startowa (867):** [zachodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- **Najbliższe miejsca święte:** Płock (c_plocka), Legnica (c_legnica), Arkona (c_rugen)
+Polanie wyznają wiarę [zachodniosłowiańską](../../03-wiara/przeglad-wiary.md) — pogański kult Świętowita i innych bóstw lechickich. Gniezno leży blisko ważnych miejsc świętych tej wiary.
+
+- **Najbliższe miejsca święte:** Płock, Legnica, Arkona
 
 ---
 

@@ -1,3 +1,10 @@
+﻿---
+heroMap: /maps/culture_hevelli.png
+ogImage: /maps/culture_hevelli_og.png
+subtitle: Połabski lud nad Hawelą — na pierwszej linii chrześcijańskiej ekspansji
+sections: flat
+---
+
 # Hawelanie
 
 Hawelanie to dworska kultura zamieszkująca tereny nad rzeką Hawelą — region, na którym w przyszłości powstanie Berlin i Brandenburg. W modzie Slavic Enlarged wyróżniają się unikatowym wśród Połabian etosem dworskim i otwartością na obce wpływy, co odzwierciedla ich położenie na skrzyżowaniu szlaków handlowych łączących świat słowiański z germańskim.
@@ -6,19 +13,28 @@ Hawelanie to dworska kultura zamieszkująca tereny nad rzeką Hawelą — region
 
 ## Karta kultury
 
+Hawelanie należą do **dziedzictwa zachodniosłowiańska** i kierują się etosem **dworskim** — prestiż i dyplomacja ponad siłę. Mówią językiem zachodniosłowiański.
+
+Zaczynają grę z dwiema tradycjami: **Strażnicy miast** i **Ksenofilizm**. W 867 roku kontrolują **4 prowincje**. Sukcesja wojenna dopuszcza **tylko mężczyzn**.
+
+*Nowa kultura dodana przez Slavic Enlarged.*
+
+<details>
+<summary>Dane techniczne (dla modderów)</summary>
+
 | Pole | Wartość |
 |------|---------|
-| **Nazwa (PL)** | Hawelanie |
-| **Klucz w grze** | `hevelli` |
-| **Grupa dziedzictwa** | zachodniosłowiańska (`heritage_west_slavic`) |
-| **Etos** | Dworski (`ethos_courtly`) |
-| **Język** | zachodniosłowiański (`language_lechitic`) |
-| **Lista imion** | `name_list_se_slavic` |
-| **Tradycje startowe** | Strażnicy miast, Ksenofilizm |
-| **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
-| **Kolor na mapie** | RGB 0.40 0.45 0.55 |
-| **Status w modzie** | nowa |
-| **Plik definicji** | `SE/common/culture/cultures/se_slavic_new.txt` |
+| **Klucz** | `hevelli` |
+| **Heritage** | `heritage_west_slavic` |
+| **Ethos** | `ethos_courtly` |
+| **Język** | `language_lechitic` |
+| **Imiona** | `name_list_se_slavic` |
+| **Tradycje** | `tradition_city_keepers`, `tradition_xenophilic` |
+| **Sukcesja** | `martial_custom_male_only` |
+| **Kolor** | `rgb(102, 114, 140)` · CK3: `0.4 0.45 0.55` |
+| **Plik** | `se_slavic_new.txt` |
+
+</details>
 
 ---
 
@@ -28,8 +44,8 @@ Hawelanie to dworska kultura zamieszkująca tereny nad rzeką Hawelą — region
 Etos dworski daje Hawelanom bonusy do prestiżu i dyplomacji. To jedyny taki etos wśród Połabian — odzwierciedla charakter plemienia, którego władcy (jak legendarny Tugumirus) prowadzili wyrafinowaną politykę lawirowania między Sasami a innymi Słowianami.
 
 ### Tradycje
-- **Strażnicy miast** (`tradition_city_keepers`) — bonusy do rozwoju i podatków miejskich; gród Brennaburg (Brandenburg) był jednym z najważniejszych ośrodków handlowych regionu.
-- **Ksenofilizm** (`tradition_xenophilic`) — bonusy do akceptacji obcych kultur i szybszej asymilacji; Hawelanie żyli na styku światów i czerpali korzyści z kontaktów z Sasami, Wikingami i innymi Słowianami.
+- **Strażnicy miast** — bonusy do rozwoju i podatków miejskich; gród Brennaburg (Brandenburg) był jednym z najważniejszych ośrodków handlowych regionu.
+- **Ksenofilizm** — bonusy do akceptacji obcych kultur i szybszej asymilacji; Hawelanie żyli na styku światów i czerpali korzyści z kontaktów z Sasami, Wikingami i innymi Słowianami.
 
 ---
 
@@ -38,7 +54,7 @@ Etos dworski daje Hawelanom bonusy do prestiżu i dyplomacji. To jedyny taki eto
 ### Region historyczny
 Hawelanie zajmowali tereny nad rzeką Hawelą i środkową Sprewą — region jezior i łagodnych wzgórz w dzisiejszej Brandenburgii. Ich głównym grodem był Brennaburg (Brandenburg an der Havel), położony na strategicznym przejściu przez Hawelę.
 
-### Prowincje przypisane w 867
+### Prowincje w 867
 - 3166
 - 2814
 - 3168
@@ -54,8 +70,9 @@ Hawelanie zajmowali tereny nad rzeką Hawelą i środkową Sprewą — region je
 
 ## Wiara
 
-- **Wiara startowa (867):** [zachodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- **Najbliższe miejsca święte:** Retra (c_mecklenburg), Legnica (c_legnica), Arkona (c_rugen)
+Hawelanie wyznają wiarę [zachodniosłowiańską](../../03-wiara/przeglad-wiary.md) — pogański kult pod silną presją misji chrześcijańskich z sąsiedniego cesarstwa.
+
+- **Najbliższe miejsca święte:** Retra, Legnica, Arkona
 
 ---
 

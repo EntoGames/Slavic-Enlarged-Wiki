@@ -1,3 +1,10 @@
+﻿---
+heroMap: /maps/culture_docleani.png
+ogImage: /maps/culture_docleani_og.png
+subtitle: Budowniczowie twierdz w górach Czarnogóry
+sections: flat
+---
+
 # Dukljanie
 
 Dukljanie to południowosłowiańska kultura zasiedlająca region dzisiejszej Czarnogóry, z centrum w Dukli (Doclea). W modzie Slavic Enlarged wyróżniają się jako budowniczowie twierdz z dostępem do morskiego handlu — stoicka społeczność, która przetrwała między bizantyńskim wybrzeżem a dzikimi górami Bałkanów.
@@ -6,19 +13,28 @@ Dukljanie to południowosłowiańska kultura zasiedlająca region dzisiejszej Cz
 
 ## Karta kultury
 
+Dukljanie należą do **dziedzictwa południowosłowiańska** i kierują się etosem **stoickim** — wytrzymałość i przetrwanie ponad wszystko. Mówią językiem południowosłowiański.
+
+Zaczynają grę z dwiema tradycjami: **Morski merkantylizm** i **Strażnicy zamków**. W 867 roku kontrolują **2 prowincje**. Sukcesja wojenna dopuszcza **tylko mężczyzn**.
+
+*Nowa kultura dodana przez Slavic Enlarged.*
+
+<details>
+<summary>Dane techniczne (dla modderów)</summary>
+
 | Pole | Wartość |
 |------|---------|
-| **Nazwa (PL)** | Dukljanie |
-| **Klucz w grze** | `docleani` |
-| **Grupa dziedzictwa** | południowosłowiańska (`heritage_south_slavic`) |
-| **Etos** | Stoicki (`ethos_stoic`) |
-| **Język** | południowosłowiański (`language_south_slavic`) |
-| **Lista imion** | `name_list_se_slavic` |
-| **Tradycje startowe** | Morski merkantylizm, Strażnicy zamków |
-| **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
-| **Kolor na mapie** | RGB 0.50 0.40 0.50 |
-| **Status w modzie** | nowa |
-| **Plik definicji** | `SE/common/culture/cultures/se_slavic_new.txt` |
+| **Klucz** | `docleani` |
+| **Heritage** | `heritage_south_slavic` |
+| **Ethos** | `ethos_stoic` |
+| **Język** | `language_south_slavic` |
+| **Imiona** | `name_list_se_slavic` |
+| **Tradycje** | `tradition_maritime_mercantilism`, `tradition_castle_keepers` |
+| **Sukcesja** | `martial_custom_male_only` |
+| **Kolor** | `rgb(127, 102, 127)` · CK3: `0.5 0.4 0.5` |
+| **Plik** | `se_slavic_new.txt` |
+
+</details>
 
 ---
 
@@ -28,8 +44,8 @@ Dukljanie to południowosłowiańska kultura zasiedlająca region dzisiejszej Cz
 Etos stoicki wzmacnia odporność armii Dukljan i pomaga przetrwać trudne okresy. Na górzystym terenie Czarnogóry hart ducha był warunkiem przeżycia, a nie wyborem.
 
 ### Tradycje
-- **Morski merkantylizm** (`tradition_maritime_mercantilism`) — bonusy do dochodów z miast przybrzeżnych; Dukljanie kontrolowali zatokę Kotoru i dalmatyńskie porty, handlując z Bizancjum i miastami włoskimi.
-- **Strażnicy zamków** (`tradition_castle_keepers`) — bonusy do fortyfikacji i obrony zamków; górzysty teren Dukli wymuszał budowę twierdz w strategicznych przełęczach i nad zatokami.
+- **Morski merkantylizm** — bonusy do dochodów z miast przybrzeżnych; Dukljanie kontrolowali zatokę Kotoru i dalmatyńskie porty, handlując z Bizancjum i miastami włoskimi.
+- **Strażnicy zamków** — bonusy do fortyfikacji i obrony zamków; górzysty teren Dukli wymuszał budowę twierdz w strategicznych przełęczach i nad zatokami.
 
 ---
 
@@ -38,7 +54,7 @@ Etos stoicki wzmacnia odporność armii Dukljan i pomaga przetrwać trudne okres
 ### Region historyczny
 Dukla obejmowała tereny wokół jeziora Szkoderskiego i zatoki Kotorskiej, w dzisiejszej Czarnogórze i północnej Albanii. Krajobraz to strome góry opadające ku Adriatykowi, z wąskimi dolinami rzecznymi i naturalnie obronnymi pozycjami.
 
-### Prowincje przypisane w 867
+### Prowincje w 867
 - 469 (region Dukli / Czarnogóry)
 - 3575
 
@@ -52,8 +68,9 @@ Dukla obejmowała tereny wokół jeziora Szkoderskiego i zatoki Kotorskiej, w dz
 
 ## Wiara
 
-- **Wiara startowa (867):** [południowosłowiańska](../../03-wiara/przeglad-wiary.md)
-- **Najbliższe miejsca święte:** Ston (c_ston), Welbazhd (c_velbazhd)
+Dukljanie wyznają wiarę [południowosłowiańską](../../03-wiara/przeglad-wiary.md) — pogański kult w regionie silnej rywalizacji między Rzymem a Konstantynopolem.
+
+- **Najbliższe miejsca święte:** Ston, Welbazhd
 
 ---
 

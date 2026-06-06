@@ -1,3 +1,10 @@
+﻿---
+heroMap: /maps/culture_drevani.png
+ogImage: /maps/culture_drevani_og.png
+subtitle: Leśni Połabianie z Wendlandu — ostatni Słowianie za Łabą
+sections: flat
+---
+
 # Drzewanie
 
 Drzewanie (Połabianie właściwi) to stoicka kultura leśna zamieszkująca tereny Wendlandu i Marchii Starej, na zachód od Łaby. W modzie Slavic Enlarged reprezentują najdalej na zachód wysunięte plemię słowiańskie — lud lasów i świętych gajów, który najdłużej spośród Połabian zachował swój język (połabski przetrwał aż do XVIII wieku).
@@ -6,19 +13,28 @@ Drzewanie (Połabianie właściwi) to stoicka kultura leśna zamieszkująca tere
 
 ## Karta kultury
 
+Drzewanie należą do **dziedzictwa zachodniosłowiańska** i kierują się etosem **stoickim** — wytrzymałość i przetrwanie ponad wszystko. Mówią językiem zachodniosłowiański.
+
+Zaczynają grę z dwiema tradycjami: **Lud lasu** i **Święte gaje**. W 867 roku kontrolują **3 prowincje**. Sukcesja wojenna dopuszcza **tylko mężczyzn**.
+
+*Nowa kultura dodana przez Slavic Enlarged.*
+
+<details>
+<summary>Dane techniczne (dla modderów)</summary>
+
 | Pole | Wartość |
 |------|---------|
-| **Nazwa (PL)** | Drzewanie |
-| **Klucz w grze** | `drevani` |
-| **Grupa dziedzictwa** | zachodniosłowiańska (`heritage_west_slavic`) |
-| **Etos** | Stoicki (`ethos_stoic`) |
-| **Język** | zachodniosłowiański (`language_lechitic`) |
-| **Lista imion** | `name_list_se_slavic` |
-| **Tradycje startowe** | Lud lasu, Święte gaje |
-| **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
-| **Kolor na mapie** | RGB 0.40 0.55 0.50 |
-| **Status w modzie** | nowa |
-| **Plik definicji** | `SE/common/culture/cultures/se_slavic_new.txt` |
+| **Klucz** | `drevani` |
+| **Heritage** | `heritage_west_slavic` |
+| **Ethos** | `ethos_stoic` |
+| **Język** | `language_lechitic` |
+| **Imiona** | `name_list_se_slavic` |
+| **Tradycje** | `tradition_forest_folk`, `tradition_sacred_groves` |
+| **Sukcesja** | `martial_custom_male_only` |
+| **Kolor** | `rgb(102, 140, 127)` · CK3: `0.4 0.55 0.5` |
+| **Plik** | `se_slavic_new.txt` |
+
+</details>
 
 ---
 
@@ -28,8 +44,8 @@ Drzewanie (Połabianie właściwi) to stoicka kultura leśna zamieszkująca tere
 Etos stoicki daje Drzewianom bonusy do wytrzymałości i oporu kulturowego. Pasuje to do ludu, który przez wieki trwał w izolacji wśród lasów za Łabą, zachowując swoją tożsamość mimo narastającej germańskiej dominacji wokół.
 
 ### Tradycje
-- **Lud lasu** (`tradition_forest_folk`) — bonusy do walki w terenie leśnym i przetrwania; Drzewanie żyli w gęstych puszczach nad Łabą, które stanowiły zarówno ich dom, jak i naturalną fortyfikację.
-- **Święte gaje** (`tradition_sacred_groves`) — bonusy do pobożności i obrony wiary; lasy Wendlandu kryły liczne miejsca kultu, gdzie Drzewanie odprawiali obrzędy pogańskie jeszcze długo po chrystianizacji sąsiadów.
+- **Lud lasu** — bonusy do walki w terenie leśnym i przetrwania; Drzewanie żyli w gęstych puszczach nad Łabą, które stanowiły zarówno ich dom, jak i naturalną fortyfikację.
+- **Święte gaje** — bonusy do pobożności i obrony wiary; lasy Wendlandu kryły liczne miejsca kultu, gdzie Drzewanie odprawiali obrzędy pogańskie jeszcze długo po chrystianizacji sąsiadów.
 
 ---
 
@@ -38,7 +54,7 @@ Etos stoicki daje Drzewianom bonusy do wytrzymałości i oporu kulturowego. Pasu
 ### Region historyczny
 Drzewanie zamieszkiwali Wendland i Marchię Starą — tereny na zachodnim brzegu Łaby, w dzisiejszej Dolnej Saksonii. Był to region gęstych lasów mieszanych, przeplatanych bagnami i małymi rzekami, tworzący naturalną barierę oddzielającą Słowian od Sasów.
 
-### Prowincje przypisane w 867
+### Prowincje w 867
 - 2894 (Wendland)
 - 2900 (Marchia Stara)
 - 2906
@@ -53,8 +69,9 @@ Drzewanie zamieszkiwali Wendland i Marchię Starą — tereny na zachodnim brzeg
 
 ## Wiara
 
-- **Wiara startowa (867):** [zachodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- **Najbliższe miejsca święte:** Retra (c_mecklenburg), Arkona (c_rugen), Legnica (c_legnica)
+Drzewanie wyznają wiarę [zachodniosłowiańską](../../03-wiara/przeglad-wiary.md) — pogański kult w najtrudniejszej sytuacji: otoczeni ze wszystkich stron przez chrześcijańskich Sasów.
+
+- **Najbliższe miejsca święte:** Retra, Arkona, Legnica
 
 ---
 

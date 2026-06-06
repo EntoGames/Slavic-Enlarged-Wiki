@@ -1,3 +1,10 @@
+﻿---
+heroMap: /maps/culture_travunians.png
+ogImage: /maps/culture_travunians_og.png
+subtitle: Nadmorskie plemię między Dubrownikiem a Kotorem
+sections: flat
+---
+
 # Travunianie
 
 Travunianie to południowosłowiańska kultura zamieszkująca okolice Trebinje, na styku gór Dalmacji i wybrzeża Adriatyku. W modzie Slavic Enlarged łączą pasterski styl życia z morskim handlem, co czyni ich naturalnym pomostem między lądem a morzem na południowym krańcu chorwacko-serbskiego pogranicza.
@@ -6,19 +13,28 @@ Travunianie to południowosłowiańska kultura zamieszkująca okolice Trebinje, 
 
 ## Karta kultury
 
+Travunianie należą do **dziedzictwa południowosłowiańska** i kierują się etosem **stoickim** — wytrzymałość i przetrwanie ponad wszystko. Mówią językiem południowosłowiański.
+
+Zaczynają grę z dwiema tradycjami: **Pasterze** i **Morski merkantylizm**. W 867 roku kontrolują **1 prowincję**. Sukcesja wojenna dopuszcza **tylko mężczyzn**.
+
+*Nowa kultura dodana przez Slavic Enlarged.*
+
+<details>
+<summary>Dane techniczne (dla modderów)</summary>
+
 | Pole | Wartość |
 |------|---------|
-| **Nazwa (PL)** | Travunianie |
-| **Klucz w grze** | `travunians` |
-| **Grupa dziedzictwa** | południowosłowiańska (`heritage_south_slavic`) |
-| **Etos** | Stoicki (`ethos_stoic`) |
-| **Język** | południowosłowiański (`language_south_slavic`) |
-| **Lista imion** | `name_list_se_slavic` |
-| **Tradycje startowe** | Pasterze, Morski merkantylizm |
-| **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
-| **Kolor na mapie** | RGB 0.55 0.35 0.40 |
-| **Status w modzie** | nowa |
-| **Plik definicji** | `SE/common/culture/cultures/se_slavic_new.txt` |
+| **Klucz** | `travunians` |
+| **Heritage** | `heritage_south_slavic` |
+| **Ethos** | `ethos_stoic` |
+| **Język** | `language_south_slavic` |
+| **Imiona** | `name_list_se_slavic` |
+| **Tradycje** | `tradition_pastoralists`, `tradition_maritime_mercantilism` |
+| **Sukcesja** | `martial_custom_male_only` |
+| **Kolor** | `rgb(140, 89, 102)` · CK3: `0.55 0.35 0.4` |
+| **Plik** | `se_slavic_new.txt` |
+
+</details>
 
 ---
 
@@ -28,8 +44,8 @@ Travunianie to południowosłowiańska kultura zamieszkująca okolice Trebinje, 
 Etos stoicki zapewnia Travunianom bonusy do wytrzymałości armii i odporności na straty. Odzwierciedla realia życia w surowym, górzystym terenie, gdzie przetrwanie wymagało hartu ducha i samodyscypliny.
 
 ### Tradycje
-- **Pasterze** (`tradition_pastoralists`) — bonusy do lekkiej kawalerii i podatków z prowincji o niskim rozwoju; Travunianie prowadzili stada na górskich pastwiskach dalmatyńskiego zaplecza.
-- **Morski merkantylizm** (`tradition_maritime_mercantilism`) — bonusy do dochodów z miast przybrzeżnych i floty; bliskość Adriatyku dawała dostęp do handlu morskiego z Wenecją i Bizancjum.
+- **Pasterze** — bonusy do lekkiej kawalerii i podatków z prowincji o niskim rozwoju; Travunianie prowadzili stada na górskich pastwiskach dalmatyńskiego zaplecza.
+- **Morski merkantylizm** — bonusy do dochodów z miast przybrzeżnych i floty; bliskość Adriatyku dawała dostęp do handlu morskiego z Wenecją i Bizancjum.
 
 ---
 
@@ -38,7 +54,7 @@ Etos stoicki zapewnia Travunianom bonusy do wytrzymałości armii i odporności 
 ### Region historyczny
 Travunia (Trebinje) leżała w południowo-wschodniej Dalmacji, w górzystym terenie między Dubrownikierm a Kotorem. Region był wąskim pasem między wybrzeżem Adriatyku a serbskim interiorem.
 
-### Prowincje przypisane w 867
+### Prowincje w 867
 - 3572 (region Trebinje)
 
 ### Sąsiedztwo kulturowe
@@ -51,8 +67,9 @@ Travunia (Trebinje) leżała w południowo-wschodniej Dalmacji, w górzystym ter
 
 ## Wiara
 
-- **Wiara startowa (867):** [południowosłowiańska](../../03-wiara/przeglad-wiary.md)
-- **Najbliższe miejsca święte:** Ston (c_ston), Szerem (c_szerem)
+Travunianie wyznają wiarę [południowosłowiańską](../../03-wiara/przeglad-wiary.md) — pogański kult na wybrzeżu adriatyckim, w zasięgu papieskich i bizantyńskich misji.
+
+- **Najbliższe miejsca święte:** Ston, Szerem
 
 ---
 

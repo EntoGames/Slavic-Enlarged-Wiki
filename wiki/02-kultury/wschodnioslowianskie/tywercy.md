@@ -1,3 +1,10 @@
+﻿---
+heroMap: /maps/culture_tivertsi.png
+ogImage: /maps/culture_tivertsi_og.png
+subtitle: Pograniczne plemię nad Dniestrem — między Rusią a stepem
+sections: flat
+---
+
 # Tywercy
 
 Tywercy to wschodniosłowiańskie plemię zamieszkujące dorzecze Dniestru, od Bukowiny po Morze Czarne. W modzie Slavic Enlarged to stoicka kultura rolnicza otwarta na obce wpływy, położona na strategicznym skrzyżowaniu szlaków między Rusią, Bizancjum a stepem — lud zahartowany przez życie na niebezpiecznym pograniczu.
@@ -6,19 +13,28 @@ Tywercy to wschodniosłowiańskie plemię zamieszkujące dorzecze Dniestru, od B
 
 ## Karta kultury
 
+Tywercy należą do **dziedzictwa wschodniosłowiańska** i kierują się etosem **stoickim** — wytrzymałość i przetrwanie ponad wszystko. Mówią językiem wschodniosłowiański.
+
+Zaczynają grę z dwiema tradycjami: **Rolnicy** i **Ksenofile**. W 867 roku kontrolują **7 prowincji**. Sukcesja wojenna dopuszcza **tylko mężczyzn**.
+
+*Nowa kultura dodana przez Slavic Enlarged.*
+
+<details>
+<summary>Dane techniczne (dla modderów)</summary>
+
 | Pole | Wartość |
 |------|---------|
-| **Nazwa (PL)** | Tywercy |
-| **Klucz w grze** | `tivertsi` |
-| **Grupa dziedzictwa** | wschodniosłowiańska (`heritage_east_slavic`) |
-| **Etos** | Stoicki (`ethos_stoic`) |
-| **Język** | wschodniosłowiański (`language_east_slavic`) |
-| **Lista imion** | `name_list_se_slavic` |
-| **Tradycje startowe** | Rolnicy, Ksenofile |
-| **Zasada sukcesji wojennej** | tylko mężczyźni (`martial_custom_male_only`) |
-| **Kolor na mapie** | RGB 0.70 0.70 0.30 |
-| **Status w modzie** | nowa |
-| **Plik definicji** | `SE/common/culture/cultures/se_east_slavic_corrections.txt` |
+| **Klucz** | `tivertsi` |
+| **Heritage** | `heritage_east_slavic` |
+| **Ethos** | `ethos_stoic` |
+| **Język** | `language_east_slavic` |
+| **Imiona** | `name_list_se_slavic` |
+| **Tradycje** | `tradition_agrarian`, `tradition_xenophilic` |
+| **Sukcesja** | `martial_custom_male_only` |
+| **Kolor** | `rgb(178, 178, 76)` · CK3: `0.7 0.7 0.3` |
+| **Plik** | `se_east_slavic_corrections.txt` |
+
+</details>
 
 ---
 
@@ -28,8 +44,8 @@ Tywercy to wschodniosłowiańskie plemię zamieszkujące dorzecze Dniestru, od B
 Etos stoicki daje Tywercom bonusy do wytrzymałości armii i obronności. Reprezentuje charakter ludu, który przetrwał na jednym z najbardziej niebezpiecznych odcinków pogranicza — między światem słowiańskim, stepem koczowniczym i wpływami bizantyńskimi.
 
 ### Tradycje
-- **Rolnicy** (`tradition_agrarian`) — bonusy do podatków z gospodarstw i wzrostu populacji; żyzne doliny Dniestru i Prutu sprzyjały rolnictwu.
-- **Ksenofile** (`tradition_xenophilic`) — bonusy do akceptacji obcych kultur i dyplomacji; położenie na skrzyżowaniu Rusi, Bizancjum i stepu zmusiło Tywercow do otwartości na inne ludy.
+- **Rolnicy** — bonusy do podatków z gospodarstw i wzrostu populacji; żyzne doliny Dniestru i Prutu sprzyjały rolnictwu.
+- **Ksenofile** — bonusy do akceptacji obcych kultur i dyplomacji; położenie na skrzyżowaniu Rusi, Bizancjum i stepu zmusiło Tywercow do otwartości na inne ludy.
 
 ---
 
@@ -38,7 +54,7 @@ Etos stoicki daje Tywercom bonusy do wytrzymałości armii i obronności. Reprez
 ### Region historyczny
 Tywercy zamieszkiwali dorzecze Dniestru i Prutu, od Bukowiny na północy po Budziakę przy Morzu Czarnym na południu. Region jest zróżnicowany — od zalesionych wzgórz Karpat, przez żyzne doliny rzeczne, po otwarte stepy naddunajskie. Kontrolowali szlaki handlowe biegnące wzdłuż Dniestru.
 
-### Prowincje przypisane w 867
+### Prowincje w 867
 
 **Bukowina (d_bukovina):**
 - 5040
@@ -63,8 +79,9 @@ Tywercy zamieszkiwali dorzecze Dniestru i Prutu, od Bukowiny na północy po Bud
 
 ## Wiara
 
-- **Wiara startowa (867):** [wschodniosłowiańska](../../03-wiara/przeglad-wiary.md)
-- **Najbliższe miejsca święte:** Kijów (c_kiev), Lwów (c_lwow)
+Tywercy wyznają wiarę [wschodniosłowiańską](../../03-wiara/przeglad-wiary.md) — pogański kult wspólny z innymi plemionami wschodnimi, choć bliskość stepu i Bizancjum naraża ich na wcześniejsze wpływy chrześcijańskie.
+
+- **Najbliższe miejsca święte:** Kijów, Lwów
 
 ---
 
