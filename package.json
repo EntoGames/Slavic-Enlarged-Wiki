@@ -9,8 +9,12 @@
     "node": ">=18.0.0"
   },
   "scripts": {
+    "sync-se": "node scripts/sync-se-data.js",
+    "predevelop": "node scripts/sync-se-data.js",
     "develop": "gatsby develop",
+    "prestart": "node scripts/sync-se-data.js",
     "start": "gatsby develop",
+    "prebuild": "node scripts/sync-se-data.js",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",

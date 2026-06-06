@@ -1,6 +1,7 @@
 import type { GatsbyNode } from "gatsby";
 import * as path from "path";
 import { deriveFromPath } from "./src/utils/wiki-paths";
+import { isArticleVisible } from "./src/data/mod-registry";
 
 /* =============================================================
    gatsby-node.ts
@@ -79,6 +80,10 @@ export const onCreateNode: GatsbyNode["onCreateNode"] = ({
   const rawTitle =
     (md.frontmatter?.title as string | undefined) || extractH1(md.rawMarkdownBody ?? "");
   createNodeField({ node, name: "title", value: rawTitle || derived.slug });
+
+  // Mod powiązany z artykułem (z frontmattera lub z sekcji)
+  const fmMod = md.frontmatter?.mod as string | undefined;
+  createNodeField({ node, name: "mod", value: fmMod ?? "" });
 };
 
 /** Wyciągnij pierwszy `# Heading` z markdown body. */
@@ -98,10 +103,13 @@ interface ArticleQueryResult {
       fields: {
         urlPath: string;
         slug: string;
+        section: string;
         isContent: boolean;
+        mod: string;
       };
       frontmatter: {
         draft: boolean | null;
+        mod: string | null;
       };
     }>;
   };
@@ -125,10 +133,13 @@ export const createPages: GatsbyNode["createPages"] = async ({
           fields {
             urlPath
             slug
+            section
             isContent
+            mod
           }
           frontmatter {
             draft
+            mod
           }
         }
       }
@@ -143,13 +154,21 @@ export const createPages: GatsbyNode["createPages"] = async ({
   const allNodes = result.data?.allMarkdownRemark.nodes ?? [];
   const nodes = allNodes.filter((n) => {
     if (!n.fields.isContent || !n.fields.urlPath) return false;
-    // W produkcji pomijaj strony z draft: true
     if (isProduction && n.frontmatter?.draft === true) return false;
+    const modId = n.frontmatter?.mod || n.fields.mod || undefined;
+    if (!isArticleVisible(n.fields.section, modId)) return false;
     return true;
   });
 
   const draftCount = allNodes.filter((n) => n.frontmatter?.draft === true).length;
-  reporter.info(`[wiki] generuję ${nodes.length} stron${isProduction ? ` (pomijam ${draftCount} draft)` : ` (tryb dev: wszystkie, w tym ${draftCount} draft)`}`);
+  const hiddenByMod = allNodes.filter(
+    (n) => n.fields.isContent && !isArticleVisible(n.fields.section, n.frontmatter?.mod || n.fields.mod || undefined)
+  ).length;
+  reporter.info(
+    `[wiki] generuję ${nodes.length} stron` +
+    (isProduction ? ` (pomijam ${draftCount} draft)` : ` (tryb dev: wszystkie, w tym ${draftCount} draft)`) +
+    (hiddenByMod > 0 ? ` (ukryto ${hiddenByMod} z prywatnych modów)` : "")
+  );
 
   for (const node of nodes) {
     createPage({
@@ -184,6 +203,7 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
       segments: [String!]
       relativePath: String
       title: String
+      mod: String
     }
     type MarginaliaItem {
       type: String
@@ -195,6 +215,7 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
     }
     type Frontmatter {
       draft: Boolean
+      mod: String
       subtitle: String
       kicker: String
       blurb: String

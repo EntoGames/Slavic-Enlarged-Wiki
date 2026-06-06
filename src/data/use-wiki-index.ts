@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { SECTIONS } from "./wiki-sections";
+import { isArticleVisible } from "./mod-registry";
 
 /* =============================================================
    useWikiIndex — pełna mapa wszystkich artykułów wiki.
@@ -121,6 +122,7 @@ export function useWikiIndex(): WikiIndex {
     for (const node of data.allMarkdownRemark.nodes) {
       const f = node.fields;
       if (!f.isContent || !f.urlPath || !f.slug) continue;
+      if (!isArticleVisible(f.section)) continue;
 
       const entry: WikiEntry = {
         urlPath: f.urlPath,

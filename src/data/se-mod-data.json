@@ -1,0 +1,788 @@
+{
+  "mod": {
+    "name": "Slavic Enlarged",
+    "version": "1.0.0",
+    "supportedVersion": "1.19.*"
+  },
+  "cultures": [
+    {
+      "id": "krivichians",
+      "ethos": "communal",
+      "heritage": "east_slavic",
+      "language": "east_slavic",
+      "traditions": [
+        "tradition_city_keepers",
+        "tradition_agrarian"
+      ],
+      "name": "Krivichian",
+      "collectiveNoun": "Krivichians"
+    },
+    {
+      "id": "vyatichi",
+      "ethos": "communal",
+      "heritage": "east_slavic",
+      "language": "east_slavic",
+      "traditions": [
+        "tradition_forest_folk",
+        "tradition_sacred_groves"
+      ],
+      "name": "Vyatichi",
+      "collectiveNoun": "Vyatichi"
+    },
+    {
+      "id": "drevlyans",
+      "ethos": "stoic",
+      "heritage": "east_slavic",
+      "language": "east_slavic",
+      "traditions": [
+        "tradition_forest_folk",
+        "tradition_hunters"
+      ],
+      "name": "Drevlyan",
+      "collectiveNoun": "Drevlyans"
+    },
+    {
+      "id": "dregovichs",
+      "ethos": "communal",
+      "heritage": "east_slavic",
+      "language": "east_slavic",
+      "traditions": [
+        "tradition_forest_folk",
+        "tradition_agrarian"
+      ],
+      "name": "Dregovian",
+      "collectiveNoun": "Dregovichs"
+    },
+    {
+      "id": "polyans",
+      "ethos": "courtly",
+      "heritage": "east_slavic",
+      "language": "east_slavic",
+      "traditions": [
+        "tradition_city_keepers",
+        "tradition_astute_diplomats"
+      ],
+      "name": "Kievan Polyan",
+      "collectiveNoun": "Kievan Polyans"
+    },
+    {
+      "id": "ulichs",
+      "ethos": "bellicose",
+      "heritage": "east_slavic",
+      "language": "east_slavic",
+      "traditions": [
+        "tradition_horse_lords",
+        "tradition_druzhina"
+      ],
+      "name": "Ulich",
+      "collectiveNoun": "Ulichs"
+    },
+    {
+      "id": "radimichs",
+      "ethos": "communal",
+      "heritage": "east_slavic",
+      "language": "east_slavic",
+      "traditions": [
+        "tradition_sacred_groves",
+        "tradition_agrarian"
+      ],
+      "name": "Radimich",
+      "collectiveNoun": "Radimichs"
+    },
+    {
+      "id": "polochans",
+      "ethos": "courtly",
+      "heritage": "east_slavic",
+      "language": "east_slavic",
+      "traditions": [
+        "tradition_city_keepers",
+        "tradition_druzhina"
+      ],
+      "name": "Polochan",
+      "collectiveNoun": "Polochans"
+    },
+    {
+      "id": "tivertsi",
+      "ethos": "stoic",
+      "heritage": "east_slavic",
+      "language": "east_slavic",
+      "traditions": [
+        "tradition_agrarian",
+        "tradition_xenophilic"
+      ],
+      "name": "Tivertsian",
+      "collectiveNoun": "Tivertsians"
+    },
+    {
+      "id": "travunians",
+      "ethos": "stoic",
+      "heritage": "south_slavic",
+      "language": "south_slavic",
+      "traditions": [
+        "tradition_pastoralists",
+        "tradition_maritime_mercantilism"
+      ],
+      "name": "Travunian",
+      "collectiveNoun": "Travunians"
+    },
+    {
+      "id": "docleani",
+      "ethos": "stoic",
+      "heritage": "south_slavic",
+      "language": "south_slavic",
+      "traditions": [
+        "tradition_maritime_mercantilism",
+        "tradition_castle_keepers"
+      ],
+      "name": "Dioclean",
+      "collectiveNoun": "Diocleani"
+    },
+    {
+      "id": "timocani",
+      "ethos": "stoic",
+      "heritage": "south_slavic",
+      "language": "south_slavic",
+      "traditions": [
+        "tradition_pastoralists",
+        "tradition_hunters"
+      ],
+      "name": "Timocan",
+      "collectiveNoun": "Timocani"
+    },
+    {
+      "id": "branicevci",
+      "ethos": "stoic",
+      "heritage": "south_slavic",
+      "language": "south_slavic",
+      "traditions": [
+        "tradition_druzhina",
+        "tradition_agrarian"
+      ],
+      "name": "Branicevci",
+      "collectiveNoun": "Branicevci"
+    },
+    {
+      "id": "smolyani",
+      "ethos": "stoic",
+      "heritage": "south_slavic",
+      "language": "south_slavic",
+      "traditions": [
+        "tradition_mountain_homes",
+        "tradition_hunters"
+      ],
+      "name": "Smolyan",
+      "collectiveNoun": "Smolyani"
+    },
+    {
+      "id": "pannonian_slavs",
+      "ethos": "bureaucratic",
+      "heritage": "south_slavic",
+      "language": "south_slavic",
+      "traditions": [
+        "tradition_city_keepers",
+        "tradition_astute_diplomats"
+      ],
+      "name": "Pannonian Slav",
+      "collectiveNoun": "Pannonian Slavs"
+    },
+    {
+      "id": "draguvites",
+      "ethos": "communal",
+      "heritage": "south_slavic",
+      "language": "south_slavic",
+      "traditions": [
+        "tradition_agrarian",
+        "tradition_forest_folk"
+      ],
+      "name": "draguvites",
+      "collectiveNoun": null
+    },
+    {
+      "id": "polans",
+      "ethos": "courtly",
+      "heritage": "west_slavic",
+      "language": "lechitic",
+      "traditions": [
+        "tradition_agrarian",
+        "tradition_city_keepers"
+      ],
+      "name": "Polan",
+      "collectiveNoun": "Polans"
+    },
+    {
+      "id": "goplans",
+      "ethos": "communal",
+      "heritage": "west_slavic",
+      "language": "lechitic",
+      "traditions": [
+        "tradition_agrarian",
+        "tradition_stand_and_fight"
+      ],
+      "name": "Goplan",
+      "collectiveNoun": "Goplans"
+    },
+    {
+      "id": "hevelli",
+      "ethos": "courtly",
+      "heritage": "west_slavic",
+      "language": "lechitic",
+      "traditions": [
+        "tradition_city_keepers",
+        "tradition_xenophilic"
+      ],
+      "name": "Hevellian",
+      "collectiveNoun": "Hevelli"
+    },
+    {
+      "id": "wagrians",
+      "ethos": "stoic",
+      "heritage": "west_slavic",
+      "language": "lechitic",
+      "traditions": [
+        "tradition_maritime_mercantilism",
+        "tradition_hunters"
+      ],
+      "name": "Wagrian",
+      "collectiveNoun": "Wagrians"
+    },
+    {
+      "id": "kashubians",
+      "ethos": "communal",
+      "heritage": "west_slavic",
+      "language": "lechitic",
+      "traditions": [
+        "tradition_maritime_mercantilism",
+        "tradition_agrarian"
+      ],
+      "name": "Kashubian",
+      "collectiveNoun": "Kashubians"
+    },
+    {
+      "id": "mazovians",
+      "ethos": "communal",
+      "heritage": "west_slavic",
+      "language": "lechitic",
+      "traditions": [
+        "tradition_forest_folk",
+        "tradition_stand_and_fight"
+      ],
+      "name": "Mazovian",
+      "collectiveNoun": "Mazovians"
+    },
+    {
+      "id": "nitrianians",
+      "ethos": "spiritual",
+      "heritage": "west_slavic",
+      "language": "czech_slovak",
+      "traditions": [
+        "tradition_city_keepers",
+        "tradition_parochialism"
+      ],
+      "name": "Nitrianian",
+      "collectiveNoun": "Nitrianians"
+    },
+    {
+      "id": "vistulan",
+      "ethos": "stoic",
+      "heritage": "west_slavic",
+      "language": "lechitic",
+      "traditions": [
+        "tradition_agrarian",
+        "tradition_castle_keepers"
+      ],
+      "name": "Vistulan",
+      "collectiveNoun": "Vistulans"
+    },
+    {
+      "id": "silesian",
+      "ethos": "communal",
+      "heritage": "west_slavic",
+      "language": "lechitic",
+      "traditions": [
+        "tradition_agrarian",
+        "tradition_forest_folk"
+      ],
+      "name": "Silesian",
+      "collectiveNoun": "Silesians"
+    },
+    {
+      "id": "obodrites",
+      "ethos": "bellicose",
+      "heritage": "west_slavic",
+      "language": "lechitic",
+      "traditions": [
+        "tradition_maritime_mercantilism",
+        "tradition_stand_and_fight"
+      ],
+      "name": "Obodrite",
+      "collectiveNoun": "Obodrites"
+    },
+    {
+      "id": "lutici",
+      "ethos": "bellicose",
+      "heritage": "west_slavic",
+      "language": "lechitic",
+      "traditions": [
+        "tradition_sacred_groves",
+        "tradition_stand_and_fight"
+      ],
+      "name": "Lutician",
+      "collectiveNoun": "Lutici"
+    },
+    {
+      "id": "rani",
+      "ethos": "bellicose",
+      "heritage": "west_slavic",
+      "language": "lechitic",
+      "traditions": [
+        "tradition_sacred_groves",
+        "tradition_maritime_mercantilism"
+      ],
+      "name": "Ranian",
+      "collectiveNoun": "Rani"
+    },
+    {
+      "id": "sorbian",
+      "ethos": "communal",
+      "heritage": "west_slavic",
+      "language": "lechitic",
+      "traditions": [
+        "tradition_agrarian",
+        "tradition_castle_keepers"
+      ],
+      "name": "Sorbian",
+      "collectiveNoun": "Sorbs"
+    },
+    {
+      "id": "drevani",
+      "ethos": "stoic",
+      "heritage": "west_slavic",
+      "language": "lechitic",
+      "traditions": [
+        "tradition_forest_folk",
+        "tradition_sacred_groves"
+      ],
+      "name": "Drevanian",
+      "collectiveNoun": "Drevani"
+    },
+    {
+      "id": "severian",
+      "ethos": "stoic",
+      "heritage": "east_slavic",
+      "language": "east_slavic",
+      "traditions": [
+        "tradition_forest_folk",
+        "tradition_agrarian"
+      ],
+      "name": "Severian",
+      "collectiveNoun": "Severians"
+    },
+    {
+      "id": "ilmenian",
+      "ethos": "communal",
+      "heritage": "east_slavic",
+      "language": "east_slavic",
+      "traditions": [
+        "tradition_city_keepers",
+        "tradition_maritime_mercantilism"
+      ],
+      "name": "Ilmenian",
+      "collectiveNoun": "Ilmenians"
+    }
+  ],
+  "faiths": [
+    {
+      "id": "se_slavic_base",
+      "tenets": [
+        "tenet_ancestor_worship",
+        "tenet_sanctity_of_nature",
+        "tenet_communal_identity"
+      ],
+      "doctrines": [
+        "unreformed_faith_doctrine",
+        "tenet_ancestor_worship",
+        "tenet_sanctity_of_nature",
+        "tenet_communal_identity"
+      ],
+      "holySiteIds": [
+        "se_site_lviv",
+        "se_site_kyiv",
+        "se_site_minsk",
+        "se_site_novgorod",
+        "se_site_polotsk",
+        "se_site_arkona",
+        "se_site_plocka",
+        "se_site_praha",
+        "se_site_legnica",
+        "se_site_retra",
+        "se_site_velbazhd",
+        "se_site_tolna",
+        "se_site_ston",
+        "se_site_barlad",
+        "se_site_szerem"
+      ],
+      "name": "Slavic Faith",
+      "description": "The primordial Slavic faith, shared by all Slavic peoples before regional divergence. Centered on the great triad of Perun, Veles, and Dazhbog."
+    },
+    {
+      "id": "se_slavic_east",
+      "tenets": [
+        "tenet_ancestor_worship",
+        "tenet_ritual_celebrations",
+        "tenet_sanctity_of_nature"
+      ],
+      "doctrines": [
+        "unreformed_faith_doctrine",
+        "tenet_ancestor_worship",
+        "tenet_ritual_celebrations",
+        "tenet_sanctity_of_nature"
+      ],
+      "holySiteIds": [
+        "se_site_lviv",
+        "se_site_kyiv",
+        "se_site_minsk",
+        "se_site_novgorod",
+        "se_site_polotsk"
+      ],
+      "name": "Eastern Slavic Faith",
+      "description": "The faith of the Eastern Slavic peoples, where Perun the Thunderer holds supreme authority. Shaped by the steppe frontier and the warrior culture of the druzhina."
+    },
+    {
+      "id": "se_slavic_west",
+      "tenets": [
+        "tenet_warmonger",
+        "tenet_ritual_celebrations",
+        "tenet_sanctity_of_nature"
+      ],
+      "doctrines": [
+        "unreformed_faith_doctrine",
+        "tenet_warmonger",
+        "tenet_ritual_celebrations",
+        "tenet_sanctity_of_nature"
+      ],
+      "holySiteIds": [
+        "se_site_arkona",
+        "se_site_plocka",
+        "se_site_praha",
+        "se_site_legnica",
+        "se_site_retra"
+      ],
+      "name": "Western Slavic Faith",
+      "description": "The faith of the Western Slavic peoples, where Svantevit of Arkona reigns supreme. Distinguished by a remarkable degree of priestly organization."
+    },
+    {
+      "id": "se_slavic_south",
+      "tenets": [
+        "tenet_false_conversion_sanction",
+        "tenet_ritual_celebrations",
+        "tenet_sanctity_of_nature"
+      ],
+      "doctrines": [
+        "unreformed_faith_doctrine",
+        "tenet_false_conversion_sanction",
+        "tenet_ritual_celebrations",
+        "tenet_sanctity_of_nature"
+      ],
+      "holySiteIds": [
+        "se_site_velbazhd",
+        "se_site_tolna",
+        "se_site_ston",
+        "se_site_barlad",
+        "se_site_szerem"
+      ],
+      "name": "Southern Slavic Faith",
+      "description": "The faith of the Southern Slavic peoples, shaped by the mountains and the Byzantine shadow. The zadruga is both the family and the congregation."
+    }
+  ],
+  "holySites": [
+    {
+      "id": "se_site_lviv",
+      "county": "c_lviv",
+      "name": "Lviv"
+    },
+    {
+      "id": "se_site_kyiv",
+      "county": "c_kiev",
+      "name": "Kyiv"
+    },
+    {
+      "id": "se_site_minsk",
+      "county": "c_minsk",
+      "name": "Minsk"
+    },
+    {
+      "id": "se_site_novgorod",
+      "county": "c_novgorod",
+      "name": "Novgorod"
+    },
+    {
+      "id": "se_site_polotsk",
+      "county": "c_polotsk",
+      "name": "Polotsk"
+    },
+    {
+      "id": "se_site_arkona",
+      "county": "c_rugen",
+      "name": "Arkona"
+    },
+    {
+      "id": "se_site_plocka",
+      "county": "c_plocka",
+      "name": "Plock"
+    },
+    {
+      "id": "se_site_praha",
+      "county": "c_praha",
+      "name": "Prague"
+    },
+    {
+      "id": "se_site_legnica",
+      "county": "c_legnica",
+      "name": "Legnica"
+    },
+    {
+      "id": "se_site_retra",
+      "county": "c_mecklenburg",
+      "name": "Retra"
+    },
+    {
+      "id": "se_site_velbazhd",
+      "county": "c_velbazhd",
+      "name": "Velbazhd"
+    },
+    {
+      "id": "se_site_tolna",
+      "county": "c_tolna",
+      "name": "Tolna"
+    },
+    {
+      "id": "se_site_ston",
+      "county": "c_zachlumia",
+      "name": "Ston"
+    },
+    {
+      "id": "se_site_barlad",
+      "county": "c_barlad",
+      "name": "Barlad"
+    },
+    {
+      "id": "se_site_szerem",
+      "county": "c_szerem",
+      "name": "Sirmium"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "se_check_holy_sites",
+      "desc": "se_check_holy_sites_desc"
+    }
+  ],
+  "eventFiles": [
+    "se_faith_reform_events.txt"
+  ],
+  "localization": {
+    "cultures": {
+      "krivichians": "Krivichian",
+      "krivichians_collective_noun": "Krivichians",
+      "krivichians_prefix": "Krivichian",
+      "vyatichi": "Vyatichi",
+      "vyatichi_collective_noun": "Vyatichi",
+      "vyatichi_prefix": "Vyatichi",
+      "drevlyans": "Drevlyan",
+      "drevlyans_collective_noun": "Drevlyans",
+      "drevlyans_prefix": "Drevlyan",
+      "polochans": "Polochan",
+      "polochans_collective_noun": "Polochans",
+      "polochans_prefix": "Polochan",
+      "dregovichs": "Dregovian",
+      "dregovichs_collective_noun": "Dregovichs",
+      "dregovichs_prefix": "Dregovian",
+      "polyans": "Kievan Polyan",
+      "polyans_collective_noun": "Kievan Polyans",
+      "polyans_prefix": "Polyan",
+      "ulichs": "Ulich",
+      "ulichs_collective_noun": "Ulichs",
+      "ulichs_prefix": "Ulich",
+      "radimichs": "Radimich",
+      "radimichs_collective_noun": "Radimichs",
+      "radimichs_prefix": "Radimich",
+      "tivertsi": "Tivertsian",
+      "tivertsi_collective_noun": "Tivertsians",
+      "tivertsi_prefix": "Tivertsian",
+      "travunians": "Travunian",
+      "travunians_collective_noun": "Travunians",
+      "travunians_prefix": "Travunian",
+      "docleani": "Dioclean",
+      "docleani_collective_noun": "Diocleani",
+      "docleani_prefix": "Dioclean",
+      "timocani": "Timocan",
+      "timocani_collective_noun": "Timocani",
+      "timocani_prefix": "Timocan",
+      "branicevci": "Branicevci",
+      "branicevci_collective_noun": "Branicevci",
+      "branicevci_prefix": "Branicevci",
+      "smolyani": "Smolyan",
+      "smolyani_collective_noun": "Smolyani",
+      "smolyani_prefix": "Smolyan",
+      "pannonian_slavs": "Pannonian Slav",
+      "pannonian_slavs_collective_noun": "Pannonian Slavs",
+      "pannonian_slavs_prefix": "Pannonian",
+      "polans": "Polan",
+      "polans_collective_noun": "Polans",
+      "polans_prefix": "Polan",
+      "goplans": "Goplan",
+      "goplans_collective_noun": "Goplans",
+      "goplans_prefix": "Goplan",
+      "hevelli": "Hevellian",
+      "hevelli_collective_noun": "Hevelli",
+      "hevelli_prefix": "Hevellian",
+      "wagrians": "Wagrian",
+      "wagrians_collective_noun": "Wagrians",
+      "wagrians_prefix": "Wagrian",
+      "kashubians": "Kashubian",
+      "kashubians_collective_noun": "Kashubians",
+      "kashubians_prefix": "Kashubian",
+      "mazovians": "Mazovian",
+      "mazovians_collective_noun": "Mazovians",
+      "mazovians_prefix": "Mazovian",
+      "nitrianians": "Nitrianian",
+      "nitrianians_collective_noun": "Nitrianians",
+      "nitrianians_prefix": "Nitrianian",
+      "vistulan": "Vistulan",
+      "vistulan_collective_noun": "Vistulans",
+      "vistulan_prefix": "Vistulan",
+      "silesian": "Silesian",
+      "silesian_collective_noun": "Silesians",
+      "silesian_prefix": "Silesian",
+      "obodrites": "Obodrite",
+      "obodrites_collective_noun": "Obodrites",
+      "obodrites_prefix": "Obodrite",
+      "lutici": "Lutician",
+      "lutici_collective_noun": "Lutici",
+      "lutici_prefix": "Lutician",
+      "rani": "Ranian",
+      "rani_collective_noun": "Rani",
+      "rani_prefix": "Ranian",
+      "sorbian": "Sorbian",
+      "sorbian_collective_noun": "Sorbs",
+      "sorbian_prefix": "Sorbian",
+      "drevani": "Drevanian",
+      "drevani_collective_noun": "Drevani",
+      "drevani_prefix": "Drevanian",
+      "severian": "Severian",
+      "severian_collective_noun": "Severians",
+      "severian_prefix": "Severian ",
+      "ilmenian": "Ilmenian",
+      "ilmenian_collective_noun": "Ilmenians",
+      "ilmenian_prefix": "Ilmenian "
+    },
+    "faiths": {
+      "se_slavic": "Slavic Faith",
+      "se_slavic_adj": "Slavic",
+      "se_slavic_adherent": "Slav",
+      "se_slavic_adherent_plural": "Slavs",
+      "se_slavic_base": "Slavic Faith",
+      "se_slavic_base_adj": "Slavic",
+      "se_slavic_base_adherent": "Slav",
+      "se_slavic_base_adherent_plural": "Slavs",
+      "se_slavic_base_desc": "The primordial Slavic faith, shared by all Slavic peoples before regional divergence. Centered on the great triad of Perun, Veles, and Dazhbog.",
+      "se_slavic_base_old": "Old Slavic Faith",
+      "se_slavic_base_old_adj": "Old Slavic",
+      "se_slavic_base_old_adherent": "Old Slav",
+      "se_slavic_base_old_adherent_plural": "Old Slavs",
+      "se_slavic_east": "Eastern Slavic Faith",
+      "se_slavic_east_adj": "Eastern Slavic",
+      "se_slavic_east_adherent": "Eastern Slav",
+      "se_slavic_east_adherent_plural": "Eastern Slavs",
+      "se_slavic_east_desc": "The faith of the Eastern Slavic peoples, where Perun the Thunderer holds supreme authority. Shaped by the steppe frontier and the warrior culture of the druzhina.",
+      "se_slavic_east_old": "Old Eastern Slavic Faith",
+      "se_slavic_east_old_adj": "Old Eastern Slavic",
+      "se_slavic_east_old_adherent": "Old Eastern Slav",
+      "se_slavic_east_old_adherent_plural": "Old Eastern Slavs",
+      "se_slavic_west": "Western Slavic Faith",
+      "se_slavic_west_adj": "Western Slavic",
+      "se_slavic_west_adherent": "Western Slav",
+      "se_slavic_west_adherent_plural": "Western Slavs",
+      "se_slavic_west_desc": "The faith of the Western Slavic peoples, where Svantevit of Arkona reigns supreme. Distinguished by a remarkable degree of priestly organization.",
+      "se_slavic_west_old": "Old Western Slavic Faith",
+      "se_slavic_west_old_adj": "Old Western Slavic",
+      "se_slavic_west_old_adherent": "Old Western Slav",
+      "se_slavic_west_old_adherent_plural": "Old Western Slavs",
+      "se_slavic_south": "Southern Slavic Faith",
+      "se_slavic_south_adj": "Southern Slavic",
+      "se_slavic_south_adherent": "Southern Slav",
+      "se_slavic_south_adherent_plural": "Southern Slavs",
+      "se_slavic_south_desc": "The faith of the Southern Slavic peoples, shaped by the mountains and the Byzantine shadow. The zadruga is both the family and the congregation.",
+      "se_slavic_south_old": "Old Southern Slavic Faith",
+      "se_slavic_south_old_adj": "Old Southern Slavic",
+      "se_slavic_south_old_adherent": "Old Southern Slav",
+      "se_slavic_south_old_adherent_plural": "Old Southern Slavs",
+      "se_slavic_high_god_perun": "Perun",
+      "se_slavic_high_god_perun_possessive": "Perun's",
+      "se_slavic_god_name": "the Gods",
+      "se_slavic_god_name_possessive": "the Gods'",
+      "se_slavic_devotee": "Slav",
+      "se_slavic_devotee_plural": "Slavs",
+      "se_slavic_devotee_adj": "Slavic",
+      "se_slavic_devotee_adj_plural": "Slavic",
+      "se_slavic_priest": "Volkhv",
+      "se_slavic_priest_plural": "Volkhvy",
+      "se_slavic_alt_priest_plural": "Volkhvy",
+      "se_slavic_religious_head": "High Volkhv",
+      "se_slavic_religious_head_title": "High Volkhv",
+      "se_slavic_good_afterlife": "Vyraj",
+      "se_slavic_bad_afterlife": "Nav",
+      "se_slavic_death_deity": "Morana",
+      "se_slavic_death_deity_possessive": "Morana's",
+      "se_slavic_witch_god": "Veles",
+      "se_slavic_witch_god_possessive": "Veles'",
+      "holy_order_warriors_of_perun": "Warriors of Perun",
+      "holy_order_guardians_of_veles": "Guardians of Veles"
+    },
+    "holySites": {
+      "holy_site_se_site_lviv_name": "Lviv",
+      "holy_site_se_site_kyiv_name": "Kyiv",
+      "holy_site_se_site_minsk_name": "Minsk",
+      "holy_site_se_site_novgorod_name": "Novgorod",
+      "holy_site_se_site_polotsk_name": "Polotsk",
+      "holy_site_se_site_arkona_name": "Arkona",
+      "holy_site_se_site_plocka_name": "Plock",
+      "holy_site_se_site_praha_name": "Prague",
+      "holy_site_se_site_legnica_name": "Legnica",
+      "holy_site_se_site_retra_name": "Retra",
+      "holy_site_se_site_velbazhd_name": "Velbazhd",
+      "holy_site_se_site_tolna_name": "Tolna",
+      "holy_site_se_site_ston_name": "Ston",
+      "holy_site_se_site_barlad_name": "Barlad",
+      "holy_site_se_site_szerem_name": "Sirmium",
+      "se_holy_site_lviv_effect": "From [holy_site|E] #weak ($holy_site_se_site_lviv_name$)#!",
+      "se_holy_site_kyiv_effect": "From [holy_site|E] #weak ($holy_site_se_site_kyiv_name$)#!",
+      "se_holy_site_minsk_effect": "From [holy_site|E] #weak ($holy_site_se_site_minsk_name$)#!",
+      "se_holy_site_novgorod_effect": "From [holy_site|E] #weak ($holy_site_se_site_novgorod_name$)#!",
+      "se_holy_site_polotsk_effect": "From [holy_site|E] #weak ($holy_site_se_site_polotsk_name$)#!",
+      "se_holy_site_arkona_effect": "From [holy_site|E] #weak ($holy_site_se_site_arkona_name$)#!",
+      "se_holy_site_plocka_effect": "From [holy_site|E] #weak ($holy_site_se_site_plocka_name$)#!",
+      "se_holy_site_praha_effect": "From [holy_site|E] #weak ($holy_site_se_site_praha_name$)#!",
+      "se_holy_site_legnica_effect": "From [holy_site|E] #weak ($holy_site_se_site_legnica_name$)#!",
+      "se_holy_site_retra_effect": "From [holy_site|E] #weak ($holy_site_se_site_retra_name$)#!",
+      "se_holy_site_velbazhd_effect": "From [holy_site|E] #weak ($holy_site_se_site_velbazhd_name$)#!",
+      "se_holy_site_tolna_effect": "From [holy_site|E] #weak ($holy_site_se_site_tolna_name$)#!",
+      "se_holy_site_ston_effect": "From [holy_site|E] #weak ($holy_site_se_site_ston_name$)#!",
+      "se_holy_site_barlad_effect": "From [holy_site|E] #weak ($holy_site_se_site_barlad_name$)#!",
+      "se_holy_site_szerem_effect": "From [holy_site|E] #weak ($holy_site_se_site_szerem_name$)#!"
+    },
+    "decisions": {
+      "se_check_holy_sites": "Assess the Slavic Holy Sites",
+      "se_check_holy_sites_desc": "The volkhvy report how many of the fifteen holy places of the Slavic world lie under your rule. The more you hold when you reform your faith, the stronger the gods will answer.",
+      "se_check_holy_sites_tooltip": "Check how many of the 15 Slavic holy sites you control and which reward tier awaits you.",
+      "se_check_holy_sites_confirm": "Understood",
+      "se_check_tooltip_reward": "Control at least 9 of 15 holy sites → #G Reward #! (+500 piety, +250 prestige, 30-year bonus modifier)",
+      "se_check_tooltip_neutral": "Control at least 6 of 15 holy sites → #Y Neutral #! (no reward, no penalty)",
+      "se_check_tooltip_penalty": "Control fewer than 6 → #R Penalty #! (-300 piety, 15-year malus modifier)"
+    }
+  },
+  "meta": {
+    "generatedAt": "2026-06-06T09:57:39.053Z",
+    "sourceDir": "Slavic-Enlarged/"
+  }
+}

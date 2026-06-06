@@ -83,4 +83,3 @@ Ilmenianie (zwani też Słowianami Ilmeńskimi) byli jednym z kluczowych plemion
 
 - Grupa dziedzictwa: [Kultury wschodniosłowiańskie](README.md)
 - Wiara: [wschodniosłowiańska](../../05-wiara/przeglad-wiary.md)
-- Walka Słowiańszczyzny: [Czym jest](../../06-walka-slowianczyzny/czym-jest-walka.md)

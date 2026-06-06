@@ -14,6 +14,8 @@ export interface SectionMeta {
   label: string;
   /** Krótki opis sekcji (w mega-menu intro panel). */
   blurb: string;
+  /** ID moda z mod-registry ("se", "ssp", "kingdom-mods"). Sekcje mieszane → "mixed". */
+  mod: string;
 }
 
 export const SECTIONS: Record<string, SectionMeta> = {
@@ -22,48 +24,98 @@ export const SECTIONS: Record<string, SectionMeta> = {
     label: "Wprowadzenie",
     blurb:
       "Czym są oba mody, jak je zainstalować i od czego zacząć grę.",
+    mod: "se",
+  },
+  kultury: {
+    order: 2,
+    label: "Kultury",
+    blurb:
+      "34 kultury słowiańskie — od Krywiczów po Karyntan.",
+    mod: "se",
   },
   "krolestwa-wschodnie": {
-    order: 2,
+    order: 3,
     label: "Królestwa Wschodnie",
     blurb:
       "Ruś, Biała Ruś, Mołdawia i Połock — kultury od Kijowa po Dźwinę.",
+    mod: "kingdom-mods",
   },
   "krolestwa-zachodnie": {
-    order: 3,
+    order: 4,
     label: "Królestwa Zachodnie",
     blurb:
       "Polska, Pomorze, Serbołużyce, Węgry i Karyntia — od Gniezna po Alpy.",
+    mod: "kingdom-mods",
   },
   "krolestwa-poludniowe": {
-    order: 4,
+    order: 5,
     label: "Królestwa Południowe",
     blurb:
       "Chorwacja, Serbia i Bułgaria — Bałkany od Adriatyku po Trację.",
+    mod: "kingdom-mods",
   },
   wiara: {
-    order: 5,
+    order: 6,
     label: "Wiara",
     blurb:
       "Jeden panteon, trzy odłamy, piętnaście miejsc świętych i szansa na zjednoczenie.",
+    mod: "se",
   },
   "walka-slowianczyzny": {
-    order: 6,
+    order: 7,
     label: "Walka Słowiańszczyzny",
     blurb:
       "Pięć faz, trzy zakończenia, jedno pytanie: czy Perun powstanie z Dniepru.",
+    mod: "ssp",
+  },
+  decyzje: {
+    order: 8,
+    label: "Decyzje",
+    blurb:
+      "Decyzje strategiczne i religijne dostępne w grze.",
+    mod: "mixed",
+  },
+  wydarzenia: {
+    order: 9,
+    label: "Wydarzenia",
+    blurb:
+      "Eventy synkretyczne, fazowe i tradycyjne.",
+    mod: "mixed",
+  },
+  scenariusze: {
+    order: 10,
+    label: "Scenariusze",
+    blurb:
+      "Ekran startowy 867 i sugerowane postacie.",
+    mod: "ssp",
+  },
+  poradniki: {
+    order: 11,
+    label: "Poradniki",
+    blurb:
+      "Przewodniki krok po kroku do kluczowych mechanik.",
+    mod: "mixed",
   },
   historia: {
-    order: 7,
+    order: 12,
     label: "Historia",
     blurb:
       "Tło źródłowe, na którym stoi cały mod.",
+    mod: "se",
   },
   techniczne: {
-    order: 8,
+    order: 13,
     label: "Techniczne",
     blurb:
       "Kompatybilność z innymi modami, znane problemy, changelog.",
+    mod: "se",
+  },
+  changelog: {
+    order: 14,
+    label: "Changelog",
+    blurb:
+      "Kronika zmian we wszystkich modach.",
+    mod: "mixed",
   },
 };
 

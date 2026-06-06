@@ -29,35 +29,9 @@ Jeden panteon, trzy odłamy, 15 miejsc świętych i szansa na zjednoczenie.
 - [Miejsca święte](05-wiara/miejsca-swiete.md)
 - [Zakony święte](05-wiara/zakony-swiete.md)
 
-### Walka Słowiańszczyzny ⚠
-Mechanika Struggle z DLC Fate of Iberia — wielowiekowy dramat chrystianizacji. Wymaga addonu Slavic Struggle of Perun.
-- [Czym jest Walka](06-walka-slowianczyzny/czym-jest-walka.md)
-- [Fazy walki](06-walka-slowianczyzny/fazy/) — Swarożyc, Perun, Lada, Weles, Marzanna
-- [Zakończenia](06-walka-slowianczyzny/zakonczenia.md)
-- [System dwójwierstwa](06-walka-slowianczyzny/dwojwierstwo.md)
-- [Katalizatory](06-walka-slowianczyzny/katalizatory.md)
-
-### Decyzje i mechaniki
-Od reformy wiary po chrzest polityczny — wszystkie narzędzia dostępne graczowi.
+### Decyzje
+Od reformy wiary po chrzest polityczny — narzędzia dostępne graczowi.
 - [Przegląd decyzji](05-decyzje/README.md)
-
-### Wydarzenia
-17 narracyjnych eventów — od Nocy Kupały po Ostatniego Wołchwa.
-- [Przegląd wydarzeń](06-wydarzenia/README.md)
-
-### Sub-mody królewskie ⚠
-16 opcjonalnych sub-modów rozbudowujących poszczególne królestwa. Wszystkie w przygotowaniu.
-- [Królestwa wschodnie](02-krolestwa-wschodnie/README.md) — Ruś, Biała Ruś, Połock, Mołdawia, Nowogród, Galicja-Wołyń, Opolye
-- [Królestwa zachodnie](03-krolestwa-zachodnie/README.md) — Polska, Pomorze, Serbolużyce, Węgry, Karyntia
-- [Królestwa południowe](04-krolestwa-poludniowe/README.md) — Bułgaria, Chorwacja, Serbia, Tessaloniki
-
-### Scenariusze startowe
-7 grywalnych postaci na ekranie „Slavic Struggles" (867 r.).
-- [Postacie i scenariusze](09-scenariusze/README.md)
-
-### Poradniki
-Praktyczne przewodniki po najambitniejszych celach w modzie.
-- [Lista poradników](10-poradniki/README.md)
 
 ### Kontekst historyczny
 Historia, która zainspirowała mody — od plemion IX wieku po upadek Arkony.
@@ -69,19 +43,15 @@ Kompatybilność, znane problemy i changelog.
 
 ---
 
-## O modach
+## O modzie
 
-| | Slavic Enlarged | Slavic Struggle of Perun ⚠ | Sub-mody królewskie ⚠ |
-|---|---|---|---|
-| **Typ** | Mod bazowy | Addon | 16 opcjonalnych sub-modów |
-| **Wersja CK3** | 1.19+ | 1.19+ | 1.19+ |
-| **DLC** | Brak | Fate of Iberia | Fate of Iberia |
-| **Kultury** | 34 | — | nowe per sub-mod |
-| **Wiary** | 5 (3 regionalne + bazowa + zreformowana) | — | — |
-| **Miejsca święte** | 15 | — | — |
-| **Fazy Walki** | — | 5 | — |
-| **Zakończenia** | — | 3 | — |
-| **Wydarzenia** | 1 | 17 | per sub-mod |
-| **Decyzje** | 1 | 10 | per sub-mod |
-
-⚠ = w przygotowaniu, jeszcze niepubliczne
+| | Slavic Enlarged |
+|---|---|
+| **Typ** | Mod bazowy |
+| **Wersja CK3** | 1.19+ |
+| **DLC** | Brak |
+| **Kultury** | 34 |
+| **Wiary** | 4 (3 regionalne + bazowa) |
+| **Miejsca święte** | 15 |
+| **Wydarzenia** | 3 |
+| **Decyzje** | 1 |
