@@ -115,7 +115,7 @@
 :global(.wf-hero__subtitle) {
   margin: 16px 0 0;
   font-family: var(--font-display);
-  font-size: 36px; line-height: 1;
+  font-size: var(--t-subtitle-size); line-height: var(--t-subtitle-line);
   color: var(--gold-light);
   text-shadow: 2px 3px 0 #000;
 }
@@ -195,7 +195,7 @@
 }
 :global(.wf-toc__head span) {
   font-family: var(--font-display);
-  font-size: 26px; line-height: 1;
+  font-size: var(--t-section-size); line-height: var(--t-section-line);
   color: #fff;
   text-shadow: 0 4px 30px rgba(0,0,0,0.8);
 }
@@ -290,7 +290,7 @@
 /* Akapity */
 :global(.wf-article p) {
   font-family: var(--font-body);
-  font-size: 16px; line-height: 1.75;
+  font-size: var(--t-body-size); line-height: 1.75;
   color: rgba(255,255,255,0.82);
   margin: 0 0 18px;
   text-wrap: pretty;
@@ -298,15 +298,26 @@
 }
 :global(.wf-article p + p) { text-indent: 1.8em; }
 
-/* Sekcja */
-:global(.wf-section) { margin: 36px 0 0; scroll-margin-top: 32px; }
+/* Sekcja — akordeon (osobny box na każdy element) */
+:global(.wf-section) {
+  margin: 20px 0 0;
+  scroll-margin-top: 32px;
+  background: rgba(8,13,4,0.45);
+  border: 1px solid rgba(179,153,77,0.15);
+  border-radius: 6px;
+  padding: 0;
+}
 :global(.wf-section__head) {
-  display: flex; align-items: baseline; gap: 16px;
+  display: flex; align-items: baseline; gap: 14px;
   cursor: pointer;
   user-select: none;
-  margin: 0 0 20px;
-  padding: 0 0 4px;
-  border-radius: 4px;
+  margin: 0;
+  padding: 16px 20px;
+  border-radius: 6px;
+  transition: background 150ms ease;
+}
+:global(.wf-section__head:hover) {
+  background: rgba(179,153,77,0.06);
 }
 :global(.wf-section__head:focus-visible) {
   outline: none;
@@ -314,7 +325,7 @@
 }
 :global(.wf-section__num) {
   font-family: var(--font-display);
-  font-size: 28px; line-height: 1;
+  font-size: var(--t-h2-size); line-height: var(--t-h2-line);
   color: var(--gold);
   letter-spacing: 0.02em;
   flex-shrink: 0;
@@ -323,7 +334,7 @@
 :global(.wf-section__title) {
   margin: 0;
   font-family: var(--font-display);
-  font-size: 44px; line-height: 1;
+  font-size: var(--t-h2-size); line-height: var(--t-h2-line);
   color: #fff;
   flex: 1;
   text-shadow: 2px 3px 0 #000;
@@ -339,18 +350,19 @@
 }
 :global(.wf-section__body) {
   overflow: hidden;
+  padding: 0 20px 20px;
   transition: max-height 280ms ease, opacity 200ms ease;
 }
 :global(.wf-section.is-collapsed .wf-section__body) {
   max-height: 0 !important;
   opacity: 0;
-  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 /* Subsekcja — karta postaci / entry */
 :global(.wf-article h3) {
   font-family: var(--font-display);
-  font-size: 28px; line-height: 1.1;
+  font-size: var(--t-h2-size); line-height: var(--t-h2-line);
   color: var(--gold-light);
   margin: 30px 0 10px;
   text-shadow: 2px 3px 0 #000;
@@ -377,7 +389,7 @@
   display: block;
   font-style: normal;
   font-family: var(--font-display);
-  font-size: 20px;
+  font-size: var(--t-tag-size);
   color: var(--gold-light);
   margin-top: 4px;
   text-shadow: 1px 2px 0 #000;
@@ -395,7 +407,7 @@
   border-collapse: separate;
   border-spacing: 0;
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: var(--t-caption-size);
   color: rgba(255,255,255,0.82);
 }
 :global(.wf-table thead th) {
@@ -443,7 +455,7 @@
 :global(.wf-article ul),
 :global(.wf-article ol) {
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: var(--t-body-size);
   line-height: 1.75;
   color: rgba(255,255,255,0.82);
   margin: 12px 0 20px;
@@ -619,8 +631,8 @@
 :global(.wf-preview__title) {
   margin: 0 0 4px;
   font-family: var(--font-display);
-  font-size: 28px;
-  line-height: 1;
+  font-size: var(--t-h2-size);
+  line-height: var(--t-h2-line);
   color: #fff;
   text-shadow: 2px 3px 1px #000;
 }
@@ -665,7 +677,7 @@
 :global(.wf-related__head h2) {
   margin: 0;
   font-family: var(--font-display);
-  font-size: 36px; line-height: 1;
+  font-size: var(--t-subtitle-size); line-height: var(--t-subtitle-line);
   color: #fff;
   text-shadow: 2px 3px 0 #000;
 }
@@ -720,8 +732,8 @@
 :global(.wf-rcard__title) {
   margin: 0 0 4px;
   font-family: var(--font-display);
-  font-size: 30px;
-  line-height: 1;
+  font-size: var(--t-h2-size);
+  line-height: var(--t-h2-line);
   color: #fff;
   text-shadow: 2px 3px 0 #000;
 }
@@ -776,9 +788,9 @@
 :global(.wf-footer p) {
   margin: 0;
   font-family: var(--font-body);
-  font-size: 10.5px;
-  line-height: 1.5;
-  color: rgba(255,255,255,0.45);
+  font-size: var(--t-foot-size);
+  line-height: var(--t-foot-line);
+  color: rgba(255,255,255,0.5);
 }
 
 /* ============================================================
@@ -871,9 +883,11 @@
   :global(.wf-toc ol) { grid-template-columns: 1fr; }
   :global(.wf-toc__meta) { grid-template-columns: repeat(2, 1fr); }
 
-  :global(.wf-section__head) { gap: 10px; padding-bottom: 8px; }
+  :global(.wf-section) { margin: 14px 0 0; }
+  :global(.wf-section__head) { gap: 10px; padding: 12px 14px; }
   :global(.wf-section__num) { font-size: 22px; }
-  :global(.wf-section__title) { font-size: clamp(28px, 7vw, 38px); }
+  :global(.wf-section__title) { font-size: 22px; }
+  :global(.wf-section__body) { padding: 0 14px 14px; }
   :global(.wf-article h3) { font-size: 22px; }
   :global(.wf-article p) { font-size: 15px; line-height: 1.7; }
   :global(.wf-article p + p) { text-indent: 1.4em; }

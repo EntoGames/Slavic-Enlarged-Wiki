@@ -103,6 +103,7 @@ const WikiArticleTemplate: React.FC<PageProps<QueryData>> = ({ data }) => {
 
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
   const [activeId, setActiveId] = useState<string>(rest.sections[0]?.id ?? "");
+  const [collapsedSet, setCollapsedSet] = useState<Set<string>>(new Set());
 
   /* Scroll-spy */
   useEffect(() => {
@@ -150,7 +151,7 @@ const WikiArticleTemplate: React.FC<PageProps<QueryData>> = ({ data }) => {
 
   return (
     <WikiLinkProvider>
-      <div className={"wf" + (isSectionLanding ? " wf--landing" : "")}>
+      <main id="main" className={"wf" + (isSectionLanding ? " wf--landing" : "")}>
         <MegaMenu activeUrlPath={fields.urlPath} />
 
         {fm.interactive !== "scenario-map" && (
@@ -193,8 +194,15 @@ const WikiArticleTemplate: React.FC<PageProps<QueryData>> = ({ data }) => {
                   id={s.id}
                   title={s.title}
                   num={i + 1}
-                  collapsed={false}
-                  onToggle={() => {}}
+                  collapsed={collapsedSet.has(s.id)}
+                  onToggle={() =>
+                    setCollapsedSet((prev) => {
+                      const next = new Set(prev);
+                      if (next.has(s.id)) next.delete(s.id);
+                      else next.add(s.id);
+                      return next;
+                    })
+                  }
                   registerRef={(el) => {
                     sectionRefs.current[s.id] = el;
                   }}
@@ -215,7 +223,7 @@ const WikiArticleTemplate: React.FC<PageProps<QueryData>> = ({ data }) => {
         />
 
         <Footer />
-      </div>
+      </main>
     </WikiLinkProvider>
   );
 };
