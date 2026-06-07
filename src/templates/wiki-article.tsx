@@ -7,6 +7,7 @@ import wordmarkSvg from "../assets/img/wordmark.svg";
 import iconTraditionsSvg from "../assets/img/icon-traditions.svg";
 import godWelesSvg from "../assets/img/god-weles.svg";
 
+import { toRoman } from "../utils/to-roman";
 import { WikiLinkProvider } from "./components/WikiLink";
 import { MegaMenu } from "./components/MegaMenu";
 import { Section } from "./components/Section";
@@ -211,7 +212,7 @@ const WikiArticleTemplate: React.FC<PageProps<QueryData>> = ({ data }) => {
                       ref={(el) => { sectionRefs.current[s.id] = el; }}
                     >
                       <header className="wf-section__head wf-section__head--flat">
-                        <span className="wf-section__num">{String(i + 1).padStart(2, "0")}</span>
+                        <span className="wf-section__num">{toRoman(i + 1)}</span>
                         <h2 className="wf-section__title">{s.title}</h2>
                       </header>
                       <div className="wf-section__body">{s.body}</div>

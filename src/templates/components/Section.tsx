@@ -1,10 +1,11 @@
 import * as React from "react";
 import { useEffect, useRef, useState } from "react";
+import { toRoman } from "../../utils/to-roman";
 
 /* =============================================================
    Section — zwijany rozdział artykułu (akordeon).
    ─────────────────────────────────────────────────────────────
-   Numerację (01., 02., …) liczy szablon — `num` w propsach.
+   Numerację (I, II, III, …) liczy szablon — `num` w propsach.
    Animowane max-height: krótko po zmianie `collapsed` najpierw
    ustawiamy konkretną wysokość px, by transition działała,
    a po zakończeniu wracamy do `none` aby nie blokować dynamiki
@@ -66,7 +67,7 @@ export function Section({
         tabIndex={0}
         aria-expanded={!collapsed}
       >
-        <span className="wf-section__num">{String(num).padStart(2, "0")}</span>
+        <span className="wf-section__num">{toRoman(num)}</span>
         <h2 className="wf-section__title">{title}</h2>
         <span className="wf-section__chevron">▾</span>
       </header>
