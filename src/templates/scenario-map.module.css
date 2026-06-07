@@ -94,8 +94,8 @@
 :global(.sm__marker) {
   position: absolute;
   z-index: 5;
-  width: 32px;
-  height: 32px;
+  width: 44px;
+  height: 44px;
   transform: translate(-50%, -50%);
   background: none;
   border: none;
@@ -238,10 +238,10 @@
 
 :global(.sm__modal-close) {
   position: absolute;
-  top: 12px;
-  right: 12px;
-  width: 28px;
-  height: 28px;
+  top: 8px;
+  right: 8px;
+  width: 44px;
+  height: 44px;
   border: 1px solid rgba(179, 153, 77, 0.3);
   border-radius: 4px;
   background: rgba(8, 13, 0, 0.5);
@@ -276,15 +276,15 @@
 :global(.sm__modal-name) {
   margin: 0 0 4px;
   font-family: var(--font-display);
-  font-size: 40px;
-  line-height: 1;
+  font-size: var(--t-subtitle-size);
+  line-height: var(--t-subtitle-line);
   color: #fff;
   text-shadow: 2px 3px 0 #000;
 }
 
 :global(.sm__modal-title) {
   font-family: var(--font-display);
-  font-size: 20px;
+  font-size: var(--t-tag-size);
   color: var(--gold-light);
   text-shadow: 1px 2px 0 #000;
   margin-bottom: 22px;
@@ -329,7 +329,7 @@
   gap: 8px;
   font-family: var(--font-body);
   font-size: 11px;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.5);
   letter-spacing: 0.03em;
 }
 :global(.sm__modal-hint-icon) {

@@ -164,6 +164,10 @@ export function MegaMenu({ activeUrlPath }: MegaMenuProps) {
   const showSearchResults = searchFocused && searchResults.length > 0;
 
   return (
+    <>
+    <a className="wf-skip-link" href="#main">
+      Przejdź do treści
+    </a>
     <header className="mm-top" onMouseLeave={scheduleClose}>
       <Link to="/" className="mm-top__brand" aria-label="Slavic Enlarged Wiki">
         <img className="kolovrat" src={kolovratSvg} alt="" />
@@ -272,6 +276,7 @@ export function MegaMenu({ activeUrlPath }: MegaMenuProps) {
         onClose={closeDrawer}
       />
     </header>
+    </>
   );
 }
 
@@ -378,7 +383,7 @@ function CodexPanel({
       <div className="mm-panel__inner">
         <div className="mm-panel__intro">
           <div className="mm-panel__count" title={`${panel.count} ${pluralizeArtykul(panel.count)}`}>
-            <span className="mm-panel__count-num">
+            <span className="mm-panel__count-num" aria-hidden="true">
               {String(panel.count).padStart(2, "0")}
             </span>
           </div>

@@ -93,7 +93,7 @@
 }
 :global(.cl-toc__head span) {
   font-family: var(--font-display);
-  font-size: 26px; line-height: 1;
+  font-size: var(--t-section-size); line-height: var(--t-section-line);
   color: #fff;
   text-shadow: 0 4px 30px rgba(0,0,0,0.8);
 }
@@ -121,7 +121,7 @@
 }
 :global(.cl-toc__v) {
   font-family: var(--font-display);
-  font-size: 22px; line-height: 1;
+  font-size: var(--t-section-size); line-height: var(--t-section-line);
   color: var(--gold-light);
   text-shadow: 1px 2px 0 #000;
 }
@@ -296,7 +296,7 @@
 }
 :global(.cl-entry__v) {
   font-family: var(--font-display);
-  font-size: 56px; line-height: 0.9;
+  font-size: var(--t-title-size); line-height: 0.9;
   color: var(--gold-light);
   text-shadow: 3px 4px 0 #000;
   letter-spacing: 0.01em;
@@ -354,7 +354,7 @@
 :global(.cl-entry__name) {
   margin: 0 0 6px;
   font-family: var(--font-display);
-  font-size: 44px; line-height: 0.95;
+  font-size: var(--t-title-size); line-height: var(--t-title-line);
   color: #fff;
   text-shadow: 2px 3px 0 #000;
   letter-spacing: 0.01em;
@@ -397,7 +397,7 @@
 }
 :global(.cl-group__label) {
   font-family: var(--font-display);
-  font-size: 24px; line-height: 1;
+  font-size: var(--t-section-size); line-height: var(--t-section-line);
   color: #fff;
   text-shadow: 2px 3px 0 #000;
 }
@@ -431,7 +431,7 @@
   align-items: baseline;
   padding: 6px 0;
   font-family: var(--font-body);
-  font-size: 14px; line-height: 1.55;
+  font-size: var(--t-caption-size); line-height: 1.55;
   color: rgba(255,255,255,0.82);
   transition: background 120ms;
 }
@@ -607,7 +607,7 @@
 :global(.cl-preview__title) {
   margin: 0 0 4px;
   font-family: var(--font-display);
-  font-size: 28px; line-height: 1;
+  font-size: var(--t-h2-size); line-height: var(--t-h2-line);
   color: #fff; text-shadow: 2px 3px 1px #000;
 }
 :global(.cl-preview__sub) {

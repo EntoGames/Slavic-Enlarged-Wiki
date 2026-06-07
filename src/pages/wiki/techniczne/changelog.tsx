@@ -195,7 +195,7 @@ const ChangelogPage: React.FC = () => {
     <div className="wf">
       <MegaMenu activeUrlPath={URL_PATH} />
 
-      <main className="wf">
+      <main id="main" className="wf">
         {/* HERO */}
         <section className="wf-hero" data-screen-label="Kronika Zmian — Hero">
           <div className="wf-hero__inner">

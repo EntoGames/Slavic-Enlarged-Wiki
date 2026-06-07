@@ -11,7 +11,9 @@
   z-index: 80;
   display: flex; align-items: center; gap: 24px;
   padding: 18px 48px;
-  background: linear-gradient(180deg, rgba(8,13,0,0.78) 0%, rgba(8,13,0,0.55) 100%);
+  background: linear-gradient(180deg, rgba(8,13,0,0.88) 0%, rgba(8,13,0,0.82) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(179,153,77,0.18);
 }
 
@@ -42,7 +44,7 @@
 :global(.mm-top__nav-item) {
   position: relative;
   display: inline-flex; align-items: center; gap: 7px;
-  padding: 10px 16px;
+  padding: 14px 16px;
   font-family: var(--font-body);
   font-size: 13px;
   font-weight: 600;
@@ -189,7 +191,7 @@
 }
 :global(.mm-panel__count-num) {
   font-family: var(--font-display);
-  font-size: 64px; line-height: 0.9;
+  font-size: var(--t-hero-size); line-height: 0.9;
   color: var(--gold);
   text-shadow: var(--shadow-carved);
 }
@@ -204,8 +206,8 @@
 :global(.mm-panel__intro-text h3) {
   margin: 0 0 8px;
   font-family: var(--font-display);
-  font-size: 34px;
-  line-height: 1;
+  font-size: var(--t-subtitle-size);
+  line-height: var(--t-subtitle-line);
   color: #fff;
   text-shadow: 2px 3px 0 #000;
 }
@@ -365,8 +367,8 @@
 :global(.mm-feat__title) {
   margin: 0 0 4px;
   font-family: var(--font-display);
-  font-size: 28px;
-  line-height: 1;
+  font-size: var(--t-h2-size);
+  line-height: var(--t-h2-line);
   color: #fff;
   text-shadow: 2px 3px 0 #000;
 }
@@ -499,7 +501,7 @@
 }
 :global(.mm-drawer__close) {
   display: inline-flex; align-items: center; justify-content: center;
-  width: 36px; height: 36px;
+  width: 44px; height: 44px;
   padding: 0;
   background: none;
   border: 1px solid rgba(179,153,77,0.25);

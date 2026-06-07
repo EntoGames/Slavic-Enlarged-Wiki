@@ -239,23 +239,41 @@
 
 /* ===== TOC (left, sticky) ===== */
 :global(.wf-toc) {
-  position: sticky; top: 24px;
+  position: sticky;
+  top: 88px;
+  align-self: flex-start;
+  max-height: calc(100vh - 104px);
+  overflow-y: auto;
   font-family: var(--font-body);
-  background: transparent;
+  padding-bottom: var(--space-10);
+
+  /* thin scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(197, 160, 72, 0.2) transparent;
+}
+:global(.wf-toc::-webkit-scrollbar) {
+  width: 4px;
+}
+:global(.wf-toc::-webkit-scrollbar-thumb) {
+  background: rgba(197, 160, 72, 0.2);
+  border-radius: 2px;
 }
 :global(.wf-toc__head) {
-  display: flex; align-items: center; gap: 10px;
+  display: flex; align-items: center; gap: 6px;
   margin-bottom: 14px;
+  padding-left: var(--space-3);
 }
 :global(.wf-toc__head img) {
-  width: 18px; height: 20px;
+  width: 14px; height: 16px;
   filter: invert(85%) sepia(33%) saturate(572%) hue-rotate(8deg) brightness(92%);
+  opacity: 0.5;
 }
 :global(.wf-toc__head span) {
-  font-family: var(--font-display);
-  font-size: var(--t-section-size); line-height: var(--t-section-line);
-  color: #fff;
-  text-shadow: 0 4px 30px rgba(0,0,0,0.8);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
 }
 :global(.wf-toc ol) {
   list-style: none;
@@ -268,22 +286,26 @@
 }
 :global(.wf-toc a) {
   display: block;
-  padding: 8px 8px 8px 36px;
-  font-size: 13px; line-height: 1.35;
-  color: rgba(255,255,255,0.72);
+  padding: 5px var(--space-3) 5px 34px;
+  font-size: 13px; line-height: 1.4;
+  font-weight: 500;
+  color: var(--fg-on-dark-soft);
+  text-decoration: none;
   border-left: 2px solid transparent;
-  transition: color 120ms, border-color 120ms, background 120ms;
+  transition: color 150ms, border-color 150ms, background 150ms;
 }
 :global(.wf-toc a::before) {
-  content: counter(tocnum, decimal-leading-zero) ".";
-  position: absolute; left: 8px; top: 8px;
+  content: counter(tocnum, upper-roman) ".";
+  position: absolute; left: 4px; top: 5px;
+  width: 24px;
+  text-align: right;
   font-family: var(--font-display);
-  font-size: 16px; line-height: 1;
-  color: var(--gold);
+  font-size: 14px; line-height: 1;
+  color: var(--gold-deep);
 }
 :global(.wf-toc a:hover) {
-  color: #fff;
-  background: rgba(179,153,77,0.08);
+  color: var(--gold-light);
+  background: rgba(197, 160, 72, 0.04);
 }
 :global(.wf-toc a:focus-visible) {
   outline: none;
@@ -291,13 +313,18 @@
   border-radius: 2px;
 }
 :global(.wf-toc a.is-active) {
-  color: var(--gold-light);
+  color: var(--gold);
   border-left-color: var(--gold);
-  background: rgba(179,153,77,0.12);
+  background: rgba(197, 160, 72, 0.06);
+  font-weight: 600;
+}
+:global(.wf-toc a.is-active::before) {
+  color: var(--gold);
 }
 :global(.wf-toc__meta) {
-  margin-top: 22px;
-  padding-top: 18px;
+  margin-top: 18px;
+  padding: 14px 0 0 var(--space-3);
+  border-top: 1px solid rgba(179, 153, 77, 0.08);
   font-size: 11px;
   color: rgba(255,255,255,0.4);
   line-height: 1.6;
@@ -310,6 +337,9 @@
   letter-spacing: 0.12em;
   font-size: 10px;
   margin-top: 8px;
+}
+:global(.wf-toc__meta dt:first-child) {
+  margin-top: 0;
 }
 :global(.wf-toc__meta dd) {
   margin: 2px 0 0;
@@ -359,7 +389,7 @@
 /* Sekcja — akordeon (osobny box na każdy element) */
 :global(.wf-section) {
   margin: 20px 0 0;
-  scroll-margin-top: 32px;
+  scroll-margin-top: 88px;
   background: rgba(8,13,4,0.45);
   border: 1px solid rgba(179,153,77,0.15);
   border-radius: 6px;
@@ -1061,12 +1091,14 @@
   :global(.wf-toc) {
     position: static;
     grid-column: 1;
-    background: rgba(8,13,4,0.55);
-    border: 1px solid rgba(179,153,77,0.22);
+    max-height: none;
+    overflow-y: visible;
+    padding: 16px 0;
+    background: rgba(8, 13, 4, 0.55);
+    border: 1px solid rgba(179, 153, 77, 0.12);
     border-radius: 6px;
-    padding: 16px 18px;
   }
-  :global(.wf-toc__head) { margin-bottom: 10px; padding-bottom: 10px; }
+  :global(.wf-toc__head) { margin: 0 18px 10px; padding-bottom: 10px; }
   :global(.wf-toc ol) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

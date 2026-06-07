@@ -73,66 +73,70 @@
                   "Segoe UI", Roboto, sans-serif;
   --font-mono:    ui-monospace, "SF Mono", Menlo, monospace;
 
-  /* ===== TYPOGRAFIA — role semantyczne ===== */
+  /* ===== TYPOGRAFIA — role semantyczne =====
+     Skala monotonowa: Hero > Title > Subtitle > H2 > Section > Tag
+     Ratio ~1.25 (major third) od bazy 16px.
+     Rozpiętość: 12px–64px (×5.3). */
+
   /* Hero — wielki ozdobny tytuł ("Faiths and Cultures") */
-  --t-hero-size: 115px;
-  --t-hero-line: 86px;
+  --t-hero-size: 64px;
+  --t-hero-line: 1.05;
   --t-hero-weight: 400;
   --t-hero-family: var(--font-display);
 
   /* Title — sekcje / promo */
-  --t-title-size: 55px;
-  --t-title-line: 46px;
+  --t-title-size: 48px;
+  --t-title-line: 1.1;
   --t-title-weight: 400;
   --t-title-family: var(--font-display);
 
   /* Subtitle — nagłówek wstęgi */
-  --t-subtitle-size: 32px;
-  --t-subtitle-line: 100%;
+  --t-subtitle-size: 36px;
+  --t-subtitle-line: 1.15;
   --t-subtitle-weight: 400;
   --t-subtitle-family: var(--font-display);
 
   /* H2 — nazwa kultury / frakcji */
-  --t-h2-size: 60px;
-  --t-h2-line: 1.0;
+  --t-h2-size: 28px;
+  --t-h2-line: 1.2;
   --t-h2-family: var(--font-display);
 
   /* Section heading — "Traditions", "Shortly about" */
-  --t-section-size: 25px;
-  --t-section-line: 1.0;
+  --t-section-size: 24px;
+  --t-section-line: 1.2;
   --t-section-family: var(--font-display);
 
   /* Tag — "Work in Progress" */
-  --t-tag-size: 25px;
-  --t-tag-line: 46px;
+  --t-tag-size: 20px;
+  --t-tag-line: 1.3;
   --t-tag-family: var(--font-display);
   --t-tag-color: var(--gold);
 
   /* Body */
   --t-body-size: 16px;
-  --t-body-line: 25px;
+  --t-body-line: 1.56;
   --t-body-weight: 500;
   --t-body-family: var(--font-body);
 
   /* Body-large */
   --t-body-lg-size: 20px;
-  --t-body-lg-line: 100%;
+  --t-body-lg-line: 1.5;
   --t-body-lg-family: var(--font-body);
 
   /* Caption */
-  --t-caption-size: 15px;
-  --t-caption-line: 1.2;
+  --t-caption-size: 14px;
+  --t-caption-line: 1.3;
   --t-caption-weight: 700;
   --t-caption-family: var(--font-body);
 
   /* Menu item */
   --t-menu-size: 20px;
-  --t-menu-line: 100%;
+  --t-menu-line: 1.4;
   --t-menu-family: var(--font-body);
 
   /* Footnote */
   --t-foot-size: 12px;
-  --t-foot-line: 100%;
+  --t-foot-line: 1.4;
   --t-foot-weight: 500;
   --t-foot-family: var(--font-body);
 
@@ -212,6 +216,29 @@ html, body {
 * { box-sizing: border-box; }
 a { color: inherit; text-decoration: none; }
 
+/* ===== Skip-link — pierwszy fokusowany element na stronie ===== */
+.wf-skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 9999;
+  padding: 12px 24px;
+  font-family: var(--font-body);
+  font-size: var(--t-caption-size);
+  font-weight: 700;
+  color: var(--bog-deep);
+  background: var(--gold);
+  border-radius: var(--radius-soft);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: top 150ms ease;
+}
+.wf-skip-link:focus {
+  top: 12px;
+  outline: 2px solid var(--gold-bright);
+  outline-offset: 2px;
+}
+
 /* ===== Klasy pomocnicze, gdyby były potrzebne poza widokiem wiki ===== */
 .se-display {
   font-family: var(--font-display);
@@ -230,3 +257,43 @@ a { color: inherit; text-decoration: none; }
   color: var(--gold);
   text-shadow: var(--shadow-carved);
 }
+
+/* =============================================================
+   ZASADY DOSTĘPNOŚCI (WCAG 2.1 AA) — design system
+   ─────────────────────────────────────────────────────────────
+   Minimum kontrastu:
+     • Tekst normalny (< 18px lub < 14px bold): ≥ 4.5:1
+     • Tekst duży (≥ 18px lub ≥ 14px bold):     ≥ 3:1
+     • Elementy UI (border, ikona):              ≥ 3:1
+
+   Zweryfikowane pary (tło: bog-deep #1C2214):
+     ✅  #fff          na bog-deep  = 16.30:1
+     ✅  rgba(…, 0.82) na bog-deep  = 11.29:1  (akapit)
+     ✅  rgba(…, 0.6)  na bog-deep  =  6.69:1  (tekst muted)
+     ✅  #C5A048       na bog-deep  =  6.59:1  (złoto)
+     ✅  rgba(…, 0.5)  na bog-deep  ≈  4.95:1  (stopka min.)
+     ❌  rgba(…, 0.45) na bog-deep  =  4.35:1  → NIE UŻYWAĆ
+
+   Touch targets:
+     • Minimalny hit-area: 44×44 CSS px (WCAG 2.5.5).
+     • Jeśli element jest mniejszy wizualnie, powiększ
+       padding lub dodaj ::after pseudo-element.
+
+   Fokus:
+     • Każdy interaktywny element MUSI mieć :focus-visible.
+     • Styl: `box-shadow: 0 0 0 2px var(--gold)`.
+     • Nigdy `outline: none` bez zamiennika.
+
+   Struktura:
+     • Każda strona MUSI mieć <main id="main">.
+     • Każda strona MUSI mieć skip-link (.wf-skip-link).
+     • Nagłówki: monotonowa hierarchia H1 → H2 → H3.
+     • Landmark roles: <header>, <nav>, <main>, <aside>, <footer>.
+
+   Ruch:
+     • Każda animacja MUSI mieć @media (prefers-reduced-motion: reduce).
+
+   Dekoracje:
+     • Dekoracyjne obrazki: alt=""
+     • Dekoracyjne numery/ikony: aria-hidden="true"
+   ============================================================= */

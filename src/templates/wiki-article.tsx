@@ -5,6 +5,7 @@ import { graphql, Link, type HeadFC, type PageProps } from "gatsby";
 import kolovratSvg from "../assets/img/kolovrat.svg";
 import wordmarkSvg from "../assets/img/wordmark.svg";
 import iconTraditionsSvg from "../assets/img/icon-traditions.svg";
+import godWelesSvg from "../assets/img/god-weles.svg";
 
 import { WikiLinkProvider } from "./components/WikiLink";
 import { MegaMenu } from "./components/MegaMenu";
@@ -449,7 +450,7 @@ function TOC({
       {sections.length > 0 && (
         <>
           <div className="wf-toc__head">
-            <img src={iconTraditionsSvg} alt="" />
+            <img src={godWelesSvg} alt="" />
             <span>Spis Treści</span>
           </div>
           <ol>
