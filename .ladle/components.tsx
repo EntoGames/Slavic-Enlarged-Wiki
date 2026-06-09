@@ -1,4 +1,5 @@
 import type { GlobalProvider } from "@ladle/react";
+import "./ladle-overrides.css";
 import "../src/styles/tokens.css";
 import "../src/styles/fonts.css";
 import "../src/templates/wiki-article.module.css";

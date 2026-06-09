@@ -1,0 +1,125 @@
+/* =============================================================
+   Slavic Enlarged — Ladle brand overrides
+   Ciemny sidebar, złote akcenty, fonty z design systemu.
+   ============================================================= */
+
+/* ===== Layout: nawigacja po lewej ===== */
+.ladle-wrapper {
+  flex-direction: row-reverse !important;
+}
+
+/* ===== Tło globalne ===== */
+.ladle-background {
+  background: var(--bog-deep, #1c2214) !important;
+}
+
+/* ===== Sidebar ===== */
+.ladle-aside {
+  background: #151a0e !important;
+  color: rgba(255, 255, 255, 0.82) !important;
+  font-family: var(--font-body, "Lato", sans-serif) !important;
+  border-right: 1px solid rgba(179, 153, 77, 0.18) !important;
+  border-left: none !important;
+}
+
+.ladle-aside input[type="text"],
+.ladle-aside input[placeholder="Search"] {
+  background: rgba(255, 255, 255, 0.06) !important;
+  color: rgba(255, 255, 255, 0.82) !important;
+  border: 1px solid rgba(179, 153, 77, 0.25) !important;
+  border-radius: 6px !important;
+  font-family: var(--font-body, "Lato", sans-serif) !important;
+  font-size: 13px !important;
+  padding: 6px 10px !important;
+}
+.ladle-aside input::placeholder {
+  color: rgba(255, 255, 255, 0.35) !important;
+}
+.ladle-aside input:focus {
+  border-color: var(--gold, #c5a048) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 2px rgba(197, 160, 72, 0.2) !important;
+}
+
+/* Tree: grupy komponentów */
+[role="treeitem"] > div {
+  color: var(--gold, #c5a048) !important;
+  font-family: var(--font-display, "Paradox King Script", serif) !important;
+  font-size: 16px !important;
+  letter-spacing: 0.02em !important;
+}
+
+/* Tree: story items */
+[role="treeitem"] [role="treeitem"] {
+  color: rgba(255, 255, 255, 0.65) !important;
+  font-family: var(--font-body, "Lato", sans-serif) !important;
+  font-size: 13px !important;
+}
+[role="treeitem"] [role="treeitem"]:hover {
+  color: rgba(255, 255, 255, 0.9) !important;
+  background: rgba(197, 160, 72, 0.08) !important;
+}
+
+/* Aktywny story */
+[role="treeitem"] [role="treeitem"] a[aria-current="page"],
+[role="treeitem"] [role="treeitem"][aria-selected="true"],
+[role="treeitem"] [role="treeitem"] > div:has(+ [aria-selected="true"]) {
+  color: #fff !important;
+  font-weight: 700 !important;
+}
+
+/* Strzałki expand/collapse */
+[role="treeitem"] > div svg {
+  fill: var(--gold, #c5a048) !important;
+  opacity: 0.6 !important;
+}
+
+/* ===== Resize handle ===== */
+.ladle-resize-handle {
+  background: rgba(179, 153, 77, 0.18) !important;
+  width: 1px !important;
+}
+.ladle-resize-handle:hover {
+  background: var(--gold, #c5a048) !important;
+  width: 2px !important;
+}
+
+/* ===== Addons toolbar (dół) ===== */
+.ladle-addons {
+  order: -1 !important;
+  background: #151a0e !important;
+  border-top: 1px solid rgba(179, 153, 77, 0.18) !important;
+}
+.ladle-addons button {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+.ladle-addons button:hover {
+  color: var(--gold, #c5a048) !important;
+}
+.ladle-addons button svg {
+  fill: currentColor !important;
+}
+.ladle-addons label {
+  color: rgba(255, 255, 255, 0.4) !important;
+  font-size: 10px !important;
+}
+
+/* ===== Main canvas ===== */
+.ladle-main {
+  background: var(--bog-deep, #1c2214) !important;
+}
+
+/* ===== Scrollbar w sidebarze ===== */
+.ladle-aside::-webkit-scrollbar {
+  width: 4px;
+}
+.ladle-aside::-webkit-scrollbar-track {
+  background: transparent;
+}
+.ladle-aside::-webkit-scrollbar-thumb {
+  background: rgba(179, 153, 77, 0.3);
+  border-radius: 2px;
+}
+.ladle-aside::-webkit-scrollbar-thumb:hover {
+  background: rgba(197, 160, 72, 0.5);
+}
