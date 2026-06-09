@@ -6,6 +6,7 @@
 /* ===== Layout: nawigacja po lewej ===== */
 .ladle-wrapper {
   flex-direction: row-reverse !important;
+  width: 100vw !important;
 }
 
 /* ===== Tło globalne ===== */
@@ -41,21 +42,46 @@
   box-shadow: 0 0 0 2px rgba(197, 160, 72, 0.2) !important;
 }
 
-/* Tree: grupy komponentów */
-[role="treeitem"] > div {
-  color: var(--gold, #c5a048) !important;
-  font-family: var(--font-display, "Paradox King Script", serif) !important;
-  font-size: 16px !important;
-  letter-spacing: 0.02em !important;
+/* Tree: base reset */
+[role="tree"],
+[role="treeitem"],
+[role="treeitem"] * {
+  font-family: "Lato", system-ui, sans-serif !important;
+}
+[role="treeitem"] {
+  margin: 2px 4px !important;
+  font-size: 12px !important;
+  line-height: 1.5 !important;
 }
 
-/* Tree: story items */
-[role="treeitem"] [role="treeitem"] {
-  color: rgba(255, 255, 255, 0.65) !important;
-  font-family: var(--font-body, "Lato", sans-serif) !important;
-  font-size: 13px !important;
+/* Tree: grupy komponentów (top-level) */
+[role="tree"] > [role="treeitem"] > div,
+[role="tree"] > [role="treeitem"] > span {
+  color: var(--gold, #c5a048) !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  padding: 4px 0 2px !important;
 }
-[role="treeitem"] [role="treeitem"]:hover {
+
+/* Tree: sub-group labels (2nd level — mod names, categories) */
+[role="tree"] > [role="treeitem"] [role="treeitem"] > div,
+[role="tree"] > [role="treeitem"] [role="treeitem"] > span {
+  text-transform: capitalize !important;
+}
+
+/* Tree: story items (leaf nodes) */
+[role="treeitem"] [role="treeitem"],
+[role="treeitem"] [role="treeitem"] a {
+  color: rgba(255, 255, 255, 0.65) !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+}
+[role="treeitem"] [role="treeitem"]:hover,
+[role="treeitem"] [role="treeitem"]:hover a {
   color: rgba(255, 255, 255, 0.9) !important;
   background: rgba(197, 160, 72, 0.08) !important;
 }
@@ -63,7 +89,7 @@
 /* Aktywny story */
 [role="treeitem"] [role="treeitem"] a[aria-current="page"],
 [role="treeitem"] [role="treeitem"][aria-selected="true"],
-[role="treeitem"] [role="treeitem"] > div:has(+ [aria-selected="true"]) {
+[role="treeitem"] [role="treeitem"][aria-selected="true"] a {
   color: #fff !important;
   font-weight: 700 !important;
 }
@@ -87,21 +113,48 @@
 /* ===== Addons toolbar (dół) ===== */
 .ladle-addons {
   order: -1 !important;
-  background: #151a0e !important;
-  border-top: 1px solid rgba(179, 153, 77, 0.18) !important;
+  background: transparent !important;
+  border: none !important;
+}
+.ladle-addons li {
+  background: rgba(21, 26, 14, 0.85) !important;
+  border: 1px solid rgba(179, 153, 77, 0.15) !important;
+  border-radius: 6px !important;
+  padding: 4px 6px !important;
+  transition: background 0.15s ease, border-color 0.15s ease !important;
+}
+.ladle-addons li:hover {
+  background: rgba(179, 153, 77, 0.12) !important;
+  border-color: rgba(179, 153, 77, 0.35) !important;
 }
 .ladle-addons button {
-  color: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(255, 255, 255, 0.75) !important;
+  transition: color 0.15s ease !important;
 }
 .ladle-addons button:hover {
   color: var(--gold, #c5a048) !important;
 }
 .ladle-addons button svg {
-  fill: currentColor !important;
+  fill: none !important;
+  stroke: currentColor !important;
+}
+.ladle-addons button svg path[stroke="none"] {
+  fill: none !important;
 }
 .ladle-addons label {
-  color: rgba(255, 255, 255, 0.4) !important;
-  font-size: 10px !important;
+  color: rgba(255, 255, 255, 0.45) !important;
+  font-size: 11px !important;
+}
+.ladle-addon-tooltip {
+  background: rgba(21, 26, 14, 0.95) !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+  border: 1px solid rgba(179, 153, 77, 0.2) !important;
+}
+
+/* Ukryj przycisk zmiany motywu — zawsze dark */
+.ladle-addons li:has(button[title*="theme"]),
+.ladle-addons li:has(button[aria-label*="theme"]) {
+  display: none !important;
 }
 
 /* ===== Main canvas ===== */

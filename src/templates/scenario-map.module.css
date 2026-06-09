@@ -12,8 +12,8 @@
 /* ===== Viewport ===== */
 :global(.sm__viewport) {
   position: relative;
-  border-top: 1px solid rgba(179, 153, 77, 0.25);
-  border-bottom: 1px solid rgba(179, 153, 77, 0.25);
+  border-top: 1px solid rgba(var(--gold-border-rgb), 0.25);
+  border-bottom: 1px solid rgba(var(--gold-border-rgb), 0.25);
   overflow: hidden;
 }
 
@@ -168,32 +168,43 @@
   }
 }
 
-/* Tooltip on hover */
+/* Tooltip on hover (Ark UI Tooltip — Portal + Positioner) */
 :global(.sm__marker-tooltip) {
-  position: absolute;
-  bottom: calc(100% + 8px);
-  left: 50%;
-  transform: translateX(-50%);
   white-space: nowrap;
   font-family: var(--font-display);
   font-size: 16px;
-  color: #fff;
+  color: var(--fg-on-dark);
   text-shadow: 2px 3px 0 #000;
   pointer-events: none;
+}
+:global(.sm__marker-tooltip[data-state="open"]) {
   animation: sm-tooltip-in 150ms ease forwards;
+}
+:global(.sm__marker-tooltip[data-state="closed"]) {
+  animation: sm-tooltip-out 100ms ease forwards;
 }
 @keyframes sm-tooltip-in {
   from {
     opacity: 0;
-    transform: translateX(-50%) translateY(4px);
+    transform: translateY(4px);
   }
   to {
     opacity: 1;
-    transform: translateX(-50%) translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes sm-tooltip-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(4px);
   }
 }
 
-/* ===== Modal — karta postaci ===== */
+/* ===== Modal — karta postaci (Ark UI Dialog) ===== */
 :global(.sm__backdrop) {
   position: fixed;
   inset: 0;
@@ -202,11 +213,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+:global(.sm__backdrop[data-state="open"]) {
   animation: sm-backdrop-in 200ms ease forwards;
+}
+:global(.sm__backdrop[data-state="closed"]) {
+  animation: sm-backdrop-out 150ms ease forwards;
 }
 @keyframes sm-backdrop-in {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+@keyframes sm-backdrop-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
 }
 
 :global(.sm__modal) {
@@ -218,12 +238,18 @@
   padding: 32px 28px;
   background:
     linear-gradient(180deg, rgba(11, 16, 4, 0.97) 0%, rgba(26, 22, 14, 0.97) 100%);
-  border: 1px solid rgba(179, 153, 77, 0.3);
+  border: 1px solid rgba(var(--gold-border-rgb), 0.3);
   border-radius: 8px;
   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.6),
-    0 0 0 1px rgba(179, 153, 77, 0.1);
+    0 0 0 1px rgba(var(--gold-border-rgb), 0.1);
+  outline: none;
+}
+:global(.sm__modal[data-state="open"]) {
   animation: sm-modal-in 300ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+:global(.sm__modal[data-state="closed"]) {
+  animation: sm-modal-out 200ms ease forwards;
 }
 @keyframes sm-modal-in {
   from {
@@ -235,6 +261,16 @@
     transform: translateY(0) scale(1);
   }
 }
+@keyframes sm-modal-out {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(16px) scale(0.97);
+  }
+}
 
 :global(.sm__modal-close) {
   position: absolute;
@@ -242,7 +278,7 @@
   right: 8px;
   width: 44px;
   height: 44px;
-  border: 1px solid rgba(179, 153, 77, 0.3);
+  border: 1px solid rgba(var(--gold-border-rgb), 0.3);
   border-radius: 4px;
   background: rgba(8, 13, 0, 0.5);
   color: rgba(255, 255, 255, 0.6);
@@ -278,7 +314,7 @@
   font-family: var(--font-display);
   font-size: var(--t-subtitle-size);
   line-height: var(--t-subtitle-line);
-  color: #fff;
+  color: var(--fg-on-dark);
   text-shadow: 2px 3px 0 #000;
 }
 
@@ -296,8 +332,8 @@
   gap: 6px 14px;
   margin: 0 0 22px;
   padding: 16px 0;
-  border-top: 1px solid rgba(179, 153, 77, 0.2);
-  border-bottom: 1px solid rgba(179, 153, 77, 0.2);
+  border-top: 1px solid rgba(var(--gold-border-rgb), 0.2);
+  border-bottom: 1px solid rgba(var(--gold-border-rgb), 0.2);
 }
 :global(.sm__modal-stats dt) {
   font-family: var(--font-body);
@@ -350,7 +386,7 @@
   align-items: center;
   gap: 6px;
   padding: 6px 12px;
-  border: 1px solid rgba(179, 153, 77, 0.15);
+  border: 1px solid rgba(var(--gold-border-rgb), 0.15);
   border-radius: 4px;
   background: rgba(8, 13, 0, 0.4);
   cursor: pointer;
@@ -360,16 +396,16 @@
   color: rgba(255, 255, 255, 0.7);
 }
 :global(.sm__legend-item:hover) {
-  background: rgba(179, 153, 77, 0.08);
-  border-color: rgba(179, 153, 77, 0.3);
-  color: #fff;
+  background: rgba(var(--gold-border-rgb), 0.08);
+  border-color: rgba(var(--gold-border-rgb), 0.3);
+  color: var(--fg-on-dark);
 }
 :global(.sm__legend-item:focus-visible) {
   outline: none;
   box-shadow: 0 0 0 2px var(--gold);
 }
 :global(.sm__legend-item.is-selected) {
-  background: rgba(179, 153, 77, 0.15);
+  background: rgba(var(--gold-border-rgb), 0.15);
   border-color: var(--gold);
   color: var(--gold-light);
 }

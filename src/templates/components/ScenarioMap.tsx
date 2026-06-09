@@ -1,5 +1,8 @@
 import * as React from "react";
-import { useState, useCallback, useEffect, useRef, type KeyboardEvent as ReactKeyboardEvent } from "react";
+import { useState, useCallback, useRef } from "react";
+import { Dialog } from "@ark-ui/react/dialog";
+import { Portal } from "@ark-ui/react/portal";
+import { Tooltip } from "@ark-ui/react/tooltip";
 import "../scenario-map.module.css";
 
 /* =============================================================
@@ -135,53 +138,12 @@ export function ScenarioMap() {
   const [selected, setSelected] = useState<string | null>(null);
   const [hovered, setHovered] = useState<string | null>(null);
   const mapRef = useRef<HTMLDivElement>(null);
-  const modalRef = useRef<HTMLDivElement>(null);
 
   const active = CHARACTERS.find((c) => c.id === selected) ?? null;
 
   const handleSelect = useCallback((id: string) => {
     setSelected((prev) => (prev === id ? null : id));
   }, []);
-
-  const handleClose = useCallback(() => setSelected(null), []);
-
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setSelected(null);
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, []);
-
-  useEffect(() => {
-    if (!active || !modalRef.current) return;
-    const modal = modalRef.current;
-    const prev = document.activeElement as HTMLElement | null;
-    const closeBtn = modal.querySelector<HTMLElement>(".sm__modal-close");
-    closeBtn?.focus();
-
-    const trapFocus = (e: KeyboardEvent) => {
-      if (e.key !== "Tab") return;
-      const focusable = modal.querySelectorAll<HTMLElement>(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-      );
-      if (focusable.length === 0) return;
-      const first = focusable[0];
-      const last = focusable[focusable.length - 1];
-      if (e.shiftKey && document.activeElement === first) {
-        e.preventDefault();
-        last.focus();
-      } else if (!e.shiftKey && document.activeElement === last) {
-        e.preventDefault();
-        first.focus();
-      }
-    };
-    modal.addEventListener("keydown", trapFocus);
-    return () => {
-      modal.removeEventListener("keydown", trapFocus);
-      prev?.focus();
-    };
-  }, [active]);
 
   return (
     <div className="sm" ref={mapRef}>
@@ -223,85 +185,111 @@ export function ScenarioMap() {
           )}
 
           {CHARACTERS.map((c) => (
-            <button
+            <Tooltip.Root
               key={c.id}
-              className={
-                "sm__marker" +
-                (selected === c.id ? " is-selected" : "") +
-                (hovered === c.id ? " is-hovered" : "")
-              }
-              style={{
-                left: `${c.pos[0]}%`,
-                top: `${c.pos[1]}%`,
-                "--marker-accent": c.accent,
-              } as React.CSSProperties}
-              onClick={() => handleSelect(c.id)}
-              onMouseEnter={() => setHovered(c.id)}
-              onMouseLeave={() => setHovered(null)}
-              aria-label={`${c.name} — ${c.title}`}
-              aria-pressed={selected === c.id}
+              open={hovered === c.id && selected !== c.id}
+              positioning={{ placement: "top", gutter: 8 }}
+              lazyMount
+              unmountOnExit
             >
-              <span className="sm__marker-ring" />
-              <span className="sm__marker-dot" />
-              {(hovered === c.id && selected !== c.id) && (
-                <span className="sm__marker-tooltip">{c.name}</span>
-              )}
-            </button>
+              <Tooltip.Trigger asChild>
+                <button
+                  className={
+                    "sm__marker" +
+                    (selected === c.id ? " is-selected" : "") +
+                    (hovered === c.id ? " is-hovered" : "")
+                  }
+                  style={{
+                    left: `${c.pos[0]}%`,
+                    top: `${c.pos[1]}%`,
+                    "--marker-accent": c.accent,
+                  } as React.CSSProperties}
+                  onClick={() => handleSelect(c.id)}
+                  onMouseEnter={() => setHovered(c.id)}
+                  onMouseLeave={() => setHovered(null)}
+                  aria-label={`${c.name} — ${c.title}`}
+                  aria-pressed={selected === c.id}
+                >
+                  <span className="sm__marker-ring" />
+                  <span className="sm__marker-dot" />
+                </button>
+              </Tooltip.Trigger>
+              <Portal>
+                <Tooltip.Positioner>
+                  <Tooltip.Content className="sm__marker-tooltip">
+                    {c.name}
+                  </Tooltip.Content>
+                </Tooltip.Positioner>
+              </Portal>
+            </Tooltip.Root>
           ))}
         </div>
       </div>
 
-      {/* Modal karty postaci */}
-      {active && (
-        <div className="sm__backdrop" onClick={handleClose}>
-          <div
-            ref={modalRef}
-            className="sm__modal"
-            role="dialog"
-            aria-modal="true"
-            aria-label={`${active.name} — ${active.title}`}
-            onClick={(e) => e.stopPropagation()}
-            style={{ "--modal-accent": active.accent } as React.CSSProperties}
-          >
-            <button
-              className="sm__modal-close"
-              onClick={handleClose}
-              aria-label="Zamknij"
+      {/* Modal karty postaci — Ark UI Dialog */}
+      <Dialog.Root
+        open={!!active}
+        onOpenChange={({ open: isOpen }) => { if (!isOpen) setSelected(null); }}
+        lazyMount
+        unmountOnExit
+        aria-label={active ? `${active.name} — ${active.title}` : undefined}
+      >
+        <Portal>
+          <Dialog.Backdrop className="sm__backdrop" />
+          <Dialog.Positioner className="sm__backdrop">
+            <Dialog.Content
+              className="sm__modal"
+              style={active ? { "--modal-accent": active.accent } as React.CSSProperties : undefined}
             >
-              ×
-            </button>
-            <div className="sm__modal-style">{active.playStyle}</div>
-            <h3 className="sm__modal-name">{active.name}</h3>
-            <div className="sm__modal-title">{active.title}</div>
-
-            <dl className="sm__modal-stats">
-              <dt>Kultura</dt>
-              <dd>{active.culture}</dd>
-              <dt>Państwo</dt>
-              <dd>{active.state}</dd>
-              <dt>Wiara</dt>
-              <dd>{active.faith}</dd>
-              {active.holySite !== "—" && (
+              {active && (
                 <>
-                  <dt>Miejsce święte</dt>
-                  <dd>{active.holySite}</dd>
+                  <Dialog.CloseTrigger asChild>
+                    <button
+                      className="sm__modal-close"
+                      aria-label="Zamknij"
+                    >
+                      ×
+                    </button>
+                  </Dialog.CloseTrigger>
+                  <div className="sm__modal-style">{active.playStyle}</div>
+                  <Dialog.Title asChild>
+                    <h3 className="sm__modal-name">{active.name}</h3>
+                  </Dialog.Title>
+                  <div className="sm__modal-title">{active.title}</div>
+
+                  <dl className="sm__modal-stats">
+                    <dt>Kultura</dt>
+                    <dd>{active.culture}</dd>
+                    <dt>Państwo</dt>
+                    <dd>{active.state}</dd>
+                    <dt>Wiara</dt>
+                    <dd>{active.faith}</dd>
+                    {active.holySite !== "—" && (
+                      <>
+                        <dt>Miejsce święte</dt>
+                        <dd>{active.holySite}</dd>
+                      </>
+                    )}
+                  </dl>
+
+                  <Dialog.Description asChild>
+                    <p className="sm__modal-desc">{active.description}</p>
+                  </Dialog.Description>
+
+                  <div className="sm__modal-hint">
+                    <span className="sm__modal-hint-icon">◆</span>
+                    {active.holySitePos
+                      ? "Linia na mapie wskazuje miejsce święte"
+                      : active.id === "dyre"
+                      ? "Miejsce święte w posiadaniu — brak linii"
+                      : "Brak pogańskiego miejsca świętego"}
+                  </div>
                 </>
               )}
-            </dl>
-
-            <p className="sm__modal-desc">{active.description}</p>
-
-            <div className="sm__modal-hint">
-              <span className="sm__modal-hint-icon">◆</span>
-              {active.holySitePos
-                ? "Linia na mapie wskazuje miejsce święte"
-                : active.id === "dyre"
-                ? "Miejsce święte w posiadaniu — brak linii"
-                : "Brak pogańskiego miejsca świętego"}
-            </div>
-          </div>
-        </div>
-      )}
+            </Dialog.Content>
+          </Dialog.Positioner>
+        </Portal>
+      </Dialog.Root>
 
       <div className="sm__legend">
         {CHARACTERS.map((c) => (

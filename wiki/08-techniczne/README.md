@@ -1,5 +1,8 @@
 # Informacje techniczne
 
+## [Instalacja i kolejność ładowania](instalacja.md)
+Jak zainstalować Slavic Enlarged, ustawić kolejność ładowania modów i rozwiązać typowe problemy.
+
 ## [Kompatybilność z innymi modami](kompatybilnosc.md)
 Które mody współpracują z Slavic Enlarged, a które mogą powodować konflikty. Informacje o kolejności ładowania i znanych interakcjach.
 

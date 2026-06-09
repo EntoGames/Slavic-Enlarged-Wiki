@@ -1,6 +1,6 @@
 import * as React from "react";
 import type { Story } from "@ladle/react";
-import { WikiLinkProvider, WikiLink } from "../templates/components/WikiLink";
+import { WikiLinkProvider, WikiLink } from "../../templates/components/WikiLink";
 
 const WithPopover: Story = () => (
   <WikiLinkProvider>
@@ -26,4 +26,4 @@ const WithPopover: Story = () => (
 WithPopover.storyName = "Hover popover";
 
 export { WithPopover };
-export default { title: "WikiLink" };
+export default { title: "Design System / Komponenty / WikiLink" };

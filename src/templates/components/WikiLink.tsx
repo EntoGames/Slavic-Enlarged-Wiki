@@ -1,73 +1,24 @@
 import * as React from "react";
-import { useCallback, useContext, useMemo, useRef, useState } from "react";
+import { useRef } from "react";
 import { Link } from "gatsby";
+import { HoverCard } from "@ark-ui/react/hover-card";
+import { Portal } from "@ark-ui/react/portal";
 import { useWikiIndex, type WikiEntry } from "../../data/use-wiki-index";
 
 /* =============================================================
    WikiLink — link wewnątrz treści artykułu z hover-popoverem.
    ─────────────────────────────────────────────────────────────
-   Sygnatura podstawowa: <WikiLink to="/wiki/wiara/przeglad-wiary">
-   Hover wyświetla popover z danymi z `useWikiIndex()` (auto-generowany
-   z plików markdown — autor nie musi NIC dodawać do frontmattera).
-   Jeśli `to` nie odpowiada żadnemu artykułowi, renderujemy plain link
-   (np. linki do folderów-indeksów, które jeszcze nie istnieją).
+   Sygnatura: <WikiLink to="/wiki/wiara/przeglad-wiary">
+   Hover wyświetla HoverCard (Ark UI) z danymi z `useWikiIndex()`.
+   Jeśli `to` nie odpowiada żadnemu artykułowi, renderujemy plain link.
    ============================================================= */
 
-interface PreviewState {
-  entry: WikiEntry | null;
-  x: number;
-  y: number;
-  open: boolean;
-}
-
-interface PreviewCtx {
-  open: (entry: WikiEntry, rect: DOMRect) => void;
-  scheduleClose: () => void;
-  cancelClose: () => void;
-}
-
-const PreviewContext = React.createContext<PreviewCtx | null>(null);
-
+/**
+ * WikiLinkProvider — backward-compat wrapper, nie wymaga już contextu.
+ * Ark UI HoverCard zarządza stanem per-link (open/close, positioning).
+ */
 export function WikiLinkProvider({ children }: { children: React.ReactNode }) {
-  const [state, setState] = useState<PreviewState>({
-    entry: null, x: 0, y: 0, open: false,
-  });
-  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  const open = useCallback((entry: WikiEntry, rect: DOMRect) => {
-    if (closeTimer.current) {
-      clearTimeout(closeTimer.current);
-      closeTimer.current = null;
-    }
-    setState({ entry, x: rect.left, y: rect.bottom + 8, open: true });
-  }, []);
-
-  const scheduleClose = useCallback(() => {
-    if (closeTimer.current) clearTimeout(closeTimer.current);
-    closeTimer.current = setTimeout(() => {
-      setState((s) => ({ ...s, open: false }));
-      setTimeout(() => setState((s) => ({ ...s, entry: null })), 200);
-    }, 220);
-  }, []);
-
-  const cancelClose = useCallback(() => {
-    if (closeTimer.current) {
-      clearTimeout(closeTimer.current);
-      closeTimer.current = null;
-    }
-  }, []);
-
-  const ctx = useMemo<PreviewCtx>(
-    () => ({ open, scheduleClose, cancelClose }),
-    [open, scheduleClose, cancelClose]
-  );
-
-  return (
-    <PreviewContext.Provider value={ctx}>
-      {children}
-      <PreviewPopover state={state} onEnter={cancelClose} onLeave={scheduleClose} />
-    </PreviewContext.Provider>
-  );
+  return <>{children}</>;
 }
 
 export interface WikiLinkProps {
@@ -76,7 +27,6 @@ export interface WikiLinkProps {
 }
 
 export function WikiLink({ to, children }: WikiLinkProps) {
-  const ctx = useContext(PreviewContext);
   const index = useWikiIndex();
   const ref = useRef<HTMLAnchorElement>(null);
 
@@ -89,68 +39,71 @@ export function WikiLink({ to, children }: WikiLinkProps) {
     if (lastSeg) entry = index.all.find((e) => e.slug === lastSeg);
   }
 
-  const onEnter = () => {
-    if (!entry || !ctx || !ref.current) return;
-    ctx.open(entry, ref.current.getBoundingClientRect());
-  };
-  const onLeave = () => ctx?.scheduleClose();
-
-  // Gatsby's <Link> woli ścieżki absolutne; jeśli nie pasuje, użyj <a>
   const isInternal = to.startsWith("/");
   const Anchor = isInternal ? (Link as any) : "a";
   const linkProps = isInternal ? { to } : { href: to };
 
+  // Bez entry — plain link, bez HoverCard
+  if (!entry) {
+    return (
+      <Anchor
+        ref={ref}
+        className="wf-link is-unresolved"
+        {...linkProps}
+      >
+        {children}
+      </Anchor>
+    );
+  }
+
   return (
-    <Anchor
-      ref={ref}
-      className={"wf-link" + (entry ? "" : " is-unresolved")}
-      onMouseEnter={onEnter}
-      onMouseLeave={onLeave}
-      onFocus={onEnter}
-      onBlur={onLeave}
-      {...linkProps}
+    <HoverCard.Root
+      openDelay={600}
+      closeDelay={220}
+      positioning={{ placement: "bottom-start", gutter: 8 }}
+      lazyMount
+      unmountOnExit
     >
-      {children}
-    </Anchor>
+      <HoverCard.Trigger asChild>
+        <Anchor
+          ref={ref}
+          className="wf-link"
+          {...linkProps}
+        >
+          {children}
+        </Anchor>
+      </HoverCard.Trigger>
+
+      <Portal>
+        <HoverCard.Positioner>
+          <HoverCard.Content className="wf-preview">
+            <PreviewBody entry={entry} />
+          </HoverCard.Content>
+        </HoverCard.Positioner>
+      </Portal>
+    </HoverCard.Root>
   );
 }
 
-/* ----- Popover ----- */
-interface PreviewPopoverProps {
-  state: PreviewState;
-  onEnter: () => void;
-  onLeave: () => void;
-}
+/* ----- Preview body (extracted for clarity) ----- */
 
-function PreviewPopover({ state, onEnter, onLeave }: PreviewPopoverProps) {
-  if (!state.entry || typeof window === "undefined") return null;
-
-  const W = 320;
-  const vw = window.innerWidth;
-  let left = state.x;
-  if (left + W + 12 > vw) left = vw - W - 12;
-  if (left < 12) left = 12;
-
+function PreviewBody({ entry }: { entry: WikiEntry }) {
   return (
-    <div
-      className={"wf-preview" + (state.open ? " is-open" : "")}
-      style={{ left, top: state.y }}
-      onMouseEnter={onEnter}
-      onMouseLeave={onLeave}
-      role="tooltip"
-    >
-      <div className="wf-preview__kicker">{state.entry.kicker}</div>
-      <h4 className="wf-preview__title">{state.entry.title}</h4>
-      {state.entry.subtitle && (
-        <div className="wf-preview__subtitle">{state.entry.subtitle}</div>
+    <>
+      <div className="wf-preview__kicker">{entry.kicker}</div>
+      <h4 className="wf-preview__title">{entry.title}</h4>
+      {entry.subtitle && (
+        <div className="wf-preview__subtitle">{entry.subtitle}</div>
       )}
-      {state.entry.blurb && (
-        <p className="wf-preview__blurb">{state.entry.blurb}</p>
+      {entry.blurb && (
+        <p className="wf-preview__blurb">{entry.blurb}</p>
       )}
       <div className="wf-preview__footer">
-        <span>Artykuł wiki</span>
-        <span className="go">Czytaj →</span>
+        <span>{entry.kicker}</span>
+        <Link to={entry.urlPath} className="go">
+          Czytaj →
+        </Link>
       </div>
-    </div>
+    </>
   );
 }

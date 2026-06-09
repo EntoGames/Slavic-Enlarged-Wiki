@@ -19,6 +19,10 @@
   --gold-shadow:    rgb( 98,  75, 38);   /* #624B26 */
   --gold-glow:      rgb(169, 148, 88);   /* #A99458 */
 
+  /* Kanały RGB do użycia z rgba(var(--x), alpha) */
+  --gold-border-rgb: 179, 153, 77;      /* #B3994D — dekoracyjne obramowania, rule, separatory */
+  --gold-bright-rgb: 197, 160, 72;      /* #C5A048 — interaktywne bordery, scrollbar, hover */
+
   /* Łupek — wnętrze koloowratu (chłodny kamień). */
   --slate:          rgb(107, 127, 148);
 
@@ -42,7 +46,6 @@
 
   /* Banner — kolor wstęgi. */
   --banner-fill:    rgb(57, 52, 30);
-  --banner-flag:    rgb(178, 0, 207);
 
   /* ===== KOLORY — akcenty semantyczne (in-game tag colors) ===== */
   --accent-positive:       rgba(201, 255, 115, 0.8);
@@ -58,6 +61,7 @@
   --fg-on-dark-soft: rgba(255, 255, 255, 0.6);
   --fg-on-light:     rgb(31, 50, 0);
   --fg-muted:        rgb(115, 115, 115);
+  --fg-meta:         rgba(255, 255, 255, 0.5);
   --fg-gold:         var(--gold);
 
   --bg-page-dark:    var(--bog-deep);
@@ -101,6 +105,11 @@
   --t-h2-line: 1.2;
   --t-h2-family: var(--font-display);
 
+  /* H3 — sub-sekcja wewnątrz artykułu ("Etos: Wspólnotowy", "Tradycje") */
+  --t-h3-size: 22px;
+  --t-h3-line: 1.25;
+  --t-h3-family: var(--font-display);
+
   /* Section heading — "Traditions", "Shortly about" */
   --t-section-size: 24px;
   --t-section-line: 1.2;
@@ -140,6 +149,13 @@
   --t-foot-weight: 500;
   --t-foot-family: var(--font-body);
 
+  /* ===== TYPOGRAFIA — rozmiary utility (UI chrome) ===== */
+  --t-ui-xs:    11px;
+  --t-ui-sm:    12.5px;
+  --t-ui-md:    13px;
+  --t-ui-lg:    17px;
+  --t-ui-xl:    18px;
+
   /* ===== EFEKTY — cienie, krawędzie, zaokrąglenia ===== */
   --shadow-carved:     2px 3px 1px 0 rgb(0, 0, 0);
   --shadow-card:       0 4px  4px 0 rgba(0, 0, 0, 0.6);
@@ -153,18 +169,20 @@
   --border-ink-2: 2px solid rgb(0, 0, 0);
   --border-ink-3: 3px solid rgb(0, 0, 0);
 
-  --rule-gold: radial-gradient(rgb(179, 153, 77) 0%, rgba(179, 153, 77, 0) 100%);
+  --rule-gold: radial-gradient(rgb(179, 153, 77) 0%, rgba(var(--gold-border-rgb), 0) 100%);
 
   --radius-card: 20px;
   --radius-pill: 999px;
   --radius-soft: 10px;
+  --radius-sm:   6px;
+  --radius-xs:   4px;
 
   /* ===== SPACING ===== */
   --space-1:  4px;
   --space-2:  8px;
   --space-3:  10px;
   --space-4:  14px;
-  --space-5:  15px;
+  --space-5:  16px;
   --space-6:  20px;
   --space-7:  25px;
   --space-8:  30px;
@@ -271,8 +289,9 @@ a { color: inherit; text-decoration: none; }
      ✅  rgba(…, 0.82) na bog-deep  = 11.29:1  (akapit)
      ✅  rgba(…, 0.6)  na bog-deep  =  6.69:1  (tekst muted)
      ✅  #C5A048       na bog-deep  =  6.59:1  (złoto)
-     ✅  rgba(…, 0.5)  na bog-deep  ≈  4.95:1  (stopka min.)
+     ✅  rgba(…, 0.5)  na bog-deep  ≈  4.95:1  (--fg-meta)
      ❌  rgba(…, 0.45) na bog-deep  =  4.35:1  → NIE UŻYWAĆ
+     ❌  rgba(…, 0.4)  na bog-deep  ≈  4.0:1   → NIE UŻYWAĆ
 
    Touch targets:
      • Minimalny hit-area: 44×44 CSS px (WCAG 2.5.5).

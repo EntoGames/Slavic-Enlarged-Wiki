@@ -75,6 +75,34 @@ const IndexPage: React.FC<PageProps<QueryData>> = ({ data }) => {
           </div>
         </section>
 
+        <section className="wf-coming-soon" data-screen-label="Coming Soon — SSP">
+          <div className="wf-coming-soon__card">
+            <div className="wf-coming-soon__map" aria-hidden="true" />
+            <svg className="wf-coming-soon__sigil" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+              <circle cx="32" cy="32" r="28" stroke="currentColor" strokeWidth="5"/>
+              <polygon points="32,12 27,46 37,46" fill="currentColor"/>
+              <polygon points="24,18 19,46 29,46" fill="currentColor"/>
+              <polygon points="40,18 35,46 45,46" fill="currentColor"/>
+              <rect x="18" y="46" width="28" height="5" fill="currentColor"/>
+            </svg>
+            <div className="wf-coming-soon__body">
+              <span className="wf-coming-soon__badge">Nadchodzi</span>
+              <h2 className="wf-coming-soon__title">Walka Słowiańszczyzny</h2>
+              <p className="wf-coming-soon__blurb">
+                Pięć faz. Trzy zakończenia. Jedno pytanie: czy Perun
+                powstanie znad Dniepru, czy zostanie w nim pogrzebany na wieki.
+              </p>
+              <div className="wf-coming-soon__meta">
+                <span className="wf-coming-soon__detail">System Zmagań</span>
+                <span className="wf-coming-soon__sep" aria-hidden="true">·</span>
+                <span className="wf-coming-soon__detail">Unikalne decyzje i wydarzenia</span>
+                <span className="wf-coming-soon__sep" aria-hidden="true">·</span>
+                <span className="wf-coming-soon__detail">DLC: Fate of Iberia</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="wf-home-sections">
           <h2 className="wf-home-sections__head">Spis Sekcji</h2>
           <div className="wf-home-sections__grid">

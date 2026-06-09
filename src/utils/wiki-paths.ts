@@ -126,21 +126,24 @@ export function deriveFromPath(relPath: string): DerivedFields {
 
 /**
  * Buduje breadcrumbs jako tablicę krotek [label, href]. Etykiety pochodzą
- * z mapy `SECTION_LABELS`; nieznane segmenty są tytuł-case'owane z slugu.
+ * z mapy `SECTION_LABELS` (sekcja) i `subfolderLabels` (podfoldery);
+ * nieznane segmenty są tytuł-case'owane z slugu.
  */
 export function buildBreadcrumbs(
   segments: string[],
-  sectionLabels: Record<string, string>
+  sectionLabels: Record<string, string>,
+  subfolderLabels?: Record<string, string>
 ): { label: string; href: string }[] {
   if (segments.length === 0) return [];
   const out: { label: string; href: string }[] = [];
   let acc = "/wiki";
   for (let i = 0; i < segments.length; i++) {
     acc += "/" + segments[i];
-    const isFirst = i === 0;
+    const seg = segments[i];
     const label =
-      (isFirst && sectionLabels[segments[i]]) ||
-      humanizeSlug(segments[i]);
+      (i === 0 && sectionLabels[seg]) ||
+      subfolderLabels?.[seg] ||
+      humanizeSlug(seg);
     out.push({ label, href: acc });
   }
   return out;

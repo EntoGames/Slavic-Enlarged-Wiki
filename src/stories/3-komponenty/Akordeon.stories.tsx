@@ -1,17 +1,23 @@
 import * as React from "react";
-import { useState } from "react";
 import type { Story } from "@ladle/react";
-import { Section } from "../templates/components/Section";
+import { CopyChip } from "../_helpers/CopyChip";
+import { Section, SectionGroup } from "../../templates/components/Section";
 
-const SectionDemo: Story = () => {
-  const [collapsed, setCollapsed] = useState(false);
-  return (
+const SectionDemo: Story = () => (
+  <div>
+    <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 16 }}>
+      <CopyChip kind="component">SectionGroup</CopyChip>
+      <CopyChip kind="component">Section</CopyChip>
+      <span style={{ color: "rgba(255,255,255,0.45)", fontSize: 11 }}>Ark UI Accordion</span>
+    </div>
+  <SectionGroup
+    value={["demo-section"]}
+    onValueChange={() => {}}
+  >
     <Section
       id="demo-section"
       title="Kultury wschodniosłowiańskie"
       num={2}
-      collapsed={collapsed}
-      onToggle={() => setCollapsed((c) => !c)}
       registerRef={() => {}}
     >
       <div style={{ padding: "16px 24px", color: "var(--fg-on-dark)", fontFamily: "var(--font-body)" }}>
@@ -19,34 +25,36 @@ const SectionDemo: Story = () => {
         <p>Każda kultura posiada unikalne tradycje, etos i zestaw innowacji kulturowych.</p>
       </div>
     </Section>
-  );
-};
+  </SectionGroup>
+  </div>
+);
 SectionDemo.storyName = "Interaktywna";
 
 const MultipleSections: Story = () => {
-  const [openIdx, setOpenIdx] = useState(0);
-  const titles = ["Wprowadzenie", "Kultury", "Wiara", "Walka Słowiańszczyzny"];
+  const [openIds, setOpenIds] = React.useState(["section-0"]);
+  const titles = ["Wprowadzenie", "Kultury", "Wiara", "Walka Slowianczyzny"];
   return (
-    <div>
+    <SectionGroup
+      value={openIds}
+      onValueChange={({ value }) => setOpenIds(value)}
+    >
       {titles.map((t, i) => (
         <Section
           key={i}
           id={`section-${i}`}
           title={t}
           num={i + 1}
-          collapsed={openIdx !== i}
-          onToggle={() => setOpenIdx(openIdx === i ? -1 : i)}
           registerRef={() => {}}
         >
           <div style={{ padding: "16px 24px", color: "var(--fg-on-dark)", fontFamily: "var(--font-body)" }}>
-            <p>Treść sekcji „{t}" — kliknij nagłówek, by zwinąć/rozwinąć.</p>
+            <p>Tresc sekcji „{t}" — kliknij naglowek, by zwinac/rozwinac.</p>
           </div>
         </Section>
       ))}
-    </div>
+    </SectionGroup>
   );
 };
 MultipleSections.storyName = "Akordeon (wiele sekcji)";
 
 export { SectionDemo, MultipleSections };
-export default { title: "Section" };
+export default { title: "Design System / Komponenty / Akordeon" };

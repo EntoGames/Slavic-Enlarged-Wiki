@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <style>
+    @font-face {
+      font-family: "Paradox King Script";
+      src: url("/fonts/ParadoxKingScript.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
+  <defs>
+    <!-- Tlo: brand dark greens -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b1004"/>
+      <stop offset="30%" stop-color="#151a0e"/>
+      <stop offset="70%" stop-color="#1c2214"/>
+      <stop offset="100%" stop-color="#0b1004"/>
+    </linearGradient>
+
+    <!-- Piorun — zloty gradient -->
+    <linearGradient id="lightning" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0d878"/>
+      <stop offset="40%" stop-color="#c5a048"/>
+      <stop offset="100%" stop-color="#8E7638"/>
+    </linearGradient>
+
+    <!-- Glow pioruna -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glow-soft">
+      <feGaussianBlur stdDeviation="25" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Gradient zlota na tekst -->
+    <linearGradient id="gold-text" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8d5a0"/>
+      <stop offset="50%" stop-color="#c5a048"/>
+      <stop offset="100%" stop-color="#8a6d30"/>
+    </linearGradient>
+
+    <!-- Gradient zlota na kolovrat -->
+    <linearGradient id="gold-logo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B89A5A"/>
+      <stop offset="50%" stop-color="#A88845"/>
+      <stop offset="100%" stop-color="#8E7638"/>
+    </linearGradient>
+
+    <!-- Vignette -->
+    <radialGradient id="vignette" cx="0.5" cy="0.5" r="0.65">
+      <stop offset="0%" stop-color="transparent"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0.5)"/>
+    </radialGradient>
+
+    <!-- Chmury burzowe — zielonkawe -->
+    <filter id="clouds">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="4" seed="7"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0 0.06 0.15 0.1 0"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+
+  <!-- Tlo -->
+  <rect width="512" height="512" fill="url(#sky)"/>
+
+  <!-- Chmury -->
+  <rect width="512" height="512" fill="#2a3a1a" opacity="0.2" filter="url(#clouds)"/>
+
+  <!-- Ambient glow — centralny -->
+  <ellipse cx="256" cy="256" rx="140" ry="160" fill="#c5a048" opacity="0.04" filter="url(#glow-soft)"/>
+
+  <!-- ===== PIORUN LEWY — za tekstem ===== -->
+  <g filter="url(#glow)" opacity="0.5">
+    <polyline
+      points="100,0 88,55 112,62 82,130 106,137 90,210 114,216 96,295"
+      fill="none" stroke="url(#lightning)" stroke-width="2.5"
+      stroke-linecap="round" stroke-linejoin="round"/>
+    <polyline
+      points="88,55 68,85 84,90"
+      fill="none" stroke="url(#lightning)" stroke-width="1.5"
+      stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+  </g>
+
+  <!-- ===== PIORUN PRAWY — za tekstem ===== -->
+  <g filter="url(#glow)" opacity="0.45">
+    <polyline
+      points="412,10 424,70 400,76 430,148 406,154 420,230 396,236 414,310"
+      fill="none" stroke="url(#lightning)" stroke-width="2.5"
+      stroke-linecap="round" stroke-linejoin="round"/>
+    <polyline
+      points="430,148 450,175 434,180"
+      fill="none" stroke="url(#lightning)" stroke-width="1.5"
+      stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+  </g>
+
+  <!-- ===== PIORUN CENTRALNY — gora ===== -->
+  <g filter="url(#glow)" opacity="0.3">
+    <polyline
+      points="256,0 248,40 264,45 250,90 266,95 254,140"
+      fill="none" stroke="url(#lightning)" stroke-width="1.5"
+      stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- ===== PIORUN CENTRALNY — dol ===== -->
+  <g filter="url(#glow)" opacity="0.3">
+    <polyline
+      points="256,380 248,420 264,425 250,465 266,470 254,512"
+      fill="none" stroke="url(#lightning)" stroke-width="1.5"
+      stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Vignette -->
+  <rect width="512" height="512" fill="url(#vignette)"/>
+
+  <!-- ===== LOGO SLAVIC ENLARGED — maly kolovrat + tekst ===== -->
+
+  <!-- Kolovrat — wycentrowany, maly -->
+  <g transform="translate(256, 185) scale(0.28)" opacity="0.7">
+    <g transform="translate(-47.687, -46.883)">
+      <path d="M 51.984 4.35 C 51.984 6.752 50.037 8.7 47.634 8.7 C 45.232 8.7 43.284 6.752 43.284 4.35 C 43.284 1.948 45.232 0 47.634 0 C 50.037 0 51.984 1.948 51.984 4.35 Z M 51.984 46.883 C 51.984 49.285 50.037 51.233 47.634 51.233 C 45.232 51.233 43.284 49.285 43.284 46.883 C 43.284 44.481 45.232 42.533 47.634 42.533 C 50.037 42.533 51.984 44.481 51.984 46.883 Z M 59.644 4.405 C 59.644 11.009 54.291 16.362 47.688 16.362 C 41.084 16.362 35.731 11.009 35.731 4.405 C 35.731 4.247 35.734 4.09 35.74 3.933 L 26.705 3.933 L 47.687 40.275 L 68.67 3.933 L 59.635 3.933 C 59.641 4.09 59.644 4.247 59.644 4.405 Z M 43.285 89.416 C 43.285 87.014 45.232 85.067 47.634 85.067 C 50.037 85.067 51.984 87.014 51.984 89.416 C 51.984 91.819 50.037 93.766 47.634 93.766 C 45.232 93.766 43.285 91.819 43.285 89.416 Z M 35.73 89.361 C 35.73 82.758 41.084 77.404 47.687 77.404 C 54.291 77.404 59.644 82.758 59.644 89.361 C 59.644 89.519 59.641 89.677 59.635 89.833 L 68.67 89.833 L 47.687 53.491 L 26.705 89.833 L 35.739 89.833 C 35.733 89.677 35.73 89.519 35.73 89.361 Z M 13.102 21.829 C 15.209 23.046 15.931 25.74 14.714 27.847 C 13.498 29.954 10.804 30.676 8.697 29.459 C 6.59 28.243 5.868 25.549 7.084 23.442 C 8.301 21.335 10.995 20.613 13.102 21.829 Z M 16.878 15.289 C 22.597 18.591 24.556 25.904 21.255 31.622 C 17.953 37.341 10.64 39.301 4.921 35.999 C 4.785 35.92 4.65 35.839 4.517 35.755 L 0 43.579 L 41.965 43.579 L 20.982 7.237 L 16.465 15.061 C 16.604 15.134 16.741 15.21 16.878 15.289 Z M 82.272 71.937 C 80.165 70.721 79.443 68.027 80.659 65.92 C 81.876 63.813 84.57 63.091 86.677 64.307 C 88.784 65.524 89.505 68.218 88.289 70.325 C 87.073 72.432 84.378 73.154 82.272 71.937 Z M 78.496 78.477 C 72.777 75.175 70.818 67.862 74.12 62.144 C 77.421 56.425 84.734 54.465 90.453 57.767 C 90.59 57.846 90.724 57.927 90.857 58.011 L 95.374 50.187 L 53.41 50.187 L 74.392 86.529 L 78.909 78.705 C 78.771 78.632 78.633 78.556 78.496 78.477 Z M 8.697 64.307 C 10.804 63.091 13.498 63.813 14.715 65.92 C 15.931 68.027 15.209 70.721 13.102 71.937 C 10.995 73.154 8.301 72.432 7.085 70.325 C 5.868 68.218 6.59 65.524 8.697 64.307 Z M 4.921 57.768 C 10.64 54.466 17.953 56.425 21.254 62.144 C 24.556 67.863 22.597 75.176 16.878 78.477 C 16.741 78.556 16.604 78.632 16.465 78.705 L 20.982 86.53 L 41.965 50.187 L 0 50.187 L 4.517 58.011 C 4.65 57.928 4.784 57.847 4.921 57.768 Z M 86.677 29.459 C 84.57 30.675 81.876 29.953 80.659 27.846 C 79.443 25.74 80.165 23.045 82.272 21.829 C 84.378 20.613 87.073 21.334 88.289 23.441 C 89.506 25.548 88.784 28.242 86.677 29.459 Z M 90.453 35.999 C 84.734 39.301 77.421 37.342 74.119 31.623 C 70.818 25.904 72.777 18.591 78.496 15.29 C 78.633 15.211 78.77 15.135 78.909 15.062 L 74.391 7.237 L 53.409 43.58 L 95.374 43.58 L 90.856 35.756 C 90.724 35.839 90.589 35.92 90.453 35.999 Z" fill="url(#gold-logo)" fill-rule="evenodd"/>
+    </g>
+  </g>
+
+  <!-- SLAVIC ENLARGED — pod kołowratem -->
+  <text x="256" y="218" text-anchor="middle"
+    font-family="'Paradox King Script', 'Cinzel', serif"
+    font-size="11" font-weight="400" letter-spacing="4"
+    fill="#c5a048" opacity="0.6">
+    SLAVIC ENLARGED
+  </text>
+
+  <!-- ===== TYTUL GLOWNY — na srodku ===== -->
+
+  <!-- Kreska dekoracyjna gorna -->
+  <line x1="160" y1="240" x2="352" y2="240" stroke="#c5a048" stroke-width="0.5" opacity="0.25"/>
+
+  <!-- SLAVIC -->
+  <text x="256" y="280" text-anchor="middle"
+    font-family="'Paradox King Script', 'Cinzel', serif"
+    font-size="18" font-weight="400" letter-spacing="8"
+    fill="#c5a048" opacity="0.7">
+    SLAVIC
+  </text>
+
+  <!-- STRUGGLE — duzy, centralny -->
+  <text x="256" y="322" text-anchor="middle"
+    font-family="'Paradox King Script', 'Cinzel', serif"
+    font-size="46" font-weight="700" letter-spacing="5"
+    fill="url(#gold-text)">
+    STRUGGLE
+  </text>
+
+  <!-- OF PERUN -->
+  <text x="256" y="355" text-anchor="middle"
+    font-family="'Paradox King Script', 'Cinzel', serif"
+    font-size="18" font-weight="400" letter-spacing="8"
+    fill="#c5a048" opacity="0.7">
+    OF PERUN
+  </text>
+
+  <!-- Kreska dekoracyjna dolna -->
+  <line x1="160" y1="372" x2="352" y2="372" stroke="#c5a048" stroke-width="0.5" opacity="0.25"/>
+
+  <!-- Dekoracja — kreska z punktem (pod tytulem) -->
+  <g transform="translate(256, 392)" opacity="0.25">
+    <line x1="-16" y1="0" x2="-5" y2="0" stroke="#c5a048" stroke-width="0.5"/>
+    <circle cx="0" cy="0" r="1.5" fill="#c5a048"/>
+    <line x1="5" y1="0" x2="16" y2="0" stroke="#c5a048" stroke-width="0.5"/>
+  </g>
+
+  <!-- Addon badge -->
+  <text x="256" y="480" text-anchor="middle"
+    font-family="'Lato', 'Helvetica', sans-serif"
+    font-size="9" font-weight="400" letter-spacing="3"
+    fill="#c5a048" opacity="0.25">
+    ADDON · FATE OF IBERIA
+  </text>
+</svg>

@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default {
+  publicDir: path.resolve(__dirname, "../static"),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "../src"),

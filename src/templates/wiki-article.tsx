@@ -10,14 +10,14 @@ import godWelesSvg from "../assets/img/god-weles.svg";
 import { toRoman } from "../utils/to-roman";
 import { WikiLinkProvider } from "./components/WikiLink";
 import { MegaMenu } from "./components/MegaMenu";
-import { Section } from "./components/Section";
+import { Section, SectionGroup } from "./components/Section";
 import {
   parseArticleBody,
   splitLede,
 } from "./components/parseBody";
 import { ScenarioMap } from "./components/ScenarioMap";
 import { buildBreadcrumbs } from "../utils/wiki-paths";
-import { SECTION_LABELS, SECTIONS } from "../data/wiki-sections";
+import { SECTION_LABELS, SECTIONS, SUBFOLDER_LABELS } from "../data/wiki-sections";
 import { useWikiIndex } from "../data/use-wiki-index";
 import { humanizeSlug } from "../utils/wiki-paths";
 
@@ -151,7 +151,7 @@ const WikiArticleTemplate: React.FC<PageProps<QueryData>> = ({ data }) => {
   const heroSubtitle =
     fm.subtitle ?? (isSectionLanding ? sectionMeta?.blurb : undefined);
   const breadcrumbs = useMemo(
-    () => buildBreadcrumbs(fields.segments, SECTION_LABELS),
+    () => buildBreadcrumbs(fields.segments, SECTION_LABELS, SUBFOLDER_LABELS),
     [fields.segments]
   );
 
@@ -218,28 +218,27 @@ const WikiArticleTemplate: React.FC<PageProps<QueryData>> = ({ data }) => {
                       <div className="wf-section__body">{s.body}</div>
                     </section>
                   ))
-                : rest.sections.map((s, i) => (
-                    <Section
-                      key={s.id}
-                      id={s.id}
-                      title={s.title}
-                      num={i + 1}
-                      collapsed={collapsedSet.has(s.id)}
-                      onToggle={() =>
-                        setCollapsedSet((prev) => {
-                          const next = new Set(prev);
-                          if (next.has(s.id)) next.delete(s.id);
-                          else next.add(s.id);
-                          return next;
-                        })
-                      }
-                      registerRef={(el) => {
-                        sectionRefs.current[s.id] = el;
-                      }}
-                    >
-                      {s.body}
-                    </Section>
-                  ))}
+                : <SectionGroup
+                    value={rest.sections.map(s => s.id).filter(id => !collapsedSet.has(id))}
+                    onValueChange={({ value }) => {
+                      const allIds = rest.sections.map(s => s.id);
+                      setCollapsedSet(new Set(allIds.filter(id => !value.includes(id))));
+                    }}
+                  >
+                    {rest.sections.map((s, i) => (
+                      <Section
+                        key={s.id}
+                        id={s.id}
+                        title={s.title}
+                        num={i + 1}
+                        registerRef={(el) => {
+                          sectionRefs.current[s.id] = el;
+                        }}
+                      >
+                        {s.body}
+                      </Section>
+                    ))}
+                  </SectionGroup>}
             </article>
 
             <Marginalia items={fm.marginalia ?? []} />
@@ -362,7 +361,7 @@ function deriveKicker(
   if (fields.segments.length <= 2) return sectionLabel;
   const middle = fields.segments
     .slice(1, -1)
-    .map(humanizeSlug)
+    .map(s => SUBFOLDER_LABELS[s] ?? humanizeSlug(s))
     .join(" · ");
   return middle ? `${sectionLabel} · ${middle}` : sectionLabel;
 }

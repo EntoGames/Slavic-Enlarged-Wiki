@@ -143,6 +143,10 @@ export const SECTION_LABELS: Record<string, string> = Object.fromEntries(
  * Klucz to ścieżka podfolderu (segments[1:n-1].join("/")).
  */
 export const SUBFOLDER_LABELS: Record<string, string> = {
+  /* Kultury — grupy dziedzictwa */
+  wschodnioslowianskie: "Wschodniosłowiańskie",
+  zachodnioslowianskie: "Zachodniosłowiańskie",
+  poludniowoslowianskie: "Południowosłowiańskie",
   /* Królestwa wschodnie */
   rus: "Ruś",
   "biala-rus": "Biała Ruś",

@@ -23,6 +23,7 @@
     "ladle:build": "ladle build"
   },
   "dependencies": {
+    "@ark-ui/react": "^5.37.2",
     "gatsby": "^5.13.7",
     "gatsby-plugin-image": "^3.13.1",
     "gatsby-plugin-manifest": "^5.13.1",

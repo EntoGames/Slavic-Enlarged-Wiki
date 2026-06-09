@@ -4,7 +4,7 @@ import { Link, type HeadFC } from "gatsby";
 
 import { MegaMenu } from "../../templates/components/MegaMenu";
 import { WikiLinkProvider } from "../../templates/components/WikiLink";
-import { Section } from "../../templates/components/Section";
+import { Section, SectionGroup } from "../../templates/components/Section";
 import { useWikiIndex } from "../../data/use-wiki-index";
 
 import kolovratSvg from "../../assets/img/kolovrat.svg";
@@ -20,10 +20,10 @@ import godWelesSvg from "../../assets/img/god-weles.svg";
 import "../../templates/wiki-article.module.css";
 import "../../templates/mega-menu.module.css";
 import "../../styles/home.css";
-import "./komponenty.module.css";
+import "./design-system.module.css";
 
 /* =============================================================
-   /dev/komponenty — Design System showcase (dev-only).
+   /dev/design-system — Design System showcase (dev-only).
    ─────────────────────────────────────────────────────────────
    Organizacja wg warstw:
      I.   Fundamenty  — tokeny: kolory, typografia, spacing, cienie, dostępność
@@ -42,7 +42,7 @@ import "./komponenty.module.css";
 function Swatch({ name, cssVar }: { name: string; cssVar: string }) {
   return (
     <div className="kb-swatch">
-      <div className="kb-swatch__chip" style={{ background: `var(${cssVar})` }} />
+      <div className="kb-swatch__chip" style={{ background: `var(${cssVar})` }} role="img" aria-label={`Kolor ${name}`} />
       <div className="kb-swatch__meta">
         <span className="kb-swatch__name">{name}</span>
         <code className="kb-swatch__var">{cssVar}</code>
@@ -196,7 +196,7 @@ const SPACING = [
   { token: "--space-2", px: 8 },
   { token: "--space-3", px: 10 },
   { token: "--space-4", px: 14 },
-  { token: "--space-5", px: 15 },
+  { token: "--space-5", px: 16 },
   { token: "--space-6", px: 20 },
   { token: "--space-7", px: 25 },
   { token: "--space-8", px: 30 },
@@ -294,25 +294,22 @@ function useScrollSpy(ids: string[], offset = 100) {
   return activeId;
 }
 
-const ALL_IDS = TOC.flatMap((g) => g.items.map((t) => t.id));
+const DIVIDER_IDS = ["fundamenty", "elementy", "komponenty", "wzorce", "markdown", "zasoby"];
+const ALL_IDS = TOC.flatMap((g) => g.items.map((t) => t.id)).concat(DIVIDER_IDS);
 
 const KomponentyPage: React.FC = () => {
   const index = useWikiIndex();
   const visibleSections = index.visibleSections;
   const activeId = useScrollSpy(ALL_IDS);
 
-  const [sectionCollapsed, setSectionCollapsed] = useState<Record<string, boolean>>({
-    demo1: false,
-    demo2: true,
-    demo3: true,
-  });
+  const [sectionOpen, setSectionOpen] = useState<string[]>(["demo1"]);
 
   return (
     <WikiLinkProvider>
       <main id="main" className="wf" style={{ background: "var(--bg-page-dark)", minHeight: "100vh" }}>
 
         {/* ── Live MegaMenu ── */}
-        <MegaMenu activeUrlPath="/dev/komponenty" />
+        <MegaMenu activeUrlPath="/dev/design-system" />
 
         {/* ── Header ── */}
         <div className="kb-header">
@@ -331,10 +328,10 @@ const KomponentyPage: React.FC = () => {
           <nav className="kb-sidebar" aria-label="Spis komponentów">
             {TOC.map((g) => (
               <div key={g.group} className="kb-sidebar__group">
-                <span className="kb-sidebar__group-label">
+                <h2 className="kb-sidebar__group-label">
                   <span className="kb-sidebar__group-num" aria-hidden="true">{g.num}</span>
                   {g.group}
-                </span>
+                </h2>
                 <ul className="kb-sidebar__list">
                   {g.items.map((t) => (
                     <li key={t.id}>
@@ -475,7 +472,7 @@ const KomponentyPage: React.FC = () => {
               <div className="kb-label">Kontrast tekstu</div>
               <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13, color: "var(--fg-on-dark-soft)" }}>
                 <thead>
-                  <tr style={{ textAlign: "left", borderBottom: "1px solid rgba(179,153,77,0.2)" }}>
+                  <tr style={{ textAlign: "left", borderBottom: "1px solid rgba(var(--gold-border-rgb),0.2)" }}>
                     <th style={{ padding: "6px 8px" }}>Para</th>
                     <th style={{ padding: "6px 8px" }}>Stosunek</th>
                     <th style={{ padding: "6px 8px" }}>Wymagane</th>
@@ -545,8 +542,8 @@ const KomponentyPage: React.FC = () => {
           <DemoCard id="przyciski" title="Przyciski" desc="Klasy .wf-btn i .wf-cta — akcje i nawigacja.">
             <div className="kb-label">.wf-btn — CTA w hero i formularzach</div>
             <div style={{ display: "flex", gap: 14, flexWrap: "wrap", alignItems: "center", marginBottom: 16 }}>
-              <span className="wf-btn wf-btn--gold">Gold (główny CTA)</span>
-              <span className="wf-btn">Ghost (drugorzędny)</span>
+              <button type="button" className="wf-btn wf-btn--gold">Gold (główny CTA)</button>
+              <button type="button" className="wf-btn">Ghost (drugorzędny)</button>
             </div>
             <div className="kb-label">.wf-cta — link nawigacyjny w treści artykułu</div>
             <div style={{ marginBottom: 16 }}>
@@ -598,29 +595,30 @@ const KomponentyPage: React.FC = () => {
             desc="Zwijany rozdział artykułu z animacją max-height. Plik: Section.tsx."
           >
             <div style={{ background: "var(--bg-overlay-90)", borderRadius: 4, padding: "0 16px" }}>
-              {["Otwarty rozdzial", "Zamkniety rozdzial", "Kolejny zamkniety"].map(
-                (title, i) => {
-                  const key = `demo${i + 1}`;
-                  return (
-                    <Section
-                      key={key}
-                      id={key}
-                      title={title}
-                      num={i + 1}
-                      collapsed={!!sectionCollapsed[key]}
-                      onToggle={() =>
-                        setSectionCollapsed((prev) => ({ ...prev, [key]: !prev[key] }))
-                      }
-                      registerRef={() => {}}
-                    >
-                      <p style={{ color: "var(--fg-on-dark-soft)", padding: "8px 0 16px" }}>
-                        Treść rozdziału. Numeracja dynamiczna (01., 02., ...).
-                        Kliknij nagłówek aby zwinąć/rozwinąć.
-                      </p>
-                    </Section>
-                  );
-                }
-              )}
+              <SectionGroup
+                value={sectionOpen}
+                onValueChange={({ value }) => setSectionOpen(value)}
+              >
+                {["Otwarty rozdzial", "Zamkniety rozdzial", "Kolejny zamkniety"].map(
+                  (title, i) => {
+                    const key = `demo${i + 1}`;
+                    return (
+                      <Section
+                        key={key}
+                        id={key}
+                        title={title}
+                        num={i + 1}
+                        registerRef={() => {}}
+                      >
+                        <p style={{ color: "var(--fg-on-dark-soft)", padding: "8px 0 16px" }}>
+                          Treść rozdziału. Numeracja dynamiczna (01., 02., ...).
+                          Kliknij nagłówek aby zwinąć/rozwinąć.
+                        </p>
+                      </Section>
+                    );
+                  }
+                )}
+              </SectionGroup>
             </div>
           </DemoCard>
 
@@ -709,7 +707,7 @@ const KomponentyPage: React.FC = () => {
                 </div>
                 <div className="wf-preview__footer">
                   <span>Kultury › Wschodniosłowiańskie</span>
-                  <span className="go">Otwórz →</span>
+                  <span className="go">Czytaj →</span>
                 </div>
               </div>
             </div>
@@ -729,7 +727,7 @@ const KomponentyPage: React.FC = () => {
                 <span className="wf-hero__ordinal-line" />
               </div>
               <div className="wf-hero__kicker">Demo · Komponenty</div>
-              <h1 className="wf-hero__h1">Przykładowy tytuł</h1>
+              <div className="wf-hero__h1" role="heading" aria-level={2}>Przykładowy tytuł</div>
               <p className="wf-hero__subtitle">Podtytuł z frontmattera</p>
               <p className="wf-hero__lede">
                 Lede — pierwszy akapit wprowadzający artykuł wiki.
@@ -747,7 +745,7 @@ const KomponentyPage: React.FC = () => {
                   <h2 className="wf-home-hero__brand-name">Slavic Enlarged</h2>
                   <span className="wf-tag">Work in Progress</span>
                 </div>
-                <h1 className="wf-home-hero__title">Slavic Enlarged Wiki</h1>
+                <div className="wf-home-hero__title" role="heading" aria-level={2}>Slavic Enlarged Wiki</div>
                 <p className="wf-home-hero__lede">
                   Przewodnik po świecie słowiańskiego pogaństwa w Crusader Kings III
                   — mod Slavic Enlarged &amp; Slavic Struggle of Perun.
@@ -1023,7 +1021,7 @@ const KomponentyPage: React.FC = () => {
             title="Mapy kultur"
             desc={`${CULTURE_MAPS.length} map generowanych z heightmapy CK3. Styl wiki: globalna normalizacja, rampa zieleń→banner-fill→pomarańcz. Pliki: static/maps/culture_*.png.`}
           >
-            <div className="kb-carousel">
+            <div className="kb-carousel" tabIndex={0} role="region" aria-label="Karuzela map kultur">
               <div className="kb-carousel__track">
                 {CULTURE_MAPS.map((key) => (
                   <figure key={key} className="kb-carousel__slide">

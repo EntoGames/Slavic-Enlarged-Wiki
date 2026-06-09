@@ -1,23 +1,31 @@
 import * as React from "react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
+import { Accordion } from "@ark-ui/react/accordion";
 import { toRoman } from "../../utils/to-roman";
 
-/* =============================================================
-   Section — zwijany rozdział artykułu (akordeon).
-   ─────────────────────────────────────────────────────────────
-   Numerację (I, II, III, …) liczy szablon — `num` w propsach.
-   Animowane max-height: krótko po zmianie `collapsed` najpierw
-   ustawiamy konkretną wysokość px, by transition działała,
-   a po zakończeniu wracamy do `none` aby nie blokować dynamiki
-   treści (obrazków, hover-popoverów wewnątrz itd.).
-   ============================================================= */
+export interface SectionGroupProps {
+  value: string[];
+  onValueChange: (details: { value: string[] }) => void;
+  children: React.ReactNode;
+}
+
+export function SectionGroup({ value, onValueChange, children }: SectionGroupProps) {
+  return (
+    <Accordion.Root
+      value={value}
+      onValueChange={onValueChange}
+      multiple
+      collapsible
+    >
+      {children}
+    </Accordion.Root>
+  );
+}
 
 export interface SectionProps {
   id: string;
   title: string;
   num: number;
-  collapsed: boolean;
-  onToggle: () => void;
   registerRef: (el: HTMLElement | null) => void;
   children: React.ReactNode;
 }
@@ -26,58 +34,33 @@ export function Section({
   id,
   title,
   num,
-  collapsed,
-  onToggle,
   registerRef,
   children,
 }: SectionProps) {
-  const bodyRef = useRef<HTMLDivElement>(null);
-  const [maxH, setMaxH] = useState<string>("none");
+  const wrapRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!bodyRef.current) return;
-    if (collapsed) {
-      const h = bodyRef.current.scrollHeight;
-      setMaxH(h + "px");
-      requestAnimationFrame(() => setMaxH("0px"));
-    } else {
-      const h = bodyRef.current.scrollHeight;
-      setMaxH(h + "px");
-      const t = setTimeout(() => setMaxH("none"), 300);
-      return () => clearTimeout(t);
-    }
-  }, [collapsed]);
+    registerRef(wrapRef.current);
+  }, [registerRef]);
 
   return (
-    <section
-      className={"wf-section" + (collapsed ? " is-collapsed" : "")}
-      id={id}
-      ref={(el) => registerRef(el)}
-    >
-      <header
-        className="wf-section__head"
-        onClick={onToggle}
-        onKeyDown={(e) => {
-          if (e.key === "Enter" || e.key === " ") {
-            e.preventDefault();
-            onToggle();
-          }
-        }}
-        role="button"
-        tabIndex={0}
-        aria-expanded={!collapsed}
-      >
-        <span className="wf-section__num">{toRoman(num)}</span>
-        <h2 className="wf-section__title">{title}</h2>
-        <span className="wf-section__chevron">▾</span>
-      </header>
-      <div
-        ref={bodyRef}
-        className="wf-section__body"
-        style={{ maxHeight: maxH }}
-      >
-        <div>{children}</div>
-      </div>
-    </section>
+    <div ref={wrapRef} id={id} className="wf-section">
+      <Accordion.Item value={id}>
+        <h2 className="wf-section__heading" id={id + "-heading"}>
+          <Accordion.ItemTrigger asChild>
+            <button className="wf-section__head" type="button">
+              <span className="wf-section__num" aria-hidden="true">{toRoman(num)}</span>
+              <span className="wf-section__title">{title}</span>
+              <Accordion.ItemIndicator asChild>
+                <span className="wf-section__chevron" aria-hidden="true">▾</span>
+              </Accordion.ItemIndicator>
+            </button>
+          </Accordion.ItemTrigger>
+        </h2>
+        <Accordion.ItemContent className="wf-section__body">
+          <div>{children}</div>
+        </Accordion.ItemContent>
+      </Accordion.Item>
+    </div>
   );
 }

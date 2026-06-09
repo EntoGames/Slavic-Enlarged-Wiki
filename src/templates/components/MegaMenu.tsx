@@ -1,6 +1,9 @@
 import * as React from "react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link, navigate } from "gatsby";
+import { Combobox, createListCollection } from "@ark-ui/react/combobox";
+import { Drawer } from "@ark-ui/react/drawer";
+import { Portal } from "@ark-ui/react/portal";
 import kolovratSvg from "../../assets/img/kolovrat.svg";
 import wordmarkSvg from "../../assets/img/wordmark.svg";
 import { useWikiIndex, type WikiEntry } from "../../data/use-wiki-index";
@@ -51,11 +54,8 @@ export function MegaMenu({ activeUrlPath }: MegaMenuProps) {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchFocused, setSearchFocused] = useState(false);
-  const [selectedResultIdx, setSelectedResultIdx] = useState(-1);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const searchRef = useRef<HTMLInputElement>(null);
-
-  const closeDrawer = useCallback(() => setDrawerOpen(false), []);
 
   const visibleSections = index.visibleSections;
 
@@ -71,12 +71,21 @@ export function MegaMenu({ activeUrlPath }: MegaMenuProps) {
       .slice(0, 8);
   }, [searchQuery, index.all]);
 
-  // Zamknij na Escape
+  const searchCollection = useMemo(
+    () =>
+      createListCollection({
+        items: searchResults,
+        itemToString: (item: WikiEntry) => item.title,
+        itemToValue: (item: WikiEntry) => item.urlPath,
+      }),
+    [searchResults]
+  );
+
+  // Zamknij mega-panel i search na Escape (drawer obsługuje Ark UI)
   useEffect(() => {
     const h = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         setOpenId(null);
-        setDrawerOpen(false);
         setSearchQuery("");
         setSearchFocused(false);
         searchRef.current?.blur();
@@ -97,18 +106,6 @@ export function MegaMenu({ activeUrlPath }: MegaMenuProps) {
     window.addEventListener("keydown", h);
     return () => window.removeEventListener("keydown", h);
   }, []);
-
-  // Blokada scrolla body kiedy drawer otwarty
-  useEffect(() => {
-    if (typeof document === "undefined") return;
-    if (drawerOpen) {
-      const prev = document.body.style.overflow;
-      document.body.style.overflow = "hidden";
-      return () => {
-        document.body.style.overflow = prev;
-      };
-    }
-  }, [drawerOpen]);
 
   // Zamknij drawer przy zmianie szerokości na desktop
   useEffect(() => {
@@ -146,25 +143,17 @@ export function MegaMenu({ activeUrlPath }: MegaMenuProps) {
     return buildPanelData(section);
   }, [openId, index.bySection]);
 
-  const handleSearchKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === "ArrowDown") {
-      e.preventDefault();
-      setSelectedResultIdx((i) => Math.min(i + 1, searchResults.length - 1));
-    } else if (e.key === "ArrowUp") {
-      e.preventDefault();
-      setSelectedResultIdx((i) => Math.max(i - 1, -1));
-    } else if (e.key === "Enter" && selectedResultIdx >= 0 && searchResults[selectedResultIdx]) {
-      e.preventDefault();
-      navigate(searchResults[selectedResultIdx].urlPath);
-      setSearchQuery("");
-      setSearchFocused(false);
-    }
-  };
-
-  const showSearchResults = searchFocused && searchResults.length > 0;
+  const burgerRef = useRef<HTMLButtonElement>(null);
 
   return (
-    <>
+    <Drawer.Root
+      open={drawerOpen}
+      onOpenChange={({ open: isOpen }) => setDrawerOpen(isOpen)}
+      swipeDirection="right"
+      lazyMount
+      unmountOnExit
+      finalFocusEl={() => burgerRef.current}
+    >
     <a className="wf-skip-link" href="#main">
       Przejdź do treści
     </a>
@@ -202,64 +191,75 @@ export function MegaMenu({ activeUrlPath }: MegaMenuProps) {
         ))}
       </nav>
 
-      <div className="mm-top__search-wrap">
-        <label className="mm-top__search" aria-label="Szukaj artykułu">
+      <Combobox.Root
+        collection={searchCollection}
+        inputValue={searchQuery}
+        onInputValueChange={({ inputValue }) => setSearchQuery(inputValue)}
+        onValueChange={({ value }) => {
+          if (value.length > 0) navigate(value[0]);
+          setSearchQuery("");
+          setSearchFocused(false);
+        }}
+        open={searchFocused && searchResults.length > 0}
+        onOpenChange={({ open: isOpen }) => {
+          if (!isOpen) setSearchQuery("");
+        }}
+        allowCustomValue
+        inputBehavior="autohighlight"
+        closeOnSelect
+        lazyMount
+        unmountOnExit
+        positioning={{ placement: "bottom-start", sameWidth: true, gutter: 4 }}
+        className="mm-top__search-wrap"
+      >
+        <Combobox.Label
+          style={{ position: "absolute", width: 1, height: 1, overflow: "hidden", clip: "rect(0,0,0,0)" }}
+        >
+          Szukaj artykułu
+        </Combobox.Label>
+        <Combobox.Control className="mm-top__search">
           <svg className="mm-search-ico" viewBox="0 0 16 16" aria-hidden="true">
             <circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" strokeWidth="1.5" />
             <path d="M11,11 L15,15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
           </svg>
-          <input
+          <Combobox.Input
             ref={searchRef}
-            type="text"
             placeholder="Szukaj artykułu…"
-            value={searchQuery}
-            onChange={(e) => {
-              setSearchQuery(e.target.value);
-              setSelectedResultIdx(-1);
-            }}
             onFocus={() => setSearchFocused(true)}
-            onBlur={() => setTimeout(() => setSearchFocused(false), 150)}
-            onKeyDown={handleSearchKeyDown}
-            role="combobox"
-            aria-expanded={showSearchResults}
-            aria-controls="mm-search-results"
-            aria-autocomplete="list"
+            onBlur={() => setTimeout(() => setSearchFocused(false), 200)}
           />
           <span className="mm-kbd">⌘ K</span>
-        </label>
-        {showSearchResults && (
-          <ul className="mm-search-results" id="mm-search-results" role="listbox">
-            {searchResults.map((r, i) => (
-              <li key={r.urlPath} role="option" aria-selected={i === selectedResultIdx}>
-                <Link
-                  to={r.urlPath}
-                  className={"mm-search-result" + (i === selectedResultIdx ? " is-selected" : "")}
-                  onClick={() => {
-                    setSearchQuery("");
-                    setSearchFocused(false);
-                  }}
-                >
-                  <span className="mm-search-result__kicker">{r.kicker}</span>
-                  <span className="mm-search-result__title">{r.title}</span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
+        </Combobox.Control>
+        <Portal>
+          <Combobox.Positioner>
+            <Combobox.Content className="mm-search-results">
+              {searchCollection.items.map((r) => (
+                <Combobox.Item key={r.urlPath} item={r} asChild>
+                  <Link to={r.urlPath} className="mm-search-result">
+                    <span className="mm-search-result__kicker">{r.kicker}</span>
+                    <Combobox.ItemText className="mm-search-result__title">
+                      {r.title}
+                    </Combobox.ItemText>
+                  </Link>
+                </Combobox.Item>
+              ))}
+            </Combobox.Content>
+          </Combobox.Positioner>
+        </Portal>
+      </Combobox.Root>
 
-      <button
-        type="button"
-        className="mm-burger"
-        aria-label={drawerOpen ? "Zamknij menu" : "Menu"}
-        aria-expanded={drawerOpen}
-        aria-controls="mm-drawer"
-        onClick={() => setDrawerOpen((v) => !v)}
-      >
-        <span className={"mm-burger__bars" + (drawerOpen ? " is-open" : "")}>
-          <span /><span /><span />
-        </span>
-      </button>
+      <Drawer.Trigger asChild>
+        <button
+          ref={burgerRef}
+          type="button"
+          className="mm-burger"
+          aria-label={drawerOpen ? "Zamknij menu" : "Menu"}
+        >
+          <span className={"mm-burger__bars" + (drawerOpen ? " is-open" : "")}>
+            <span /><span /><span />
+          </span>
+        </button>
+      </Drawer.Trigger>
 
       {panel && (
         <CodexPanel
@@ -268,15 +268,37 @@ export function MegaMenu({ activeUrlPath }: MegaMenuProps) {
           onMouseLeave={scheduleClose}
         />
       )}
-
-      <MobileDrawer
-        open={drawerOpen}
-        sections={visibleSections}
-        activeSection={activeSection}
-        onClose={closeDrawer}
-      />
     </header>
-    </>
+
+    <Drawer.Backdrop className="mm-scrim" />
+    <Drawer.Positioner className="mm-drawer-positioner">
+      <Drawer.Content className="mm-drawer" draggable={false}>
+        <header className="mm-drawer__head">
+          <Link to="/" className="mm-drawer__brand" onClick={() => setDrawerOpen(false)}>
+            <img className="kolovrat" src={kolovratSvg} alt="" />
+            <img className="wordmark" src={wordmarkSvg} alt="Slavic Enlarged" />
+          </Link>
+          <Drawer.CloseTrigger asChild>
+            <button
+              type="button"
+              className="mm-drawer__close"
+              aria-label="Zamknij menu"
+            >
+              <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+                <path d="M2,2 L14,14 M14,2 L2,14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+              </svg>
+            </button>
+          </Drawer.CloseTrigger>
+        </header>
+
+        <MobileDrawerBody
+          sections={visibleSections}
+          activeSection={activeSection}
+          onNavigate={() => setDrawerOpen(false)}
+        />
+      </Drawer.Content>
+    </Drawer.Positioner>
+    </Drawer.Root>
   );
 }
 
@@ -404,13 +426,13 @@ function CodexPanel({
             <div className="mm-col" key={col.key}>
               {col.title && (
                 <header className="mm-col__head">
-                  <h4>{col.title}</h4>
+                  <h4 id={`mm-col-${panel.sectionId}-${col.key}`}>{col.title}</h4>
                   {col.sub != null && (
                     <span className="mm-col__sub" title={`${col.sub} ${pluralizeArtykul(col.sub)}`}>{col.sub}</span>
                   )}
                 </header>
               )}
-              <ul className="mm-col__list">
+              <ul className="mm-col__list" aria-labelledby={col.title ? `mm-col-${panel.sectionId}-${col.key}` : undefined}>
                 {col.items.slice(0, 5).map((it) => (
                   <li key={it.urlPath}>
                     <Link to={it.urlPath}>
@@ -460,20 +482,19 @@ function CodexPanel({
 }
 
 /* ============================================================
-   MobileDrawer — pełnoekranowa szuflada dla < 1024px.
+   MobileDrawerBody — treść szuflady dla < 1024px.
    ─────────────────────────────────────────────────────────────
-   Brak mega-panelu — sekcje są płaskimi linkami z licznikiem i
-   blurbem. Stosunek "1 sekcja = 1 wiersz" + akordeon nie ma
-   sensu w tym formacie (sekcje już mają landing-page z całą listą).
+   Wrapper (Drawer.Root/Backdrop/Positioner/Content) w MegaMenu.
+   Ark UI obsługuje: focus trap, scroll lock, Escape, backdrop,
+   swipe-to-dismiss, aria-modal.
    ============================================================ */
 
-function MobileDrawer({
-  open, sections, activeSection, onClose,
+function MobileDrawerBody({
+  sections, activeSection, onNavigate,
 }: {
-  open: boolean;
   sections: { id: string; label: string; entries: WikiEntry[] }[];
   activeSection: string | null;
-  onClose: () => void;
+  onNavigate: () => void;
 }) {
   const [mobileQuery, setMobileQuery] = useState("");
   const allEntries = useMemo(
@@ -494,99 +515,72 @@ function MobileDrawer({
 
   return (
     <>
-      <div
-        className={"mm-scrim" + (open ? " is-open" : "")}
-        onClick={onClose}
-        aria-hidden="true"
-      />
-      <aside
-        id="mm-drawer"
-        className={"mm-drawer" + (open ? " is-open" : "")}
-        role="dialog"
-        aria-modal="true"
-        aria-label="Menu nawigacji"
-        aria-hidden={!open}
-      >
-        <header className="mm-drawer__head">
-          <Link to="/" className="mm-drawer__brand" onClick={onClose}>
-            <img className="kolovrat" src={kolovratSvg} alt="" />
-            <img className="wordmark" src={wordmarkSvg} alt="Slavic Enlarged" />
-          </Link>
-          <button
-            type="button"
-            className="mm-drawer__close"
-            onClick={onClose}
-            aria-label="Zamknij menu"
-          >
-            <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
-              <path d="M2,2 L14,14 M14,2 L2,14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-            </svg>
-          </button>
-        </header>
+      <label className="mm-drawer__search" aria-label="Szukaj artykułu">
+        <svg className="mm-search-ico" viewBox="0 0 16 16" aria-hidden="true">
+          <circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M11,11 L15,15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        </svg>
+        <input
+          type="text"
+          placeholder="Szukaj artykułu…"
+          value={mobileQuery}
+          onChange={(e) => setMobileQuery(e.target.value)}
+          role="combobox"
+          aria-expanded={mobileResults.length > 0}
+          aria-controls="mm-drawer-results"
+          aria-autocomplete="list"
+        />
+      </label>
 
-        <label className="mm-drawer__search" aria-label="Szukaj artykułu">
-          <svg className="mm-search-ico" viewBox="0 0 16 16" aria-hidden="true">
-            <circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" strokeWidth="1.5" />
-            <path d="M11,11 L15,15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-          </svg>
-          <input
-            type="text"
-            placeholder="Szukaj artykułu…"
-            value={mobileQuery}
-            onChange={(e) => setMobileQuery(e.target.value)}
-          />
-        </label>
+      {mobileResults.length > 0 && (
+        <ul className="mm-drawer__results" id="mm-drawer-results" role="listbox" aria-live="polite">
+          {mobileResults.map((r) => (
+            <li key={r.urlPath}>
+              <Link to={r.urlPath} className="mm-drawer__result" onClick={onNavigate}>
+                <span className="mm-drawer__result-kicker">{r.kicker}</span>
+                <span className="mm-drawer__result-title">{r.title}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
 
-        {mobileResults.length > 0 && (
-          <ul className="mm-drawer__results">
-            {mobileResults.map((r) => (
-              <li key={r.urlPath}>
-                <Link to={r.urlPath} className="mm-drawer__result" onClick={onClose}>
-                  <span className="mm-drawer__result-kicker">{r.kicker}</span>
-                  <span className="mm-drawer__result-title">{r.title}</span>
+      <nav className="mm-drawer__nav" aria-label="Sekcje wiki">
+        <ol className="mm-drawer__list">
+          {sections.map((s, idx) => {
+            const count = s.entries.filter((e) => !e.isCategoryIndex).length;
+            const displayNum = idx + 1;
+            const blurb = SECTIONS[s.id]?.blurb ?? "";
+            return (
+              <li key={s.id}>
+                <Link
+                  to={`/wiki/${s.id}`}
+                  className={
+                    "mm-drawer__item" +
+                    (activeSection === s.id ? " is-active" : "")
+                  }
+                  onClick={onNavigate}
+                >
+                  <span className="mm-drawer__num">
+                    {String(displayNum).padStart(2, "0")}
+                  </span>
+                  <span className="mm-drawer__meta">
+                    <span className="mm-drawer__label">{s.label}</span>
+                    {blurb && <span className="mm-drawer__blurb">{blurb}</span>}
+                  </span>
+                  <span className="mm-drawer__count" title={`${count} ${pluralizeArtykul(count)}`}>
+                    {count} ›
+                  </span>
                 </Link>
               </li>
-            ))}
-          </ul>
-        )}
+            );
+          })}
+        </ol>
+      </nav>
 
-        <nav className="mm-drawer__nav" aria-label="Sekcje wiki">
-          <ol className="mm-drawer__list">
-            {sections.map((s, idx) => {
-              const count = s.entries.filter((e) => !e.isCategoryIndex).length;
-              const displayNum = idx + 1;
-              const blurb = SECTIONS[s.id]?.blurb ?? "";
-              return (
-                <li key={s.id}>
-                  <Link
-                    to={`/wiki/${s.id}`}
-                    className={
-                      "mm-drawer__item" +
-                      (activeSection === s.id ? " is-active" : "")
-                    }
-                    onClick={onClose}
-                  >
-                    <span className="mm-drawer__num">
-                      {String(displayNum).padStart(2, "0")}
-                    </span>
-                    <span className="mm-drawer__meta">
-                      <span className="mm-drawer__label">{s.label}</span>
-                      {blurb && <span className="mm-drawer__blurb">{blurb}</span>}
-                    </span>
-                    <span className="mm-drawer__count" title={`${count} ${pluralizeArtykul(count)}`}>
-                      {count} ›
-                    </span>
-                  </Link>
-                </li>
-              );
-            })}
-          </ol>
-        </nav>
-
-        <footer className="mm-drawer__foot">
-          „Slavic Enlarged" — fan-mod do Crusader Kings III
-        </footer>
-      </aside>
+      <footer className="mm-drawer__foot">
+        „Slavic Enlarged" — fan-mod do Crusader Kings III
+      </footer>
     </>
   );
 }

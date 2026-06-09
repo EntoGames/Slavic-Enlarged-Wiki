@@ -17,6 +17,7 @@ export interface ModEntry {
   name: string;
   prefix: string;
   repo?: string;
+  workshop?: string;
   visibility: ModVisibility;
   sections: string[];
 }
@@ -27,6 +28,7 @@ export const MOD_REGISTRY: ModEntry[] = [
     name: "Slavic Enlarged",
     prefix: "se_",
     repo: "https://github.com/EntoGames/Slavic-Enlarged",
+    workshop: "https://steamcommunity.com/sharedfiles/filedetails/?id=3740630117",
     visibility: "public",
     sections: ["wprowadzenie", "kultury", "wiara", "historia", "techniczne"],
   },

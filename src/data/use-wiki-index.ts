@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import { SECTIONS, TEMPLATE_SLUGS } from "./wiki-sections";
+import { SECTIONS, SUBFOLDER_LABELS, TEMPLATE_SLUGS } from "./wiki-sections";
 import { isArticleVisible } from "./mod-registry";
 import { humanizeSlug } from "../utils/wiki-paths";
 
@@ -115,7 +115,7 @@ function deriveKicker(entry: Pick<WikiEntry, "section" | "segments">): string {
   if (!entry.section) return "Wiki";
   const sectionLabel = SECTIONS[entry.section]?.label ?? humanizeSlug(entry.section);
   if (entry.segments.length <= 2) return sectionLabel;
-  const middle = entry.segments.slice(1, -1).map(humanizeSlug).join(" · ");
+  const middle = entry.segments.slice(1, -1).map(s => SUBFOLDER_LABELS[s] ?? humanizeSlug(s)).join(" · ");
   return middle ? `${sectionLabel} · ${middle}` : sectionLabel;
 }
 
