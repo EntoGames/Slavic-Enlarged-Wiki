@@ -157,6 +157,16 @@
   display: none !important;
 }
 
+/* Ukryj przycisk zmiany strony nawigacji — zawsze lewa */
+.ladle-addons li:has(button[title*="right"]),
+.ladle-addons li:has(button[title*="left"]),
+.ladle-addons li:has(button[aria-label*="right"]),
+.ladle-addons li:has(button[aria-label*="left"]),
+.ladle-addons li:has(button[title*="rtl"]),
+.ladle-addons li:has(button[aria-label*="rtl"]) {
+  display: none !important;
+}
+
 /* ===== Main canvas ===== */
 .ladle-main {
   background: var(--bog-deep, #1c2214) !important;
@@ -174,5 +184,20 @@
   border-radius: 2px;
 }
 .ladle-aside::-webkit-scrollbar-thumb:hover {
+  background: rgba(197, 160, 72, 0.5);
+}
+
+/* ===== Scrollbar w panelu modow ===== */
+.mod-nav-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+.mod-nav-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.mod-nav-scroll::-webkit-scrollbar-thumb {
+  background: rgba(179, 153, 77, 0.3);
+  border-radius: 2px;
+}
+.mod-nav-scroll::-webkit-scrollbar-thumb:hover {
   background: rgba(197, 160, 72, 0.5);
 }

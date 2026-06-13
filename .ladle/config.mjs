@@ -13,11 +13,16 @@ export default {
       "marketing--slavic-enlarged",
       "marketing--slavic-struggle-of-perun",
       "marketing--myths-and-legends",
+      "marketing--kingdoms",
     ];
     const ds = dsOrder.flatMap((p) => stories.filter((s) => s.startsWith(p)));
     const mk = mkOrder.flatMap((p) => stories.filter((s) => s.startsWith(p)));
-    const known = ["design-system", "marketing"];
+    const modOrder = ["modyfikacje"];
+    const epOrder = ["epiki"];
+    const md = modOrder.flatMap((p) => stories.filter((s) => s.startsWith(p)));
+    const ep = epOrder.flatMap((p) => stories.filter((s) => s.startsWith(p)));
+    const known = ["design-system", "marketing", "modyfikacje", "epiki"];
     const rest = stories.filter((s) => !known.some((k) => s.startsWith(k)));
-    return [...ds, ...mk, ...rest];
+    return [...ds, ...mk, ...md, ...ep, ...rest];
   },
 };

@@ -1,6 +1,7 @@
 import * as React from "react";
 import type { Story } from "@ladle/react";
 import { CopyChip } from "../_helpers/CopyChip";
+import { SteamCopyBlock } from "../_helpers/SteamCopyBlock";
 import { ScreenshotGallery } from "../_helpers/ScreenshotGallery";
 
 /* ───── Myths & Legends — addon Legend system ───── */
@@ -396,29 +397,77 @@ const Cover: Story = () => (
 );
 Cover.storyName = "Okladka";
 
+const STEAM_SML_EN = `[h1]Myths & Legends[/h1]
+An addon for [b]Slavic Enlarged[/b] expanding the Legend system from the Legends of the Dead DLC.
+
+Adds unique Slavic legend types tied to gods, sacred places, and heroic tales from Slavic mythology. Each legend type comes with dedicated mechanics and event chains.
+
+[h1]Features[/h1]
+[list]
+[*] Legends of the Gods: Perun, Veles, Mokosh, Svarog
+[*] Legends of Sacred Places: Arkona, Rethra, Wolin
+[*] Legends of Heroes: unique chain events
+[*] New legend types with dedicated mechanics
+[/list]
+
+[h1]Requirements[/h1]
+[list]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3740630117]Slavic Enlarged[/url] (base mod)
+[*] DLC: Legends of the Dead (for the Legend system)
+[/list]
+
+[h1]Compatibility[/h1]
+[list]
+[*] Safe to add mid-campaign
+[*] Compatible with other Slavic Enlarged addons and kingdom sub-mods
+[/list]
+
+[h1]Languages[/h1]
+[list]
+[*] English
+[*] Polish
+[/list]
+
+[url=https://frolicking-donut-9d7999.netlify.app/]Wiki & Documentation[/url]`;
+
+const STEAM_SML_PL = `[h1]Myths & Legends[/h1]
+Addon do [b]Slavic Enlarged[/b] rozszerzajacy system Legend z DLC Legends of the Dead.
+
+Dodaje unikalne slowianskie typy legend zwiazane z bogami, swietymi miejscami i podaniami bohaterskimi z mitologii slowianskiej. Kazdy typ legendy posiada dedykowane mechaniki i lancuchy eventow.
+
+[h1]Zawartosc[/h1]
+[list]
+[*] Legendy bogow: Perun, Weles, Mokosz, Swarog
+[*] Legendy swietych miejsc: Arkona, Rethra, Wolin
+[*] Legendy bohaterow: unikalne lancuchy eventow
+[*] Nowe typy legend z dedykowanymi mechanikami
+[/list]
+
+[h1]Wymagania[/h1]
+[list]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3740630117]Slavic Enlarged[/url] (mod bazowy)
+[*] DLC: Legends of the Dead (dla systemu Legend)
+[/list]
+
+[h1]Kompatybilnosc[/h1]
+[list]
+[*] Mozna dodac w trakcie kampanii
+[*] Kompatybilny z innymi addonami i sub-modami krolewskimi Slavic Enlarged
+[/list]
+
+[h1]Jezyki[/h1]
+[list]
+[*] Angielski
+[*] Polski
+[/list]
+
+[url=https://frolicking-donut-9d7999.netlify.app/]Wiki i dokumentacja[/url]`;
+
 const Overview: Story = () => (
-  <div style={{ display: "flex", flexDirection: "column", gap: 24, maxWidth: 640 }}>
-    <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+  <div style={{ display: "flex", flexDirection: "column", gap: 16, maxWidth: 640 }}>
+    <div style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
       <CopyChip kind="component">Myths &amp; Legends</CopyChip>
       <CopyChip kind="class">sml_</CopyChip>
-    </div>
-    <div style={{ fontFamily: "var(--font-body)", color: "var(--fg-on-dark)", lineHeight: 1.6 }}>
-      <h2 style={{ fontFamily: "var(--font-display)", color: "var(--gold)", textShadow: "var(--shadow-carved)", margin: "0 0 12px" }}>
-        Myths &amp; Legends
-      </h2>
-      <p>
-        Addon rozszerzajacy system Legend z DLC Legends of the Dead
-        o slowianskie mity, podania i legendy. Dodaje unikalne typy legend
-        zwiazane z bogami i tradycjami slowianskimi.
-      </p>
-      <ul style={{ paddingLeft: 20, marginTop: 12 }}>
-        <li>Legendy bogow: Perun, Weles, Mokosz, Swarog</li>
-        <li>Legendy miejsc: Arkona, Rethra, Wolin</li>
-        <li>Legendy bohaterow: unikalne chain eventy</li>
-        <li>Nowe typy legend z dedykowanymi mechanikami</li>
-      </ul>
-    </div>
-    <div style={{ display: "flex", gap: 8 }}>
       <span style={{
         display: "inline-block",
         padding: "4px 12px",
@@ -445,6 +494,7 @@ const Overview: Story = () => (
         Faza koncepcyjna
       </span>
     </div>
+    <SteamCopyBlock en={STEAM_SML_EN} pl={STEAM_SML_PL} />
   </div>
 );
 Overview.storyName = "Przeglad";

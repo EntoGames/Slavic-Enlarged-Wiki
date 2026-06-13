@@ -1,6 +1,7 @@
 import * as React from "react";
 import type { Story } from "@ladle/react";
 import { CopyChip } from "../_helpers/CopyChip";
+import { SteamCopyBlock } from "../_helpers/SteamCopyBlock";
 import { ScreenshotGallery } from "../_helpers/ScreenshotGallery";
 
 /* ───── Slavic Struggle of Perun — addon Struggle ───── */
@@ -738,29 +739,79 @@ const SteamScreenshot: Story = () => (
 );
 SteamScreenshot.storyName = "Screenshot 1920x1080";
 
+const STEAM_SSP_EN = `[h1]Slavic Struggle of Perun[/h1]
+An addon for [b]Slavic Enlarged[/b] introducing the Slavic Struggle system to Crusader Kings III.
+
+A dynamic rivalry between Slavic, Nordic, and Steppe factions using the Struggle mechanic from the Fate of Iberia DLC. Guide the fate of Slavdom through four distinct phases — from conquest and resistance to balance and unification.
+
+[h1]Features[/h1]
+[list]
+[*] Full Struggle system with 4 phases: Conquest, Resistance, Balance, Unification
+[*] Unique events and decisions per phase
+[*] Catalyst events based on Slavic history
+[*] Multiple Struggle endings: Slavic Union, Nordic Domination, Conversion
+[*] Dynamic faction interactions and power shifts
+[/list]
+
+[h1]Requirements[/h1]
+[list]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3740630117]Slavic Enlarged[/url] (base mod)
+[*] DLC: Fate of Iberia (for the Struggle system)
+[/list]
+
+[h1]Compatibility[/h1]
+[list]
+[*] Safe to add mid-campaign
+[*] Compatible with other Slavic Enlarged addons and kingdom sub-mods
+[/list]
+
+[h1]Languages[/h1]
+[list]
+[*] English
+[*] Polish
+[/list]
+
+[url=https://frolicking-donut-9d7999.netlify.app/]Wiki & Documentation[/url]`;
+
+const STEAM_SSP_PL = `[h1]Slavic Struggle of Perun[/h1]
+Addon do [b]Slavic Enlarged[/b] wprowadzajacy system Walki Slowianczyzny do Crusader Kings III.
+
+Dynamiczna rywalizacja miedzy frakcjami slowianskimi, nordyckimi i stepowymi wykorzystujaca mechanike Struggle z DLC Fate of Iberia. Pokieruj losem Slowianczyzny przez cztery fazy — od podboju i oporu, przez rownowage, az po zjednoczenie.
+
+[h1]Zawartosc[/h1]
+[list]
+[*] Pelny system Struggle z 4 fazami: Podboj, Opor, Rownowaga, Zjednoczenie
+[*] Unikalne eventy i decyzje per faza
+[*] Eventy katalizujace oparte na historii Slowian
+[*] Wiele koncowek Struggle: Unia Slowian, Dominacja Nordycka, Konwersja
+[*] Dynamiczne interakcje miedzy frakcjami i zmiany wladzy
+[/list]
+
+[h1]Wymagania[/h1]
+[list]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3740630117]Slavic Enlarged[/url] (mod bazowy)
+[*] DLC: Fate of Iberia (dla systemu Struggle)
+[/list]
+
+[h1]Kompatybilnosc[/h1]
+[list]
+[*] Mozna dodac w trakcie kampanii
+[*] Kompatybilny z innymi addonami i sub-modami krolewskimi Slavic Enlarged
+[/list]
+
+[h1]Jezyki[/h1]
+[list]
+[*] Angielski
+[*] Polski
+[/list]
+
+[url=https://frolicking-donut-9d7999.netlify.app/]Wiki i dokumentacja[/url]`;
+
 const Overview: Story = () => (
-  <div style={{ display: "flex", flexDirection: "column", gap: 24, maxWidth: 640 }}>
+  <div style={{ display: "flex", flexDirection: "column", gap: 16, maxWidth: 640 }}>
     <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
       <CopyChip kind="component">Slavic Struggle of Perun</CopyChip>
       <CopyChip kind="class">sessp_</CopyChip>
-    </div>
-    <div style={{ fontFamily: "var(--font-body)", color: "var(--fg-on-dark)", lineHeight: 1.6 }}>
-      <h2 style={{ fontFamily: "var(--font-display)", color: "var(--gold)", textShadow: "var(--shadow-carved)", margin: "0 0 12px" }}>
-        Slavic Struggle of Perun
-      </h2>
-      <p>
-        Addon wprowadzajacy system Walki Slowianczyzny (Struggle) — dynamiczna
-        rywalizacja miedzy frakcjami slowianskimi, nordyckimi i stepowymi.
-        Wymaga DLC Fate of Iberia.
-      </p>
-      <ul style={{ paddingLeft: 20, marginTop: 12 }}>
-        <li>System Struggle z 4 fazami: Podboj, Opor, Rownowaga, Zjednoczenie</li>
-        <li>Unikalne eventy i decyzje per faza</li>
-        <li>Catalyst events oparte na historii Slowian</li>
-        <li>Koncowki Struggle: Unia Slowian, Dominacja Nordycka, Konwersja</li>
-      </ul>
-    </div>
-    <div style={{ display: "flex", gap: 8 }}>
       <span style={{
         display: "inline-block",
         padding: "4px 12px",
@@ -774,6 +825,7 @@ const Overview: Story = () => (
         Wymaga: SE + Fate of Iberia
       </span>
     </div>
+    <SteamCopyBlock en={STEAM_SSP_EN} pl={STEAM_SSP_PL} />
   </div>
 );
 Overview.storyName = "Przeglad";
