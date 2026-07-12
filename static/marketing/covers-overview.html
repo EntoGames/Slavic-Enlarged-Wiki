@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Slavic Enlarged — All Covers</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0e0a05; font-family: sans-serif; padding: 24px; }
+
+  h2 {
+    color: rgba(255,255,255,0.45);
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin: 28px 0 10px;
+  }
+  h2:first-of-type { margin-top: 0; }
+
+  .grid { display: grid; gap: 12px; }
+  .grid-main  { grid-template-columns: repeat(4, 200px); }
+  .grid-kings { grid-template-columns: repeat(6, 160px); }
+
+  /* komórka — klip do zadanego rozmiaru */
+  .cover-cell {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    flex-shrink: 0;
+  }
+  .grid-main  .cover-cell { width: 200px; height: 200px; }
+  .grid-kings .cover-cell { width: 160px; height: 160px; }
+
+  /* iframe 512×512 → skalowany do 200px */
+  .cover-cell iframe {
+    width: 512px;
+    height: 512px;
+    border: none;
+    display: block;
+    transform: scale(0.390625);
+    transform-origin: top left;
+    pointer-events: none;
+  }
+
+  /* statyczny obrazek */
+  .cover-cell img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* label nad wszystkim */
+  .label {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 18px 8px 6px;
+    background: linear-gradient(to top, rgba(10,6,2,0.85) 0%, transparent 100%);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    text-align: center;
+    pointer-events: none;
+  }
+
+  /* placeholder */
+  .cover-placeholder {
+    background: rgba(255,255,255,0.04);
+    border: 1px dashed rgba(255,255,255,0.12);
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 4px;
+  }
+  .placeholder-text {
+    text-align: center;
+    font-size: 11px; letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.3);
+    line-height: 1.6;
+  }
+  .placeholder-text span {
+    display: block;
+    font-size: 9px; letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.18);
+  }
+</style>
+</head>
+<body>
+
+<h2>Główne mody</h2>
+<div class="grid grid-main">
+
+  <div class="cover-cell">
+    <iframe src="se-cover-render.html" scrolling="no" title="Slavic Enlarged"></iframe>
+    <div class="label">Slavic Enlarged</div>
+  </div>
+
+  <div class="cover-cell">
+    <iframe src="hof-cover-render.html" scrolling="no" title="Head of Faith"></iframe>
+    <div class="label">Head of Faith</div>
+  </div>
+
+  <div class="cover-cell">
+    <img src="ssp-cover-v3.png" alt="Slavic Struggle of Perun">
+    <div class="label">Slavic Struggle of Perun</div>
+  </div>
+
+  <div class="cover-cell cover-placeholder">
+    <div class="placeholder-text">Myths &amp; Legends<br><span>— do opracowania —</span></div>
+  </div>
+
+</div>
+
+<h2>Królestwa</h2>
+<div class="grid grid-kings">
+  <div class="cover-cell"><img src="poland-cover.png"           alt="Poland"><div class="label">Poland</div></div>
+  <div class="cover-cell"><img src="bohemia-cover.png"          alt="Bohemia"><div class="label">Bohemia</div></div>
+  <div class="cover-cell"><img src="pomerania-cover.png"        alt="Pomerania"><div class="label">Pomerania</div></div>
+  <div class="cover-cell"><img src="sorbia-cover.png"           alt="Sorbia"><div class="label">Sorbia</div></div>
+  <div class="cover-cell"><img src="slovakia-cover.png"         alt="Slovakia"><div class="label">Slovakia</div></div>
+  <div class="cover-cell"><img src="hungary-cover.png"          alt="Hungary"><div class="label">Hungary</div></div>
+  <div class="cover-cell"><img src="carinthia-cover.png"        alt="Carinthia"><div class="label">Carinthia</div></div>
+  <div class="cover-cell"><img src="croatia-cover.png"          alt="Croatia"><div class="label">Croatia</div></div>
+  <div class="cover-cell"><img src="serbia-cover.png"           alt="Serbia"><div class="label">Serbia</div></div>
+  <div class="cover-cell"><img src="bulgaria-cover.png"         alt="Bulgaria"><div class="label">Bulgaria</div></div>
+  <div class="cover-cell"><img src="ruthenia-cover.png"         alt="Ruthenia"><div class="label">Ruthenia</div></div>
+  <div class="cover-cell"><img src="novgorod-cover.png"         alt="Novgorod"><div class="label">Novgorod</div></div>
+  <div class="cover-cell"><img src="galicia_volhynia-cover.png" alt="Galicia-Volhynia"><div class="label">Galicia-Volhynia</div></div>
+  <div class="cover-cell"><img src="moldavia-cover.png"         alt="Moldavia"><div class="label">Moldavia</div></div>
+  <div class="cover-cell"><img src="polotsk-cover.png"          alt="Polotsk"><div class="label">Polotsk</div></div>
+  <div class="cover-cell"><img src="opolye-cover.png"           alt="Opolye"><div class="label">Opolye</div></div>
+  <div class="cover-cell"><img src="white_ruthenia-cover.png"   alt="White Ruthenia"><div class="label">White Ruthenia</div></div>
+</div>
+
+</body>
+</html>
